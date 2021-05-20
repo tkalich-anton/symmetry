@@ -45,4 +45,4 @@
   30. <span class="quiz">К9:</span> [Производная (Задание №7).](./components/quiz/quiz-9.md)
   31. <span class="class">У10:</span> [Производная (Задание №12).](./components/class/class-10.md)
   32. <span class="quiz">К10:</span> [Производная (Задание №12).](./components/quiz/quiz-10.md)
-  33. Модульный экзамен [](./components/exam/exam-1.md)
+### Модульный экзамен [](./components/exam/exam-1.md)
