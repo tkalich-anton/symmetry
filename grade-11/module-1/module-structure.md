@@ -1,5 +1,7 @@
-<link rel="stylesheet" type="text/css" media="all" href="./components/main.css" />
-<link rel="stylesheet" type="text/css" media="all" href="main.css" />
+<head>
+  <link rel="stylesheet" type="text/css" media="all" href="./components/main.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="main.css" />
+</head>
 
 # Алгебра (I часть)
 
