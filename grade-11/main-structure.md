@@ -1,6 +1,6 @@
 # Структура модулей
 
-## [Модуль 1](./module_1/module-structure.md)
+## [Модуль 1](./module-1/module-structure.md)
 
 Продолжительность: 5 недель
 
