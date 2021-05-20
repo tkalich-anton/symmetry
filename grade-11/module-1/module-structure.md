@@ -1,5 +1,5 @@
 <head>
-  <!-- <link rel="stylesheet" type="text/css" media="all" href="./components/main.css" /> -->
+  <link rel="stylesheet" type="text/css" media="all" href="./components/main.css" />
   <link rel="stylesheet" type="text/css" media="all" href="/css/main.css" />
 </head>
 
@@ -10,7 +10,7 @@
 
 ## Структура модуля
 
-1. <span class="theory">Теория 1:</span> [Алгебраические выражения, уравнения и неравенства.](components/theory/theory-1.md)
+1. <span class="theory">Теория 1:</span> [Алгебраические выражения, уравнения и неравенства.](./components/theory/theory-1.md)
 2. <span class="class">Занятие 1:</span> [Рациональныe, иррациоанльныe и степенныe выражения, уравнения и неравенства.](./components/class/class-1.md)
 3. <span class="homework">Домашняя работа 1:</span> [](./components/homework/homework-1.md)
 4. <span class="quiz">Квиз 1:</span> [Формулы сокращенного умножения, свойства степеней, свойства корней](./components/quiz/special-products-etc.md)
