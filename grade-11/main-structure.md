@@ -6,49 +6,49 @@
 
 Тема: Алгебра (I часть)  
 
-## [Модуль 2](./module_2/module-structure.md)
+## [Модуль 2](./module-2/module-structure.md)
 
 Продолжительность: 4 недели
 
-Тема: Геометрия (II часть)
+Тема: Геометрия. Базовые знания. Задания №6 и №8.
 
-## [Модуль 3](./module_3/module-structure.md)
+## [Модуль 3](./module-3/module-structure.md)
 
 Продолжительность: 4 недели
 
 Тема: Задание №13
 
-## [Модуль 4](./module_4/module-structure.md)
+## [Модуль 4](./module-4/module-structure.md)
 
 Продолжительность: 5 недель
 
 Тема: Задание №15
 
-## [Модуль 5](./module_5/module-structure.md)
+## [Модуль 5](./module-5/module-structure.md)
 
 Продолжительность: 4 недели
 
 Тема: Задание №14
 
-## [Модуль 6](./module_6/module-structure.md)
+## [Модуль 6](./module-6/module-structure.md)
 
 Продолжительность: 4 недели
 
 Тема: Задание №17
 
-## [Модуль 7](./module_7/module-structure.md)
+## [Модуль 7](./module-7/module-structure.md)
 
 Продолжительность: 4 недели
 
 Тема: Задание №17
 
-## [Модуль 8](./module_8/module-structure.md)
+## [Модуль 8](./module-8/module-structure.md)
 
 Продолжительность: 4 недели
 
 Тема: Задание №18
 
-## [Модуль 9](./module_9/module-structure.md)
+## [Модуль 9](./module-9/module-structure.md)
 
 Продолжительность: 4 недели
 
