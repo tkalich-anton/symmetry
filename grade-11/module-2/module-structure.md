@@ -9,31 +9,41 @@
 
 ## Структура модуля
 
-### Неделя №1
+## Неделя №1
+Т-1: [Геометрия треугольника и четырехугольника.](./components/theory/theory-1.md)
 
-  1. <span class="theory">Т1:</span> [Геометрия треугольника и четырехугольника.](./components/theory/theory-1.md)
-  2. <span class="class">У1:</span> [Задание №6. Задачи на треугольникки и четырехугольники.](./components/class/class-1.md)
-  3. <span class="homework">Д1:</span> [Планиметрия. Многоугольники.](./components/homework/homework-1.md)
-  4. <span class="quiz">К1:</span> [Основные свойства и теоремы, связанные с треугольником или четырехугольником.](./components/quiz/quiz-1.md)
-  5. <span class="quiz">К2:</span> [Площади треугольника и четырехугольника.](./components/quiz/quiz-2.md)
+У-1: [Задание №6. Задачи на треугольникки и четырехугольники.](./components/class/class-1.md)
 
-### Неделя №2
+Д-1: [Планиметрия. Многоугольники.](./components/homework/homework-1.md)
 
-  1. <span class="theory">Т2:</span> [Геометрия окружности.](./components/theory/theory-2.md)
-  2. <span class="class">У2:</span> [Задание №6. Задачи на окружности, касательные, хорды, вписанные и описанные многоугольники.](./components/class/class-2.md)
-  3. <span class="homework">Д2:</span> [Планиметрия. Окружности.](./components/homework/homework-2.md)
-  4. <span class="quiz">К3:</span> [Основные свойства и теоремы, связанные с окружностью. Площадь и длина окружности.](./components/quiz/quiz-3.md)
+К-1: [Основные свойства и теоремы, связанные с треугольником или четырехугольником.](./components/quiz/quiz-1.md)
 
-### Неделя №3
+К-2: [Площади треугольника и четырехугольника.](./components/quiz/quiz-2.md)
 
-1. <span class="theory">Т3:</span> [Стереометрия (Часть 1).](./components/theory/theory-3.md)
-2. <span class="class">У3:</span> [Задание №8. Задачи на поиск длин ребер, диагоналей, площади поверхности.](./components/class/class-3.md)
-3. <span class="homework">Д3:</span> [Стереометрия. Задание №8.](./components/homework/homework-3.md)
+## Неделя №2
 
-### Неделя №4
+Т-2: [Геометрия окружности.](./components/theory/theory-2.md)
 
-1. <span class="theory">Т4:</span> [Стереометрия (Часть 2).](./components/theory/theory-4.md)
-2. <span class="class">У4:</span> [Задание №8. Задачи на поиск объема многогранника или тела вращения.](./components/class/class-4.md)
-3. <span class="quiz">К3:</span> [Основные свойства и теоремы, связанные с окружностью.](./components/quiz/quiz-2.md)
+У-2: [Задание №6. Задачи на окружности, касательные, хорды, вписанные и описанные многоугольники.](./components/class/class-2.md)
 
-### [Модульный экзамен ](./components/exam/exam-1.md)
+Д-2: [Планиметрия. Окружности.](./components/homework/homework-2.md)
+
+К-3: [Основные свойства и теоремы, связанные с окружностью. Площадь и длина окружности.](./components/quiz/quiz-3.md)
+
+## Неделя №3
+
+Т-3: [Стереометрия (Часть 1).](./components/theory/theory-3.md)
+
+У-3: [Задание №8. Задачи на поиск длин ребер, диагоналей, площади поверхности.](./components/class/class-3.md)
+
+Д-3: [Стереометрия. Задание №8.](./components/homework/homework-3.md)
+
+## Неделя №4
+
+Т-4: [Стереометрия. Объем и площадь повкрхности многогранников и тел вращения.](./components/theory/theory-4.md)
+
+У-4:[Задание №8. Задачи на поиск объема многогранника или тела вращения.](./components/class/class-4.md)
+
+К-3: [Основные свойства и теоремы, связанные с окружностью.](./components/quiz/quiz-2.md)
+
+### [Модульный экзамен](./components/exam/exam-1.md)
