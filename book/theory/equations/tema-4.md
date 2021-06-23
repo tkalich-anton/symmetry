@@ -24,19 +24,19 @@
 $|f(x)|=g(x) \Leftrightarrow$ 
 
 $\left\{
-  \begin{array}{c}
-     g(x) & \geq & 0 \\
-     f^2(x) & = & g^2(x) \\
+  \begin{array}{l}
+     g(x) \geq 0 \\
+     f^2(x) = g^2(x) \\
   \end{array}
 \right.$
 $\Leftrightarrow$
 $\left\{
-  \begin{array}{c}
-     g(x) & \geq & 0, \\
+  \begin{array}{l}
+     g(x) \geq 0, \\
     \left[
-  \begin{array}{c}
-     f(x) & = & g(x), \\
-     f(x) & = & -g(x), \\
+  \begin{array}{l}
+     f(x)=g(x), \\
+     f(x)=-g(x), \\
   \end{array}
 \right.
   \end{array}
@@ -48,12 +48,12 @@ $|x^3+x-1|=x+1$
 Данное уравнение равносильно системе
 
 $\left\{
-  \begin{array}{c}
-     x+1 & \geq & 0, \\
+  \begin{array}{l}
+     x+1 \geq 0, \\
     \left[
-  \begin{array}{c}
-     x^3+x-1 & = & x+1, \\
-     x^3+x-1 & = & -x-1, \\
+  \begin{array}{l}
+     x^3+x-1=x+1, \\
+     x^3+x-1=-x-1, \\
   \end{array}
 \right.
   \end{array}
@@ -62,12 +62,12 @@ $\left\{
 откуда
 
 $\left\{
-  \begin{array}{c}
-     x & \geq & -1, \\
+  \begin{array}{l}
+     x \geq -1, \\
     \left[
-  \begin{array}{c}
-     x & = & \sqrt[3]{2}, \\
-     x(x^2+2) & = & 0, \\
+  \begin{array}{l}
+     x = \sqrt[3]{2}, \\
+     x(x^2+2) = 0, \\
   \end{array}
 \right.
   \end{array}
@@ -79,9 +79,9 @@ $\left\{
 Аналогичным образом обстоит дело с уравнением вида $|p(x)|=|q(x)|$:
 
 $\left[
-  \begin{array}{c}
-     p(x) & = & q(x) \\
-     p(x) & = & -q(x) \\
+  \begin{array}{l}
+     p(x) = q(x) \\
+     p(x) = -q(x) \\
   \end{array}
 \right.$
 
@@ -148,50 +148,50 @@ $|2-x|-|x-5|=x+1-|7-2x|$
 Имеем
 
 1) $\left\{
-  \begin{array}{c}
-     x & \geq & 5 \\
-     -2+x-x+5& = & x+1+7-2x \\
+  \begin{array}{l}
+     x \geq 5 \\
+     -2+x-x+5 = x+1+7-2x \\
   \end{array}
 \right.$, откуда $\left\{
-  \begin{array}{c}
-     x & \geq & 5 \\
-     x & = & 5 \\
+  \begin{array}{l}
+     x \geq 5 \\
+     x = 5 \\
   \end{array}
 \right.$, значит, $x=5$
 
 2) $\left\{
-  \begin{array}{c}
-     3,5 & \leq & x & < & 5 \\
-     -2+x+x-5& = & x+1+7-2x \\
+  \begin{array}{l}
+     3,5 \leq x < 5 \\
+     -2+x+x-5 = x+1+7-2x \\
   \end{array}
 \right.$, откуда $\left\{
-  \begin{array}{c}
-     3,5 & \leq & x & < & 5 \\
-     x & = & 5 \\
+  \begin{array}{l}
+     3,5 \leq x < 5 \\
+     x = 5 \\
   \end{array}
 \right.$, решений нет.
 
-3) $\left\{
-  \begin{array}{c}
-     2 & \leq & x & < & 3,5 \\
-     -2+x+x-5& = & x+1-7+2x \\
+1) $\left\{
+  \begin{array}{l}
+     2 \leq x < 3,5 \\
+     -2+x+x-5 = x+1-7+2x \\
   \end{array}
 \right.$, откуда $\left\{
-  \begin{array}{c}
-     2 & \leq & x & < & 3,5 \\
-     x & = & -1 \\
+  \begin{array}{l}
+     2 \leq x < 3,5 \\
+     x = -1 \\
   \end{array}
 \right.$, решений нет.
 
 4) $\left\{
-  \begin{array}{c}
-     x & < & 2 \\
-     2-x+x-5& = & x+1-7-2x \\
+  \begin{array}{l}
+     x < 2 \\
+     2-x+x-5 = x+1-7-2x \\
   \end{array}
 \right.$, откуда $\left\{
-  \begin{array}{c}
-     x & < & 2 \\
-     x & = & 1 \\
+  \begin{array}{l}
+     x < 2 \\
+     x = 1 \\
   \end{array}
 \right.$, значит, $x=1$
 
