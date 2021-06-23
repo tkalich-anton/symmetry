@@ -19,33 +19,69 @@
 
 Если обе части уравнения неотрицательны на некотором множестве, то возведение в квадрат обеих частей такого уравнения не приводит ни к потере, ни к преобретеню решений на этом множестве, то есть является **`равносильным преобразованием`**:
 
-$|f(x)|=g(x) \Leftrightarrow$ { $g(x) \geq 0$, { $f^2(x)=g^2(x) \Leftrightarrow$ { $g(x) \geq 0$, {[ $f(x)=g(x)$, {[ $f(x)=-g(x)$. Например:
+$|f(x)|=g(x) \Leftrightarrow$ 
+
+$\left\{
+  \begin{array}{c}
+     g(x) & \geq & 0 \\
+     f^2(x) & = & g^2(x) \\
+  \end{array}
+\right.$
+$\Leftrightarrow$
+$\left\{
+  \begin{array}{c}
+     g(x) & \geq & 0, \\
+    \left[
+  \begin{array}{c}
+     f(x) & = & g(x), \\
+     f(x) & = & -g(x), \\
+  \end{array}
+\right.
+  \end{array}
+\right.$
+ Например:
 
 $|x^3+x-1|=x+1$
 
 Данное уравнение равносильно системе
 
-{ $x+1 \geq 0$,
-
-{ [$x^3+x-1=x+1$,
-
-{ [$x^3+x-1=-x-1$
+$\left\{
+  \begin{array}{c}
+     x+1 & \geq & 0, \\
+    \left[
+  \begin{array}{c}
+     x^3+x-1 & = & x+1, \\
+     x^3+x-1 & = & -x-1, \\
+  \end{array}
+\right.
+  \end{array}
+\right.$
 
 откуда
 
-{ $x \geq -1$,
-    
-{ [ $x=\sqrt[3]{2}$
+$\left\{
+  \begin{array}{c}
+     x & \geq & -1, \\
+    \left[
+  \begin{array}{c}
+     x & = & \sqrt[3]{2}, \\
+     x(x^2+2) & = & 0, \\
+  \end{array}
+\right.
+  \end{array}
+\right.$
 
-{ [ $x(x^2+2)=0$
 
 Ответ: $0$, $\sqrt[3]{2}$
 
 Аналогичным образом обстоит дело с уравнением вида $|p(x)|=|q(x)|$:
 
-[ $p(x)=q(x)$
-
-[ $p(x)=-q(x)$
+$\left[
+  \begin{array}{c}
+     p(x) & = & q(x) \\
+     p(x) & = & -q(x) \\
+  \end{array}
+\right.$
 
 Например:
 
@@ -94,3 +130,4 @@ $\left\{
 Неравенству системы удовлетворяет только $x=0,5$.
 
 Ответ: $0,5$.
+
