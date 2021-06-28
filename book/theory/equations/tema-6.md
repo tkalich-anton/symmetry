@@ -405,3 +405,4 @@ $2sin(x-\frac{\pi}{6})=2 \Leftrightarrow sin(x-\frac{\pi}{6})=1$.
 ***
 
 ## 7. Отбор корней.
+
