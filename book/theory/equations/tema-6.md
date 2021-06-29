@@ -384,7 +384,7 @@ $asinx \pm cosx=\sqrt{a^2+b^2}sin(x \pm \phi)$
 
 Итак, пусть мы имеем выражение $asinx \pm bcosx$, где $a>0, b>0$. 
 
-$asinx \ pm bcosx=\sqrt{a^2+b^2}*(\frac{a}{\sqrt{a^2+b^2}}sinx \pm \frac{b}{\sqrt{a^2+b^2}}cosx)=\sqrt{a^2+b^2}(sinxcos \phi \pm cosxsin \phi) = \sqrt{a^2+b^2}sin(x \pm \phi)$, где $\phi = arcsin \frac{b}{\sqrt{a^2+b^2}}$.
+$asinx \pm bcosx=\sqrt{a^2+b^2}*(\frac{a}{\sqrt{a^2+b^2}}sinx \pm \frac{b}{\sqrt{a^2+b^2}}cosx)=\sqrt{a^2+b^2}(sinxcos \phi \pm cosxsin \phi) = \sqrt{a^2+b^2}sin(x \pm \phi)$, где $\phi = arcsin \frac{b}{\sqrt{a^2+b^2}}$.
 
 Пример:
 
