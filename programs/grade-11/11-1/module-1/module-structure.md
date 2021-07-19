@@ -1,83 +1,37 @@
 # Алгебра (I часть)
 
-Продолжительность модуля — 5 недель
-
 ## Структура модуля
 
 ## Неделя №1
 
-Т-1: [Алгебраические выражения, уравнения и неравенства.](./components/theory/theory-1.md)
+У-1: [](./components/class/class-1.md)
 
-Д-1: [Упрощение и вычисление целых, рациональных и степенных выражений.](./components/homework/homework-1.md)
+У-2: [](./components/class/class-2.md)
 
-У-1: [Рациональныe, иррациоанльныe и степенныe выражения, уравнения и неравенства.](./components/class/class-1.md)
-
-К-1: [Формулы сокращенного умножения, свойства степеней, свойства корней.](./components/quiz/quiz-1.md)
-
-К-2: [Простейшие уравнения: целые, рациональные, показательные.](./components/quiz/quiz-2.md)
-
-Т-2: [Тригонометрия. Формулы. Преобразование выражений. Простейшие уравнения.](./components/theory/theory-2.md)
-
-У-2: [Тригонометрия. Решение выражений и простейшийших уравнений.](./components/class/class-2.md)
-
-Д-2: [Упрощение и вычисление тригонометрических выражений.](./components/homework/homework-2.md)
-
-К-3: [Формулы по тригонометрии.](./components/quiz/quiz-3.md)
+Д-1: [](./components/homework/homework-1.md)
 
 ## Неделя №2
 
-Т-3: [Логарифмы. Формулы. Преобразование выражений. Простейшие уравнения.](./components/theory/theory-3.md)
+У-3: [](./components/class/class-3.md)
 
-У-3: [Логарифмы. Решение выражений и простейшийших уравнений.](./components/class/class-3.md)
+У-4: [](./components/class/class-4.md)
 
-Д-3: [Упрощение и вычисление логарифмических выражений.](./components/homework/homework-3.md)
-
-К-4: [Формулы по логарифмам.](./components/quiz/quiz-4.md)
-
-Т-4: [Уравнения и неравенства. Равносильные переходы](./components/theory/theory-4.md)
-
-У-4: [Уравнения и неравенства. Обобщающее занятие. Равносильные переходы.](./components/class/class-4.md)
-
-Д-4: [Уравнения всех типов. Равносильные переходы.](./components/homework/homework-4.md)
-
-К-5: [Равносильные переходы.](./components/quiz/quiz-5.md)
+Д-2: [](./components/homework/homework-2.md)
 
 ## Неделя №3
 
-У-5: [Текстовые задачи (Часть 1).](./components/class/class-5.md)
+У-5: [](./components/class/class-5.md)
 
-К-6: [Простейшие текстовые задачи и задачи с прикладным содержанием.](./components/quiz/quiz-6.md)
+У-6: [](./components/class/class-6.md)
 
-У-6: [Текстовые задачи (Часть 2).](./components/class/class-6.md)
-
-Д-5: [Текстовые задачи (Задание №11).](./components/homework/homework-5.md)
+Д-3: [](./components/homework/homework-3.md)
 
 ## Неделя №4
 
-Т-5: [Теория вероятностей.](./components/theory/theory-5.md)
+У-7: [](./components/class/class-7.md)
 
-У-7: [Теория вероятностей.](./components/class/class-7.md)
+У-8: [](./components/class/class-8.md)
 
-К-7: [Теория вероятностей (Задание №4).](./components/quiz/quiz-7.md)
-
-Т-6: [Все о функциях.](./components/theory/theory-6.md)
-
-Д-6: [Построение функций.](./components/homework/homework-6.md)
-
-У-8: [Функции. Вводное занятие.](./components/class/class-8.md)
-
-К-8: [Функции.](./components/quiz/quiz-8.md)
-
-## Неделя №5
-
-Т-7: [Производная.](./components/theory/theory-7.md)
-
-У-9: [Производная (Задание №7).](./components/class/class-9.md)
-
-К-9: [Производная (Задание №7).](./components/quiz/quiz-9.md)
-
-У-10: [Производная (Задание №12).](./components/class/class-10.md)
-
-К-10: [Производная (Задание №12).](./components/quiz/quiz-10.md)
+Д-4: [](./components/homework/homework-4.md)
 
 ### [Модульный экзамен ](./components/exam/exam-1.md)
