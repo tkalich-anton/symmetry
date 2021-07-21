@@ -4,32 +4,40 @@
 
 ## Неделя №1
 
-У-1: [](./components/class/class-1.md)
+### Тема недели: числовые выражения и выражения с переменными.
 
-У-2: [](./components/class/class-2.md)
+У-1: [Числовые выражения и действия над ними. Сравнение чисел.](./components/class/class-1.md)
 
-Д-1: [](./components/homework/homework-1.md)
+У-2: [Выражения с переменными. Сравнение значений выражений.](./components/class/class-2.md)
+
+Д-1: [Нахождение значений выражений. Сравнение значений выражений.](./components/homework/homework-1.md)
 
 ## Неделя №2
 
-У-3: [](./components/class/class-1.md)
+### Тема недели: свойства действий над числаи и тождественные преобразования.
 
-У-4: [](./components/class/class-2.md)
+У-3: [Тождества. Тождественные преобразования выражений.](./components/class/class-3.md)
 
-Д-2: [](./components/homework/homework-1.md)
+У-4: [Преобразование выражений.](./components/class/class-2.md)
+
+Д-2: [Применение свойств действий над числами и тождественные преобразования.](./components/homework/homework-1.md)
 
 ## Неделя №3
 
-У-5: [](./components/class/class-1.md)
+### Тема недели: уравения.
 
-У-6: [](./components/class/class-2.md)
+У-5: [Решение линейных уравнений.](./components/class/class-1.md)
 
-Д-3: [](./components/homework/homework-1.md)
+У-6: [Решение более сложных линейных уравнений.](./components/class/class-2.md)
+
+Д-3: [Решение линейных уравнений.](./components/homework/homework-1.md)
 
 ## Неделя №4
 
-У-7: [](./components/class/class-1.md)
+### Тема недели: решение задач на проценты и уравнения; среднее арифметическое.
 
-У-8: [](./components/class/class-2.md)
+У-7: [Решение задач на движение и на работу с помощью уравнений.](./components/class/class-1.md)
 
-Д-4: [](./components/homework/homework-1.md)
+У-8: [Проценты. Задачи на проценты.](./components/class/class-2.md)
+
+Д-4: [Решение задач с помощью уравнений, задач на проценты.](./components/homework/homework-1.md)
