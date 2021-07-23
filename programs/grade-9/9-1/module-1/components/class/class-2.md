@@ -1,18 +1,22 @@
-## Тригонометрия. Решение выражений и простейшийших уравнений.
-
-3) $(\dfrac{2ab}{a^2-b^2}+\dfrac{a-b}{2a+2b})\cdot\dfrac{2a}{a+b}+\dfrac{b}{b-a}$
-
-4) $(\dfrac{x}{y}+1)^2+(\dfrac{x}{y}-1)^2$
-
-5) $\dfrac{2x^{-\frac{1}{3}}}{x^{\frac{2}{3}}-3x^{-\frac{1}{3}}}-\dfrac{x^{\frac{2}{3}}}{x^{\frac{5}{3}}-x^{\frac{2}{3}}}-\dfrac{x+1}{x^2-4x+3}$
-
-6) $\dfrac{x-1}{x+x^{0,5}+1} \div \dfrac{x^{0,5}+1}{x^{1,5}-1}$
-   
-7) $\dfrac{x-1}{x^{\frac{3}{4}}+x^{\frac{1}{2}}}\cdot\dfrac{x^{\frac{1}{2}}+x^{\frac{1}{4}}}{x^{\frac{1}{2}}+1}\cdot x^{\frac{1}{4}}+1$
+## Преобразование более сложных алгебраических выражений.
 
 Арифметика:
 
 1) $(\dfrac{2}{\sqrt{3}-1}+\dfrac{3}{\sqrt{3}-2}+\dfrac{15}{3-\sqrt{3}})\cdot(\sqrt{3}+5)^{-1}$
+
+Порешаем примеры:
+
+1) $(\dfrac{2ab}{a^2-b^2}+\dfrac{a-b}{2a+2b})\cdot\dfrac{2a}{a+b}+\dfrac{b}{b-a}$
+
+2) $(\dfrac{x}{y}+1)^2+(\dfrac{x}{y}-1)^2$
+
+3) $\dfrac{2x^{-\frac{1}{3}}}{x^{\frac{2}{3}}-3x^{-\frac{1}{3}}}-\dfrac{x^{\frac{2}{3}}}{x^{\frac{5}{3}}-x^{\frac{2}{3}}}-\dfrac{x+1}{x^2-4x+3}$
+
+4) $\dfrac{x-1}{x+x^{0,5}+1} \div \dfrac{x^{0,5}+1}{x^{1,5}-1}$
+   
+5) $\dfrac{x-1}{x^{\frac{3}{4}}+x^{\frac{1}{2}}}\cdot\dfrac{x^{\frac{1}{2}}+x^{\frac{1}{4}}}{x^{\frac{1}{2}}+1}\cdot x^{\frac{1}{4}}+1$
+
+
 
 Примеры для самостоятельного решения:
 
