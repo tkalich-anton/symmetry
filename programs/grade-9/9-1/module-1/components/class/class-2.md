@@ -20,6 +20,8 @@
 
 Примеры для самостоятельного решения:
 
-3) $((\dfrac{x^2}{y^3}+\dfrac{1}{x})\div(\dfrac{x}{y^2}-\dfrac{1}{y}+\dfrac{1}{x}))\div\dfrac{(x-y)^2+4xy}{1+yx^{-1}}$
+1) $((\dfrac{x^2}{y^3}+\dfrac{1}{x})\div(\dfrac{x}{y^2}-\dfrac{1}{y}+\dfrac{1}{x}))\div\dfrac{(x-y)^2+4xy}{1+yx^{-1}}$
 
-4) $\dfrac{\sqrt[4]{x^5}+\sqrt[4]{xy^4}-\sqrt[4]{x^4y}-\sqrt[4]{y^5}}{\sqrt{x}-\sqrt{y}}\cdot(\sqrt[4]{x}+\sqrt[4]{y})$
+2) $\dfrac{\sqrt[4]{x^5}+\sqrt[4]{xy^4}-\sqrt[4]{x^4y}-\sqrt[4]{y^5}}{\sqrt{x}-\sqrt{y}}\cdot(\sqrt[4]{x}+\sqrt[4]{y})$
+
+3) $\dfrac{p^3+4p^2+10p+12}{p^3-p^2+2p+16}\cdot \dfrac{p^3-3p^2+8p}{p^2+2p+6}$
