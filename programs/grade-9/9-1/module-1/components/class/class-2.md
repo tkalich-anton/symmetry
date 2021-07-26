@@ -10,16 +10,18 @@
 
 2) $(\dfrac{x}{y}+1)^2+(\dfrac{x}{y}-1)^2$
 
-3) $\dfrac{2x^{-\frac{1}{3}}}{x^{\frac{2}{3}}-3x^{-\frac{1}{3}}}-\dfrac{x^{\frac{2}{3}}}{x^{\frac{5}{3}}-x^{\frac{2}{3}}}-\dfrac{x+1}{x^2-4x+3}$
+3) $\dfrac{x-y}{6y}:\dfrac{x^2-y^2}{y}\cdot\dfrac{x^2+2xy+y^2}{x}$
 
-4) $\dfrac{x-1}{x+x^{0,5}+1} \div \dfrac{x^{0,5}+1}{x^{1,5}-1}$
+4) $\dfrac{a+4}{a^2-2f}-\dfrac{a}{2b-b^2}$
+
+5) $\dfrac{(a+b)^2}{a^2+ab}+\dfrac{(a-b)^2}{a^2-ab}$
+
+6) $\dfrac{2x^{-\frac{1}{3}}}{x^{\frac{2}{3}}-3x^{-\frac{1}{3}}}-\dfrac{x^{\frac{2}{3}}}{x^{\frac{5}{3}}-x^{\frac{2}{3}}}-\dfrac{x+1}{x^2-4x+3}$
+
+7) $$
    
-5) $\dfrac{x-1}{x^{\frac{3}{4}}+x^{\frac{1}{2}}}\cdot\dfrac{x^{\frac{1}{2}}+x^{\frac{1}{4}}}{x^{\frac{1}{2}}+1}\cdot x^{\frac{1}{4}}+1$
-
-
-
 Примеры для самостоятельного решения:
 
-3) $((\dfrac{x^2}{y^3}+\dfrac{1}{x})\div(\dfrac{x}{y^2}-\dfrac{1}{y}+\dfrac{1}{x}))\div\dfrac{(x-y)^2+4xy}{1+yx^{-1}}$
-
-4) $\dfrac{\sqrt[4]{x^5}+\sqrt[4]{xy^4}-\sqrt[4]{x^4y}-\sqrt[4]{y^5}}{\sqrt{x}-\sqrt{y}}\cdot(\sqrt[4]{x}+\sqrt[4]{y})$
+1) $\dfrac{p^3+4p^2+10p+12}{p^3-p^2+2p+16}\cdot \dfrac{p^3-3p^2+8p}{p^2+2p+6}$
+   
+2)  $\dfrac{x-1}{x^{\frac{3}{4}}+x^{\frac{1}{2}}}\cdot\dfrac{x^{\frac{1}{2}}+x^{\frac{1}{4}}}{x^{\frac{1}{2}}+1}\cdot x^{\frac{1}{4}}+1$
