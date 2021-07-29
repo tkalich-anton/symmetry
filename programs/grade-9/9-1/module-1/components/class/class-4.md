@@ -81,6 +81,6 @@ $\dfrac{x}{4}+\dfrac{(3x-2)}{8}>x-\dfrac{1}{16}$
 4) $\dfrac{x-1}{3}-3(2x-\dfrac{5-2(x-1)}{4}>x+2\dfrac{3}{4})$
 5) $\dfrac{2x-1}{5}-\dfrac{2x-2}{3}>2$
 6) $\dfrac{3}{2x-1}>0$
-7) $\dfrac{2\sqrt{2}-3}{4+5x}$
+7) $\dfrac{2\sqrt{2}-3}{4+5x}\leq 0$
    
 8) $\dfrac{3x-2}{5x^2+7}<0$
