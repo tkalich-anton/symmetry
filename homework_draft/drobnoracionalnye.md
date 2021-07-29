@@ -64,7 +64,7 @@ $\dfrac{2x + 3}{x+2} = \dfrac{3x + 2}{x}$
 
 $\dfrac{7a - 6}{a^3 + 27} = \dfrac{1}{a^2- 3a + 9} - \dfrac{1}{a + 3}$
 
-$\dfrac{y + 3}{9y^2 + 3y + 1} + \dfrac{3}{27Y^3 - 1} = \dfrac{1}{3y - 1}$
+$\dfrac{y + 3}{9y^2 + 3y + 1} + \dfrac{3}{27y^3 - 1} = \dfrac{1}{3y - 1}$
 
 $\dfrac{3}{1 - 4y^2} + \dfrac{4}{2y^2 + y} = \dfrac{3}{4y^2 + 4y + 1}$
 
