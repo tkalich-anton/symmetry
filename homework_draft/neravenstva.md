@@ -497,8 +497,8 @@ $\left\{
 
 $\left\{
   \begin{array}{c}
-    \sqrt[4]{77 - 9x - 2x^2} \geq 3  \\
-     \sqrt[4]{83 -5x - 3x^2} \geq 3 \\
+    14^{x-6} > 2 \cdot 7^{x-6}   \\
+     14^{x-16} < 7 \cdot 2^{x-16}   \\
   \end{array}
 \right.$
 
