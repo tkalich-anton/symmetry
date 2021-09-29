@@ -1,0 +1,52 @@
+\documentclass[12pt, a5paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+
+
+\usepackage{amsmath,amsthm,amssymb,scrextend, cancel}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+
+%Изменеие параметров листа
+\usepackage[left=10mm,right=10mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\setlength\parindent{1,5em}
+\setlength{\parskip}{0cm}
+\pagestyle{fancy}
+
+\begin{document}
+		
+\lhead{Группа 71}
+\chead{Модуль 1 Д/З №3}
+\rhead{<<Симметрия>>}
+
+\section*{Решение линейных уравнений}
+\textbf{Задание №1} \textit{(2 балла)} Решить уравнения:
+\begin{enumerate}[label=\asbuk*)]
+	\item $3,8x-(1,6-1,2x)=9,6+(3,7-5x)$
+	\item $0,15(x-4)=9,9-0,3(x-1)$
+	\item $\dfrac{1-y}{7}+y=\dfrac{y}{2}+3$
+\end{enumerate}
+
+
+\textbf{Задание №2} \textit{(2 балла)} Можно ли 59 банок варенья разложить в три ящика так, чтобы в третьем было на 9 банок больше, чем в первом, а во втором — на 4 банки меньше, чем в третьем?
+
+\textbf{Задание №3} \textit{(2 балла)} В корзине было в 2 раза меньше винограда, чем в ящике. После того как в корзину добавили 2 кг, в ней стало винограда на 0,5 кг больше, чем в ящике. Сколько винограда было в корзине?
+
+\end{document}

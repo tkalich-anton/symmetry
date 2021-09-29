@@ -1,0 +1,166 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage{amsmath,amsthm,amssymb,scrextend}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+		
+	\lhead{Группа 71}
+	\chead{Модуль 1 Урок 3}
+	\rhead{Школа <<Симметрия>>}
+	
+	\section*{Уравнения с одной переменной}
+	\subsection*{Уравение и его корни}
+	На прошлом уроке мы познакомились с понятием равенства. Вспомним, что равенство, это два числа или выражения, соединённых между собой знаком "$=$".
+	
+	Как уже говорилось, равенства могут быть верными и не верными. Если равенство верное при любых занчениях, которые мы подставляем вместо переменных, то такое равенство называется \textbf{тождеством}.
+	
+	Сегодня поговорим о равенствах, которые верны не при всех значениях переменных, а лишь при каких-то определенных. Процесс поиска таких значений называется \textbf{решением уравнения}, а найденные значения — \textbf{корнями уравнения}.
+	
+	\textbf{Решить уравнение} — значит найти \underline{все} его корни или доказать, что корней нет.
+	
+	Два уравнения называют \textbf{равносильными}, если они имеют одинаковые корни или если оба уравнения не имеют корней.
+	
+	При решении уравнений используются следующие свойства:
+	\begin{itemize}
+		\item Если в уравнении перенести слагаемое из одной части в другую, изменеив его знак, то получится уравнение, равносильное данному.
+		
+		\textit{Пример:}
+		\begin{center}
+			$3x+8=10$\\
+			$3x=10-8$
+		\end{center}
+		\item Если обе части уравнения разделить или множить на одно и то же отличное от нуля число, то получится уравнение, равносильное данному.
+		
+		\textit{Пример:}
+		\begin{center}
+			$10x+15=5x\quad|:5 $\\
+			$2x+3=1x$
+		\end{center}
+	\end{itemize}
+
+
+	\subsection*{Линейное уравнение с одной переменной}
+	
+	Уравнение вида \mathversion{bold}$ax=b$\mathversion{normal}, где $x$ — переменная, а $a$ и $b$ — некоторые числа, называется линейным уравнением с одной переменной.
+	\begin{enumerate}
+		\item Если $a\ne0$, тогда можем разделить обе части уравнения на $a$ и поулчим $x=\dfrac{b}{a}$.
+		
+		\textit{Пример:}
+		\begin{eqnarray*}
+			3x &=& 5 \quad |:3 \\
+			x &=& \dfrac{5}{3}
+		\end{eqnarray*}
+	
+		\textbf{Ответ:} $x=\dfrac{5}{3}$
+	
+		\item Если $a=0$, а $b\ne0$, то уравнение не будет иметь корней. Очевидно, что какое бы мы значение вместо $x$ не подставили, умножив его на $0$ можно получить только $0$.
+		
+		\textit{Пример:}
+		\begin{eqnarray*}
+			0\cdot x &=& 4
+		\end{eqnarray*}
+	
+		\textbf{Ответ:} нет решений.
+		
+		\item Если $a=0$ и $b=0$, то уравнение будет иметь бесконечное количество решений. Не сложно заметить, что какое бы число мы не подставляли вместо $x$, умножив его на $0$ мы всегда будем поулчать $0$.
+		
+		\textit{Пример:}
+		\begin{eqnarray*}
+			0\cdot x &=& 0
+		\end{eqnarray*}
+	
+		\textbf{Ответ:} любое число.
+	\end{enumerate}
+		
+		\subsection*{Практика}	
+		\textbf{Задание №1} Решить уравнение:
+		\begin{multicols}{4}
+			\begin{enumerate}[label=\asbuk*)]
+				\item $5x=20$
+				\item $3x=-150$
+				\item $-2x=-36$
+				\item $1,2=0,5x$
+				\item $42x=13$
+				\item $\dfrac{1}{5}x=17$
+				\item $\dfrac{3}{4}x=15$
+				\item $-\dfrac{3}{7}x=27$
+				\item $5x=-\dfrac{15}{7}$
+				\item $5x=0$
+			\end{enumerate}	
+		\end{multicols}
+		
+		\textbf{Задание №2} Решить уравнение:
+		\begin{multicols}{3}
+			\begin{enumerate}[label=\asbuk*)]
+				\item $4x+140=0$
+				\item $54-3x=0$
+				\item $-1,8x-9=0$
+				\item $3,5x+2,8=0$
+				\item $-\dfrac{1}{17}x-\dfrac{3}{34}=0$
+				\item $-x+3\dfrac{5}{7}=3\dfrac{1}{3}$
+				\item $1,7-0,5k=3+4,5k$
+				\item $1\dfrac{1}{3}x+5=\dfrac{1}{3}x+3$
+				\item $x=x$
+				\item $y-\dfrac{3}{5}y$
+				\item $3x=6x$
+			\end{enumerate}
+		\end{multicols}
+	
+		\textbf{Задание №3} Решить уравнение:
+		\begin{multicols}{3}
+			\begin{enumerate}[label=\asbuk*)]
+				\item $(x+3)-(x-2)=12$
+				\item $\dfrac{2}{7}x=\dfrac{1}{2}$
+				\item $3k-2-(k+3)=4$
+				\item $21x=19-(3+13x)$
+				\item $0,6+(0,5y-1)=y+0,5$
+				\item $(13x-15)-(9+6x)=-3x$
+				\item $5(2y-4)=2(5y-10)$
+			\end{enumerate}
+		\end{multicols}
+	
+	\textbf{Задание №4} Решить уравнение:
+	\begin{enumerate}[label=\asbuk*)]
+		\item $0,3y+0,2(y+10)-(0,1y-10)=2$
+		\item $1,2x-(x+3,8)=(\dfrac{1}{5}x+1,5)-\dfrac{14}{20}$
+		\item $(\dfrac{1}{2}x+1,3)-(3,6-4,5x)=(5,4-0,3x)+(10\dfrac{2}{3}x+\dfrac{3}{8})$
+		\item $\dfrac{x-3}{8}+3=\dfrac{3x+127}{20}-\dfrac{x+9}{12}$
+		\item $3\dfrac{1}{2}-\left(3x+\dfrac{2}{5}\right)=x-\dfrac{37-x}{5}$
+	\end{enumerate}
+
+	\textbf{Задание №5} При каком значении переменной значение выражения $13x-51$ равно $1$?\\
+	
+	\textbf{Задание №6} При каком значении переменной $x$ выражения $2x+8$ и $-2x-14$ равны?\\
+	
+	\textbf{Задание №7} При каком значении переменной $x$ выражение $-x+14$ больше выражения $3x-8$ на $2$?
+	
+
+\end{document}

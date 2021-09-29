@@ -1,0 +1,66 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage{amsmath,amsthm,amssymb,scrextend}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+		
+\lhead{Группа 71}
+\chead{Модуль 1 Домашняя работа №3}
+\rhead{Школа <<Симметрия>>}
+
+\section*{Решение линейных уравнений}
+\textbf{Задание №1} \textit{(0,5 балла)} Решить уравнения:
+\begin{multicols}{3}
+	\begin{enumerate}[label=\asbuk*)]
+		\item $3x-90=0$
+		\item $1,2x=68+x$
+		\item $1,8-0,2x=2,5-1,6x$
+		\item $x-\dfrac{1}{3}x=0$
+		\item $y=-y$
+		\item $\dfrac{1}{6}x-\dfrac{1}{2}=3-\dfrac{1}{2}x$
+		\item $a-\dfrac{1}{4}=\dfrac{3}{8}+\dfrac{1}{2}a$
+		\item $\dfrac{5}{9}x=\dfrac{25}{3}$
+	\end{enumerate}
+\end{multicols}
+
+\textbf{Задание №2} \textit{(1 балл)} Решить уравнения:
+\begin{enumerate}[label=\asbuk*)]
+	\item $1,6x-(x-2,8x)=(0,2x+1,5)-0,7$
+	\item $0,8+(0,3x-1)=0,9x+1,8$
+	\item $(0,9x+1,2)-(5,6-4,4x)=(5,9-0,3x)+(10x+0,7)$
+\end{enumerate}
+
+\textbf{Задание №3} \textit{(1 балл)} При каком значении переменной значение выражения $-2x-14$ равно $16$?\\
+
+\textbf{Задание №4} \textit{(1 балл)} При каком значении переменной $x$ выражения $14x+1$ и $-6x-8$ равны?\\
+
+\textbf{Задание №5} \textit{(1 балл)} При каком значении переменной $x$ выражение $9x-12$ больше выражения $4x$ на $5$?
+\end{document}

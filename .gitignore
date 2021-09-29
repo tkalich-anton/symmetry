@@ -2,3 +2,7 @@
 *.txt
 *.gz
 *.log
+*.nav
+*.out
+*.snm
+*.toc
