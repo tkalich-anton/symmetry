@@ -1,4 +1,4 @@
-*.aux,
-*.txt,
-*.gz,
+*.aux
+*.txt
+*.gz
 *.log
