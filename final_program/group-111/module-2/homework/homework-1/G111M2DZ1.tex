@@ -1,0 +1,94 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{soulutf8}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+		
+\lhead{Группа 111}
+\chead{Модуль 2 ДЗ№3}
+\rhead{Школа <<Симметрия>>}
+
+\section*{Домашняя работа №3}
+\begin{enumerate}
+	\item \textit{(2 балла)} Вычислить значения производных заданных функций при указанных значениях переменной:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $y=\dfrac{x^2-3}{x^2+3}$; $f'(1)=?$
+			\item $y=\dfrac{\cos x}{1+\sin x}$; $f'\left(\dfrac{\pi}{2}\right)=?$
+			\item $y=\dfrac{1}{2}\sin x\tg2x$; $f'\left(\dfrac{\pi}{2}\right)=?$
+			\item $y=(x^2-x)\cos^2x$; $f'(0)=?$
+		\end{enumerate}
+	\end{multicols}
+	 
+	\item \textit{(4 балла)} Найти промежутки возрастания и убывания функций и точки экстремума:
+	\begin{multicols}{3}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $y=2x^3+3x^2-1$
+			\item $y=\dfrac{1}{5}x^5-4x^2$
+			\item $y=\dfrac{x^4}{4}-2x^2-\dfrac{9}{4}$
+			\item $y=\dfrac{2}{1+x^2}$
+			\item $y=\dfrac{x^2-1}{x^2+1}$
+			\item $y=\dfrac{(x-2)^2}{x^2+4}$
+			\item $y=\dfrac{1}{(x-1)(x-4)}$
+			\item $y=e^{-x}-e^{-2x}$
+		\end{enumerate}
+	\end{multicols}
+	\item \textit{(3 балла)} Найти наименьшее и наибольшее значения функции в заданных промежутках:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $y=\dfrac{x}{8}+\dfrac{2}{x}$; $[1;6]$
+			\item $y=x+\cos^2x$; $\left[0;\dfrac{\pi}{2}\right]$
+			\item $y=\dfrac{1}{2}\cos2x+\sin x$; $\left[0;\dfrac{\pi}{2}\right]$
+			\item $y=(5-x)2^{-x}$; $[-1;0]$
+			\item $y=\dfrac{4}{\sqrt{x^2+16}}$; $[2\sqrt{5};8]$
+			\item $y=3\sqrt[3]{(x-1)^2}+x$; $[-7;0]$
+		\end{enumerate}
+	\end{multicols}
+	\item \textit{(1 балл)} Доказать, что функция $y=x+\dfrac{1}{1+x^2}$ возрастает на всей числовой оси. 
+	\item \textit{(1 балл)} $s(t)=8-2t+24t^2-0,3t^5$. В какой момент тело имеет наибольшую скорость? Найдите эту скорость.
+	\item \textit{(2 балла)} Две точки движутся по оси $Ox$. Координата $x_1$ первой точки определяется формулой $x_1=3t^2-5$, координата $x_2$ второй точки — формулой $x_2=3t^2-t+1$ ($x_1,x_2$ — в метрах, $t$ — в секундах). Найти скорости движения каждой точки в тот момент времени, когда их координаты равны.
+	\item \textit{(2 балла)} Найти точки экстремума функции $y=e^{-x}\sin x$ и угол между осью $Ox$ и касательной к графику данной функции в точке с абсциссой $x=0$
+\end{enumerate}
+\end{document}

@@ -1,0 +1,78 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+
+
+\usepackage{amsmath,amsthm,amssymb,scrextend, cancel}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+
+%Изменеие параметров листа
+\usepackage[left=10mm,right=10mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\setlength\parindent{1,5em}
+\setlength{\parskip}{0cm}
+\pagestyle{fancy}
+
+\begin{document}
+		
+\lhead{Группа 101}
+\chead{Модуль 1 Урок 8}
+\rhead{<<Симметрия>>}
+
+\section*{Решение рациональных и иррациональных уравнений}
+Решить уравнения:
+\begin{multicols}{2}
+	\begin{enumerate}
+		\item $(x+3)^4-13(x+3)+36=0$
+		\item $x^2=\dfrac{49x+343}{x+7}$
+		\item $\dfrac{x^2}{x+8}=\dfrac{64}{x+8}$
+		\item $\sqrt{8-x}=2-x$
+		\item $x^2+3\sqrt{x^2-3x+11}=3x+4$
+		\item $(2x+3)\sqrt{23x-14-3x^2}=0$
+		\item $(2-x)\sqrt{x^2-x-20}=12-6x$
+		\item $\dfrac{x-2}{x^3}=2x-x^2$
+		\item $\sqrt{(x+5)(x-7)}=\sqrt{x+5}$
+		\item $(x+4)\sqrt{x-6}=\sqrt{x-6}$
+		\item $\dfrac{x+0,5}{9x+3}+\dfrac{8x^2+3}{9x^2-1}=\dfrac{x+2}{3x-1}$
+		\item $\dfrac{x^4-6x^3+9x^2-36}{2x-3+\sqrt{33}}=0$
+		\item $\left\{
+		\begin{aligned}
+			x+y^2&=2,\\
+			2y^2+x^2&=3
+		\end{aligned}
+		\right.$
+		\item $\left\{
+		\begin{aligned}
+			x^2&=5y-6,\\
+			y^2&=5x-6
+		\end{aligned}
+		\right.$
+		\item $\left\{
+		\begin{aligned}
+			x+7y&=1,\\
+			x^2-49y^2&=5
+		\end{aligned}
+		\right.$
+		\item $\sqrt{x^2-2x-1}=\dfrac{14}{\sqrt{x^2-2x-1}}-5$
+		\item $x-\sqrt{x}=30$
+	\end{enumerate}
+\end{multicols}
+
+\end{document}

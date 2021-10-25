@@ -1,0 +1,69 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{soulutf8}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+		
+\lhead{Группа 81}
+\chead{Модуль 2 Урок 2}
+\rhead{Школа <<Симметрия>>}
+	
+\subsection*{Практика}	
+\begin{enumerate}
+	\item На прямой выбраны три точки $A$, $B$ и $C$, причем $AB = 1$, $BC = 3$. Чему может быть равно $AC$? Укажите все возможные варианты.
+	\item Углы $a$, $b$ и $c$ — смежные. Известно, что угол $a$ в два раза больше угла $b$, а угол $b$ на $20\degree$ больше угла $c$. Найдите градусные величины углов $a$, $b$ и $c$.
+	\item Прямой угол $ADB$ разделен лучом $DC$ на два угла, причем один угол на $90$ больше другого. Найдите градусные меры этих углов.
+	\item Луч BM делит развернутый угол ABC в отношении $5:1$, считая от луча $BA$. Найдите угол $ABK$, если $BK$ – биссектриса угла $MBC$.
+	\item Разность двух смежных углов равна $54\degree$. Найдите эти углы.
+	\item Один из внешних углов равнобедренного треугольника равен $126\degree$. Найдите углы треугольника.
+	\item В треугольнике $ABC$ угол $A$ равен $70\degree$, внешний угол при вершине $B$ равен  $79\degree$. Найдите угол $C$. Ответ дайте в градусах.
+	\item В треугольнике $ABC$ угол $A$ равен $39\degree$, $АС=ВС$. Найдите угол $C$. Ответ дайте в градусах.
+	\item Сумма двух углов треугольника и внешнего угла к третьему равна $120\degree$. Найдите этот третий угол. Ответ дайте в градусах.
+	\item Один острый угол прямоугольного треугольника на $42\degree$ больше другого. Найдите больший острый угол. Ответ дайте в градусах.
+	\item Угол при основании равнобедренного треугольника равен $70\degree$, чему равен внешний угол при при основании треугольника, не смежный с данным углом?
+	\item Через вершину B треугольника ABC проведена прямая, параллельная прямой $AC$. Образовавшиеся при этом три угла с вершиной B относятся как 3 : 10 : 5. Найдите углы треугольника ABC.
+\end{enumerate}
+
+\end{document}

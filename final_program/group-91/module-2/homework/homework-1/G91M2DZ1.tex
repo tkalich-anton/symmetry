@@ -1,0 +1,80 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{soulutf8}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+		
+\lhead{Группа 91}
+\chead{Модуль 2 ДЗ№1}
+\rhead{Школа <<Симметрия>>}
+
+\section*{Домашняя работа №1}
+\begin{enumerate}
+	\item \textit{(1 балл)} Один из двух смежных углов на $20\degree$ меньше другого. Найдите эти углы.
+	\item \textit{(1 балл)} Углы $\alpha$ (альфа), $\beta$ (бетта), $\gamma$ (гамма) — смежные. Известно, что угол $\alpha$ в два раза больше угла $\beta$, а угол $\beta$ в три раза больше угла $\gamma$. Чему равны эти углы?
+	\item \textit{(1 балл)} Прямой угол разделен двумя лучами на три угла. Один из них на 10\degree больше другого и на 10\degree меньше третьего. Найдите эти углы.
+	\item \textit{(1 балл)} Из точки $O$ на плоскости выходят три луча $OA$, $OB$, $OC$. Известно, что $\angle AOB=91\degree$, $\angle BOC=90\degree$. Найдите $\angle AOC$
+	\item \textit{(1 балл)} Из точки, данной на окружности, проведены диаметр и хорда, равная радиусу. Найдите угол между ними.
+	\item \textit{(1 балл)} Радиус окружности равен 13, хорда равна 10. Найдите её расстояние от центра.
+	\item \textit{(2 балла)} Решите уравнение:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\dfrac{1}{4} - \dfrac{1}{3}x = 4\dfrac{1}{4} - 3x$
+			\item $\dfrac{6x -1}{5} - \dfrac{2-x}{4} = \dfrac{3x+2}{2}$
+			\item $4x^2+7x+3=0$
+			\item $3x^2+11x-34=0$
+			\item $(5x+3)^2=5(x+3)$
+			\item $\dfrac{x^2}{x+3}=\dfrac{5x-6}{x+3}$
+		\end{enumerate}
+	\end{multicols}
+	\item \textit{(2 балла)} Упростите выражение и найдите значение выражения:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\dfrac{x^2-10x+25}{3x+12}\cdot\dfrac{x^2-16}{2x-10}$ при $x=-1$
+			\item $\dfrac{a^3-42}{a-7}-\dfrac{-28-a^3}{a-7}$ при $a=2$
+		\end{enumerate}
+	\end{multicols}
+	\end{enumerate}
+\end{document}

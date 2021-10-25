@@ -1,0 +1,105 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{soulutf8}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+		
+\lhead{Группа 102}
+\chead{Модуль 2 ДЗ№1}
+\rhead{Школа <<Симметрия>>}
+
+\section*{Тригонометрия. Решение иррациональных уравнений.}
+\begin{enumerate}
+	\item \textit{(2 балла)} Вычислите:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $4\cos{45\degree}\cdot\ctg{60\degree}\tg{60\degree}-3\sin{45\degree}$
+			\item $\dfrac{1-2\sin^2{60\degree}}{2\cos^2{60\degree}-1}$
+			\item $2\cos{30\degree}-\ctg{45}+\sin^2{60\degree}+\ctg^2{60\degree}$
+			\item $\dfrac{\sin^{20}{60\degree}\cdot\tg^{10}{30\degree}}{\sin^{25}{30\degree}\cdot\ctg^5{30\degree}}$
+			\item $\dfrac{\sin^3{60\degree}\tg{30\degree}}{8\cos60\degree-2\cos30\degree\cdot\ctg30\degree}$
+		\end{enumerate}
+	\end{multicols}	
+	\item \textit{(1 балл)} Известно, что $\cos{\beta}=0,5$. Верно ли, что $\beta=300\degree$? Объясние почему.
+	\item \textit{(2 балла)} Вычислите:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\sqrt{6}\sin120\degree\cos315\degree$
+			\item $\sin225\degree\cos120\degree\tg330\degree\ctg240\degree$
+			\item $\dfrac{3\sin120\degree+2\cos150\degree}{\tg210\degree+\ctg210\degree}$
+			\item $(\sin300\degree)^{-2}+4\tg300\degree\cdot\sin300\degree$
+		\end{enumerate}
+	\end{multicols}	
+	\item \textit{(1 балл)} Укажите наибольшее и наименьшее значение выражения:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $1+\sin\alpha$
+			\item $2\cos^2{\alpha}-1$
+			\item $-|\sin\alpha|$
+			\item $|3+4\sin\alpha|$
+		\end{enumerate}
+	\end{multicols}	
+	\item \textit{(1 балл)} Вычислите значение выражения:
+	$$\sin(-300\degree)\cdot\cos(-135\degree)\cdot\tg(-210\degree)\cdot\ctg(-120\degree)$$
+	\item \textit{(2 балла)} Решить уравнение:
+	\begin{enumerate}[label=\asbuk*)]
+		\item $x-3\sqrt{x-1}+1=0$
+		\item $(x^2-2x+8)\sqrt{x^2-x-6}=0$
+		\item $\sqrt{-2x-1}=\sqrt{x^2-36}$
+		\item $\sqrt{x-3}+\sqrt{6-x}=\sqrt{3}$
+	\end{enumerate}
+	\item \textit{(1 балл)} Решить систему уравнений:
+	$$
+	\left\{
+	\begin{aligned}
+		x+\dfrac{3}{y}=-1,\\
+		\dfrac{x}{y}=-\dfrac{2}{3}
+	\end{aligned}
+	\right.
+	$$
+	
+	
+\end{enumerate}
+\end{document}
