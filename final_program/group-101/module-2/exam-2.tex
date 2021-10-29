@@ -1,0 +1,78 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{soulutf8}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+\usepackage{multicol}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=1cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+
+\section*{Билет 1}
+\begin{enumerate}
+	\item \textit{(1 балл)} В каких четвертях знаки синуса и косинуса совпадают?
+	\item \textit{(1 балл)} Какой четверти может принадлежать угол $x$, если $\sin x$ положительный?
+	\item \textit{(1 балл)} Переведите 30 градусов в радианы.
+	\item \textit{(1 балл)} Назовите хотя бы один угол в радианной мере, косинус которого равен 1.
+	\item \textit{(1 балл)} Сформулируйте основное тригонометрическое тождество.
+	\item \textit{(1 балл)} Вычислите $\sin (-45)$.
+	\item \textit{(1 балл)} Вычислите $\sin 405$.
+	\item \textit{(2 балла)} Выведите формулу $\sin x \cdot \cos y$.
+	\item \textit{(2 балла)} Выведите формулу $\sin x + \sin y$.
+	\item \textit{(3 балла)} Вычислите $\sin 225 \cdot \cos 120  \cdot \tg 330 \cdot \ctg 240$
+	\item \textit{(3 балла)} Упростите выражение
+	\item \textit{(3 балла)} Известно, что ...
+\end{enumerate}
+\section*{Билет 2}
+\begin{enumerate}
+	\item \textit{(1 балл)} В каких четвертях знаки синуса и косинуса совпадают?
+	\item \textit{(1 балл)} Какой четверти может принадлежать угол $x$, если $\sin x$ положительный?
+	\item \textit{(1 балл)} Переведите 30 градусов в радианы.
+	\item \textit{(1 балл)} Назовите хотя бы один угол в радианной мере, косинус которого равен 1.
+	\item \textit{(1 балл)} Сформулируйте основное тригонометрическое тождество.
+	\item \textit{(1 балл)} Вычислите $\sin (-45)$.
+	\item \textit{(1 балл)} Вычислите $\sin 405$.
+	\item \textit{(2 балла)} Выведите формулу $\sin x \cdot \cos y$.
+	\item \textit{(2 балла)} Выведите формулу $\sin x + \sin y$.
+	\item \textit{(3 балла)} Вычислите $\sin 225 \cdot \cos 120  \cdot \tg 330 \cdot \ctg 240$
+	\item \textit{(3 балла)} Упростите выражение
+	\item \textit{(3 балла)} Известно, что ...
+\end{enumerate}
+\end{document}
