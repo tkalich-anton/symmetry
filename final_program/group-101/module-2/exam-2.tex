@@ -1,0 +1,130 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{soulutf8}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+\usepackage{multicol}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=1cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+	
+	\section*{Билет 1}
+	\begin{enumerate}
+		\item \textit{(1 балл)} В каких четвертях знаки синуса и косинуса совпадают?
+		\item \textit{(1 балл)} Какой четверти может принадлежать угол $x$, если $\sin x$ положительный?
+		\item \textit{(1 балл)} Переведите 30 градусов в радианы.
+		\item \textit{(1 балл)} Назовите хотя бы один угол в радианной мере, косинус которого равен 1.
+		\item \textit{(1 балл)} Сформулируйте основное тригонометрическое тождество.
+		\item \textit{(1 балл)} Вычислите $\sin (-45^{\circ})$.
+		\item \textit{(1 балл)} Вычислите $\sin 405^{\circ}$.
+		\item \textit{(2 балла)} Выведите формулу $\sin x \cdot \cos y$.
+		\item \textit{(2 балла)} Выведите формулу $\sin x + \sin y$.
+		\item \textit{(3 балла)} Вычислите $\sin \dfrac{7\pi}{4} \cos \dfrac{7\pi}{6} \tg \dfrac{5\pi}{3} \ctg \dfrac{4\pi}{3}$.
+		\item \textit{(3 балла)} Упростите выражение $\dfrac{\cos x}{1+\sin x}+\tg x$.
+		\item \textit{(3 балла)} Известно, что $\ctg x=-3\dfrac{3}{7}$ и $\pi<x<2\pi$. Найдите $\cos x$ и $\tg x$.
+	\end{enumerate}
+	\section*{Билет 2}
+	\begin{enumerate}
+		\item \textit{(1 балл)} В каких четвертях знаки синуса и косинуса совпадают?
+		\item \textit{(1 балл)} Какой четверти может принадлежать угол $x$, если $\tg x$ отрицательный?
+		\item \textit{(1 балл)} Переведите 30 градусов в радианы.
+		\item \textit{(1 балл)} Назовите хотя бы один угол в радианной мере, косинус которого равен 1.
+		\item \textit{(1 балл)} Сформулируйте основное тригонометрическое тождество.
+		\item \textit{(1 балл)} Вычислите $\cos (-30^{\circ})$.
+		\item \textit{(1 балл)} Вычислите $\tg 405^{\circ}$.
+		\item \textit{(2 балла)} Выведите формулу $\sin x \cdot \sin y$.
+		\item \textit{(2 балла)} Выведите формулу $\sin x + \sin y$.
+		\item \textit{(3 балла)} Вычислите $\sin 225 \cdot \cos 120  \cdot \tg 330 \cdot \ctg 240$.
+		\item \textit{(3 балла)} Упростите выражение $\ctg x + \dfrac{\sin x}{1+\cos x}$.
+		\item \textit{(3 балла)} Известно, что $\tg x = 2,4$ и $\dfrac{\pi}{2}<x<\dfrac{3\pi}{2}$. Найдите $\sin x$ и $\ctg x$.
+	\end{enumerate}
+
+\newpage 
+
+\section*{Билет 3}
+\begin{enumerate}
+	\item \textit{(1 балл)} Назовите четверти, в которых положителен синус, косинус
+	\item \textit{(1 балл)} Какой четверти может принадлежать угол $x$, если $\sin x$ положительный?
+	\item \textit{(1 балл)} Переведите 90 градусов в радианы.
+	\item \textit{(1 балл)} Назовите угол, синус которого равен 0,5.
+	\item \textit{(1 балл)} Чему равно произведение тангенса и котангенса?
+	\item \textit{(1 балл)} Вычислите $\sin (-45^{\circ})$.
+	\item \textit{(1 балл)} Вычислите $\sin 405^{\circ}$.
+	\item \textit{(2 балла)} Выведите формулу $\sin x \cdot \sin y$.
+	\item \textit{(2 балла)} Выведите формулу $\sin x + \sin y$.
+	\item \textit{(3 балла)} Вычислите $\sin (-\dfrac{11\pi}{6}) \cos (-\dfrac{13\pi}{6}) \tg (-\dfrac{5\pi}{4}) \ctg (-\dfrac{5\pi}{3})$.
+	\item \textit{(3 балла)} Упростите выражение $\dfrac{\cos x}{1+\sin x}+ \tg x$.
+	\item \textit{(3 балла)} Известно, что $\tg x=2,4$ и $\dfrac{\pi}{2}<x<\dfrac{3\pi}{2}$. Найдите $\sin x$ и $\ctg x$.
+\end{enumerate}
+\section*{Билет 4}
+\begin{enumerate}
+	\item \textit{(1 балл)} В каких четвертях отрицательный синус, тангенс?
+	\item \textit{(1 балл)} Какой четверти может принадлежать угол $x$, если $\cos x$ отрицательный?
+	\item \textit{(1 балл)} Переведите 150 градусов в радианы.
+	\item \textit{(1 балл)} Назовите угол, синус которого равен 1.
+	\item \textit{(1 балл)} Чему равно произведение тангенса и котангенса?
+	\item \textit{(1 балл)} Вычислите $\tg (-45^{\circ})$.
+	\item \textit{(1 балл)} Вычислите $\cos 390^{\circ}$.
+	\item \textit{(2 балла)} Выведите формулу $\sin x \cdot \sin y$.
+	\item \textit{(2 балла)} Выведите формулу $\cos x + \cos y$.
+	\item \textit{(3 балла)} Вычислите $\sin \dfrac{7\pi}{4} \cos \dfrac{7\pi}{6} \tg \dfrac{5\pi}{3} \ctg \dfrac{4\pi}{3}$.
+	\item \textit{(3 балла)} Упростите выражение $\ctg x + \dfrac{\sin x}{1+\cos x}$.
+	\item \textit{(3 балла)} Известно, что $\ctg x = -3\dfrac{3}{7}$ и $\pi<x<2\pi$. Найдите $\cos x$ и $\tg x$.
+\end{enumerate}
+
+\newpage 
+
+\section*{Билет 5}
+\begin{enumerate}
+	\item \textit{(1 балл)} Есть ли четверти, в которых тангенс и синус положительны одновременно? Если да, то в каких?
+	\item \textit{(1 балл)} Какой четверти может принадлежать угол $x$, если $\tg x$ положительный?
+	\item \textit{(1 балл)} Переведите 150 градусов в радианы.
+	\item \textit{(1 балл)} Назовите угол, тангенс которого равен 1.
+	\item \textit{(1 балл)} Выразите котангенс через синус и косинус.
+	\item \textit{(1 балл)} Вычислите $\sin (-60^{\circ})$.
+	\item \textit{(1 балл)} Вычислите $\tg 420^{\circ}$.
+	\item \textit{(2 балла)} Выведите формулу $\cos x \cdot \cos y$.
+	\item \textit{(2 балла)} Выведите формулу $\cos x + \cos y$.
+	\item \textit{(3 балла)} Вычислите $\sin 225^{\circ} \cos 120^{\circ} \tg 330^{\circ} \ctg 240^{\circ}$.
+	\item \textit{(3 балла)} Упростите выражение $\dfrac{\cos x}{1+\sin x}+ \tg x$.
+	\item \textit{(3 балла)} Известно, что $\tg x=2,4$ и $\dfrac{\pi}{2}<x<\dfrac{3\pi}{2}$. Найдите $\sin x$ и $\ctg x$.
+\end{enumerate}
+
+\end{document}
