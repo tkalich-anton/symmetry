@@ -1,0 +1,196 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{soulutf8}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+\usepackage{multicol}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=1cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+	
+	\section*{Билет 1}
+	\begin{enumerate}
+		\item \textit{(1 балл)} В каких четвертях знаки синуса и косинуса совпадают?
+		\item \textit{(1 балл)} Какой четверти может принадлежать угол $x$, если $\tg x$ отрицательный?
+		\item \textit{(1 балл)} Переведите 30 градусов в радианы.
+		\item \textit{(1 балл)} Назовите хотя бы один угол в радианной мере, косинус которого равен 1.
+		\item \textit{(1 балл)} Сформулируйте основное тригонометрическое тождество.
+		\item \textit{(1 балл)} Вычислите $\cos (-30^{\circ})$.
+		\item \textit{(1 балл)} Вычислите $\sin 405^{\circ}$.
+		\item \textit{(2 балла)} Выведите формулу $\sin x \cdot \cos y$.
+		\item \textit{(2 балла)} Выведите формулу $\cos x - \cos y$.
+		\item \textit{(3 балла)} Вычислите $\sin (2x-\pi)  \cos (x-3\pi)  + \sin (2x-\dfrac{9\pi}{2}) \cos (x+\dfrac{\pi}{2})$
+		\item \textit{(3 балла)} Упростите выражение $sin(-1,3\pi)cos(-1,7\pi)tg(-0,7\pi)+\sin 0,8\pi \cos 1,8\pi \tg 1,2\pi$
+		\item \textit{(3 балла)} Упростите выражение $\sin^2 x(1+\sin^{-1}x + \ctg x)(1 - \sin^{-1}x + \ctg x)$
+	\end{enumerate}
+	\section*{Билет 2}
+	\begin{enumerate}
+		\item \textit{(1 балл)}	В каких четвертях отрицательный синус, тангенс? 
+		\item \textit{(1 балл)}	Какой четверти принадлежит $x$ , если $\cos x$ отрицательный?
+		\item \textit{(1 балл)}	Переведите 150 градусов в радианы.
+		\item \textit{(1 балл)}	Назовите хотя бы один угол в радианной мере, при котором $\sin$  равен $1$
+		\item \textit{(1 балл)} Выразите тангенс через синус и косинус
+		\item \textit{(1 балл)} Вычислите $\tg (-45^{\circ})$
+		\item \textit{(1 балл)}	Вычислите $\cos (390^{\circ})$.
+		\item \textit{(2 балла)} Выведите формулу $\sin x \cdot sin y$ 
+		\item \textit{(2 балла)} Выведите формулу $cos x + \cos y$.
+		\item \textit{(3 балла)} Вычислите $\dfrac{\tg(\dfrac{3\pi}{2}-x)-\cos (\pi-x) \sin (3\pi + x)}{(\cos (3,5\pi - x) + \sin (1,5\pi + x))^2-1}$
+		\item \textit{(3 балла)} Упростите выражение $\sin(x+2\pi) \cos (2x-\dfrac{7\pi}{2}) + \sin (\dfrac{3\pi}{2}-x) \sin (2x-\dfrac{5\pi}{2})$
+		\item \textit{(3 балла)} Упростите выражение $\sin^2 x(1+\sin^{-1}x + \ctg x)(1 - \sin^{-1}x + \ctg x)$
+	\end{enumerate}
+	
+	\newpage 
+	
+	\section*{Билет 3}
+	\begin{enumerate}
+		\item \textit{(1 балл)}	Есть ли четверти, в которых тангенс и синус положительны одновременно? 
+		\item \textit{(1 балл)}	Какой четверти принадлежит $x$ , если $\cos x$ положительный?
+		\item \textit{(1 балл)}	Переведите 120 градусов в радианы
+		\item \textit{(1 балл)}	Назовите хотя бы один угол в радианной мере, при котором $\cos$  равен $0,5$.
+		\item \textit{(1 балл)} Чему равно произведение тангенса и котангенс.
+		\item \textit{(1 балл)} Вычислите $\sin (-60^{\circ})$.
+		\item \textit{(1 балл)}	Вычислите $\cos 420^{\circ}$.
+		\item \textit{(2 балла)} Выведите формулу $\sin x \cdot \cos y$.
+		\item \textit{(2 балла)} Выведите формулу $\sin x - \sin y$.
+		\item \textit{(3 балла)} Вычислите $(\dfrac{\cos (2,5\pi + x)}{\ctg (3\pi + x)} - \sin (-x) \tg (\dfrac{5\pi}{2}+x))^2 + \dfrac{\tg x}{tg (\dfrac{3\pi}{2}+x)}$
+		\item \textit{(3 балла)} Упростите выражение $\dfrac{\ctg(270^{\circ}-x)}{1-\tg^2(x-180^{\circ})} \cdot \dfrac{\ctg^2(360^{\circ}-x)-1}{\ctg(180^{\circ}+x)}$
+		\item \textit{(3 балла)} Упростите выражение $\sin^2 x(1+\sin^{-1}x + \ctg x)(1 - \sin^{-1}x + \ctg x)$
+	\end{enumerate}
+	\section*{Билет 4}
+	\begin{enumerate}
+		\item \textit{(1 балл)}	В каких четвертях знаки синуса и косинуса совпадают? 
+		\item \textit{(1 балл)}	Какой четверти принадлежит x , если tg x положительный?
+		\item \textit{(1 балл)}	Переведите 30 градусов в радианы
+		\item \textit{(1 балл)}	Назовите хотя бы один угол в радианной мере, при котором $\tg$  равен $1$
+		\item \textit{(1 балл)} Выразите котангенс через синус и косинус
+		\item \textit{(1 балл)} Вычислите $\tg (-45^{\circ})$
+		\item \textit{(1 балл)}	Вычислите $\tg (420^{\circ})$.
+		\item \textit{(2 балла)} Выведите формулу $\sin x \cdot cos y$ 
+		\item \textit{(2 балла)} Выведите формулу $cos x + \cos y$.
+		\item \textit{(3 балла)} Вычислите $\sin(-1,3\pi) \cos (-1,7 \pi) \tg (-0,7 \pi)+ \sin 0,8 \pi \cos 1,8 \pi \tg 1,2 \pi$
+		\item \textit{(3 балла)} Упростите выражение $\dfrac{\cos^2 (x-270^{\circ})}{\sin^{-2}(x+90^{\circ})-1}+\dfrac{\sin^2 (x+270^{\circ})}{\cos^{-2}(x-90^{\circ})-1}$
+		\item \textit{(3 балла)} Упростите выражение $\sin^2 x(1+\sin^{-1}x + \ctg x)(1 - \sin^{-1}x + \ctg x)$
+	\end{enumerate}
+	
+	
+	\newpage 
+	
+	\section*{Билет 5}
+	\begin{enumerate}
+		\item \textit{(1 балл)}	Назовите четверти, в которых положителен синус, косинус 
+		\item \textit{(1 балл)}	Какой четверти принадлежит $x$ , если $\sin x$ положительный?
+		\item \textit{(1 балл)}	Переведите 90 градусов в радианы
+		\item \textit{(1 балл)}	Назовите хотя бы один угол в радианной мере, при котором $\sin$  равен $0,5$.
+		\item \textit{(1 балл)}	Выразите котангенс через синус и косинус.
+		\item \textit{(1 балл)} Вычислите $\sin (-45^{\circ})$.
+		\item \textit{(1 балл)}	Вычислите $\sin 405^{\circ}$.
+		\item \textit{(2 балла)} Выведите формулу $\cos x \cdot \cos y$.
+		\item \textit{(2 балла)} Выведите формулу $\sin x + \sin y$.
+		\item \textit{(3 балла)} Вычислите $(\dfrac{\cos (2,5\pi + x)}{\ctg (3\pi + x)} - \sin (-x) \tg (\dfrac{5\pi}{2}+x))^2 + \dfrac{\tg x}{tg (\dfrac{3\pi}{2}+x)}$
+		\item \textit{(3 балла)} Упростите выражение $\dfrac{\cos^2 (x-270^{\circ})}{\sin^{-2}(x+90^{\circ})-1}+\dfrac{\sin^2 (x+270^{\circ})}{\cos^{-2}(x-90^{\circ})-1}$
+		\item \textit{(3 балла)} Упростите выражение $\sin^2 x(1+\sin^{-1}x + \ctg x)(1 - \sin^{-1}x + \ctg x)$
+	\end{enumerate}
+	\section*{Билет 6}
+	\begin{enumerate}
+		\item \textit{(1 балл)}	Назовите четверти, в которых положителен синус, косинус 
+		\item \textit{(1 балл)}	Какой четверти принадлежит $x$ , если $\sin x$ отрицательный?
+		\item \textit{(1 балл)}	Переведите 90 градусов в радианы
+		\item \textit{(1 балл)}	Назовите хотя бы один угол в радианной мере, при котором $\cos$  равен $0,5$
+		\item \textit{(1 балл)} Напишите основное тригонометрическое тождество
+		\item \textit{(1 балл)} Вычислите $\cos (-30^{\circ})$
+		\item \textit{(1 балл)}	Вычислите $\sin (390^{\circ})$.
+		\item \textit{(2 балла)} Выведите формулу $\sin x \cdot cos y$ 
+		\item \textit{(2 балла)} Выведите формулу $cos x - \cos y$.
+		\item \textit{(3 балла)} Вычислите $\sin(-1,3\pi) \cos (-1,7 \pi) \tg (-0,7 \pi)+ \sin 0,8 \pi \cos 1,8 \pi \tg 1,2 \pi$
+		\item \textit{(3 балла)} Упростите выражение $\sin(2x-\pi) \cos (x-3\pi) + \sin (2x- \dfrac{9 \pi}{2}) \cos (x+\dfrac{\pi}{2})$
+		\item \textit{(3 балла)} Упростите выражение $\sin^2 x(1+\sin^{-1}x + \ctg x)(1 - \sin^{-1}x + \ctg x)$
+	\end{enumerate}
+	
+	\newpage 
+	
+	\section*{Билет 7}
+	\begin{enumerate}
+		\item \textit{(1 балл)}	В каких четвертях знаки синуса и косинуса совпадают? 
+		\item \textit{(1 балл)}	Какой четверти принадлежит $x$ , если $\cos x$ положительный?
+		\item \textit{(1 балл)}	Переведите 150 градусов в радианы
+		\item \textit{(1 балл)}	Назовите хотя бы один угол в радианной мере, при котором $\tg$  равен $1$.
+		\item \textit{(1 балл)}	Напишите основное тригонометрическое тождество.
+		\item \textit{(1 балл)} Вычислите $\tg (-45^{\circ})$.
+		\item \textit{(1 балл)}	Вычислите $\sin 390^{\circ}$.
+		\item \textit{(2 балла)} Выведите формулу $\sin x \cdot \cos y$.
+		\item \textit{(2 балла)} Выведите формулу $\sin x - \sin y$.
+		\item \textit{(3 балла)} Вычислите $(\dfrac{\cos (2,5\pi + x)}{\ctg (3\pi + x)} - \sin (-x) \tg (\dfrac{5\pi}{2}+x))^2 + \dfrac{\tg x}{tg (\dfrac{3\pi}{2}+x)}$
+		\item \textit{(3 балла)} Упростите выражение $\sin (x+2\pi) \cos (2x-\dfrac{7\pi}{2})+ \sin (\dfrac{3\pi}{2}-x) \sin (2x - \dfrac{5\pi}{2})$
+		\item \textit{(3 балла)} Упростите выражение $\sin^2 x(1+\sin^{-1}x + \ctg x)(1 - \sin^{-1}x + \ctg x)$
+	\end{enumerate}
+	\section*{Билет 8}
+	\begin{enumerate}
+		\item \textit{(1 балл)}	В каких четвертях отрицательный синус, тангенс?
+		\item \textit{(1 балл)}	Какой четверти принадлежит $x$ , если $\tg x$ положительный?
+		\item \textit{(1 балл)}	Переведите 90 градусов в радианы
+		\item \textit{(1 балл)}	Назовите хотя бы один угол в радианной мере, при котором $\cos$  равен $0,5$
+		\item \textit{(1 балл)} Выразите тангенс через синус и косинус
+		\item \textit{(1 балл)} Вычислите $\sin (-60^{\circ})$
+		\item \textit{(1 балл)}	Вычислите $\cos (420^{\circ})$.
+		\item \textit{(2 балла)} Выведите формулу $\sin x \cdot \sin y$ 
+		\item \textit{(2 балла)} Выведите формулу $\cos x + \cos y$.
+		\item \textit{(3 балла)} Вычислите $\dfrac{\tg (\dfrac{3\pi}{2}-x)-\cos(\pi - x) \sin(3\pi + x)}{(\cos(3,5\pi - x)+ \sin (1,5 \pi + x))^2-1}$
+		\item \textit{(3 балла)} Упростите выражение $\dfrac{\ctg(270^{\circ}-x)}{1-\tg^2(x-180^{\circ})} \cdot \dfrac{\ctg^2(360^{\circ}-x)-1}{\ctg(180^{\circ}+x)}$
+		\item \textit{(3 балла)} Упростите выражение $\sin^2 x(1+\sin^{-1}x + \ctg x)(1 - \sin^{-1}x + \ctg x)$
+	\end{enumerate}
+	
+	\newpage 
+	
+	\section*{Билет 9}
+	\begin{enumerate}
+		\item \textit{(1 балл)}	Есть ли четверти, в которых тангенс и синус положительны одновременно? 
+		\item \textit{(1 балл)}	Какой четверти принадлежит $x$ , если $\sin x$ отрицательный?
+		\item \textit{(1 балл)}	Переведите 30 градусов в радианы
+		\item \textit{(1 балл)}	Назовите хотя бы один угол в радианной мере, при котором $\sin$  равен $0,5$.
+		\item \textit{(1 балл)}	Выразите тангенс через синус и косинус.
+		\item \textit{(1 балл)} Вычислите $\cos (-30^{\circ})$.
+		\item \textit{(1 балл)}	Вычислите $\cos 420^{\circ}$.
+		\item \textit{(2 балла)} Выведите формулу $\sin x \cdot \sin y$.
+		\item \textit{(2 балла)} Выведите формулу $\sin x + \sin y$.
+		\item \textit{(3 балла)} Вычислите $\sin (-1,3\pi) \cos (-1,7 \pi) \tg (-0,7\pi)+ \sin 0,8\pi \cos 1,8 \pi \tg 1,2 \pi$
+		\item \textit{(3 балла)} Упростите выражение $\sin (x+2\pi) \cos (2x-\dfrac{7\pi}{2})+ \sin (\dfrac{3\pi}{2}-x) \sin (2x - \dfrac{5\pi}{2})$
+		\item \textit{(3 балла)} Упростите выражение $\sin^2 x(1+\sin^{-1}x + \ctg x)(1 - \sin^{-1}x + \ctg x)$
+	\end{enumerate}
+\end{document}
