@@ -1,0 +1,97 @@
+	\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{soulutf8}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+		
+\lhead{Группа 91}
+\chead{Модуль 3 ДЗ№1}
+\rhead{Школа <<Симметрия>>}
+
+\begin{enumerate}
+	\item \textit(2 балла) Вычислить:
+	$$\dfrac{\dfrac{5}{6}-\dfrac{21}{45}}{1\dfrac{5}{6}}\cdot\dfrac{1,125+1\dfrac{3}{4}-\dfrac{5}{12}}{0,59}$$
+	\item \textit(2 балла) Упростить выражение $$\left(\dfrac{a+b}{b}-\dfrac{a}{a+b}\right):\left(\dfrac{a+b}{a}-\dfrac{b}{a+b}\right)$$
+	\item \textit(1 балл) Вычислить значение корня:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\sqrt{36\cdot2500}$
+			\item $\sqrt{5\dfrac{4}{9}}$
+			\item $\sqrt{\dfrac{36}{100}\cdot\dfrac{4}{25}\cdot\dfrac{64}{144}}$
+			\item $\sqrt{360\cdot90}$
+			\item $\sqrt{4,9\cdot12,1}$
+		\end{enumerate}
+	\end{multicols}
+	\item \textit(1 балл) Вычислите значение выражения:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\sqrt{11^4}$
+			\item $\sqrt{3^4\cdot3^2}$
+			\item $\sqrt{0,16}+(2\sqrt{0,1})^2$
+			\item $(5\sqrt{2})^2-(2\sqrt{5})^2$
+			\item $\sqrt{18 \cdot 50}$
+			\item $\sqrt{21 \cdot 35 \cdot 15}$
+		\end{enumerate}
+	\end{multicols}
+	\item \textit(1 балл) Сравните значения выражений: $3\sqrt{3}$ и $\sqrt{12}$
+	\item \textit(1 балл) Расположите в порядке возрастания числа:
+	$3\sqrt{3}$, $2\sqrt{6}$, $\sqrt{29}$, $4\sqrt{2}$, $2\sqrt{11}$
+	\item \textit(2 балла) Решить уравнение:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $(x+4)-(x-1)=6x$
+			\item $1,6x-(x-2,8)=(0,2x+1,5)-0,7$
+			\item $15(x+2)-30=12x$
+			\item $2x^2=5+3x$
+			\item $2x^2-3x=0$
+			\item $(x+4)(x-6)=0$
+			\item $(2x-3)(x^2+3x+2)=0$
+			\item $(x^2+1)(x^2+5x+6)=0$
+			\item $x^3-4x^2=x$
+		\end{enumerate}
+	\end{multicols}
+\end{enumerate}
+
+\end{document}

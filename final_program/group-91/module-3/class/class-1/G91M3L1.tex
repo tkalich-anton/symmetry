@@ -1,0 +1,120 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{soulutf8}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+		
+\lhead{Группа 91}
+\chead{Модуль 3 Урок 1}
+\rhead{Школа <<Симметрия>>}
+
+\begin{enumerate}
+	\item Вычислить:
+	$$\dfrac{\dfrac{5}{6}-\dfrac{21}{45}}{1\dfrac{5}{6}}\cdot\dfrac{1,125+1\dfrac{3}{4}-\dfrac{5}{12}}{0,59}$$
+	\item Упростить выражение
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\dfrac{x^2-2x}{x-3}-\dfrac{4x-9}{x-3}$
+			\item $\dfrac{a^2-4a+4}{a^2+ab-2a-2b}$
+			\item $\left(\dfrac{y^2-xy}{x^2+xy}-xy+y^2\right)\cdot\dfrac{x}{x-y}+\dfrac{y}{x+y}$
+			\item $\left(\dfrac{a+b}{b}-\dfrac{a}{a+b}\right):\left(\dfrac{a+b}{a}-\dfrac{b}{a+b}\right)$
+		\end{enumerate}
+	\end{multicols}
+	\item Вычислить значение корня:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\sqrt{81\cdot900}$
+			\item $\sqrt{12\dfrac{1}{4}}$
+			\item $\sqrt{\dfrac{25}{81}\cdot\dfrac{16}{49}\cdot\dfrac{196}{9}}$
+			\item $\sqrt{810\cdot40}$
+			\item $\sqrt{8\cdot98}$
+			\item $\sqrt{2,5\cdot14,4}$
+		\end{enumerate}
+	\end{multicols}
+	\item Вычислите значение выражения:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\sqrt{28}\cdot\sqrt{7}$
+			\item $\sqrt{50}\cdot\sqrt{4,5}$
+			\item $\sqrt{1,2}\cdot\sqrt{3\dfrac{1}{3}}$
+			\item $\sqrt{5^2}$
+			\item $\sqrt{11^4}$
+			\item $\sqrt{3^4\cdot3^2}$
+			\item $\sqrt{0,16}+(2\sqrt{0,1})^2$
+			\item $(5\sqrt{2})^2-(2\sqrt{5})^2$
+		\end{enumerate}
+	\end{multicols}
+	\item Сравните значения выражений:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $3\sqrt{3}$ и $\sqrt{12}$
+			\item $2\sqrt{5}$ и $3\sqrt{2}$
+		\end{enumerate}
+	\end{multicols}
+	\item Расположите в порядке возрастания числа:
+	$3\sqrt{3}$, $2\sqrt{6}$, $\sqrt{29}$, $4\sqrt{2}$, $2\sqrt{11}$
+	\item Решить уравнение:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $(x+4)-(x-1)=6x$
+			\item $1,6x-(x-2,8)=(0,2x+1,5)-0,7$
+			\item $15(x+2)-30=12x$
+			\item $3x+(x-2)=2(2x-1)$
+			\item $\dfrac{4x-1}{12}+\dfrac{7}{4}=\dfrac{5-x}{9}$
+			\item $3x^2-8x+5=0$
+			\item $5x^2=9x+2$
+			\item $6x+9=x^2$
+		\end{enumerate}
+	\end{multicols}
+	\item Упростить выражение:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $(1-\sqrt{x})(1+\sqrt{x}+x)$
+			\item $(\sqrt{a}+2)(a-2\sqrt{a}+4)$
+		\end{enumerate}
+	\end{multicols}
+\end{enumerate}
+
+\end{document}

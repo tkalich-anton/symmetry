@@ -1,0 +1,92 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{soulutf8}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+		
+\lhead{Группа 71}
+\chead{Модуль 3 Домашняя работа №1}
+\rhead{Школа <<Симметрия>>}
+
+\begin{enumerate}
+	\item \textit{(2 балла)} Вычислите
+	$\left( \dfrac{3,75+2\dfrac{1}{2}}{2\dfrac{1}{2}-1,875}-\dfrac{2\dfrac{3}{4}+1,5}{2,75-1\dfrac{1}{2}}\right)\cdot\dfrac{10}{11} $
+	\item \textit{(1 балл)} Найдите значение выражения $4x+5(0,3x-12)-(12-2,5x)+\dfrac{2,6}{1,3}x$ при $x=-3$
+	\item \textit{(1 балл)} Вычислите:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $(-2)^5$
+			\item $0,4\cdot5^2$
+			\item $100000\cdot(0,1)^5$
+			\item $2^2-\left( \dfrac{3}{5}\right)^3\cdot13\dfrac{8}{9}$
+			\item $8\cdot0,5^3+25\cdot0,2^2$
+		\end{enumerate}
+	\end{multicols}
+	\item \textit{(2 балла)} Представьте в виде степени:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $3^2\cdot27\cdot81$
+			\item $a\cdot a^2 \cdot a^3 \cdot a^4 \cdot ... \cdot a^{49}$
+			\item $((2^2)^2)^2$
+			\item $4^2\cdot2^3\cdot8^2$
+		\end{enumerate}
+	\end{multicols}
+	\item \textit{(2 балла)} Вычислите:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $4^5:4^2$
+			\item $\dfrac{4^8}{16^5}$
+			\item $\dfrac{(-0,12)^5}{(-0,12)^3}$
+			\item $\dfrac{7^9\cdot7^5}{7^{12}}$
+			\item $\dfrac{3^{19}\cdot3^6}{3^{14}\cdot3^9}$
+			\item $\dfrac{3^7\cdot(3^2)^3}{(3^3)^3\cdot3}$
+			\item $\dfrac{5^8\cdot25^2}{125^4}$
+		\end{enumerate}
+	\end{multicols}
+	\item \textit{(1 балл)} Найдите значение выражения $\dfrac{(a^3)^5\cdot a^4 : (a^4)^3}{a^3\cdot a^6}$ при $a=-\dfrac{1}{7}$
+	\item \textit{(1 балл)} Решить уравнение $\dfrac{1}{2}x-3-\left(2-\dfrac{1}{3}x\right)=0$
+\end{enumerate}
+
+\end{document}

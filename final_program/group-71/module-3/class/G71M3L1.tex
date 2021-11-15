@@ -1,0 +1,119 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{soulutf8}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+		
+\lhead{Группа 71}
+\chead{Модуль 3 Урок 1}
+\rhead{Школа <<Симметрия>>}
+
+\begin{enumerate}
+	\item Вычислите
+	$\dfrac{\dfrac{5}{6}-\dfrac{21}{45}}{1\dfrac{5}{6}}\cdot\dfrac{1,125+1\dfrac{3}{4}-\dfrac{5}{12}}{0,59}$
+	\item Найдите значение выражения $3x+5(0,2x-12)-(15-3,4x)+2,6x$ при $x=-7$
+	\item Вычислите:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $(-10)^4$
+			\item $4\cdot5^3$
+			\item $2600\cdot(-0,1)^3$
+			\item $\left(9\cdot\dfrac{5}{6}\right)^2$
+			\item $3^4-\left( \dfrac{2}{5}\right)^2\cdot6\dfrac{1}{4}$
+			\item $8\cdot0,5^3+25\cdot0,2^2$
+		\end{enumerate}
+	\end{multicols}
+	\item Представьте в виде степени:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $5^8\cdot25$
+			\item $0,001\cdot0,1^4$
+			\item $m^3m^2m^8$
+			\item $x^5:x^3$
+			\item $a^7a^3:a^8$
+			\item $(c^4)^2$
+		\end{enumerate}
+	\end{multicols}
+	\item Вычислите:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $5^6:5^4$
+			\item $2,71^{13}:2,73^{12}$
+			\item $\left(1\dfrac{1}{3}\right)^8 : \left(1\dfrac{1}{3}\right)^6  $
+			\item $\dfrac{8^6}{8^4}$
+			\item $\dfrac{(-0,3)^5}{(-0,3)^3}$
+			\item $\dfrac{7^9\cdot7^5}{7^12}$
+			\item $\dfrac{5^{16}\cdot5^4}{5^{18}}$
+		\end{enumerate}
+	\end{multicols}
+	\item Упростите выражение:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $x^3\cdot x^n$
+			\item $a^3\cdot a^5 : a^{2n}$
+			\item $(a^5)^2 \cdot (a^2)^2$
+			\item $(xx^6)^2$
+		\end{enumerate}
+	\end{multicols}
+	\item Вычислите:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\dfrac{2^5\cdot(2^3)^4}{2^13}$
+			\item $\dfrac{(2^5)^2}{2^6\cdot4}$
+			\item $\dfrac{3^7\cdot27}{(3^4)^3}$
+			\item $\dfrac{10^12\cdot(0,1)^4}{(10^2)^3}$
+		\end{enumerate}
+	\end{multicols}
+	\item Найдите значение выражения $\dfrac{(x^2)^3:x^4}{x\cdot x^2}$ при $x=\dfrac{1}{5}$
+	\item Решить уравнение
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\dfrac{1}{2}x-3-\left(2-\dfrac{1}{3}x\right)=0$
+			\item $x-(x-(x-(x-1)))=1-(2-(3-(4-x)))$
+		\end{enumerate}
+	\end{multicols}
+\end{enumerate}
+
+\end{document}
