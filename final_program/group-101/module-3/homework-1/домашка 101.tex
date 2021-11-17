@@ -1,0 +1,79 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{soulutf8}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+	
+	\lhead{Группа 101}
+	\chead{Модуль 3 ДЗ№1}
+	\rhead{Школа <<Симметрия>>}
+	
+	\section*{Тригонометрия.}
+	\begin{enumerate}
+		\item \textit{(1 балл)} Вычислите
+		$\dfrac{1-\sin^2x}{1-\cos^2x}+\tg x \ctg x$
+		\item \textit{(4 балла)} Упростите
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\left( \dfrac{\cos (2,5 \pi + x)}{\ctg (3\pi + x)}-\sin(-x)\tg\left( \dfrac{5\pi}{2}+x\right) \right)+\dfrac{\tg x}{\tg \left( \dfrac{3\pi}{2}+x\right)}$
+			\item $\dfrac{\sin \left( x-\dfrac{\pi}{4}\right)}{\sin\left( \dfrac{\pi}{4}+x\right) }\ctg \left( x-\dfrac{5\pi}{4}\right) - \cos \left( \dfrac{\pi}{2}+x\right)\sin(x-\pi) $
+		\end{enumerate}
+		\item \textit{(4 балла)} Решите уравнения
+		\begin{enumerate}[label=\asbuk*)]
+			\item $2x^3+8x=x^2+4$
+			\item $2(5x-1)^2+35x-11=0$
+			\item $\dfrac{x}{x-3}-\dfrac{5}{x+3}=\dfrac{18}{x^2-9}$
+			\item $3(6x^2-13x+6)^2-10(6x^2-13x)=53$
+		\end{enumerate}
+		\item \textit{(1 балл)} Решить систему уравнений:
+		$
+		\left\{
+		\begin{aligned}
+			\dfrac{x}{y}-\dfrac{y}{x}=\dfrac{5}{6},\\
+			x^2-y^2=5
+		\end{aligned}
+		\right.
+		$
+	\end{enumerate}
+\end{document}
