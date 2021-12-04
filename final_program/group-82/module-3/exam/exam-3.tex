@@ -1,0 +1,69 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{soulutf8}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+\usepackage{multicol}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=1cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+\section*{Контрольная работа №3}
+\begin{enumerate}
+	\item \textit{(3 балла)} Вычислить
+	\begin{enumerate}[label=\asbuk*)]
+		\begin{multicols}{2}
+			\item $\sqrt{16\cdot\dfrac{4}{9}\cdot0,25}$
+			\item $\sqrt{45\cdot10\cdot18}$
+			\item $\sqrt{\dfrac{9\cdot16}{25\cdot49}}$
+		\end{multicols}
+	\end{enumerate}
+	\item \textit{(2 балла)} Упростить выражение $$\sqrt{20}+2\sqrt{45}-3\sqrt{500}$$
+	\item \textit{(2 балла)} Выполнить умножение $$\left(2\sqrt{\dfrac{5}{2}}-\sqrt{10}+\sqrt{\dfrac{125}{2}}\right)\cdot\sqrt{\dfrac{5}{2}}$$
+	\item \textit{(2 балла)} Выполнить умножение $$(1+\sqrt{15})(\sqrt{3}-\sqrt{5})$$
+	\item \textit{(8 баллов)} Решить уравнение
+	\begin{enumerate}[label=\asbuk*)]
+		\item $(x-7)^2=4$
+		\item $5x^2-4x-12=0$
+		\item $(3x-2)(x-3)=20$
+		\item $x^4+20x^2+64=0$
+	\end{enumerate}
+	\item \textit{(3 балла)} Решить уравнение $$3(5x+3)(4x^2-1)=8(4x^2-1)^2$$.
+\end{enumerate}
+\end{document}

@@ -1,0 +1,64 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{soulutf8}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+	
+	\lhead{Группа 102}
+	\chead{Модуль 3 ДЗ№2}
+	\rhead{Школа <<Симметрия>>}
+	\begin{enumerate}
+		\item \textit{(1 балл)} Постройте сечение треугольной пирамиды $SABC$ плоскостью, проходящей через вершину $B$ и середины ребер $SA$ и $SC$.
+		\item \textit{(1 балл)} Постройте сечение треугольной пирамиды $SABC$ плоскостью, проходящей через вершину $A$, середину ребра $BS$ параллельно ребру $BC$.
+		\item \textit{(1 балл)} Постройте сечение треугольной пирамиды $SABC$ плоскостью, проходящей через точку $M$, лежащую на ребре $AS$, $N$, лежащую на ребре $CS$, $K$ лежащую на ребре $BC$. Если $AM:MS=1:2, SN:NC=1:2, BK:KC=1:2$
+		\item \textit{(1 балл)} Постройте сечение параллелепипеда $ABCDA_1B_1C_1D_1$ плоскостью, проходящей середины рёбер $A_1B_1$, $CC_1$ и вершину $A$.
+		\item \textit{(2 балла)} Основание пирамиды $SABCD$ — параллелограмм $ABCD$. Постройте сечение пирамиды плоскостью, проходящей середину ребра $SA$ и точки $M$ и $N$ рёбер $SB$ и $SC$, если $BM:MS=SN:NC =1:3$.
+		\item \textit{(2 балла)} Основания шестиугольной призмы $ABCDEF$ и $A_1B_1C_1E_1F_1$—правильные шестиугольники. Точка $M$ —середина ребра $CC_1$, $O$ —
+		центр грани $ABCDEF$. Постройте сечение призмы плоскостью, проходящей через точки $M$, $O$ и $E_1$.
+		\item \textit{(2 балла)} Дана правильная четырёхугольная пирамида $SABCD$ с вершиной $S$. Точки $M$ и $N$ —середины рёбер $AB$ и $SC$.\\
+		а) Постройте сечение пирамиды плоскостью, проходящей через прямую $MN$ параллельно $SA$.\\
+		б) Найдите угол между прямыми $SA$ и $MN$, если боковое ребро пирамиды равно стороне основания.
+	\end{enumerate}
+\end{document}
