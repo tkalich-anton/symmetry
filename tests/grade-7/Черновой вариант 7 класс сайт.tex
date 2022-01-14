@@ -1,0 +1,152 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+\begin{document}
+	
+	\chead{Тестирование 7 класс}
+	\rhead{Школа <<Симметрия>>}
+	\section*{Тестирование}
+	\begin{enumerate}
+		\item Выберите простые числа:
+		
+		$0; 1; 5; 12; 13; 14; 29; 30. $
+		\item Разложите число 336 на простые множители.
+		\item Найдите НОД 180 и 336.
+		
+		Найдите НОК 18 и 24.
+		\item Вычислите:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+				\item $\dfrac{1}{3}+\dfrac{2}{7}$
+				\item $\dfrac{5}{8}-\dfrac{5}{12}$
+				\item $\left( \dfrac{9}{5}+3\dfrac{1}{5}\right) \cdot 0,2$ 
+				\item $0,7 \cdot 3,09$
+				\item $0,002 \cdot 100$
+				\item $14-\dfrac{2}{3}$
+				\item $-3\cdot 10 : (-5)$
+				\item $120+(-14 \cdot 3)$
+				\item $-\dfrac{3}{2}+1,5$
+				\item $2^2+3^2$
+				\item $3^2\cdot 3^3$
+				\item $\left( \dfrac{1}{4}\right)^{16}:\left( \dfrac{1}{4}\right)^{14}$
+				\item $\dfrac{(4^2)^6}{4^{13}}$
+			\end{enumerate}
+		\end{multicols}
+		\item Решите уравнения:
+			\begin{enumerate}[label=\asbuk*)]
+				\item $2x=8$
+				\item $x+16=31$
+				\item $\dfrac{1}{3}x-10=\dfrac{2}{7}$ 
+				\end{enumerate}
+		\item \textit{}Найдите $\dfrac{2}{3}$ от $33$.
+-		
+		$34 – 17\%$ от загаданного числа. Найдите это число. 
+		\item Найдите значение выражения $\dfrac{x+y}{2}-x$, если $x=10, y=12$.
+		\item Масса сушёных яблок составляет $30\%$ массы свежих. Сколько кг сушёных яблок получится из $120$ кг свежих?
+		\item Сравните $\dfrac{4}{7}$ и $\dfrac{5}{8}$.
+		\item Сравните $1,02$ и $1,3$.
+		\item Сравните $\dfrac{4}{7}$ и $0,56$.
+		\item Расположите в порядке возрастания числа:	
+		$0,56; 1,3; \dfrac{4}{7}; \dfrac{5}{8}; 1,02$
+		\item Представьте $\dfrac{4}{3}$ в виде периодической дроби.
+		\item 
+		\begin{enumerate}[label=\asbuk*)]
+			\item Переведите $1200$г в кг.
+			\item Сколько мм в $3$дм
+			\item Найдите периметр прямоугольника со сторонами $10$ и $2,3$
+			\item Найдите площадь фигуры	(рис.1)
+		\end{enumerate}	
+		\item 
+		 \begin{enumerate}[label=\asbuk*)]
+			\item Решите пропорцию $\dfrac{30}{x}=\dfrac{5}{8}$
+			\item Поезд, скорость которого $45$ км/ч, затратил на некоторый участок пути $4$ч. За сколько часов пройдёт этот же участок пути товарный поезд, если его скорость $40$км/ч?
+		\end{enumerate}
+		\item Вычислите:
+		$|3-12|$
+		\item Являются ли числа $5$ и $\dfrac{1}{5}$ противоположными? Запишите обратное число для $\dfrac{2}{3}$
+		\item Равны ли числа:
+		\begin{enumerate}[label=\asbuk*)]
+			\item $-\dfrac{1}{3}$ и $\dfrac{-1}{3}$
+			\item $-12$ и $-(-(-12)))$
+			\item $-\dfrac{5}{6}$ и $\dfrac{-5}{-6}$
+		\end{enumerate}
+	\item Является ли равенство $5+3x=8x$ тождеством? Если нет, то почему?
+	\item Преобразуйте:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+	\item  $8bc^3$
+	\item $\left( -1\dfrac{1}{7}ab\right)^2 $
+	\item $27a-3,1b+9a+3,1a+0,4b-a$
+	\item $5a(a^2b-\dfrac{1}{3}+\dfrac{1}{12}a-\dfrac{1}{5})$
+	\end{enumerate}
+	\end{multicols}
+	\item Соотнесите треугольники с их названиями
+	(рис.2)
+	\begin{enumerate}[label=\asbuk*)]
+		\item Равнобедренный
+		\item Тупоугольный
+		\item Прямоугольный
+		\item Правильный
+	\end{enumerate}
+		\item Соотнесите углы с их названиями
+		(рис.2)
+		\begin{enumerate}[label=\asbuk*)]
+			\item Острый
+			\item Тупой
+			\item Соответственные углы
+			\item Накрест лежащие углы
+			\item Прямой
+		\end{enumerate}
+	\item Вставьте пропуски:
+	Если две стороны и $\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,$ одного треугольника соответственно равны $\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,$ другого треугольника, то такие треугольники равны.\\\\
+	Если $\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,$ и два прилежащих к ней угла одного треугольника соответственно равны $\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,$ другого треугольника, то такие треугольники равны.\\\\
+	Если три $\,\,\,\,\,\,\,\,\,\,\,\,\,\,\,$ одного треугольника соответственно равны $\,\,\,\,\,\,\,\,\,\,$ другого треугольника, то такие треугольники равны.
+	\item Перечислите свойства равнобедренных треугольников.
+	\item Перечислите свойства равносторонних треугольников.
+	\item Отрезки $MT$ и $AD$ пересекаются в точке $O$ так, что $MO=OT$; $AO=OD$. Чему равен $\angle OAD$ и $\angle OTA$, если $\angle DMP=22^{\circ}$, а $\angle MDO=57^{\circ}$\\
+	(рис. 4)
+	\item Найдите второй угол.\\
+	(рис.5) % Смежные углы
+	\item Медиана $AM$ треугольника $ABC$ перпендикулярна его биссектрисе $BK$. Найдите $AB$, если $BC=12$
+	\end{enumerate}
+\end{document}
