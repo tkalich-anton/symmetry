@@ -1,0 +1,64 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+\begin{document}
+	
+	\lhead{Группа 82}
+	\chead{Модуль 5 Домашняя работа №2}
+	\rhead{Школа <<Симметрия>>}
+	\section*{Домашняя работа №2}
+	\begin{enumerate}
+		\item \textit{(2 балла)} Вычислите:
+			\begin{enumerate}[label=\asbuk*)]
+			\item $\left( \dfrac{12}{\sqrt{15}-3}-\dfrac{28}{\sqrt{15}-1}+\dfrac{1}{2-\sqrt{3}}\right)(6-\sqrt{3}) $
+			\item $\dfrac{4}{\sqrt{5}-3}+3+\sqrt{5}$
+		\end{enumerate}
+		\item \textit{(4 балла)} Упростите выражения:
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\dfrac{x^2}{x^2+4x+4}\cdot\dfrac{8x^2-32}{x^3-2x^2}+\dfrac{x^5-8x^2}{x}:(x^2-4)$
+			\item $\dfrac{x^3-9xy^2}{9y^2+x^2}\cdot\left( \dfrac{x+3y}{x^2-3xy}+\dfrac{x-3y}{3xy+x^2}\right) $
+			\item $\left(\dfrac{4a}{a^2-1}+\dfrac{a-1}{a+1} \right) \cdot \dfrac{a}{a+1}-\dfrac{a}{a-1}$
+			\item $\left( \dfrac{2}{(a-2)^2}-\dfrac{a}{4-a^2}\right):\dfrac{4+a^2}{4-a^2}+\dfrac{2}{a-2} $
+		\end{enumerate}
+	\end{enumerate}
+\end{document}
