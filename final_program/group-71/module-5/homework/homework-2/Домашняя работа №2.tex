@@ -1,0 +1,93 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+\begin{document}
+	
+	\lhead{Группа 71}
+	\chead{Модуль 5 Домашняя работа №2}
+	\rhead{Школа <<Симметрия>>}
+	\section*{Домашняя работа №2}
+	\begin{enumerate}
+		\item \textit{(2 балла)} Преобразуйте выражение в многочлен:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+			\item $(2x+3)^2$
+			\item $(10c+0,1y)^2$
+			\item $(\dfrac{1}{3}m-3y)^2$
+			\item $(1,2a-3,1c)^2$
+		\end{enumerate}
+	\end{multicols}
+		\item \textit{(3 балла)} Разложите на множители многочлены:
+		\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $27+u^9$
+			\item $\dfrac{1}{27}x^3+\dfrac{1}{125}y^3$
+			\item $1+27y^3$
+			\item $8-v^3$
+			\item $1-\dfrac{1}{8}x^3$
+			\item $x^9-y^9$
+		\end{enumerate}
+	\end{multicols}
+	\item \textit{(2 балла)} Впишите вместо * одночлен так, чтобы получилось тождество:
+			\begin{enumerate}[label=\asbuk*)]
+			\item $(2a+*)(2a-*)=4a^2-b^2$
+			\item $(*-3x)(3x+*)=16y^2-9x^2$
+			\end{enumerate}
+		\item \textit{(2 балла)} Запишите выражение в виде многочлена:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+				\item $(x+y)^3$
+				\item $(2z+4)^3$
+				\item $(a-\dfrac{1}{2})^3$
+				\item $(x-0,2b)^3$
+			\end{enumerate}
+		\end{multicols}
+	\item \textit{(1 балл)} Упростите выражение двумя способами :
+	$(x-1)^3-(x+1)^3$
+	
+	\textit{Подсказка:} \begin{enumerate}[label=\asbuk*)]
+	 \item  Применить формулу разности кубов;
+	\item Раскрыть отдельно куб разности и куб суммы, упростить
+\end{enumerate}
+	\end{enumerate}
+\end{document}
