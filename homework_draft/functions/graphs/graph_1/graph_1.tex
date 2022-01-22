@@ -1,0 +1,66 @@
+\documentclass[]{standalone}
+
+\usepackage
+{
+	tikz,
+	pgfplots,
+	verbatim,
+	amssymb,
+}
+
+
+\usetikzlibrary
+{
+	arrows,
+	patterns,
+	angles,
+	quotes,
+	calc, 
+	3d,
+	backgrounds, 
+	positioning
+}
+
+\begin{document}
+	\pgfplotsset{
+		width=10cm,
+		compat=newest,
+		every axis/.append style={
+			axis x line=middle,
+			axis y line=middle,
+			enlargelimits=true,
+			x=1cm, y=1cm,
+			xlabel={$x$},
+			xlabel style={below left, scale=1.5},
+			ylabel={$y$},
+			ylabel style={below right, scale=1.5},
+			ymajorgrids=true,
+			xmajorgrids=true,
+			xticklabels={},
+			yticklabels={},
+			samples=1000,
+			grid=both,
+			grid style={thick},
+			axis line style={very thick},
+			ticks=both,
+			xtick={-100,-99,...,100},
+			ytick={-100,-99,...,100},
+			restrict y to domain=--100:100
+			 % enable layer, needed to draw middle grid below axis
+			set layers=standard,
+			% disable ticks
+			every major tick/.style={draw=none},
+			every minor tick/.style={draw=none},
+	}}
+	\begin{tikzpicture}[>=stealth, baseline={([yshift={-\ht\strutbox}]current bounding box.north)}]
+		\begin{axis}[
+			xmin=-2,xmax=5,
+			ymin=-2,ymax=5]
+			\addplot [red,line width=1.4pt,domain=-5:5] {3*x^2-5*x+1};
+			\fill[fill=red] (1,-1) circle (2pt);
+			\fill[fill=red] (0,1) circle (2pt);
+			\draw (2.1,2) node[anchor=north west, red, scale=1.5, fill=white] {$f(x)$};
+		\end{axis}
+	\end{tikzpicture}
+	
+\end{document}

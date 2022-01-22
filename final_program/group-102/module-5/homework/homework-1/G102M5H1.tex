@@ -1,0 +1,132 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{mathrsfs}
+\usepackage{longtable}
+
+\usepackage{pgfplots}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\pgfplotsset{}
+\pgfplotsset{
+	width=10cm,
+	compat=newest,
+	every axis/.append style={
+		axis x line=middle,
+		axis y line=middle,
+		unit vector ratio = 1 1,
+		xlabel={$x$},
+		xlabel style={below left},
+		ylabel={$y$},
+		ylabel style={below left},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		xticklabels={},
+		yticklabels={},
+		samples=1000,
+		grid=both,
+		grid style={thick},
+		very thick,
+		ticks=both,
+		xtick={-100,-99,...,100},
+		ytick={-100,-99,...,100},
+		restrict y to domain=--100:100
+}}
+
+\begin{document}
+	
+\lhead{Группа 102}
+\chead{Модуль 5 Домашняя работа №1}
+\rhead{Школа <<Симметрия>>}
+
+\begin{enumerate}
+	\item \textit{(2 балла)} Вычислить:
+	\begin{enumerate}[label=\asbuk*)]
+		\item $2\sqrt{245}+\dfrac{1}{6}\sqrt{58^2-22^2}-30\sqrt{1,8}$
+		\item $\dfrac{(7\sqrt{27}-7\sqrt{8})(\sqrt{27}+\sqrt{8})}{27^2-64}$
+		\begin{flushright}
+			\rotatebox{180}{\fbox{15}}
+		\end{flushright}
+	\end{enumerate}
+	\item \textit{(2 балла)} Упростить выражение:
+	$$\left(\dfrac{2x^2y+2xy^2}{7x^3+x^2y+7xy^2+y^3}\cdot\dfrac{7x+y}{x^2-y^2}+\dfrac{x-y}{x^2+y^2}\right)\cdot(x^2-y^2)$$
+	\item \textit{(4 балла)} Построить график функции:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $y=-4(x+1)^2+1$
+			\item $y=\dfrac{1}{2}\sqrt{x}-5$
+			\item $y=2\sin2x$
+			\item $y=\sin(x+\pi)+0,5$
+		\end{enumerate}
+	\end{multicols}
+	\item \textit{(1 балл)} На рисунке изображен график функции вида $y=\dfrac{a}{x+b}+c$, где числа $a$, $b$ и $c$ — целые. Найдите $f\left(-\dfrac{8}{5}\right)$.
+	\begin{figure}[h]
+		\centering
+		\begin{tikzpicture}[scale=0.6, >=stealth]
+			\begin{axis}[
+				xmin=-10,xmax=2,
+				ymin=-5,ymax=5,
+				ylabel style={below right},]
+				\addplot [red,line width=1.4pt,domain=-10:10] {2/(x+1)+2};
+				\addplot[red,line width=1pt,dash pattern=on 7pt off 9pt,domain=-10:10] {2};
+				\draw[red,line width=1pt,dash pattern=on 7pt off 9pt,domain=-10:10] (-1,-10)--(-1,10);
+				\fill[fill=red] (0,4) circle (2pt);
+				\fill[fill=red] (-3,1) circle (2pt);
+			\end{axis}
+		\end{tikzpicture}
+	\end{figure}
+	\item \textit{(1 балл)} На рисунке изображен график функции вида $y=ax^2+bx+c$, где числа $a$, $b$ и $c$ — целые. Вычислите $f\left(\dfrac{1}{4}\right)-f\left(\dfrac{1}{2}\right)$.
+	\begin{figure}[h]
+		\centering
+		\begin{tikzpicture}[scale=0.6, >=stealth]
+			\begin{axis}[
+				xmin=-2,xmax=5,
+				ymin=-2,ymax=5]
+				\addplot [red,line width=1.4pt,domain=-5:5] {3*x^2-5*x+1};
+				\fill[fill=red] (1,-1) circle (2pt);
+				\fill[fill=red] (0,1) circle (2pt);
+			\end{axis}
+		\end{tikzpicture}
+	\end{figure}
+\end{enumerate}
+\end{document}

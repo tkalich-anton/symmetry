@@ -1,59 +1,387 @@
-\documentclass[12pt, a4paper]{article}
-\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
-\usepackage[T2A]{fontenc} % Поддержка русских букв
-\usepackage[utf8]{inputenc} % Кодировка utf8
-\usepackage[english, russian]{babel} % Языки: русский, английский
-\usepackage{enumitem}
-\usepackage{pscyr} % Нормальные шрифты
-\usepackage{soulutf8}
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{amssymb}
-\usepackage{scrextend}
-\usepackage{titling}
-\usepackage{indentfirst}
-\usepackage{cancel}
-\usepackage{soulutf8}
-\usepackage{wrapfig}
-\usepackage{gensymb}
+\documentclass[10pt, a4paper]{article}
+\usepackage{cmap} 						% Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} 				% Поддержка русских букв
+\usepackage[utf8]{inputenc}				% Кодировка utf8
+\usepackage[english, russian]{babel}	% Языки: русский, английский
 \usepackage[dvipsnames,table,xcdraw]{xcolor}
-\usepackage{tikz}
+\usepackage{
+	amsmath,							% Пакет c математическими функциями
+	amssymb,							% Пакет c математическими функциями
+	scrextend,
+	enumitem,							% Пакет для списков
+	pscyr,								% Более красивые шрифты
+	multicol,							% Пакет для колонок
+	cmap,								% Улучшенный поиск русских слов в полученном pdf-файле
+	titling,
+	indentfirst,
+	cancel,
+	wrapfig,
+	gensymb,
+	tikz,
+	graphicx,
+	fancyhdr
+}
+%Параметры страницы
+\usepackage[left=10mm,right=10mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\pagestyle{fancy}
+%Путь к картинкам
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+%Числа в списке второго уровня по умолчанию
+\renewcommand{\labelenumii}{\arabic{enumii})}
+%Новые команды
+\newcommand{\answer}[1]{\textcolor[rgb]{0.8,0.8,0.8}{\fbox{\scriptsize=#1}}}
 
 %Русские символы в списке
 \makeatletter
 \AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
 \makeatother
 
-%Дублирование знаков при переносе
-\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
-	{\hbox{$\mathsurround=0pt #1$}}{}}
-
-\usepackage{graphicx}
-\graphicspath{{pic/}}
-\DeclareGraphicsExtensions{.pdf,.png,.jpg}
-
-%Изменеие параметров листа
-\usepackage[left=15mm,right=15mm,
-top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
-
-
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\usepackage{multicol}
-
+%Сеттеры
 \setlength\parindent{1,5em}
-\usepackage{indentfirst}
 
 \begin{document}
 		
 \lhead{Упрощение выражений}
 \rhead{Школа <<Симметрия>>}
-
-\section{Упрощение дробных выражений}
+\section{Алгебраические дроби}
+\subsection{Упрощение алгебраической дроби}
+\begin{enumerate}
+	\item Сократить дробь
+	\begin{multicols}{3}
+		\begin{enumerate}
+			\item $\dfrac{14a}{21ab}$ \answer{$\dfrac{2}{3b}$}
+			\item $\dfrac{56x^2y^4}{24x^3y}$ \answer{$\dfrac{7y^3}{3x}$}
+			\item $\dfrac{44a^8b^6}{55a^8b^5}$ \answer{$\dfrac{4b}{5}$}
+			\item $\dfrac{25x^4y^2}{100x^3y}$ \answer{$\dfrac{xy}{4}$}
+			\item $\dfrac{x^5}{x^7}$ \answer{$\dfrac{1}{x^2}$}
+			\item $\dfrac{8m^3n}{16m^2n}$ \answer{$\dfrac{m}{2}$}
+			\item $\dfrac{24a^5b^7c}{44a^7b^4c}$ \answer{$\dfrac{6b^3}{11a^2}$}
+			\item $\dfrac{ab(a+3)}{a^2b(a+3)}$ \answer{$\dfrac{1}{a}$}
+			\item $\dfrac{15a(a-b)}{20b(a-b)}$ \answer{$\dfrac{3a}{4b}$}
+			\item $\dfrac{2(x+y)}{4ax}$ \answer{$\dfrac{x+y}{2ax}$}
+			\item $\dfrac{a+b}{a+b}$ \answer{$1$}
+			\item $\dfrac{2(x-1)}{5(x-1)}$ \answer{$\dfrac{2}{5}$}
+			\item $\dfrac{3a(a-b)}{6a(a+b)}$ \answer{$\dfrac{a-b}{2(a+b)}$}
+			\item $\dfrac{4x(x-y^3)}{16x^2y(x-y)}$ \answer{$\dfrac{(x-y)^2}{4xy}$}
+		\end{enumerate}
+	\end{multicols}
+	\item Сократить дробь
+	\begin{multicols}{3}
+		\begin{enumerate}
+			\item $\dfrac{x-y}{y-x}$ \answer{$-1$}
+			\item $\dfrac{2(a-b)}{3(b-a)}$ \answer{$-\dfrac{2}{3}$}
+			\item $\dfrac{4xy(x-y)}{2x(y-x)}$ \answer{$-2y$}
+			\item $\dfrac{6a^2b^4(4-b)}{14ab^3(b-4)}$ \answer{$-\dfrac{3ab}{7}$}
+			\item $\dfrac{3(x-2)^2}{2(2-x)}$ \answer{$\dfrac{3(2-x)}{2}$}
+			\item $\dfrac{15(x-3)^3}{5(3-x)^2}$ \answer{$3(x-3)$}
+			\item $\dfrac{a(x-2y)}{b(2y-x)}$ \answer{$-\dfrac{a}{b}$}
+			\item $-\dfrac{7b-14b^2}{42b^2-21b}$ \answer{$\dfrac{1}{3}$}
+			\item $\dfrac{6x(x-y)}{2x^3(y-x)}$ \answer{$-\dfrac{3}{x^2}$}
+		\end{enumerate}	
+	\end{multicols}
+	\item Сократить дробь
+	\begin{multicols}{3}
+		\begin{enumerate}
+			\item $\dfrac{(x-y)^2}{(y-x)^2}$ \answer{$1$}
+			\item $\dfrac{(-a-b)^2}{a+b}$ \answer{$a+b$}
+			\item $\dfrac{a-b}{(b-a)^2}$ \answer{$\dfrac{1}{a-b}$}
+			\item $\dfrac{(a+b)^2}{(-a-b)^2}$ \answer{$1$}
+			\item $\dfrac{(2a-2b)^2}{a-b}$ \answer{$4(a-b)$}
+			\item $\dfrac{(2x+2y)^2}{(3y+3x)^2}$ \answer{$\dfrac{4}{9}$}
+			\item $\dfrac{(3y+12x)^2}{y+4x}$ \answer{$9(y+4x)$}
+			\item $\dfrac{(-3x-6y)^2}{5x+10y}$ \answer{$\dfrac{9(x+2y)}{5}$}
+			\item $\dfrac{8a^2-2b^2}{(8a+4b)^2}$ \answer{$\dfrac{2a-b}{8(2a+b)}$}
+		\end{enumerate}	
+	\end{multicols}
+	\item Сократить дробь
+	\begin{multicols}{4}
+		\begin{enumerate}
+			\item $\dfrac{2x+2y}{4}$ \answer{$\dfrac{x+y}{2}$}
+			\item $\dfrac{3x+12y}{6xy}$ \answer{$\dfrac{x+4}{2xy}$}
+			\item $\dfrac{15a-20b}{10a}$ \answer{$\dfrac{3a-4b}{2a}$}
+			\item $\dfrac{2x-4}{3(x-2)}$ \answer{$\dfrac{2}{3}$}
+			\item $\dfrac{5x+25}{3x+15}$ \answer{$\dfrac{3}{5}$}
+			\item $\dfrac{2a-2b}{4a-4b}$ \answer{$\dfrac{1}{2}$}
+			\item $\dfrac{4x-4y}{8xy}$ \answer{$\dfrac{x-y}{2xy}$}
+			\item $\dfrac{ax-bx}{cx+dx}$ \answer{$\dfrac{a-b}{c+d}$}
+			\item $\dfrac{xc+yc}{ac+bc}$ \answer{$\dfrac{x+y}{a+b}$}
+			\item $\dfrac{x^2}{x^2+xy}$ \answer{$\dfrac{x}{x+y}$}
+			\item $\dfrac{xy}{x-xy}$ \answer{$\dfrac{y}{1-y}$}
+			\item $\dfrac{x^2y}{x^2y-xy^2}$ \answer{$\dfrac{x}{x-y}$}
+			\item $\dfrac{ax^2-bx^2}{x^2y+x^3}$ \answer{$\dfrac{a-b}{y+x}$}
+			\item $\dfrac{x^2-x}{ax-bx}$ \answer{$\dfrac{x-1}{a-b}$}
+			\item $\dfrac{x^3-x^2y}{2x^2y+2x^2}$ \answer{$\dfrac{x-y}{2(y+1)}$}
+		\end{enumerate}	
+	\end{multicols}
+	\item Сократить дробь
+	\begin{multicols}{3}
+		\begin{enumerate}
+			\item $\dfrac{a^6+a^4}{a^4+a^2}$ \answer{$a^2$}
+			\item $\dfrac{y^6-y^8}{y^2-y^4}$ \answer{$\dfrac{1}{y^4}$}
+			\item $\dfrac{x^7-x^{10}}{x^5-x^2}$ \answer{$-x^5$}
+			\item $\dfrac{y^6-y^4}{y^3-y}$ \answer{$y^3$}
+			\item $\dfrac{2x^5+2x^7}{4x+4x^3}$ \answer{$\dfrac{x^4}{2}$}
+			\item $\dfrac{6x^8-2x^5}{3x^5-x^2}$ \answer{$2x^3$}
+			\item $\dfrac{10x^2y-2xy}{5x^3y^2-x^2y}$ \answer{$\dfrac{2}{x}$}
+			\item $\dfrac{15a^4-3a^2}{2a^4-10a^6}$ \answer{$-\dfrac{3}{2a^2}$}
+			\item $\dfrac{-3x^7-3x^6}{-5x^5-5x^4}$ \answer{$\dfrac{3x^2}{5}$}
+		\end{enumerate}	
+	\end{multicols}
+	\newpage
+	\item Сократить дробь
+	\begin{multicols}{3}
+		\begin{enumerate}
+			\item $\dfrac{a^2-b^2}{a+b}$ \answer{$a-b$}
+			\item $\dfrac{x-1}{x^2-1}$ \answer{$\dfrac{1}{x+1}$}
+			\item $\dfrac{x^2-y^2}{3x+3y}$ \answer{$\dfrac{x-y}{3}$}
+			\item $\dfrac{xa+xb}{a^2-b^2}$ \answer{$\dfrac{x}{a-b}$}
+			\item $\dfrac{x^2-2x+1}{x^2-1}$ \answer{$\dfrac{x-1}{x+1}$}
+			\item $\dfrac{a^2-b^2}{b^2+2ab+a^2}$ \answer{$\dfrac{a-b}{a+b}$}
+			\item $\dfrac{x^2-y^2}{(y-x)^2}$ \answer{$\dfrac{x+y}{x-y}$}
+			\item $\dfrac{a-a^2}{a^2-1}$ \answer{$-\dfrac{a}{a+1}$}
+			\item $\dfrac{x^2+x}{x^3-x}$ \answer{$\dfrac{1}{x-1}$}
+			\item $\dfrac{y^3-2y^2}{4-y^2}$ \answer{$-\dfrac{y^2}{2+y}$}
+			\item $\dfrac{3m-3n}{m^3-n^3}$ \answer{$\dfrac{3}{m^2+mn+n^2}$}
+			\item $\dfrac{1-a^3}{1+a+a^2}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{x^3-y^3}{x^2-y^2}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{3x^2-3x+3}{x^3+1}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{a^2-4a+4}{a^2-4}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{3m^2+6mn+3n^2}{12n^2-12m^2}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{x^2-y^2}{y^3-x^3}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{3a^3-3b^3}{6a^2-6b^2}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{9a^2-9b^2}{6a^3+6b^3}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{(x^3-y^3)(x+y)}{3x^2-3y^2}$ \answer{$\dfrac{x^2+xy+y^2}{3}$}
+		\end{enumerate}	
+	\end{multicols}
+\end{enumerate}	
+\subsection{Сложение и вычитание дробей с одинаковыми знаменателями}
+\begin{enumerate}
+	\item Представьте в виде несократимой дроби
+	\begin{multicols}{4}
+		\begin{enumerate}
+			\item $\dfrac{x}{2}+\dfrac{y}{2}$ \answer{$\dfrac{x+y}{2}$}
+			\item $\dfrac{a}{7}-\dfrac{b}{7}$ \answer{$\dfrac{a-b}{7}$}
+			\item $\dfrac{3x}{5}+\dfrac{2y}{5}$ \answer{$\dfrac{3x+2y}{5}$}
+			\item $\dfrac{5x}{12}+\dfrac{2y}{12}$ \answer{$\dfrac{5x+2y}{12}$}
+			\item $\dfrac{x^2}{3}-\dfrac{x^3}{3}$ \answer{$\dfrac{x^2-x^3}{3}$}
+			\item $\dfrac{3x^2}{4}-\dfrac{x^2}{4}$ \answer{$\dfrac{x^2}{2}$}
+			\item $\dfrac{12x}{11}+\dfrac{9x}{11}+\dfrac{x}{11}$ \answer{$2x$}
+			\item $\dfrac{12x}{11}+\dfrac{9x}{11}+\dfrac{x}{11}$ \answer{$2x$}
+			\item $\dfrac{3ab}{5}+\dfrac{16ab}{5}-\dfrac{4ab}{5}$ \answer{$3ab$}
+			\item $\dfrac{x}{7}+\dfrac{2x}{7}+\dfrac{4x}{7}$ \answer{$x$}
+			\item $\dfrac{2a^3}{2}+\dfrac{3a^3}{2}+\dfrac{5a^3}{2}$ \answer{$5a^3$}
+			\item $\dfrac{0,2x}{5}+\dfrac{1,3x}{5}$ \answer{$0,3x$}
+		\end{enumerate}	
+	\end{multicols}
+	\item Представьте в виде несократимой дроби
+	\begin{multicols}{3}
+		\begin{enumerate}
+			\item $\dfrac{x-1}{3}+\dfrac{1}{3}$ \answer{$\dfrac{x}{3}$}
+			\item $\dfrac{2x}{7}-\dfrac{1-x}{7}$ \answer{$\dfrac{3x-1}{7}$}
+			\item $\dfrac{2k+m}{6}+\dfrac{3k}{6}$ \answer{$\dfrac{5k+m}{6}$}
+			\item $\dfrac{x}{2}-\dfrac{x-y}{2}$ \answer{$\dfrac{y}{2}$}
+			\item $\dfrac{2x+1}{3}+\dfrac{8-2x}{3}$ \answer{$3$}
+			\item $\dfrac{2k}{9}-\dfrac{k+1}{9}$ \answer{$\dfrac{k-1}{9}$}
+			\item $\dfrac{11x-8y}{13}+\dfrac{2x-5y}{13}$ \answer{$x-y$}
+			\item $\dfrac{7x^2+2x}{8}-\dfrac{3x^2-2x}{8}$ \answer{$\dfrac{x^2}{2}$}
+			\item $\dfrac{9a+3}{12}+\dfrac{9+3a}{12}$ \answer{$a+1$}
+		\end{enumerate}	
+	\end{multicols}
+	\item Представьте в виде несократимой дроби
+	\begin{multicols}{2}
+		\begin{enumerate}
+			\item $\dfrac{x^2}{9}+\dfrac{13x^2+7}{9}-\dfrac{5x^2+2}{9}$ \answer{$x^2+1$}
+			\item $\dfrac{2y^3-15x^2}{17}+\dfrac{19y^3-16x^2}{17}-\dfrac{x^2-13y^3}{17}$ \answer{$2(y^3-x^2)$}
+		\end{enumerate}	
+	\end{multicols}
+	\item Представьте в виде несократимой дроби
+	\begin{multicols}{3}
+		\begin{enumerate}
+			\item $\dfrac{1+a}{a}-\dfrac{1}{a}$ \answer{$1$}
+			\item $\dfrac{a}{x}+\dfrac{4}{x}$ \answer{$\dfrac{a+4}{x}$}
+			\item $\dfrac{3x^2}{5a}+\dfrac{2x^2}{5a}$ \answer{$\dfrac{x^2}{a}$}
+			\item $\dfrac{3x+7}{4b}-\dfrac{x-3}{4b}$ \answer{$\dfrac{x+5}{2b}$}
+			\item $\dfrac{x}{2a}-\dfrac{3x}{2a}$ \answer{$-\dfrac{x}{a}$}
+			\item $\dfrac{x+13}{x}+\dfrac{x-13}{x}$ \answer{$1$}
+			\item $\dfrac{3x+2}{5x}-\dfrac{2x+3}{5x}$ \answer{$\dfrac{x+1}{x}$}
+			\item $\dfrac{y^3-14}{y^2}-\dfrac{3y^3-14}{y^2}$ \answer{$-2y$}
+			\item $\dfrac{9x^2}{4a}-\dfrac{x^2}{4a}$ \answer{$\dfrac{2x^2}{a}$}
+		\end{enumerate}	
+	\end{multicols}
+	\item Представьте в виде дроби
+	\begin{multicols}{3}
+		\begin{enumerate}
+			\item $\dfrac{2}{x+y}+\dfrac{3}{x+y}$ \answer{$\dfrac{5}{x+y}$}
+			\item $\dfrac{2}{a-1}-\dfrac{1}{a-1}$ \answer{$\dfrac{1}{a-1}$}
+			\item $\dfrac{x+2}{a+b}+\dfrac{x-2}{a+b}$ \answer{$\dfrac{2x}{a+b}$}
+			\item $\dfrac{a+1}{a+b}-\dfrac{4-a}{a+b}$ \answer{$\dfrac{2a-3}{a+b}$}
+			\item $\dfrac{x+3}{2x+7}+\dfrac{x+4}{2x+7}$ \answer{$1$}
+			\item $\dfrac{2x+1}{2x-3}+\dfrac{2x-7}{2x-3}$ \answer{$2$}
+			\item $\dfrac{7a-1}{a+2}-\dfrac{7-a}{a+2}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{12x^2+1}{x+1}-\dfrac{12x^2-4x-3}{x+1}$ \answer{$4$}
+			\item $\dfrac{x^2+x}{y+12}-\dfrac{x+14}{y+12}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{x-1}{2a+2}+\dfrac{13-x}{2a+2}$ \answer{$\dfrac{6}{a+1}$}
+			\item $\dfrac{2x-3y}{5x+y}+\dfrac{7x+3y}{5x+y}$ \answer{$\dfrac{9x}{5x+y}$}
+			\item $\dfrac{7a^3+b^2}{3a-b}-\dfrac{a^3-3b^2}{3a-b}$ \answer{$\dfrac{6a^3+4b^2}{3a-b}$}
+		\end{enumerate}	
+	\end{multicols}	
+\end{enumerate}
+\subsection{Сложение и вычитание дробей с разными знаменателями}
+\begin{enumerate}
+	\item Представьте в виде дроби
+	\begin{multicols}{4}
+		\begin{enumerate}
+			\item $\dfrac{a}{3}+\dfrac{b}{2}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{x}{4}-\dfrac{y}{2}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{2x}{3}-\dfrac{4}{5}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{4y}{7}+\dfrac{2x}{5}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{3x}{4}+\dfrac{2x}{3}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{x^2}{4}-\dfrac{2x}{2}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{7x^2}{3}+\dfrac{13x^2}{5}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{6xy^2}{7}-\dfrac{5xy^2}{9}$ \answer{$\dfrac{?}{?}$}
+		\end{enumerate}	
+	\end{multicols}
+	\item Представьте в виде дроби
+	\begin{multicols}{4}
+		\begin{enumerate}
+			\item $\dfrac{1}{a}+\dfrac{1}{b}$ \answer{$\dfrac{a+b}{ab}$}
+			\item $\dfrac{3}{x}-\dfrac{5}{y}$ \answer{$\dfrac{3y-5x}{xy}$}
+			\item $\dfrac{x}{a}+\dfrac{y}{b}$ \answer{$\dfrac{bx+ay}{?ab}$}
+			\item $\dfrac{5a}{7}-\dfrac{b}{x}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{1}{2x}+\dfrac{1}{3}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{1}{x}-\dfrac{1}{xy}$ \answer{$\dfrac{y-1}{xy}$}
+			\item $\dfrac{4}{5x}+\dfrac{2}{3x}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{4x}{3y}-\dfrac{y}{3x}$ \answer{$y$}
+		\end{enumerate}	
+	\end{multicols}
+	\item Представьте в виде дроби
+	\begin{multicols}{3}
+		\begin{enumerate}
+			\item $\dfrac{16}{4-a}-\dfrac{a^2}{4-a}$ \answer{$4+a$}
+			\item $\dfrac{49}{x+7}-\dfrac{x^2}{x+7}$ \answer{$x-7$}
+			\item $\dfrac{5x-1}{x^2-y^2}-\dfrac{5y-1}{x^2-y^2}$ \answer{$\dfrac{5}{x+y}$}
+			\item $\dfrac{11}{b^2-64}+\dfrac{b-3}{b^2-64}$ \answer{$\dfrac{1}{b-8}$}
+			\item $\dfrac{2x+y}{(x-y)^2}+\dfrac{2y-5x}{(x-y)^2}$ \answer{$\dfrac{3}{y-x}$}
+			\item $\dfrac{15x+7y}{(x+y)^2}-\dfrac{13x+5y}{(x+y)^2}$ \answer{$\dfrac{2}{x+y}$}
+		\end{enumerate}	
+	\end{multicols}
+	\item Представьте в виде дроби
+	\begin{multicols}{3}
+		\begin{enumerate}
+			\item $\dfrac{a}{b-1}+\dfrac{6}{1-b}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{x}{2-c}-\dfrac{11}{c-2}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{2x}{a-b}+\dfrac{2y}{b-a}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{5m}{2x-m}+\dfrac{10x}{m-2x}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{x^2+16}{a-4}+\dfrac{8x}{4-a}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{x^2+9y^2}{x-3y}+\dfrac{6xy}{3y-x}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{9a}{a-b}+\dfrac{4b}{b-a}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{4x}{x-b}-\dfrac{4y}{b-x}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{a-3}{a-1}-\dfrac{2}{1-a}$ \answer{$1$}
+			\item $\dfrac{x}{2x-1}+\dfrac{3x-1}{1-2x}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{m}{m^2-9}+\dfrac{3}{9-m^2}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{x^2}{x-1}+\dfrac{1}{1-x}$ \answer{$x+1$}
+		\end{enumerate}	
+	\end{multicols}
+	\item Представьте в виде дроби
+	\begin{multicols}{3}
+		\begin{enumerate}
+			\item $\dfrac{5x-3}{6x}+\dfrac{x+2}{4x}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{2b}{mx}-\dfrac{5b}{nx}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{2a-3b}{m}+\dfrac{4a-5b^2}{mb}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{x-y}{xy}-\dfrac{x-k}{xk}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{15x-y}{12x}-\dfrac{x-4y}{9x}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{7a+4}{8p}-\dfrac{3a-4}{6p}$ \answer{$\dfrac{?}{?}$}
+		\end{enumerate}
+	\end{multicols}
+	\item Представьте в виде дроби
+	\begin{multicols}{3}
+		\begin{enumerate}
+			\item $\dfrac{x}{y^2}-\dfrac{1}{y}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{2}{x^2}-\dfrac{5}{x^3}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{1-a}{a^4}+\dfrac{1}{a^3}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{8}{b^6}-\dfrac{2b}{b^4}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{1}{3a^7}+\dfrac{2-a^2}{a^9}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{x+y}{x^2}+\dfrac{x-y}{xy}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{1}{a^3b^2}+\dfrac{1}{a^2b^3}$ \answer{$\dfrac{a+b}{a^3b^3}$}
+			\item $\dfrac{5}{a^3b^5}-\dfrac{2}{a^6b^2}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{2x-3y}{x^2y}+\dfrac{4x-5y}{xy^2}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{x-3y}{xy^2}-\dfrac{3y-x}{x^2y}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{3}{a^4b^3c^2}-\dfrac{2}{ab^5c^3}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{x^4y^2}{2a^4b^2}+\dfrac{3xy^3}{a^3b^3}$ \answer{$\dfrac{?}{?}$}
+		\end{enumerate}
+	\end{multicols}
+	\item Представьте в виде дроби
+	\begin{multicols}{4}
+		\begin{enumerate}
+			\item $\dfrac{2xy-1}{4x^3}-\dfrac{3y-x}{6x^2}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{1-y^2}{3xy}+\dfrac{2y^3-1}{6xy^2}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{3}{5a^3}-\dfrac{3}{5a^2}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{a^2}{6x^5}+\dfrac{a}{3x^6}$ \answer{$\dfrac{?}{?}$}
+		\end{enumerate}
+	\end{multicols}
+	\item Представьте в виде дроби
+	\begin{multicols}{3}
+		\begin{enumerate}
+			\item $2-\dfrac{5}{x-3}$ \answer{$\dfrac{?}{?}$}
+			\item $1+\dfrac{(a-b)}{a+b}$ \answer{$\dfrac{?}{?}$}
+			\item $1-\dfrac{x}{5}-\dfrac{y}{4}$ \answer{$\dfrac{?}{?}$}
+			\item $15-\dfrac{1}{x}+\dfrac{1}{y}$ \answer{$\dfrac{?}{?}$}
+			\item $3x-\dfrac{x-1}{4}-\dfrac{x+2}{3}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{a+b}{3}-a+b$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{x-3}{4}-1-\dfrac{x-4}{3}$ \answer{$\dfrac{?}{?}$}
+			\item $a+b-\dfrac{a^2+b^2}{a}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{a^2+b^2}{a+b}+a-b$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{(x+y)^2}{y}-2x$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{(a-b)^2}{2a}+b$ \answer{$\dfrac{?}{?}$}
+			\item $a-b-\dfrac{a^2+b^2}{b}$ \answer{$\dfrac{?}{?}$}
+		\end{enumerate}
+	\end{multicols}
+	\item Представьте в виде дроби
+	\begin{multicols}{2}
+		\begin{enumerate}
+			\item $x-\dfrac{x-y}{2}+\dfrac{x+y}{4}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{2}{a}-3-\dfrac{6}{a}$ \answer{$\dfrac{?}{?}$}
+			\item $5-\dfrac{2m-n}{4}+\dfrac{m+5n}{12}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{4x-2y}{7}-\dfrac{y+5x}{2}-2$ \answer{$\dfrac{?}{?}$}
+		\end{enumerate}
+	\end{multicols}
+	\item Представьте в виде дроби
+	\begin{multicols}{2}
+		\begin{enumerate}
+			\item $\dfrac{3x}{5(x+y)}-\dfrac{2y}{3(x+y)}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{a^2}{5(a-b)}-\dfrac{b^3}{4(a-b)}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{1}{2x-2}+\dfrac{2}{5x-5}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{7x}{3x+3}-\dfrac{x}{9x+9}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{2a}{4x+4y}+\dfrac{4b}{8x+8y}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{2m}{ax+bx}+\dfrac{3y}{ay+by}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{5x}{10a-10b}-\dfrac{3x}{15a-15b}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{y}{ax-bx}-\dfrac{x}{ay-by}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{1}{2x^2y-xy}+\dfrac{2}{y-2xy}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{3}{3m^2n-6mn^2}-\dfrac{2}{4mn-2m^2}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{15}{x^3y-15x^2y^2}-\dfrac{6y}{9xy^3-6x^2y^2}$ \answer{$\dfrac{?}{?}$}
+			\item $\dfrac{3b}{2a^3b-8a^2b^2}-\dfrac{5a}{12a^3b-3a^4}$ \answer{$\dfrac{?}{?}$}
+		\end{enumerate}
+	\end{multicols}
+	\item Представьте в виде дроби
+	\begin{multicols}{2}
+		\begin{enumerate}
+			\item $\dfrac{num}{den}$ \answer{$\dfrac{?}{?}$}
+		\end{enumerate}
+	\end{multicols}
+\end{enumerate}
+\subsection{Произведение дробей}
+\begin{multicols}{3}
+	\begin{enumerate}
+		\item $\dfrac{7b^4}{5c^5y}\cdot\dfrac{18c^4y^3}{35b^4c}$ \answer{$\dfrac{2y^2}{5c^2}$}
+		\item $\left(\dfrac{xy}{ab}\right)^2\cdot\dfrac{xab}{y^2}$ \answer{$\dfrac{x^3}{ab}$}
+	\end{enumerate}
+\end{multicols}	
 \begin{enumerate}
 	\item Упростить выражение:
 	\begin{multicols}{2}
-		\begin{enumerate}[label=\asbuk*)]
+		\begin{enumerate}
 			\item $\dfrac{x^2-10x+25}{3x+12}\cdot\dfrac{x^2-16}{2x-10}$ при $x=-1$
 			\item $\left(\dfrac{b}{a}-\dfrac{a}{b}\right)\cdot\dfrac{1}{b+a}$ при $a=1$, $b=\dfrac{1}{3}$
 		\end{enumerate}
