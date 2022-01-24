@@ -1,0 +1,155 @@
+\documentclass[10pt, a4paper]{article}
+\usepackage{cmap}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{
+	amsmath,
+	amssymb,
+	scrextend,
+	enumitem,
+	pscyr,
+	multicol,
+	cmap,
+	titling,
+	indentfirst,
+	cancel,
+	wrapfig,
+	gensymb,
+	tikz,
+	graphicx,
+	fancyhdr,
+	mathrsfs,
+	graphbox
+}
+%Параметры страницы
+\usepackage[left=10mm,right=10mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\pagestyle{fancy}
+%Путь к картинкам
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+%Числа в списке второго уровня по умолчанию
+\renewcommand{\labelenumii}{\arabic{enumii})}
+%Новые команды
+\newcommand{\answer}[1]{\textcolor[rgb]{0.8,0.8,0.8}{\fbox{\scriptsize=#1}}}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Сеттеры
+\setlength\parindent{1,5em}
+
+\begin{document}
+		
+\lhead{Функции}
+\rhead{Школа <<Симметрия>>}
+
+\begin{center}
+	\Large \textbf{Преобразования графиков функций} 
+\end{center}
+\begin{enumerate}
+	\item \textbf{Сдвиг графика функции по горизонтали [\boldmath$y=f(x+c)$]}\\[1em]
+	Если к аргументу функции $y=f(x)$ прибавить число $c$, то график функции $y=f(x)$ сместится по горизонтали.\\
+	\begin{enumerate}[label=\asbuk*)]
+		\begin{minipage}[t]{0.45\textwidth}
+			\item Если $c>0$, то график $f(x)$ сместится \textbf{влево} на $c$:
+			\begin{center}
+				\includegraphics[align=t, tmargin=0.5cm, width=0.55\textwidth]{../graphs/graph_2/graph_2}
+			\end{center}
+		\end{minipage}
+		\begin{minipage}[t]{0.45\textwidth}
+			\item Если $c<0$, то график $f(x)$ сместится \textbf{вправо} на $|c|$:
+			\begin{center}
+				\includegraphics[align=t, tmargin=0.5cm, width=0.55\textwidth]{../graphs/graph_3/graph_3}
+			\end{center}
+		\end{minipage}
+	\end{enumerate}
+	\item \textbf{Сдвиг графика функции по вертикали [\boldmath$y=f(x)+c$]}\\[1em]
+	Если к функции $y=f(x)$ прибавить число $c$, то график функции $y=f(x)$ сместится по вертикали.\\
+	\begin{enumerate}[label=\asbuk*)]
+		\begin{minipage}[c][][c]{0.45\textwidth}
+			\item Если $c>0$, то график $f(x)$ сместится \textbf{вверх} на $c$:
+			\begin{center}
+				\includegraphics[align=t, tmargin=0.5cm, width=0.55\textwidth]{../graphs/graph_4/graph_4}
+			\end{center}
+		\end{minipage}
+		\begin{minipage}[c][][c]{0.45\textwidth}
+			\item Если $c<0$, то график $f(x)$ сместится \textbf{вниз} на $|c|$:
+			\begin{center}
+				\includegraphics[align=t, tmargin=0.5cm ,width=0.55\textwidth]{../graphs/graph_5/graph_5}
+		\end{center}
+		\end{minipage}
+	\end{enumerate}
+	\item \textbf{Растяжение от или сжатие к оси $\boldsymbol X$ [\boldmath$y=c\cdot f(x)$]}\\[1em]
+	Если всю функцию $y=f(x)$ умножить на число $c$, то график функции $y=f(x)$ растянется от или сожмется к оси $X$.
+	\begin{enumerate}[label=\asbuk*)]
+		\item 
+		\begin{minipage}[t]{0.65\textwidth}
+			\textbf{Если \boldmath$ c>1$}, то график функции \textbf{растянется от оси $\boldsymbol X$}. То есть игрековые координаты всех точек графика увеличатся в $c$ раз. Это означает, что точки графика с положительными игрековыми координатами сместятся в $c$ раз вверх, а с отрицательными — в $c$ раз вниз.
+		\end{minipage}
+		\begin{minipage}[t]{0.25\textwidth}
+			\begin{flushright}
+				\includegraphics[align=t, width=\textwidth]{../graphs/graph_6/graph_6}
+			\end{flushright}
+		\end{minipage}
+		\item
+		\begin{minipage}[t]{0.65\textwidth}
+			\textbf{Если \boldmath$0<c<1$}, то график функции \textbf{сожмется к оси $\boldsymbol X$}. В этом случае точки графика с положительными игрековыми координатами сместятся в $\frac{1}{c}$ раза вниз, а с отрицательными — сместятся в $\frac{1}{c}$ раза вверх.
+		\end{minipage}
+		\begin{minipage}[t]{0.25\textwidth}
+			\begin{flushright}
+				\includegraphics[align=t, width=\textwidth]{../graphs/graph_7/graph_7}
+			\end{flushright}
+		\end{minipage}
+		\item
+		\begin{minipage}[t]{0.65\textwidth}
+			\textbf{Если \boldmath$c=0$}, то уравнение функции \textbf{превратится в уравнение \boldmath$y=0$}.\\
+			
+			Очевидно, что при умножении всего выражения $f(x)$ на $0$ в результате получим $0$ и уравнение функции будет $y=0\cdot f(x)=0$, то есть $y=0$. Вспомним, что графики функций вида $y=a$, где $a$ — число, это прямые линии, параллельные оси $X$ и пересекающие ось $Y$ в значении $a$. В нашем случае получим прямую, проходящую по оси $X$.
+		\end{minipage}
+		\begin{minipage}[t]{0.25\textwidth}
+			\begin{flushright}
+				\includegraphics[align=t, width=\textwidth]{../graphs/graph_10/graph_10}
+			\end{flushright}
+		\end{minipage}
+		\item
+		\begin{minipage}[t]{0.65\textwidth}
+			\textbf{Если \boldmath$c=-1$}, то график функции \textbf{отразится относительно оси $\boldsymbol X$}. То есть игрековые координаты всех точек графика функции изменятся на противоположные.
+		\end{minipage}
+		\begin{minipage}[t]{0.25\textwidth}
+			\begin{flushright}
+				\includegraphics[align=t, width=\textwidth]{../graphs/graph_8/graph_8}
+			\end{flushright}
+		\end{minipage}
+		\item
+		\begin{minipage}[t]{0.65\textwidth}
+			\textbf{Если \boldmath$-1<c<0$}, то график функции \textbf{отразится относительно оси $\boldsymbol X$} и \textbf{сожмется к оси $\boldsymbol X$} в $\frac{1}{|c|}$ раз. Такое преобразование удобно делать в два приема: сначала переворачивать график, а потом сжимать к оси $Y$.
+		\end{minipage}
+		\begin{minipage}[t]{0.25\textwidth}
+			\begin{flushright}
+				\includegraphics[align=t, width=\textwidth]{../graphs/graph_9/graph_9}
+			\end{flushright}
+		\end{minipage}
+		\item
+		\begin{minipage}[t]{0.65\textwidth}
+			\textbf{Если \boldmath$c < -1$}, то график функции \textbf{отразится относительно оси $\boldsymbol X$} и \textbf{растянется от оси $\boldsymbol X$} в ${|c|}$ раз. Такое преобразование удобно делать в два приема: сначала переворачивать график, а потом сжимать к оси $Y$.
+		\end{minipage}
+		\begin{minipage}[t]{0.25\textwidth}
+			\begin{flushright}
+				\includegraphics[align=t, width=\textwidth]{../graphs/graph_11/graph_11}
+			\end{flushright}
+		\end{minipage}
+	\end{enumerate}
+	\newpage
+	\item \textbf{Растяжение от или сжатие к оси $\boldsymbol Y$ [\boldmath$y=f(c\cdot x)$]}\\[1em]
+	Если аргумент функции $y=f(x)$ умножить на число $c$, то график функции $y=f(x)$ растянется от или сожмется к оси $Y$.
+	\item \textbf{Отражение части графика относительно оси $\boldsymbol X$ [\boldmath$y=|f(x)|$]}\\[1em]
+	Если всю функцию $y=f(x)$ взять по модулю, то часть графика функции $y=f(x)$ которая расположена ниже оси $X$ отразится относительно оси $X$.
+	\item \textbf{Отражение части графика относительно оси $\boldsymbol Y$ [\boldmath$y=f(|x|)$]}\\[1em]
+	Если аргумент функции $y=f(x)$ взять по модулю, то часть графика функции $y=f(x)$ которая расположена левее оси $Y$ сотрется, а правая часть отразится относительно оси $Y$.
+\end{enumerate}
+\end{document}

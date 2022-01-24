@@ -1,0 +1,83 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{soulutf8}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+	
+	\lhead{Группа 91}
+	\chead{Модуль 4 Урок №7}
+	\rhead{Школа <<Симметрия>>}
+	\begin{enumerate}
+		\item Вычислить: $$\dfrac{\left(8\dfrac{1}{4}-3,51\right):2,37}{\dfrac{1}{5}\cdot3,17-2,205:3\dfrac{1}{2}}$$
+		\item Сократить дробь
+		\begin{enumerate}[label=\asbuk*)]
+			\begin{multicols}{2}
+				\item $\dfrac{a^3-2a^2}{4-a^2}$
+				\item $\dfrac{a^2-b^2}{a^2+2ab+b^2}$
+				\item $\dfrac{2mn-6m^2}{12m^2n-4mn^2}$
+			\end{multicols}
+		\end{enumerate}
+		\item Вычислить:
+		\begin{enumerate}[label=\asbuk*)]
+			\begin{multicols}{2}
+				\item $\sqrt{8\cdot50}$
+				\item $\sqrt{6\cdot30\cdot245}$
+				\item $\sqrt{21\cdot35\cdot15}$
+			\end{multicols}
+		\end{enumerate}
+		\item Решить уравнение $2x^2=5+3x$
+		\item Решить уравнение $(x+8)(x-9)=-52$
+		\item Решить систему неравенств $\left\{
+		\begin{aligned}
+			2x-1>3x+1,\\
+			5x-1>13
+		\end{aligned}
+		\right.$
+		\item Найдите диагональ прямоугольника со сторонами $5$ и $12$.
+		\item Дан треугольник с периметром, равным $24$. Найдите периметр треугольника с вершинами в серединах сторон данного.
+		\item Стороны треугольника равны $6$ и $9$. Через середину третьей стороны проведены прямые, параллельные двум другим сторонам. Найдите периметр полученного четырехугольника.
+		\item Найдите периметр четырехугольника с вершинами в серединах сторон прямоугольника с диагональю, равной $8$.
+	\end{enumerate}
+\end{document}

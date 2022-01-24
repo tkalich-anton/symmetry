@@ -1,0 +1,66 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{soulutf8}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+	
+	\lhead{Группа 102}
+	\chead{Модуль 4 Урок №6}
+	\rhead{Школа <<Симметрия>>}
+	\begin{enumerate}
+		\item $\left|\dfrac{x^2-10x+9}{x^2-9}\right|\geq1$
+		\item $\dfrac{x^2-8x+24}{|x^2-16|}\leq1$
+		\item $\sqrt{x^2-15x-7}>3$
+		\item $\sqrt{x^4-2x+6}\geq x^2$
+		\item $\sqrt{4x+3}\leq\sqrt{5x+1}$
+		\item $\sqrt{24x-5x^2}>\sqrt{2x^2-23x+66}$
+		\item $\sqrt{-x^2-5x-4}\geq x+4$
+		\item $4\sqrt{x^2+x-2}\geq 5x-2$
+		\item $(16-x^2)\sqrt{49-x^2}\geq0$
+		\item $\dfrac{x+8}{x+1}\sqrt{\dfrac{x-3}{x-8}}\leq0$
+		\item $\dfrac{(x^2-4)\sqrt{7x-x^2}}{2x^2-19x+35}\leq0$
+		\item $15\sqrt{x}-7x\geq2$
+	\end{enumerate}
+\end{document}

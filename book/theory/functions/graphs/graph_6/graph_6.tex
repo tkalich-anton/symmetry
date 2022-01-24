@@ -1,0 +1,83 @@
+\documentclass{standalone}
+\usepackage
+{
+	tikz,
+	pgfplots,
+	verbatim,
+	amssymb,
+}
+
+\usetikzlibrary
+{
+	arrows,
+	patterns,
+	angles,
+	quotes,
+	calc, 
+	3d,
+	backgrounds, 
+	positioning
+}
+\definecolor{color1}{rgb}{0.5, 0.0, 0.13}
+\definecolor{color2}{rgb}{0.0, 0.42, 0.24}
+
+\begin{document}
+\pgfplotsset{
+	compat=newest,
+	every axis/.append style={
+		width=10cm,
+		x=0.5cm,y=0.5cm,
+		axis x line=middle, axis y line=middle,
+		enlargelimits=true,
+		xlabel={$x$}, ylabel={$y$},
+		xlabel style={below left, scale=1.2},
+		ylabel style={below right, scale=1.2},
+		ymajorgrids=true, xmajorgrids=true,
+		xticklabels={}, yticklabels={},
+		samples=1000,
+		%grid style={thick},
+		%axis line style={thick},
+		ticks=both,
+		xtick={-100,-99,...,100}, ytick={-100,-99,...,100},
+		restrict y to domain=-100:100, domain=-20:20,
+		set layers=standard,
+		every major tick/.style={draw=none}, every minor tick/.style={draw=none}
+}}
+\tikzset{
+	baseline={([yshift={-\ht\strutbox}]current bounding box.north)},
+	>=stealth,
+	dot_1/.style={shape=circle, fill=color1, draw=color1, inner sep=0pt, minimum size=4pt},
+	dot_2/.style={shape=circle, fill=color2, draw=color2, inner sep=0pt, minimum size=4pt},
+	node_text/.style={inner sep=1pt, anchor=north west}
+}
+\begin{tikzpicture}
+	\begin{axis}[
+		xmin=-1,xmax=12,
+		ymin=-6,ymax=8]
+		\addplot [color1, line width=1.4pt] {x^2-10*x+23};
+		\addplot [color2, line width=1.4pt] {3*x^2-30*x+69};
+		\node[node_text, color1] at (8,6) {\mbox{\boldmath$f(x)$}};
+		\node[node_text, color2] at (6,-4) {\mbox{\boldmath$3\cdot f(x)$}};
+		\node[dot_1] (A) at (3,2) {};
+		\node[node_text, anchor=north east, color1, scale=0.8] at (3,2) {\mbox{\boldmath$(3;2)$}};
+		\node[dot_1] (B) at (4,-1) {};
+		\node[node_text, anchor=south east, color1, scale=0.8] at (3,-1) {\mbox{\boldmath$(4;-1)$}};
+		\node[dot_1] (C) at (5,-2) {};
+		\node[dot_1] (D) at (6,-1) {};
+		\node[dot_1] (E) at (7,2) {};
+		\node[dot_2] (A1) at (3,6) {};
+		\node[node_text, anchor=south west, color2, scale=0.8] at (3,6) {\mbox{\boldmath$(3;6)$}};
+		\node[dot_2] (B1) at (4,-3) {};
+		\node[node_text, anchor=north east, color2, scale=0.8] at (4,-3) {\mbox{\boldmath$(4;-3)$}};
+		\node[dot_2] (C1) at (5,-6) {};
+		\node[dot_2] (D1) at (6,-3) {};
+		\node[dot_2] (E1) at (7,6) {};
+		\draw[->, line width=0.6pt] (3,-0.6) -- (B);
+		\draw[->,dashed, line width=1pt] (A) -- (A1);
+		\draw[->,dashed, line width=1pt] (B) -- (B1);
+		\draw[->,dashed, line width=1pt] (C) -- (C1);
+		\draw[->,dashed, line width=1pt] (D) -- (D1);
+		\draw[->,dashed, line width=1pt] (E) -- (E1);
+	\end{axis}
+\end{tikzpicture}
+\end{document}

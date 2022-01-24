@@ -1,0 +1,67 @@
+\documentclass{standalone}
+\usepackage
+{
+	amsmath,
+	amssymb,
+	tikz,
+	pgfplots,
+	verbatim,
+	amssymb
+}
+
+\usetikzlibrary
+{
+	arrows,
+	patterns,
+	angles,
+	quotes,
+	calc, 
+	3d,
+	backgrounds, 
+	positioning
+}
+\definecolor{color1}{rgb}{0.5, 0.0, 0.13}
+\definecolor{color2}{rgb}{0.0, 0.42, 0.24}
+
+\begin{document}
+\pgfplotsset{
+	compat=newest,
+	every axis/.append style={
+		width=10cm,
+		x=0.5cm,y=0.5cm,
+		axis x line=middle, axis y line=middle,
+		enlargelimits=true,
+		xlabel={$x$}, ylabel={$y$},
+		xlabel style={below left, scale=1.2},
+		ylabel style={below right, scale=1.2},
+		ymajorgrids=true, xmajorgrids=true,
+		xticklabels={}, yticklabels={},
+		samples=1000,
+		%grid style={thick},
+		%axis line style={thick},
+		ticks=both,
+		xtick={-100,-99,...,100}, ytick={-100,-99,...,100},
+		restrict y to domain=-100:100, domain=-20:20,
+		set layers=standard,
+		every major tick/.style={draw=none}, every minor tick/.style={draw=none}
+}}
+\tikzset{
+	baseline={([yshift={-\ht\strutbox}]current bounding box.north)},
+	>=stealth,
+	dot_1/.style={shape=circle, fill=color1, draw=color1, inner sep=0pt, minimum size=4pt},
+	dot_2/.style={shape=circle, fill=color2, draw=color2, inner sep=0pt, minimum size=4pt},
+	node_text/.style={inner sep=1pt, anchor=north west}
+}
+\begin{tikzpicture}
+	\begin{axis}[
+		xmin=-3,xmax=10,
+		ymin=-6,ymax=8]
+		\addplot [color1, line width=1.4pt] {x^2-4*x+1};
+		\addplot [dashed, color2, line width=0.8pt] {-x^2+4*x-1};
+		\addplot [color2, line width=1.4pt] {-x^2/3+4/3*x-1/3};
+		\node[node_text, color1] at (5,5) {\mbox{\boldmath$f(x)$}};
+		\node[node_text, anchor=south, color2] at (2,3.2) {\mbox{\boldmath$-f(x)$}};
+		\node[node_text, anchor=south west, color2] at (6,-4) {\mbox{\boldmath$-\frac{1}{3}\cdot f(x)$}};
+	\end{axis}
+\end{tikzpicture}
+\end{document}

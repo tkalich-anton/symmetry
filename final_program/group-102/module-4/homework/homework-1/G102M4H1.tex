@@ -1,0 +1,77 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{soulutf8}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+	
+	\lhead{Группа 101}
+	\chead{Модуль 4 ДЗ№1}
+	\rhead{Школа <<Симметрия>>}
+	\begin{enumerate}
+		\item \textit{(1 балл)} Упростить выражение $$\left(\dfrac{\sqrt{x}}{\sqrt{x}+1}+1\right):\left(1-\dfrac{\sqrt{x}}{\sqrt{x+1}}\right)$$
+		\item \textit{(1 балл)} Решить уравнение $$(x^2+3x+1)(x^2+3x+3)+1=0$$
+		\item \textit{(2 балла)} Решить уравнение $$\left(\dfrac{4x-5}{3x+2}\right)^2+\left(\dfrac{3x+2}{5-4x}\right)^2=4,25$$
+		\item \textit{(1 балл)} Решить неравенство $$\dfrac{x^3-3x^2-10x}{x^2-3x-10}\geq 0$$
+		\item \textit{(2 балла)} Решить систему неравенств 
+		$$
+		\left\{
+		\begin{array}{l}
+			x^3(4x^2+5) \leq 5x^3\\
+			x^2+10x-24 < 0\\
+		\end{array}
+		\right.
+		$$
+		\item \textit{(1 балл)} Решить неравенство $$\left|\dfrac{x^2+3x+2}{x^2-3x+2}\right|\geq 1$$
+		\item \textit{(2 балла)} Решить систему неравенств 
+		$$
+		\left\{
+		\begin{array}{l}
+			|9x^2-20| \leq 16\\
+			|3x-4| \geq 2\\
+		\end{array}
+		\right.
+		$$
+	\end{enumerate}
+\end{document}

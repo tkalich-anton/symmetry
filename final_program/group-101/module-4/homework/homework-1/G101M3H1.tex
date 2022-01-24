@@ -1,0 +1,69 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{soulutf8}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+	
+	\lhead{Группа 101}
+	\chead{Модуль 4 ДЗ№1}
+	\rhead{Школа <<Симметрия>>}
+	\begin{enumerate}
+		\item \textit{(1 балл)} Вычислить $$\left(\dfrac{15}{\sqrt{6}-1}+\dfrac{4}{2-\sqrt{6}}\right)\cdot(\sqrt{6}+1)$$
+		\item \textit{(2 балла)} Решить уравнение $$(x^2+3x+1)(x^2+3x+3)+1=0$$
+		\item \textit{(2 балла)} Решить уравнение $$\left(\dfrac{4x-5}{3x+2}\right)^2+\left(\dfrac{3x+2}{5-4x}\right)^2=4,25$$
+		\item \textit{(1 балл)} Решить неравенство $$3-x+\dfrac{1}{16}x^2<0$$
+		\item \textit{(1 балл)} Решить неравенство $$\dfrac{(x-1)(x-2)}{15}<\dfrac{x+1}{5}-\dfrac{x}{3}$$
+		\item \textit{(1 балл)} Решить неравенство $$|x^2-6x+8|<3$$
+		\item \textit{(2 балла)} Решить систему неравенств 
+		$$
+		\left\{
+		\begin{array}{l}
+			(x+3)^2 + (x-5)^2 \geq 34   \\
+			x^2 \leq 2x  \\
+		\end{array}
+		\right.
+		$$
+	\end{enumerate}
+\end{document}

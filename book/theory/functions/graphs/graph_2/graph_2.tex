@@ -1,0 +1,75 @@
+\documentclass{standalone}
+
+\usepackage
+{
+	tikz,
+	pgfplots,
+	verbatim,
+	amssymb,
+}
+
+\usetikzlibrary
+{
+	arrows,
+	patterns,
+	angles,
+	quotes,
+	calc, 
+	3d,
+	backgrounds, 
+	positioning
+}
+\definecolor{color1}{rgb}{0.5, 0.0, 0.13}
+\definecolor{color2}{rgb}{0.0, 0.42, 0.24}
+
+\begin{document}
+\pgfplotsset{
+	compat=newest,
+	every axis/.append style={
+		width=10cm,
+		x=0.5cm,y=0.5cm,
+		axis x line=middle, axis y line=middle,
+		enlargelimits=true,
+		xlabel={$x$}, ylabel={$y$},
+		xlabel style={below left, scale=1.2},
+		ylabel style={below right, scale=1.2},
+		ymajorgrids=true, xmajorgrids=true,
+		xticklabels={}, yticklabels={},
+		samples=1000,
+		%grid style={thick},
+		%axis line style={thick},
+		ticks=both,
+		xtick={-100,-99,...,100}, ytick={-100,-99,...,100},
+		restrict y to domain=-100:100, domain=-20:20,
+		set layers=standard,
+		every major tick/.style={draw=none}, every minor tick/.style={draw=none}
+}}
+\tikzset{
+	baseline={([yshift={-\ht\strutbox}]current bounding box.north)},
+	>=stealth,
+	dot_1/.style={shape=circle, fill=color1, draw=color1, inner sep=0pt, minimum size=4pt},
+	dot_2/.style={shape=circle, fill=color2, draw=color2, inner sep=0pt, minimum size=4pt}
+}
+\begin{tikzpicture}
+	\begin{axis}[
+		xmin=-7,xmax=7,
+		ymin=-7,ymax=7]
+		\addplot [color1, line width=1.4pt] {x^2-4*x-2};
+		\addplot [color2,line width=1.4pt] {(x+3)^2-4*(x+3)-2};
+		\draw (3.6,-4) node[anchor=north west, color1, scale=1.1] {\mbox{\boldmath$f(x)$}};
+		\draw (-6,-4) node[anchor=north west, color2, scale=1.1] {\mbox{\boldmath$f(x+3)$}};
+		\node[dot_1] (A) at (4,-2) {};
+		\node[dot_1] (B) at (4.65,1) {};
+		\node[dot_1] (C) at (5.16,4) {};
+		\node[dot_1] (D) at (5.61,7) {};
+		\node[dot_2] (A1) at (1,-2) {};
+		\node[dot_2] (B1) at (1.65,1) {};
+		\node[dot_2] (C1) at (2.16,4) {};
+		\node[dot_2] (D1) at (2.61,7) {};
+		\draw[->,dashed, line width=1pt] (A) -- (A1);
+		\draw[->,dashed, line width=1pt] (B) -- (B1);
+		\draw[->,dashed, line width=1pt] (C) -- (C1);
+		\draw[->,dashed, line width=1pt] (D) -- (D1);
+	\end{axis}
+\end{tikzpicture}
+\end{document}
