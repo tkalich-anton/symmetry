@@ -46,39 +46,21 @@
 		every major tick/.style={draw=none}, every minor tick/.style={draw=none}
 	},
 	/pgf/declare function={
-	mainf(\x) = 0.25*\x^2-\x-2;
-	},
-}
+		mainf(\x) = \x^2-2*\x-1;
+	},}
 \tikzset{
 	baseline={([yshift={-\ht\strutbox}]current bounding box.north)},
 	>=stealth,
 	dot_1/.style={shape=circle, fill=color1, draw=color1, inner sep=0pt, minimum size=4pt},
 	dot_2/.style={shape=circle, fill=color2, draw=color2, inner sep=0pt, minimum size=4pt},
-	node_text/.style={inner sep=2pt, anchor=north west}
+	node_text/.style={inner sep=1pt, anchor=north west}
 }
 \begin{tikzpicture}
 	\begin{axis}[
-		xmin=-5,xmax=8,
+		xmin=-7,xmax=6,
 		ymin=-3,ymax=10]
 		\addplot [color1, line width=1.4pt] {mainf(x)};
-		\addplot [color2, line width=1.4pt] {mainf(2*x)};
-		\node[node_text, color1] at (5,-1) {\mbox{\boldmath$f(x)$}};
-		\node[node_text, color2] at (5,10) {\mbox{\boldmath$f(2\cdot x)$}};
-		\node[dot_1] (A) at (8,{mainf(8)}) {};
-		\node[node_text, anchor=south east, color1, scale=0.8] at (A) {\mbox{\boldmath$(8;6)$}};
-		\node[dot_1] (B) at (6,{mainf(6)}) {};
-		\node[node_text, anchor=south west, color1, scale=0.8,] at (6.2,{mainf(6)}) {\mbox{\boldmath$(6;1)$}};
-		\node[dot_1] (C) at (-4,{mainf(-4)}) {};
-		\node[node_text, anchor=south east, color1, scale=0.8,] at (-4.2,{mainf(-4)}) {\mbox{\boldmath$(-4;6)$}};
-		\node[dot_2] (A1) at (4,{mainf(2*4)}) {};
-		\node[node_text, anchor=south east, color2, scale=0.8] at (A1) {\mbox{\boldmath$(4;6)$}};
-		\node[dot_2] (B1) at (3,{mainf(2*3)}) {};
-		\node[node_text, anchor=south east, color2, scale=0.8] at (B1) {\mbox{\boldmath$(3;1)$}};
-		\node[dot_2] (C1) at (-2,{mainf(2*(-2))}) {};
-		\node[node_text, anchor=south west, color2, scale=0.8] at (C1) {\mbox{\boldmath$(-2;6)$}};
-		\draw[->,dashed, line width=1] (A) -- (A1);
-		\draw[->,dashed, line width=1] (B) -- (B1);
-		\draw[->,dashed, line width=1] (C) -- (C1);
+		\node[node_text, color1] at (2,-1) {\mbox{\boldmath$f(x)$}};
 	\end{axis}
 \end{tikzpicture}
 \end{document}

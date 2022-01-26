@@ -28,6 +28,7 @@
 	compat=newest,
 	every axis/.append style={
 		width=10cm,
+		height=10cm,
 		x=0.5cm,y=0.5cm,
 		axis x line=middle, axis y line=middle,
 		enlargelimits=true,
@@ -38,7 +39,7 @@
 		xticklabels={}, yticklabels={},
 		samples=1000,
 		%grid style={thick},
-		%axis line style={thick},
+		axis line style={thick},
 		ticks=both,
 		xtick={-100,-99,...,100}, ytick={-100,-99,...,100},
 		restrict y to domain=-100:100, domain=-20:20,
@@ -46,7 +47,8 @@
 		every major tick/.style={draw=none}, every minor tick/.style={draw=none}
 	},
 	/pgf/declare function={
-	mainf(\x) = 0.25*\x^2-\x-2;
+	porabola(\x) = 0.5*\x^2-4*\x-4;
+	line(\x) = -1*\x + 4;
 	},
 }
 \tikzset{
@@ -58,27 +60,14 @@
 }
 \begin{tikzpicture}
 	\begin{axis}[
-		xmin=-5,xmax=8,
-		ymin=-3,ymax=10]
-		\addplot [color1, line width=1.4pt] {mainf(x)};
-		\addplot [color2, line width=1.4pt] {mainf(2*x)};
-		\node[node_text, color1] at (5,-1) {\mbox{\boldmath$f(x)$}};
-		\node[node_text, color2] at (5,10) {\mbox{\boldmath$f(2\cdot x)$}};
-		\node[dot_1] (A) at (8,{mainf(8)}) {};
-		\node[node_text, anchor=south east, color1, scale=0.8] at (A) {\mbox{\boldmath$(8;6)$}};
-		\node[dot_1] (B) at (6,{mainf(6)}) {};
-		\node[node_text, anchor=south west, color1, scale=0.8,] at (6.2,{mainf(6)}) {\mbox{\boldmath$(6;1)$}};
-		\node[dot_1] (C) at (-4,{mainf(-4)}) {};
-		\node[node_text, anchor=south east, color1, scale=0.8,] at (-4.2,{mainf(-4)}) {\mbox{\boldmath$(-4;6)$}};
-		\node[dot_2] (A1) at (4,{mainf(2*4)}) {};
-		\node[node_text, anchor=south east, color2, scale=0.8] at (A1) {\mbox{\boldmath$(4;6)$}};
-		\node[dot_2] (B1) at (3,{mainf(2*3)}) {};
-		\node[node_text, anchor=south east, color2, scale=0.8] at (B1) {\mbox{\boldmath$(3;1)$}};
-		\node[dot_2] (C1) at (-2,{mainf(2*(-2))}) {};
-		\node[node_text, anchor=south west, color2, scale=0.8] at (C1) {\mbox{\boldmath$(-2;6)$}};
-		\draw[->,dashed, line width=1] (A) -- (A1);
-		\draw[->,dashed, line width=1] (B) -- (B1);
-		\draw[->,dashed, line width=1] (C) -- (C1);
+		xmin=-4,xmax=10,
+		ymin=-1,ymax=11]
+		\addplot [color1, line width=1.4pt] {porabola(x)};
+		\addplot [color2, line width=1.4pt] {line(x)};
+		\node[dot_2] (A) at (-2,{line(-2)}) {};
+		\node[node_text, anchor=south west, scale=1.2] at (A) {\textbf{\textit{A}}};
+		\node[node_text, anchor=south east, color1] at (9,2) {\mbox{\boldmath$f(x)$}};
+		\node[node_text, anchor=south west, color2] at (2,2) {\mbox{\boldmath$g(x)$}};
 	\end{axis}
 \end{tikzpicture}
 \end{document}
