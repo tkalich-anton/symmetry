@@ -22,42 +22,42 @@
 }
 \definecolor{color1}{rgb}{0.5, 0.0, 0.13}
 \definecolor{color2}{rgb}{0.0, 0.42, 0.24}
+\definecolor{silver}{rgb}{0.7, 0.7, 0.7}
 
 \begin{document}
-\pgfplotsset{
-	compat=newest,
-	every axis/.append style={
-		width=10cm,
-		height=10cm,
-		x=0.5cm,y=0.5cm,
-		axis x line=middle, axis y line=middle,
-		enlargelimits=true,
-		xlabel={$x$}, ylabel={$y$},
-		xlabel style={below left, scale=1.2},
-		ylabel style={below right, scale=1.2},
-		ymajorgrids=true, xmajorgrids=true,
-		xticklabels={}, yticklabels={},
-		samples=1000,
-		%grid style={thick},
-		axis line style={thick},
-		ticks=both,
-		xtick={-100,-99,...,100}, ytick={-100,-99,...,100},
-		restrict y to domain=-100:100, domain=-20:20,
-		set layers=standard,
-		every major tick/.style={draw=none}, every minor tick/.style={draw=none}
-	},
-	/pgf/declare function={
-	porabola(\x) = 0.5*\x^2-4*\x-4;
-	line(\x) = -1*\x + 4;
-	},
-}
-\tikzset{
-	baseline={([yshift={-\ht\strutbox}]current bounding box.north)},
-	>=stealth,
-	dot_1/.style={shape=circle, fill=color1, draw=color1, inner sep=0pt, minimum size=4pt},
-	dot_2/.style={shape=circle, fill=color2, draw=color2, inner sep=0pt, minimum size=4pt},
-	node_text/.style={inner sep=2pt, anchor=north west}
-}
+	\pgfplotsset{
+		compat=newest,
+		every axis/.append style={
+			width=10cm,
+			height=10cm,
+			x=0.5cm,y=0.5cm,
+			axis x line=middle, axis y line=middle,
+			xlabel={$x$}, ylabel={$y$},
+			xlabel style={below left, scale=1.2},
+			ylabel style={below right, scale=1.2},
+			ymajorgrids=true, xmajorgrids=true,
+			xticklabels={}, yticklabels={},
+			samples=1000,
+			grid style={silver, thick},
+			axis line style={line width=1.2pt},
+			ticks=both,
+			xtick={-100,-99,...,100}, ytick={-100,-99,...,100},
+			restrict y to domain=-100:100, domain=-20:20,
+			set layers=standard,
+			every major tick/.style={draw=none}, every minor tick/.style={draw=none}
+		},
+		/pgf/declare function={
+			line1(\x) = \x-5.5;
+			line2(\x) = 3*\x - 1;
+		},
+	}
+	\tikzset{
+		baseline={([yshift={-\ht\strutbox}]current bounding box.north)},
+		>=stealth,
+		dot_1/.style={shape=circle, fill=color1, draw=color1, inner sep=0pt, minimum size=4pt},
+		dot_2/.style={shape=circle, fill=color2, draw=color2, inner sep=0pt, minimum size=4pt},
+		node_text/.style={inner sep=2pt, anchor=north west}
+	}
 \begin{tikzpicture}
 	\begin{axis}[
 		xmin=-4,xmax=10,

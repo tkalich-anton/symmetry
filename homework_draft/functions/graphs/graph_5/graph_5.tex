@@ -22,6 +22,7 @@
 }
 \definecolor{color1}{rgb}{0.5, 0.0, 0.13}
 \definecolor{color2}{rgb}{0.0, 0.42, 0.24}
+\definecolor{silver}{rgb}{0.7, 0.7, 0.7}
 
 \begin{document}
 \pgfplotsset{
@@ -31,15 +32,14 @@
 		height=10cm,
 		x=0.5cm,y=0.5cm,
 		axis x line=middle, axis y line=middle,
-		enlargelimits=true,
 		xlabel={$x$}, ylabel={$y$},
 		xlabel style={below left, scale=1.2},
 		ylabel style={below right, scale=1.2},
 		ymajorgrids=true, xmajorgrids=true,
 		xticklabels={}, yticklabels={},
 		samples=1000,
-		%grid style={thick},
-		axis line style={thick},
+		grid style={silver, thick},
+		axis line style={line width=1.2pt},
 		ticks=both,
 		xtick={-100,-99,...,100}, ytick={-100,-99,...,100},
 		restrict y to domain=-100:100, domain=-20:20,
@@ -47,8 +47,8 @@
 		every major tick/.style={draw=none}, every minor tick/.style={draw=none}
 	},
 	/pgf/declare function={
-	line1(\x) = 4*\x+5;
-	line2(\x) = 8*\x + 6;
+		line1(\x) = 4*\x+5;
+		line2(\x) = 8*\x+6;
 	},
 }
 \tikzset{
@@ -60,8 +60,8 @@
 }
 \begin{tikzpicture}
 	\begin{axis}[
-		xmin=-10,xmax=1,
-		ymin=-10,ymax=1]
+		xmin=-11,xmax=2,
+		ymin=-11,ymax=2]
 		\addplot [color1, line width=1.4pt] {line1(x)};
 		\addplot [color2, line width=1.4pt] {line2(x)};
 		\node[node_text, anchor=south east, color1] at (-2.5,-5) {\mbox{\boldmath$f(x)$}};
