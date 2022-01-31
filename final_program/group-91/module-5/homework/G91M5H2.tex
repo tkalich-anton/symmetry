@@ -1,0 +1,94 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+\begin{document}
+	
+	\lhead{Группа 91}
+	\chead{Модуль 5 Домашняя работа №2}
+	\rhead{Школа <<Симметрия>>}
+	\section*{Домашняя работа №2}
+	\begin{enumerate}
+		\item \textit{(1 балл)} Вычислите:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+				\item $42 \cdot 53 - 32 \cdot 53 - 42 \cdot 63 + 32 \cdot 63$
+				\item $(3,2+(-1,7))+1,7$
+				\item $(937-811):63+\dfrac{3-21}{9}-2\cdot(7-2^4:2)$
+				\item $\left( -12\dfrac{2}{3}\right):3\dfrac{1}{6} +13,5:4,5$
+			\end{enumerate}
+		\end{multicols}
+		\item \textit{(2 балла)} Решите уравнения:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+				\item $x+3=2x-4$
+				\item $2x-6=3x$
+				\item $3x-5=-2x+7+5x-12$
+				\item $7-0,2x-(21,28-1,6)=0$
+				\item $5-3(x+5)=7-(2+3x)$
+				\item $1\dfrac{1}{5}-0,5x-0,4+\dfrac{2}{5}x=0$
+			\end{enumerate}
+		\end{multicols}
+		\item \textit{(2 балла)} Решите квадратные уравнения:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+				\item $5x^2-6x+1=0$
+				\item $2x^2+5x+3=0$
+				\item $x^2-6x+8=0$
+				\item $x^2-5\dfrac{1}{5}x+1=0$
+			\end{enumerate}
+		\end{multicols}
+		\item \textit{(1 балл)} Решите неравенства:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+				\item $3x+8>2x+1$
+				\item $-2y+3<y$
+				\item $0,1x-0,2>\dfrac{1}{100}$
+				\item $3>5x+19$
+			\end{enumerate}
+		\end{multicols}
+		\item \textit{(1 балл)} Саша с папой решили покататься на колесе обозрения. Всего на колесе десять кабинок, из них $5$ – синие, $2$ – зелёные, остальные – красные. Кабинки по очереди подходят к платформе для посадки. Найдите вероятность того, что Саша прокатится в красной кабинке.
+		\item \textit{(1 балл)} Определите вероятность того, что при бросании игрального кубика (правильной кости) выпадет нечетное число очков.
+		\item \textit{(1 балл)} Грузовик перевозит партию щебня массой $90$ тонн, ежедневно увеличивая норму перевозки на одно и то же число тонн. Известно, что за первый день было перевезено $2$ тонны щебня. Определите, сколько тонн щебня было перевезено за десятый день, если вся работа была выполнена за $12$ дней.
+		\item \textit{(1 балл)} Васе надо решить $245$ задач. Ежедневно он решает на одно и то же количество задач больше по сравнению с предыдущим днём. Известно, что за первый день Вася решил $11$ задач. Определите, сколько задач решил Вася в последний день, если со всеми задачами он справился за $7$ дней.
+	\end{enumerate}
+\end{document}
