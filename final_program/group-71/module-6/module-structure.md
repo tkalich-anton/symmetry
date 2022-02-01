@@ -6,40 +6,40 @@
 
 ### Тема недели: Окружность
 
-У-1: [.](./components/class/class-1.md)
+У-1: [Основные понятия (радиус, хорда, диаметр, дуга). Теорема о радиусе, перпендикулярном хорде. Теорема о внешнем угле треугольника. 1.164 а, б, д. 1.166, 1.167, 1.168, 1.170 а, 1.173, 1.174, 1.176](./components/class/class-1.md)
 
-У-2: [.](./components/class/class-2.md)
+У-2: [1.164 а, б, д. 1.166, 1.167, 1.168, 1.170 а, 1.173, 1.174, 1.176.](./components/class/class-2.md)
 
-Д-1: [Окружность.](./components/homework/homework-1.md)
+Д-1: [Окружность. 1.170 б.](./components/homework/homework-1.md)
 
 ## Неделя №2
 
 ### Тема недели: Окружность
 
-У-3: [.](./components/class/class-1.md)
+У-3: [Треугольник, вписанный в окружность, у которого одна сторона – диаметр. 1.183 – 1.187.](./components/class/class-1.md)
 
-У-4: [.](./components/class/class-2.md)
+У-4: [1.188, 1.189, 1.194, Пример 3 (с.28), 1.198, 1.197, 1.199.](./components/class/class-2.md)
 
-Д-2: [.](./components/homework/homework-1.md)
+Д-2: [Окружность. 1.190, 1.200.](./components/homework/homework-1.md)
 
 ## Неделя №3
 
 ### Тема недели: Касательная к окружности
 
-У-5: [.](./components/class/class-1.md)
+У-5: [Касательная к окружности. 1.221–1.230](./components/class/class-1.md)
 
-У-6: [.](./components/class/class-2.md)
+У-6: [Касательная к окружности. 1.221–1.230](./components/class/class-2.md)
 
-Д-3: [.](./components/homework/homework-1.md)
+Д-3: [Касательная к окружности.](./components/homework/homework-1.md)
 
 ## Неделя №4
 
 ### Тема недели:Касательная к окружности
 
-У-7: [.](./components/class/class-1.md)
+У-7: [1.231, 1.235, 1.240, 1.252, 1.247.](./components/class/class-1.md)
 
-У-8: [.](./components/class/class-2.md)
+У-8: [1.231, 1.235, 1.240, 1.252, 1.247.](./components/class/class-2.md)
 
-Д-4: [.](./components/homework/homework-1.md)
+Д-4: [Касательная к окружности. 1.233, 1.236, 1.256, 1.255 (с числами).](./components/homework/homework-1.md)
 
 ### [Модульный экзамен](./components/exam/exam-1.md)
