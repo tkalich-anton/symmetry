@@ -1,0 +1,103 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+\begin{document}
+	
+	\lhead{Группа 92}
+	\chead{Модуль 5 Урок №7}
+	\rhead{Школа <<Симметрия>>}
+	\begin{enumerate}
+		\item \textit{} Вычислите:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+				\item $\left( 3,5 \cdot 24 - 5\dfrac{2}{3} : \dfrac{1}{18}\right) \cdot 5 $
+				\item $\left( -12\dfrac{2}{3}\right):3\dfrac{1}{6} +13,5:4,5$
+			\end{enumerate}
+		\end{multicols}
+		\item \textit{} Решите уравнения:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+				\item $3x+5=-2x+1+4x-10$
+				\item $(x^2-7x+10)(x^2-5x+6)=0$
+				\item $\dfrac{x^2-5x}{2x+1}=0$
+				\item $\dfrac{x^2+17x+72}{x+9}=-1$
+				\item $\dfrac{60}{20+x}+\dfrac{60}{20-x}=\dfrac{25}{4}$
+				\item $(x^2-x)^2-2(x^2-x)+2=0$
+				\item $3\cdot\left(\dfrac{2x-3}{x+1}\right)^2-\dfrac{44x-66}{x+1}+7=0$
+			\end{enumerate}
+		\end{multicols}
+		\item \textit{} Решите неравенства:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+				\item $2y+8>5y-6$
+				\item $-2a-10<a+3$
+				\item $
+				\left\{
+				\begin{aligned}
+					5(x+1)-9x-3>-6(x+2),\\
+					3(3+2x)<7x-2(x-8)
+				\end{aligned}
+				\right.
+				$
+				\item $
+				\left\{
+				\begin{aligned}
+					x^2-3x+2<0,\\
+				\end{aligned}
+				\right.
+				$
+				\item $(x-9)(x-2)>0$
+				\item $(2x-1)(3x+5)<0$
+				\item $3x^2+x>0$
+				\item $x^2-100<0$
+				\item $\dfrac{1}{9}x^2\leqslant 1$
+				\item $x^2+4x+3<0$
+				\item $8x^2-3-2x>0$
+			\end{enumerate}
+		\end{multicols}
+		\item Ире надо подписать $880$ открыток. Ежедневно она подписывает на одно и то же количество открыток больше по сравнению с предыдущим днем. Известно, что за первый день Ира подписала $10$ открыток. Определите, сколько открыток было подписано за восьмой день, если вся работа была выполнена за $16$ дней.
+		\item Вероятность того, что новая шариковая ручка пишет плохо (или не пишет), равна 0,19. Покупатель в магазине выбирает одну такую ручку. Найдите вероятность того, что эта ручка пишет хорошо.
+		\item Грузовик перевозит партию щебня массой $360$ тонн, ежедневно увеличивая норму перевозки на одно и то же число тонн. Известно, что за первый день было перевезено $3$ тонны щебня. Определите, сколько тонн щебня было перевезено за десятый день, если вся работа была выполнена за $18$ дней.
+		\item Максим с папой решили покататься на колесе обозрения. Всего на колесе двадцать кабинок, из них $4$ – синие, $10$ – зеленые, остальные – красные. Кабинки по очереди подходят к платформе для посадки. Найдите вероятность того, что Максим прокатится в красной кабинке.
+	\end{enumerate}
+\end{document}

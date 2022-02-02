@@ -1,0 +1,92 @@
+\documentclass[10pt, a4paper]{article}
+\usepackage{cmap}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{
+	amsmath,
+	amssymb,
+	scrextend,
+	enumitem,
+	pscyr,
+	multicol,
+	cmap,
+	titling,
+	indentfirst,
+	cancel,
+	wrapfig,
+	gensymb,
+	tikz,
+	graphicx,
+	fancyhdr,
+	mathrsfs,
+	graphbox,
+	indentfirst
+}
+%Параметры страницы
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm]{geometry}
+\pagestyle{fancy}
+%Путь к картинкам
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+%Числа в списке второго уровня по умолчанию
+\renewcommand{\labelenumii}{\arabic{enumii})}
+%Русские символы в списке
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+
+%Новые команды
+\definecolor{silver}{rgb}{0.7, 0.7, 0.7}
+\definecolor{dark}{rgb}{0.3, 0.3, 0.3}
+
+%Сеттеры
+\setlength{\parindent}{5ex}
+\setlength{\parskip}{1em}
+
+\begin{document}
+
+\lhead{Группа 71}
+\chead{Модуль 5 Урок 7}
+\rhead{Школа <<Симметрия>>}
+
+\begin{enumerate}
+	\item Упростить выражение
+	\begin{enumerate}[label=\asbuk*)]
+		\item $(a^2-7)(a+2)-(2a-1)(a-14)$
+		\item $(2-b)(1+2b)+(1+b)(b^3-3b)$
+		\item $2x^2-(x-2y)(2x+y)$
+	\end{enumerate}
+	\item Докажите, что выражение $(x+8)(x-7)-4(0,25x-16)$ при любом значении $x$ принимает положительные значения.
+	\item Упростите выражение и найдите его значение при указанных значениях переменных:
+	\begin{enumerate}[label=\asbuk*)]
+		\item $126y^3+(x-5y)(x^2+25y^2+5xy)$ при $x=-3$, $y=-2$
+		\item $m^3+n^3-(m^2-2mn-n^2)(m-n)$ при $m=-3$, $n=4$
+	\end{enumerate}
+	\item Представить в виде многочлена:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $7(4a-1)^2$
+			\item $(a+2)(a-1)^2$
+			\item $(5a-3c)(5a+3c)-(7c-a)(7c+a)$
+			\item $(3x-4y)^2-(3x-4y)(3x+4y)$
+			\item $(2a+6b)(6b-2a)-(2a+6b)^2$
+		\end{enumerate}
+	\end{multicols}
+	\item Упростить выражение
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $(x+3)^3-(x-3)^3$
+			\item $(a+2)^3+(a-x)^3$
+			\item $5a(a-8)-3(a+2)(a-2)$
+			\item $(x-3)(x^2+9)(x+3)-(2x^2-x)^2-19$
+			\item $(1-b)(1-b^2)+(1+b)(1+b^2)-2b(1+b)(b-1)$
+		\end{enumerate}
+	\end{multicols}
+	\item Докажите, что значение выражения не зависит от значения переменной
+	\begin{enumerate}[label=\asbuk*)]
+		\item $(x-1)(x^2+1)(x+1)-(x^2-1)^2-2(x^2-3)$
+		\item $(x^2-3)^2-(x-2)(x^2+4)(x+2)-6(5-x^2)$
+	\end{enumerate}
+\end{enumerate}
+\end{document}

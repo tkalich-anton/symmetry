@@ -1,0 +1,90 @@
+\documentclass[10pt, a4paper]{article}
+\usepackage{cmap}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{
+	amsmath,
+	amssymb,
+	scrextend,
+	enumitem,
+	pscyr,
+	multicol,
+	cmap,
+	titling,
+	indentfirst,
+	cancel,
+	wrapfig,
+	gensymb,
+	tikz,
+	graphicx,
+	fancyhdr,
+	mathrsfs,
+	graphbox,
+	indentfirst
+}
+%Параметры страницы
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm]{geometry}
+\pagestyle{fancy}
+%Путь к картинкам
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+%Числа в списке второго уровня по умолчанию
+\renewcommand{\labelenumii}{\arabic{enumii})}
+%Новые команды
+\definecolor{silver}{rgb}{0.7, 0.7, 0.7}
+\definecolor{dark}{rgb}{0.3, 0.3, 0.3}
+\definecolor{harvestgold}{rgb}{0.85, 0.57, 0.0}
+\newcommand{\answer}[1]{\textcolor{silver}{\fbox{#1}}}
+\newcommand{\ranswer}[1]{\textcolor{silver}{\begin{flushright}\vspace{-1em}\fbox{#1}\end{flushright}}}
+\newcommand{\leveli}{\textcolor{dark}{$\blacksquare\square\square$}\hspace{0.5em}}
+\newcommand{\levelii}{\textcolor{dark}{$\blacksquare\blacksquare\square$}\hspace{0.5em}}
+\newcommand{\leveliii}{\textcolor{dark}{$\blacksquare\blacksquare\blacksquare$}\hspace{0.5em}}
+
+%Русские символы в списке
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+
+%Сеттеры
+\setlength{\parindent}{5ex}
+\setlength{\parskip}{1em}
+\begin{document}
+	
+	\lhead{Группа 92}
+	\chead{Модуль 5 Урок №7}
+	\rhead{Школа <<Симметрия>>}
+	\begin{enumerate}
+		\item \textit{} Решите систему уравнений:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+				\item $
+				\left\{
+				\begin{aligned}
+					5(x+1)-9x-3>-6(x+2),\\
+					3(3+2x)<7x-2(x-8)
+				\end{aligned}
+				\right.
+				$
+				\item $
+				\left\{
+				\begin{aligned}
+					x^2-3x+2<0,\\
+				\end{aligned}
+				\right.
+				$
+				\item $(x-9)(x-2)>0$
+				\item $(2x-1)(3x+5)<0$
+				\item $3x^2+x>0$
+				\item $x^2-100<0$
+				\item $\dfrac{1}{9}x^2\leqslant 1$
+				\item $x^2+4x+3<0$
+				\item $8x^2-3-2x>0$
+			\end{enumerate}
+		\end{multicols}
+		\item Ире надо подписать $880$ открыток. Ежедневно она подписывает на одно и то же количество открыток больше по сравнению с предыдущим днем. Известно, что за первый день Ира подписала $10$ открыток. Определите, сколько открыток было подписано за восьмой день, если вся работа была выполнена за $16$ дней.
+		\item Вероятность того, что новая шариковая ручка пишет плохо (или не пишет), равна 0,19. Покупатель в магазине выбирает одну такую ручку. Найдите вероятность того, что эта ручка пишет хорошо.
+		\item Грузовик перевозит партию щебня массой $360$ тонн, ежедневно увеличивая норму перевозки на одно и то же число тонн. Известно, что за первый день было перевезено $3$ тонны щебня. Определите, сколько тонн щебня было перевезено за десятый день, если вся работа была выполнена за $18$ дней.
+		\item Максим с папой решили покататься на колесе обозрения. Всего на колесе двадцать кабинок, из них $4$ – синие, $10$ – зеленые, остальные – красные. Кабинки по очереди подходят к платформе для посадки. Найдите вероятность того, что Максим прокатится в красной кабинке.
+	\end{enumerate}
+\end{document}

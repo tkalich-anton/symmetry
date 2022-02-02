@@ -1,0 +1,322 @@
+\documentclass[10pt, a4paper]{article}
+\usepackage{cmap}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{
+	amsmath,
+	amssymb,
+	scrextend,
+	enumitem,
+	pscyr,
+	multicol,
+	cmap,
+	titling,
+	indentfirst,
+	cancel,
+	wrapfig,
+	gensymb,
+	tikz,
+	graphicx,
+	fancyhdr,
+	mathrsfs,
+	graphbox,
+	indentfirst
+}
+%Параметры страницы
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm]{geometry}
+\pagestyle{fancy}
+%Путь к картинкам
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+%Числа в списке второго уровня по умолчанию
+\renewcommand{\labelenumii}{\arabic{enumii})}
+%Новые команды
+\definecolor{silver}{rgb}{0.7, 0.7, 0.7}
+\definecolor{dark}{rgb}{0.3, 0.3, 0.3}
+\definecolor{harvestgold}{rgb}{0.85, 0.57, 0.0}
+\newcommand{\answer}[1]{\textcolor{silver}{\fbox{#1}}}
+\newcommand{\ranswer}[1]{\textcolor{silver}{\begin{flushright}\vspace{-1em}\fbox{#1}\end{flushright}}}
+\newcommand{\leveli}{\textcolor{dark}{$\blacksquare\square\square$}\hspace{0.5em}}
+\newcommand{\levelii}{\textcolor{dark}{$\blacksquare\blacksquare\square$}\hspace{0.5em}}
+\newcommand{\leveliii}{\textcolor{dark}{$\blacksquare\blacksquare\blacksquare$}\hspace{0.5em}}
+
+%Русские символы в списке
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+
+%Сеттеры
+\setlength{\parindent}{5ex}
+\setlength{\parskip}{1em}
+
+\begin{document}
+		
+\lhead{Уравнения}
+\rhead{Школа <<Симметрия>>}
+
+\section{Системы линейных уравнений}
+\begin{enumerate}
+	\item \textit{(Никольский 7 кл., №696, №697)} Решить систему уравнений:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item 
+			$\left\{
+			\begin{array}{l}
+				x-y-2=-1,\\
+				x+y-5=0
+			\end{array}
+			\right.$ \answer{$(3;2)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				x-y=2,\\
+				x+y=6
+			\end{array}
+			\right.$ \answer{$(4;2)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				x-2y=0,\\
+				2x-3y-7=0\\
+			\end{array}
+			\right.$ \answer{$(14;7)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				x+5y=0,\\
+				3x+7y-16=0
+			\end{array}
+			\right.$ \answer{$(10;-2)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				y-3x=0,\\
+				x-2y=-10
+			\end{array}
+			\right.$ \answer{$(2;6)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				7x-y=0,\\
+				3x-y+12=-10
+			\end{array}
+			\right.$ \answer{$(3;21)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				x-2y=3,\\
+				5x+y=4
+			\end{array}
+			\right.$ \answer{$(1;-1)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				x-y=2,\\
+				3x-2y=9
+			\end{array}
+			\right.$ \answer{$(5;3)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				x+2y-11=0,\\
+				4x-5y=-8
+			\end{array}
+			\right.$ \answer{$(3;4)$}
+			
+			\item
+			$\left\{
+			\begin{array}{l}
+				x+4y-2=0,\\
+				3x+8y=2
+			\end{array}
+			\right.$ \answer{$(-2;1)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				2x+4y-90=0,\\
+				x-3y=10
+			\end{array}
+			\right.$ \answer{$(31;7)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				x-y-12=0,\\
+				2x+4y=0
+			\end{array}
+			\right.$ \answer{$(8;-4)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				3x-2y-4=0,\\
+				2x+10y-14=0
+			\end{array}
+			\right.$ \answer{$(2;1)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				3x-4y-7=0,\\
+				x+2y+1=0
+			\end{array}
+			\right.$ \answer{$(1;-1)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				7x-2y+3=9,\\
+				x+4y+7=-5
+			\end{array}
+			\right.$ \answer{$(0;-3)$}
+		\end{enumerate}
+	\end{multicols}
+	\item \textit{(Никольский 7 кл., №698, №700)} Решить систему уравнений:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item 
+			$\left\{
+			\begin{array}{l}
+				5x+y-7=0,\\
+				x-3y-11=0
+			\end{array}
+			\right.$ \answer{$(2;-3)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				2x+y-1=0,\\
+				3x+2y+5=0
+			\end{array}
+			\right.$ \answer{$(7;-13)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				2x+y=7,\\
+				x-2y+4=0
+			\end{array}
+			\right.$ \answer{$(2;3)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				3x+y=-5,\\
+				x-3y-5=0
+			\end{array}
+			\right.$ \answer{$(-1;-2)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				x+2y-4=0,\\
+				3x+y+3=0
+			\end{array}
+			\right.$ \answer{$(-1;-2)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				5x+y-15=0,\\
+				x-2y=14
+			\end{array}
+			\right.$ \answer{$(4;-5)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				x+2y-3=0,\\
+				x+y=-1
+			\end{array}
+			\right.$ \answer{$(-5;4)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				x-3y+3=0,\\
+				x+y=1
+			\end{array}
+			\right.$ \answer{$(0;1)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				4x+y-2=0,\\
+				3x+y=-3
+			\end{array}
+			\right.$ \answer{$(5;-18)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				x-y-7=0,\\
+				3x-y+7=6
+			\end{array}
+			\right.$ \answer{$(-4;-11)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				2x-3y+7=0,\\
+				3x+4y=1
+			\end{array}
+			\right.$ \answer{$\left(-\frac{25}{17};-\frac{23}{17}\right)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				3x-3y-5=0,\\
+				6x+8y=-11
+			\end{array}
+			\right.$ \answer{$\left(\frac{1}{6};-\frac{3}{2}\right)$}
+		\end{enumerate}
+	\end{multicols}
+	\item \textit{(Никольский 7 кл., №723-725)} Решить систему уравнений:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item 
+			$\left\{
+			\begin{array}{l}
+				x-y=5,\\
+				-4x+4y=20
+			\end{array}
+			\right.$ \answer{Нет решений}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				2x+3y=-4,\\
+				5x-7=-6y
+			\end{array}
+			\right.$ \answer{$(15;-11\frac13)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				3x-2y=11,\\
+				4x-5y=3
+			\end{array}
+			\right.$ \answer{$(7;5)$}
+			
+			\item 
+			$\left\{
+			\begin{array}{l}
+				5x+6y=13,\\
+				7x+18y+1=0
+			\end{array}
+			\right.$ \answer{$(7;5)$}
+		\end{enumerate}
+	\end{multicols}
+\end{enumerate}
+
+\end{document}
