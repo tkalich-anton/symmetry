@@ -1,0 +1,96 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+\begin{document}
+	
+	\lhead{Группа 91}
+	\chead{Модуль 5 Урок №7}
+	\rhead{Школа <<Симметрия>>}
+	\begin{enumerate}
+				\item \textit{} Вычислите:
+				\begin{multicols}{2}
+					\begin{enumerate}[label=\asbuk*)]
+						\item $356\cdot14+17\cdot215$
+						\item $1778:7+1341:9$
+						\item $(14+764)\cdot28-56\cdot66$
+						\item $\left(4-1\dfrac{1}{6}+6\dfrac{1}{4}\right):\dfrac{1}{2}$
+						\item $\left(8\dfrac{1}{2}-3\dfrac{3}{4}\right)\cdot8$
+						\item $\left(5\dfrac{5}{7}\cdot\dfrac{3}{8}-5\dfrac{1}{4}:7\right):3+3\dfrac{7}{28}$
+						\item $\left( 14,05-1\dfrac{1}{4}\right):0,04-13,8\cdot13 $
+						\item $\left(3\dfrac{1}{3}\cdot1,9+19,5:4\dfrac{1}{2}\right):\left(\dfrac{62}{75}-0,16\right)$
+					\end{enumerate}
+				\end{multicols}
+				\item \textit{} Решите уравнения:
+				\begin{multicols}{2}
+					\begin{enumerate}[label=\asbuk*)]
+						\item $5-3(x+5)=7-(2+3x)$
+						\item $-x+3+x=x-(x-3)$
+						\item $5x-4+2x=7(x-3)$
+						\item $6(x-3)=12$
+						\item $3x-5=-2x+7+5x-12$
+						\item $x-1+3x-5=(x-5)-(x-3)+(x+1)$
+						\item $7x+2-3x+10=0$
+						\item $5x-8-(3x-8)=0$
+						\item $3x-1-(2x+5-x)=0$
+						\item $1,52-2,8x-(1,72-5,2x)=0$
+						\item $5x+7-2x-(3-2x+x)=0$
+					\end{enumerate}
+				\end{multicols}
+				\item \textit{} Решите уравнения:
+				\begin{multicols}{2}
+					\begin{enumerate}[label=\asbuk*)]
+						\item $1,2x-0,5x^2=4x^2-0,8x$
+						\item $0,76x^2+14x=0$
+						\item $5x^2+8x-9=0$
+						\item $4x^2-8x+3=0$
+						\item $3x^2-5x-2=0$
+						\item $5x^2-6x+1=0$
+						\item $x^2-10x+9=0$
+						\item $x^2-3x=1,75$
+						\item $x^2+x=2$
+					\end{enumerate}
+				\end{multicols}
+				\item Максим с папой решили покататься на колесе обозрения. Всего на колесе двадцать кабинок, из них $4$ – синие, $10$ – зеленые, остальные – красные. Кабинки по очереди подходят к платформе для посадки. Найдите вероятность того, что Максим прокатится в красной кабинке.
+				\item Ире надо подписать $880$ открыток. Ежедневно она подписывает на одно и то же количество открыток больше по сравнению с предыдущим днем. Известно, что за первый день Ира подписала $10$ открыток. Определите, сколько открыток было подписано за восьмой день, если вся работа была выполнена за $16$ дней.
+			\end{enumerate}
+		\end{document}
