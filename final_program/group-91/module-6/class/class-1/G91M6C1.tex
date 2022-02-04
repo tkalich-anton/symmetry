@@ -1,0 +1,81 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+\begin{document}
+	
+	\lhead{Группа 91}
+	\chead{Модуль 6 Урок №1}
+	\rhead{Школа <<Симметрия>>}
+	\begin{enumerate}
+		\item Вычислите:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+			\item $343\cdot 52 - 220 \cdot 0,4$
+			\item $228:12-497,7:553$
+			\item $\dfrac{7}{12}-\dfrac{4}{13}$
+			\item $5\dfrac{3}{10}+\dfrac{11}{15}$
+			\item $9\dfrac{5}{24}+\dfrac{35}{36}$
+			\item $1\dfrac{3}{4}\cdot 2\dfrac{4}{7}:2\dfrac{2}{5}$
+		\end{enumerate}
+		\end{multicols}
+	\item Решите уравнения:
+			\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+				\item $3x-7=0$
+				\item $7x-7=14x-1$
+				\item $0,5x-7,3=-4x+6$
+				\item $(3x-2)-(x-1)=10$
+				\item $\dfrac{2x-3}{4}+\dfrac{x+2}{2}=6+\dfrac{2x-3}{2}$
+				\item $\dfrac{1}{2}x-3x\left( 2-\dfrac{1}{3}x\right)=0 $
+			\end{enumerate}
+		\end{multicols}
+	\item Решите квадратные уравнения:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $x^2+x-6=0$
+			\item $x^2+4x+15=0$
+			\item $x^2+4x+4=0$
+			\item $5x^2+8x-9=0$
+		\end{enumerate}
+	\end{multicols}
+	\end{enumerate}
+\end{document}
