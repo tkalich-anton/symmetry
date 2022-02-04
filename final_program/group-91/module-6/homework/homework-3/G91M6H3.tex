@@ -1,0 +1,62 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{soulutf8}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+	
+	\lhead{Группа 91}
+	\chead{Модуль 6 Домашняя работа 3}
+	\rhead{Школа <<Симметрия>>}
+	
+	\begin{enumerate}
+		\item \textit{(1 балл)} В группе из $20$ российских туристов несколько человек владеют иностранными языками. Из них пятеро говорят только по-английски, трое только по-французски, двое по-французски и по-английски. Какова вероятность того, что случайно выбранный турист говорит по-французски?
+		\item \textit{(1 балл)} В лыжных гонках участвуют $13$ спортсменов из России, $2$ спортсмена из Норвегии и $5$ спортсменов из Швеции. Порядок, в котором спортсмены стартуют, определяется жребием. Найдите вероятность того, что первым будет стартовать спортсмен из Норвегии или Швеции.
+		\item \textit{(1 балл)} В среднем из каждых $200$ поступивших в продажу аккумуляторов $196$ аккумуляторов заряжены. Найдите вероятность того, что купленный аккумулятор не заряжен.
+		\item \textit{(1 балл)} Из $1600$ пакетов молока в среднем $80$ протекают. Какова вероятность того, что случайно выбранный пакет молока не течёт?
+		\item \textit{(2 балла)} Бригада маляров красит забор длиной $270$ метров, ежедневно увеличивая норму покраски на одно и то же число метров. Известно, что за первый и последний день в сумме бригада покрасила $90$ метров заборов. Определите, сколько дней бригада маляров красила весь забор.
+		\item \textit{(2 балла)} Турист идет из одного города в другой, каждый день проходя больше, чем в предыдущий день, на одно и то же расстояние. Известно, что за первый день турист прошел $9$ километров. Определите, сколько километров прошел турист за шестой день, если весь путь он прошел за $7$ дней, а расстояние между городами составляет $105$ километров.
+		\item \textit{(2 балла)} Альпинисты в первый день восхождения поднялись на высоту $1400$ м, а затем каждый следующий день поднимались на высоту на $100$ м меньше, чем в предыдущий. За сколько дней они покорили высоту $5000$ м?
+	\end{enumerate}
+\end{document}

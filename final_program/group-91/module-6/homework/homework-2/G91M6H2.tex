@@ -1,0 +1,88 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{soulutf8}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+	
+	\lhead{Группа 91}
+	\chead{Модуль 6 Домашняя работа 2}
+	\rhead{Школа <<Симметрия>>}
+	
+	\begin{enumerate}
+		\item \textit{(2 балла)} Решите уравнения:
+		\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $3x-5=-2x+7+5x-12$
+			\item $x-1+3x-5=(x-5)-(x-3)+(x+1)$
+			\item $7x+2-3x+10=0$
+			\item $5x-8-(3x-8)=0$
+		\end{enumerate}
+		\end{multicols}
+		\item \textit{(4 балла)} Решите квадратные уравнения:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+				\item $x^2-4x=0$
+				\item $x^2-0,5x=0$
+				\item $7x^2=5x$
+				\item $x^2+6x=0$
+				\item $x^2-8x=0$
+				\item $15x-x^2=0$
+				\item $1-x^3=0$
+				\item $125-x^3=0$
+			\end{enumerate}
+		\end{multicols}
+		\item \textit{(2 балла)} Решите линейные неравенства:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+				\item $2x+17>20$
+				\item $5y\geqslant25+3y$
+				\item $-10x+22<-3+12x$
+				\item $-y+1\leqslant-2y+3$
+			\end{enumerate}
+		\end{multicols}
+	\item \textit{(2 балла)}Найдите значение выражения $\dfrac{(a^3)^5\cdot a^4 : (a^4)^3}{a^3\cdot a^6}$ при $a=-\dfrac{1}{7}$
+	\end{enumerate}
+	
+\end{document}

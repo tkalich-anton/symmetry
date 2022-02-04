@@ -1,0 +1,63 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{soulutf8}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+	
+	\lhead{Группа 91}
+	\chead{Модуль 6 Домашняя работа 4}
+	\rhead{Школа <<Симметрия>>}
+	
+	\begin{enumerate}
+		\item \textit{(1 балл)} Вычислите:\\\\
+		$\left( 4,3-5\dfrac{4}{15}\right)\cdot 4\dfrac{4}{29}-2,5\cdot 2 $
+		\item \textit{(1 балл)} Решите уравнение:\\\\
+		$\dfrac{5-6y}{3}+\dfrac{y}{8}=0$
+		\item \textit{(2 балла)} Бизнесмен Печенов получил в $2000$ году прибыль в размере $1 000 000$ рублей. Каждый следующий год его прибыль увеличивалась на $16\%$ по сравнению с предыдущим годом. Сколько рублей заработал Печенов за $2002$ год?
+		\item \textit{(2 балла)} Компания «Альфа» начала инвестировать средства в перспективную отрасль в $2001$ году, имея капитал в размере $3000$ долларов. Каждый год, начиная с $2002$ года, она получала прибыль, которая составляла $100\%$ от капитала предыдущего года. А компания «Бета» начала инвестировать средства в другую отрасль в $2003$ году, имея капитал в размере 6000 долларов, и, начиная с $2004$ года, ежегодно получала прибыль, составляющую $200\%$ от капитала предыдущего года. На сколько долларов капитал одной из компаний был больше капитала другой к концу $2006$ года, если прибыль из оборота не изымалась?
+		\item \textit{(2 балла)} В результате трехкратного повышения цены на некоторый товар на одно и то же число процентов цена товара стала превышать первоначальную цену на $72,8\%$. На сколько процентов повышалась цена на товар каждый раз?
+		\item \textit{(2 балла)} В полночь в организме начало накапливаться ядовитое вещество, причем каждые три часа количество попадающего в организм вещества увеличивается вдвое. Сколько граммов вещества накопится в организме за сутки (начиная с нуля часов), если в период с $6$ до $9$ часов утра в организм попало $0,0008$ г вещества?
+	\end{enumerate}
+\end{document}

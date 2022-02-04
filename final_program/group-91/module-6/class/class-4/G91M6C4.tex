@@ -1,0 +1,73 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+\begin{document}
+	
+	\lhead{Группа 91}
+	\chead{Модуль 6 Урок №4}
+	\rhead{Школа <<Симметрия>>}
+	\begin{enumerate}
+		\item Решите квадратные уравнения:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+			\item $0,5x(2+x)=0$
+			\item $3x(x-0,5)=0$
+			\item $(x-7)(7+x)=0$
+			\item $3(x-5)(5+x)=0$
+			\item $0,8(x+1)(1-x)$
+		\end{enumerate}
+		\end{multicols}
+	\item Решите линейные неравенства:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+		\item $-12y+25\leqslant12y-25$
+		\item $100x+223>\dfrac{1}{100}x-223,01$
+		\item $50x+12<(x-3)\cdot3$
+		\item $6y+3>2y-2-5y$
+		\item $3x+3\geqslant\dfrac{3}{5}$
+		\item $120x>840$
+		\item $3\dfrac{1}{9}x+14<5\dfrac{2}{9}x-10$
+		\item $8\dfrac{1}{4}+x\geqslant5\dfrac{1}{2}$
+		\end{enumerate}
+	\end{multicols}
+	\end{enumerate}
+\end{document}
