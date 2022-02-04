@@ -1,0 +1,81 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+\begin{document}
+	
+	\lhead{Группа 101}
+	\chead{Модуль 6 Урок №3}
+	\rhead{Школа <<Симметрия>>}
+	\begin{enumerate}
+		\item Вычислите:
+		\begin{multicols}{3}
+			\begin{enumerate}[label=\asbuk*)]
+			\item $sin\left( arcsin \dfrac{1}{2}\right) $
+			\item $sin\left( arcsin \dfrac{1}{3}\right) $
+			\item $arcsin \left( -\dfrac{1}{2}\right) $
+			\item $arcsin $ $0$
+			\item $cos\left( arccos \left( -\dfrac{1}{2}\right) \right) $
+			\item $cos\left( arccos \left( -\dfrac{1}{3}\right) \right) $
+			\item $arccos\dfrac{1}{7}$
+			\item $arccos(-1)$
+			\item $tg(arctg1)$
+			\item $tg(arctg\sqrt{3})$
+			\item $arctg$ $0$
+			\item $arctg$ $\pi$
+			\item $ctg\left( arcctg\dfrac{\sqrt{3}}{2}\right) $
+			\item $ctg(arcctg(-20000))$
+			\item $arcctg$ $0$
+			\item $arcctg\dfrac{\sqrt{3}}{3}$
+		\end{enumerate}
+		\end{multicols}
+		\item 
+		\item 
+		\item
+		\item 
+		\item 
+		\item
+		\item
+		\item
+		\item 
+	\end{enumerate}
+\end{document}

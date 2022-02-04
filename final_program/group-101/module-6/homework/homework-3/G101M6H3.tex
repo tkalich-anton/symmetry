@@ -1,0 +1,95 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{soulutf8}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+	
+	\lhead{Группа 101}
+	\chead{Модуль 6 Домашняя работа 3}
+	\rhead{Школа <<Симметрия>>}
+	
+	\begin{enumerate}
+		\item \textit{(2 балла)} Решите системы уравнений:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+		\item $\left\{
+		\begin{array}{l}
+			2x+3y=-4,\\
+			5x-7=-6y
+		\end{array}
+		\right.$ 
+		\item  $\left\{
+		\begin{array}{l}
+			9x^2-12x+4y^2+4y=15,\\
+			3x+2y=3
+		\end{array}
+		\right.$ 
+	\end{enumerate}
+\end{multicols}
+		\item \textit{(4 балла)} Решите уравнения:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+				\item $\sin\left(3x+\dfrac{\pi}{4} \right)=-1 $
+				\item $\cos\left( \dfrac{3\pi}{4}-2x\right)=-1 $
+				\item $\tg\left( \dfrac{3\pi}{4}+2x\right)=-1 $
+				\item $\ctg\left(\dfrac{\pi}{6}-\dfrac{x}{2} \right)=-1 $
+				\item $\sin\left( 2x-\dfrac{\pi}{3}\right)=\dfrac{\sqrt{3}}{2} $
+				\item $\cos3x=-\dfrac{1}{2}$
+				\item $\tg3x=\sqrt{3}$
+				\item $\ctg\left(\dfrac{x}{3}-\dfrac{\pi}{3} \right)=\dfrac{\sqrt{3}}{3} $
+			\end{enumerate}
+		\end{multicols}
+		\item \textit{(4 балла)} Решите уравнения:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+				\item $2\sin^2x=3\cos x$
+				\item $\sin^2x+2\cos x-2=0$
+				\item $\sin2x\cos x-3\sin^2x=0$
+				\item $\cos2x-\cos x=0$
+			\end{enumerate}
+		\end{multicols}
+	\end{enumerate}
+	
+\end{document}
