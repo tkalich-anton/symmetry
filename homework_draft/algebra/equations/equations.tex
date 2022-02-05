@@ -1,0 +1,604 @@
+\documentclass[10pt, a4paper]{article}
+\usepackage{cmap}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{
+	amsmath,
+	amssymb,
+	scrextend,
+	enumitem,
+	pscyr,
+	multicol,
+	cmap,
+	titling,
+	indentfirst,
+	cancel,
+	wrapfig,
+	gensymb,
+	tikz,
+	graphicx,
+	fancyhdr,
+	mathrsfs,
+	graphbox,
+	indentfirst
+}
+%Параметры страницы
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm]{geometry}
+\pagestyle{fancy}
+%Путь к картинкам
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+%Числа в списке второго уровня по умолчанию
+\renewcommand{\labelenumii}{\arabic{enumii})}
+%Новые команды
+\definecolor{silver}{rgb}{0.7, 0.7, 0.7}
+\definecolor{dark}{rgb}{0.3, 0.3, 0.3}
+\definecolor{harvestgold}{rgb}{0.85, 0.57, 0.0}
+\newcommand{\answer}[1]{\textcolor{silver}{\fbox{#1}}}
+\newcommand{\ranswer}[1]{\textcolor{silver}{\begin{flushright}\vspace{-1em}\fbox{#1}\end{flushright}}}
+\newcommand{\leveli}{\textcolor{dark}{$\blacksquare\square\square$}\hspace{0.5em}}
+\newcommand{\levelii}{\textcolor{dark}{$\blacksquare\blacksquare\square$}\hspace{0.5em}}
+\newcommand{\leveliii}{\textcolor{dark}{$\blacksquare\blacksquare\blacksquare$}\hspace{0.5em}}
+
+%Русские символы в списке
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+
+%Сеттеры
+\setlength{\parindent}{5ex}
+\setlength{\parskip}{1em}
+
+\begin{document}
+		
+\lhead{Уравнения}
+\rhead{Школа <<Симметрия>>}
+
+\section{Линейные уравнения}
+
+\begin{enumerate}
+	\item Решите уравнения:
+	\begin{multicols}{4}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $x+4=9$
+			\item $x+2=-4$
+			\item $\dfrac{1}{3}x=2$
+			\item $\dfrac{1}{8}x=5$
+			\item $2x=0$
+			\item $-3x=0$
+			\item $x+5=5$
+			\item $x-8=8$
+			\item $4x=10$
+			\item $5x=1$
+			\item $12x=0$
+			\item $3x=\dfrac{1}{7}$
+			\item $-x=0$
+			\item $-\dfrac{1}{2}x=0$
+		\end{enumerate}
+	\end{multicols}
+	\item Решите уравнения:
+	\begin{multicols}{3}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $-\dfrac{3}{4}=-\dfrac{6}{7}$
+			\item $1,8x=-0,72$
+			\item $0,25x=100$
+			\item $0,2=5x$
+			\item $\dfrac{x}{5}=4$
+			\item $3,5x=2\dfrac{1}{3}$
+			\item $-2\dfrac{1}{3}x=7$
+			\item $1\dfrac{2}{3}=2\dfrac{1}{3}$
+			\item $\dfrac{x}{3}=4$
+		\end{enumerate}
+	\end{multicols}
+	\item Решите уравнения:
+	\begin{multicols}{3}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $3x-5=0$
+			\item $5-x=0$
+			\item $x-2x+3=7$
+			\item $4x-2=x$
+			\item $7x-4=0$
+			\item $18-10x=0$
+			\item $2x-4x-1=2$
+			\item $x-3=2x+1$
+			\item $7-x=0$
+			\item $15-7x=0$
+			\item $3x-5=x$
+			\item $3x+2=5x-7$
+		\end{enumerate}
+	\end{multicols}
+	\item Решите уравнения:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $7x-3+x=4x-9+5x$
+			\item $x+5-8x=7+2x-4$
+			\item $0,5x-3=0,8-1,4x$
+			\item $x+0,2=0,4x+3,2$
+			\item $\dfrac{2}{3}-3x=\dfrac{1}{2}x-2+x$
+			\item $5-\dfrac{1}{3}x-\dfrac{1}{2}=\dfrac{1}{4}x$
+			\item $\dfrac{2x}{7}-\dfrac{x}{4}=1$
+			\item $\dfrac{x}{3}+\dfrac{x}{2}=6$
+		\end{enumerate}
+	\end{multicols}
+	\item Решите уравнения:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $0\cdot x = 3$
+			\item $0\cdot x = -2$
+			\item $0\cdot x = 0$
+			\item $3x-3x=0$
+			\item $3x+(2x-1)=10$
+			\item $5x-(3x-1)=3$
+			\item $(3x-2)-(x-1)=10$
+			\item $7-(2x-3)=x-(2-4x)$
+			\item $12x+4=3(4x-2)$
+			\item $5-3(x+5)=7-(2+3x)$
+			\item $-x+3+x=x-(x-3)$
+			\item $5x-4+2x=7(x-3)$
+			\item $6(x-3)=12$
+			\item $14=7(x+2)$
+			\item $2(x-1)-4=6(x+2)$
+			\item $3(x+1)-9=6(x-2)$
+		\end{enumerate}
+	\end{multicols}
+	\item Решите уравнения:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $3x-5=\dfrac{x+3}{4}$
+			\item $\dfrac{x-3}{5}+\dfrac{x+2}{4}=\dfrac{1}{2}$
+			\item $\dfrac{2-x}{3}=x-3$
+			\item $\dfrac{2x-3}{4}+\dfrac{x+2}{2}=6+\dfrac{2x-3}{2}$
+		\end{enumerate}
+	\end{multicols}
+	\item Решите уравнения:
+	\begin{enumerate}[label=\asbuk*)]
+		\begin{multicols}{2}
+			\item $x+3=2x-4$
+			\item $x+4=x+2$
+			\item $2x-4=7x+2$
+			\item $2x-6=3x$
+			\item $5x+6x$
+			\item $4x=-12x$
+			\item $2x+5-7x+2=3$
+		\end{multicols}
+	\end{enumerate}
+	\item Решите уравнения:
+	\begin{enumerate}[label=\asbuk*)]
+		\item $3x-5=-2x+7+5x-12$
+		\item $x-1+3x-5=(x-5)-(x-3)+(x+1)$
+		\item $7x+2-3x+10=0$
+		\item $5x-8-(3x-8)=0$
+		\item $3x-1-(2x+5-x)=0$
+		\item $1,52-2,8x-(1,72-5,2x)=0$
+		\item $5x+7-2x-(3-2x+x)=0$
+		\item $7-0,2x-(21,28-1,6)=0$
+		\item $\dfrac{1}{2}x-3-\left(2-\dfrac{1}{3}x\right)=0$
+		\item $1\dfrac{1}{5}-0,5x-0,4+\dfrac{2}{5}x=0$
+	\end{enumerate}
+	\item Решите уравнения:
+	\begin{enumerate}[label=\asbuk*)]
+		\item $x-2(x-3(x-4))=1$
+		\item $5x-4(x-3(x-2))=2$
+		\item $3x-2(x-2(x-3))=3$
+		\item $4x-4(3x-3(2x-2))=-24$
+		\item $x-2(x-3(x-4(x-5)))=6$
+		\item $5x-4(x-3(x-2(x-1)))=2$
+		\item $x-(x-(x-(x-1)))=1-(2-(3-(4-x)))$
+		\item $4x-(3x-(2x-(x-1)-2)-3)-4=0$
+	\end{enumerate}
+\end{enumerate}
+\section{Неполные квадратные уравнения}
+\begin{enumerate}
+	\item Решите уравнения:
+	\begin{enumerate}[label=\asbuk*)]
+		\begin{multicols}{2}
+			\item $x^2=0$
+			\item $2x^2=0$
+			\item $x(x-1)=0$
+			\item $(x+3)x=0$
+			\item $x(x+2)=0$
+			\item $0,5x(2+x)=0$
+			\item $3x(x-0,5)=0$
+			\item $(x-7)(7+x)=0$
+			\item $3(x-5)(5+x)=0$
+			\item $0,8(x+1)(1-x)$
+		\end{multicols}
+	\end{enumerate}
+	\item Решите уравнения:
+	\begin{enumerate}[label=\asbuk*)]
+		\begin{multicols}{3}
+			\item $x^2-4x=0$
+			\item $x^2-0,5x=0$
+			\item $7x^2=5x$
+			\item $x^2+6x=0$
+			\item $x^2-8x=0$
+			\item $15x-x^2=0$
+			\item $1-x^3=0$
+			\item $125-x^3=0$
+			\item $x^4-1=0$
+			\item $3x^2=0$
+			\item $5x=2x^2$
+			\item $2x+3x^2=0$
+			\item $x(x-2)=0$
+			\item $-x^2(3+x)=0$
+			\item $2x^2-3x=0$
+			\item $x^2+x^3=0$
+			\item $\dfrac{1}{3}x^2-5x=0$
+			\item $\dfrac{3}{4}x+\dfrac{1}{8}x^2=0$
+		\end{multicols}
+	\end{enumerate}
+	\item Решите уравнения:
+	\begin{enumerate}[label=\asbuk*)]
+		\begin{multicols}{3}
+			\item $x^2-1=0$
+			\item $16-x^2=0$
+			\item $x^2-9=0$
+			\item $25-x^2=0$
+			\item $x^2-81=0$
+			\item $5+x^2=0$
+			\item $x^3-8=0$
+			\item $4-2x^2$
+			\item $3-12x^2=0$
+			\item $7=28x^2$
+			\item $\dfrac{1}{4}+x^2=0$
+		\end{multicols}
+	\end{enumerate}
+	\item Решите уравнения:
+	\begin{enumerate}[label=\asbuk*)]
+		\begin{multicols}{3}
+			\item $x^2-3=0$
+			\item $x^2-\dfrac{2}{9}=0$
+			\item $\dfrac{1}{5}x^2-10=0$
+			\item $5x^2+2=0$
+			\item $0,001x^2=40$
+		\end{multicols}
+	\end{enumerate}
+	\item Решите уравнения:
+	\begin{enumerate}[label=\asbuk*)]
+		\begin{multicols}{2}
+			\item $4x^2+6x=7x^2-12x$
+			\item $1,2x-0,5x^2=4x^2-0,8x$
+			\item $0,76x^2+14x=0$
+			\item $0,6x^2+\sqrt{3}x=0$
+			\item $0,07x^2-50=2,1x-50$
+			\item $9x^2-10x-7x^2-15x$
+			\item $-0,5x^2+\sqrt{5}x=0$
+			\item $\dfrac{2}{3}x^2=5x$
+		\end{multicols}
+	\end{enumerate}
+	\item Решите уравнения:
+	\begin{enumerate}[label=\asbuk*)]
+			\item $(x-1)^2+(x+1)^2=2$
+			\item $(x-7)(x+3)+(x-1)(x+5)+26=0$
+			\item $(3x-8)^2-(4x-6)^2+(5x-2)(x+2)=24$
+			\item $(2x-5)(3x-4)-(3x+4)(x-2)-10x-28=0$
+			\item $(x+2)(x+3)=2x(x+6)+6$
+	\end{enumerate}
+	\item Решите уравнения:
+	\begin{enumerate}[label=\asbuk*)]
+		\item $(x-1)^2-1=0$
+		\item $(2x-3)^2-9=0$
+		\item $(x+2)^2-4=0$
+		\item $\dfrac{4x^2-1}{3}-\dfrac{3x^2+8}{5}=1$
+		\item $\dfrac{5x^2-48}{8}-\dfrac{33-2x^2}{6}=3\dfrac{5}{6}$
+		\item $\left(x+\dfrac{1}{2}\right)\left(x-\dfrac{1}{2}\right)=\dfrac{5}{16}$
+		\item $(3x+1,5)(3x-1,5)=54$
+		\item $\dfrac{3x^2-4x}{2}=\dfrac{5x^2-x}{3}$
+		\item $\dfrac{2x-3x^2}{5}-\dfrac{7x^2-x}{4}=\dfrac{x^2}{2}$
+	\end{enumerate}
+	\item При каких числовых значениях $m$ существуют корни уравнения $x^2+m=0$?
+	\item При каких числовых значениях $m$ уравнение $x^2+m=0$ будет иметь корень $-3$?
+	\item При каком числовом значении $k$ уравнение $10x^2+4x-k=0$ имеет корень $0$?
+	\item Квадрат натурального числа равен утроенному этому же числу. Найдите такое число.
+	\item Квадрат числа в 2 раза меньше самого числа. Найдите это число.
+	\item Решите уравнение относительно $x$ ($a$ и $b$ — данные числа):
+	\begin{enumerate}[label=\asbuk*)]
+		\begin{multicols}{2}
+			\item $a^2x^2-b^2=0$
+			\item $ax^2-\dfrac{1}{a}=0$
+			\item $a^2x^2-4=0$
+			\item $bx^2-\dfrac{a^2}{b}=0$
+		\end{multicols}
+	\end{enumerate}
+	\item Найдите все значения $a$, при каждом из которых уравнение:
+	\begin{enumerate}[label=\asbuk*)]
+		\begin{multicols}{2}
+			\item $ax^2-(a+1)x=0$
+			\item $ax^2+(a+1)x=0$
+		\end{multicols}
+	\end{enumerate}
+	\item Решите уравнения:
+	\begin{enumerate}[label=\asbuk*)]
+		\begin{multicols}{2}
+			\item $|x|=0$
+			\item $|x|=5$
+			\item $|x|=-7$
+			\item $|x+3|=0$
+			\item $|2x-7|=0$
+			\item $|5x-12|=0$
+			\item $|3x-2|=12$
+			\item $|4x-4|=4$
+			\item $|2x-3|=-3$
+			\item $|2x-3|=5x$
+			\item $|4x-8|=4x$
+			\item $|2x-4|=|6x|$
+			\item $|4x+5|=|3x-12|$
+			\item $|2x+1|=|x+5|$
+		\end{multicols}
+	\end{enumerate}
+\end{enumerate}
+\section{Квадратные уравнения общего вида и уравнения высших степеней}
+\begin{enumerate}
+	\item Решите уравнения:
+	\begin{enumerate}[label=\asbuk*)]
+		\begin{multicols}{2}
+			\item $x^2+6x+8=0$
+			\item $x^2-10x+21=0$
+			\item $x^2-2x+2=0$
+			\item $2x^2-3x-5=0$
+			\item $-2x^2+7x-3=0$
+			\item $4x-x^2-1=0$
+			\item $3+2x^2-7x=0$
+			\item $\dfrac{x^2}{3}-7x=1$
+			\item $\dfrac{x^2}{2}-3,5=2x$
+			\item $x^2=\dfrac{x}{2}-1$
+			\item $4-4x+x^2=0$
+		\end{multicols}
+	\end{enumerate}
+	\item Решите уравнения:
+	\begin{enumerate}[label=\asbuk*)]
+		\begin{multicols}{2}
+			\item $x^2-6x+8=0$
+			\item $x^2+5x+6=0$
+			\item $x^2-x-2=0$
+			\item $x^2+x-6=0$
+			\item $x^2+4x+15=0$
+			\item $x^2+4x+4=0$
+			\item $5x^2+8x-9=0$
+			\item $4x^2-8x+3=0$
+			\item $3x^2-5x-2=0$
+			\item $5x^2-6x+1=0$
+			\item $x^2-10x+9=0$
+			\item $x^2-3x=1,75$
+			\item $x^2+x=2$
+			\item $x^2-6x+6=0$
+			\item $x^2+8x+2=0$
+			\item $x^2-3x+1=0$
+			\item $x^2-5x-1=0$
+			\item $x^2+8x+15=0$
+			\item $x^2+5x-6=0$
+			\item $3x^2-4x-4=0$
+			\item $2x^2-8x-20=0$
+			\item $4x^2+6x+9=0$
+			\item $4x^2+12x+9=0$
+			\item $16x^2+21x-22=0$
+			\item $18x^2-x-1=0$
+			\item $7x^2-x-1=0$
+			\item $14x^2+11x-3=0$
+		\end{multicols}
+	\end{enumerate}
+	\item Решите уравнения:
+	\begin{enumerate}[label=\asbuk*)]
+		\begin{multicols}{2}
+			\item $x^2+6x+8=0$
+			\item $x^2-10x+21=0$
+			\item $x^2-2x+2=0$
+			\item $2x^2-3x-5=0$
+			\item $-2x^2+7x-3=0$
+			\item $4x-x^2-1=0$
+			\item $3+2x^2-7x=0$
+			\item $\dfrac{x^2}{3}-7x=1$
+			\item $\dfrac{x^2}{2}-3,5=2x$
+			\item $x^2=\dfrac{x}{2}-1$
+			\item $4-4x+x^2=0$
+			\item $2x^2=5+3x$
+			\item $-x^2+14x-48=0$
+			\item $-7x^2+2x=-329$
+			\item $x^2+x-5=0$
+			\item $2x^2-17x-9=0$
+			\item $7x^2+13x-3=0$
+			\item $9x^2-20=24x$
+			\item $4x^2-4x=15$
+		\end{multicols}
+	\end{enumerate}
+	\item Решите уравнения:
+	\begin{enumerate}[label=\asbuk*)]
+		\begin{multicols}{2}
+			\item $(x+8)(x-9)=-52$
+			\item $(x-1)(2x+3)=7$
+			\item $(x+1)(x+2)=(2x-1)(2x-10)$
+			\item $(x-1)(x-2)=(3x+1)(x-2)$
+			\item $\dfrac{x^2}{5}-\dfrac{2x}{3}=\dfrac{x+5}{6}$
+			\item $\dfrac{5(x^2-1)}{4}+\dfrac{2x+3}{6}=\dfrac{x^2-11}{12}$
+			\item $(x+3)(x-2)+(x+2)^2=3x+10$
+			\item $(x-5)^2+(3-x)^2-4(x+5)(3-x)-48=(x+1)^2$
+			\item $(x-1)(x-3)+(x+3)(x-5)+2x=4$
+			\item $8x^2+11+\dfrac{x}{7}=\dfrac{1-5x}{7}$
+			\item $1,2x^2x^2-0,8x-3,1=0$
+		\end{multicols}
+	\end{enumerate}
+	\item Решите уравнения:
+	\begin{enumerate}[label=\asbuk*)]
+		\begin{multicols}{2}
+			\item $(x-1)(x-2)=0$
+			\item $(x+4)(x-6)=0$
+			\item $(2x+3)(2x+5)=0$
+			\item $(5-x)(3x+2)=0$
+			\item $(2x-3)(x^2+3x+2)=0$
+			\item $(x^2+2x+1)(x^2-5x+7)=0$
+			\item $(x^2-3x+1)(x^2-4x+4)=0$
+			\item $(x^2-3x+1)(x^2-4x+3)=0$
+			\item $(x^2+1)(x^2+5x+6)=0$
+			\item $(x^2+1)(x^2-2x+7)=0$
+			\item $(x^2-16)(x^2-4x+4)=0$
+			\item $x(x^2-6x+9)=0$
+		\end{multicols}
+	\end{enumerate}
+	\item Решите уравнения:
+	\begin{enumerate}[label=\asbuk*)]
+		\begin{multicols}{2}
+			\item $x^3+5x^2+6x=0$
+			\item $x^4=2x^3+3x^2$
+			\item $x^3-4x^2=x$
+			\item $x^5+x^3=x^4$
+			\item $x^3-4x^2+3x=0$
+			\item $10x^2=x^4+3x^3$
+			\item $x^3+x=2x^2$
+			\item $(x-3)^2x=0$
+		\end{multicols}
+	\end{enumerate}
+	\item Найдите все значение параметра $a$, при каждом из которых уравнение $$(x-1)(x^2-6x+a)=0$$ \\ имеет ровно два корня.
+\end{enumerate}
+\section{Биквадратные уравнения}
+\begin{enumerate}
+	\item Решите уравнения:
+	\begin{enumerate}[label=\asbuk*)]
+		\begin{multicols}{2}
+			\item $x^4-3x^2+2=0$
+			\item $x^4-5x^2+4=0$
+			\item $x^4-20x^2+64=0$
+			\item $x^4-5x^2+6=0$
+			\item $3x^4-5x^2+2=0$
+			\item $x^4-10x^2+9=0$
+			\item $x^4-26x^2+25=0$
+			\item $x^4+20x^2+64=0$
+			\item $4x^4-41x^2+100=0$
+			\item $25x^4-25x^2+6=0$
+		\end{multicols}
+	\end{enumerate}
+	\item Решите уравнения:
+	\begin{enumerate}[label=\asbuk*)]
+		\begin{multicols}{2}
+			\item $x^4+2x^2-8=0$
+			\item $x^4+9x^2=400$
+			\item $x^4=12x^2+64$
+			\item $x^4=21x^2+100$
+			\item $x^4-2x^2+1=0$
+			\item $9x^4-25x^2+16=0$
+			\item $6x^4-35=11x^2$
+			\item $-21+10x^4=x^2$
+		\end{multicols}
+	\end{enumerate}
+	\item Решите уравнения:
+	\begin{enumerate}[label=\asbuk*)]
+		\begin{multicols}{2}
+			\item $6x^2+x^4+9=0$
+			\item $-9=25x^4+30x^2$
+			\item $-14x^2=15-x^4$
+			\item $7x^4+3=9x^2$
+			\item $9x^4=-1=9x^2$
+			\item $x^4+36=30x^2$
+			\item $-6-5x^2=-4x^4$
+			\item $-x^2-4+x^4=0$
+			\item $3-2x^4=11x^2$
+			\item $3x64+21=4x^2$
+		\end{multicols}
+	\end{enumerate}
+\end{enumerate}
+\section{Уравнения, одна часть которых алгебраическая дробь, а другая — нуль}
+\begin{enumerate}
+	\item Решите уравнения:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\dfrac{x^2+2x}{x-2}=0$
+			\item $\dfrac{(x-7)(1,5+x)}{x^2-3x+4}=0$
+			\item $\dfrac{x^2-8x+7}{x-3}=0$
+			\item $\dfrac{4x^2-12x-27}{4x^2-3x-10}=0$
+			\item $\dfrac{3x^2-7x}{x^2+1}=0$
+			\item $\dfrac{(-2-x)(x-8,5)}{(x-3)(x-2)}=0$
+			\item $\dfrac{4x^2-4x-3}{x+2}=0$
+			\item $\dfrac{4x^2+4x-35}{x^2-7x+12}=0$
+			\item $\dfrac{x^2-2x+1}{x-7}=0$
+			\item $\dfrac{x^2-2x+3}{x^2-7x+5}=0$
+			\item $\dfrac{(x-1)^2(x+2)}{x-1}=0$
+			\item $\dfrac{x^2+4x+4}{x+8}=0$
+			\item $\dfrac{x^2+3x+5}{x^2+3x-1}=0$
+			\item $\dfrac{(x+7)^2(x-4)}{x-4}=0$
+			\item $\dfrac{x^2+x-6}{x+3}=0$
+			\item $\dfrac{x+7}{x+7}=0$
+			\item $\dfrac{x^2-x-20}{x-5}=0$
+			\item $\dfrac{x-9}{x-9}=1$
+			\item $\dfrac{x^3-4x^2-5x}{x^2-3}=0$
+			\item $\dfrac{2x^3-7x^2+6x}{2x^2-3x}=0$
+			\item $\dfrac{9x^2-6x+1}{3x-1}=0$
+			\item $\dfrac{x^3+3x-18x}{x^2+4}=0$
+			\item $\dfrac{3x^3+5x^2+2x}{2x+3x^2}=0$
+			\item $\dfrac{25x^2+10x+1}{5x+1}=0$
+		\end{enumerate}
+	\end{multicols}
+	\item Решите уравнения:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\dfrac{x-1}{x}+2=0$
+			\item $1-\dfrac{2x}{x-1}=0$
+			\item $\dfrac{x+3}{x}=4$
+			\item $2=\dfrac{y}{y-5}$
+			\item $x-\dfrac{9}{x}=0$
+			\item $x+\dfrac{10}{x}=0$
+			\item $\dfrac{13}{x}-2x=0$
+			\item $\dfrac{3}{x}=\dfrac{x}{3}$
+			\item $\dfrac{4}{x-1}=\dfrac{x}{5}$
+			\item $y+\dfrac{1}{y}=1$
+		\end{enumerate}
+	\end{multicols}
+	\item Решите уравнения:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\dfrac{x^2}{x-3}-\dfrac{x+6}{x-3}=1$
+			\item $\dfrac{6x-5}{4x-3}=\dfrac{3x+3}{2x+5}$
+			\item $\dfrac{5x-7}{x+1}=\dfrac{2+5x}{x-2}$
+			\item $1-\dfrac{1-x}{x}=\dfrac{2x+2}{x-1}$
+		\end{enumerate}
+	\end{multicols}
+	\item Решите уравнения:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\dfrac{x+1}{x-1}=2-\dfrac{x}{x+1}$
+			\item $\dfrac{3a-2}{3a+2}=\dfrac{2a-5}{2a+5}$
+			\item $\dfrac{4n-1}{n+3}=\dfrac{4n+1}{n+3}$
+			\item $\dfrac{x+2}{x-2}=\dfrac{x^2}{x-2}+1$
+			\item $\dfrac{5-2x}{8x}+\dfrac{2x-5}{10x}$
+			\item $\dfrac{3x-1}{4x}+\dfrac{1-2x}{2x}=0$
+			\item $x+\dfrac{1}{x-2}=0$
+			\item $x+\dfrac{4}{x-4}$
+		\end{enumerate}
+	\end{multicols}
+	\item Решите уравнения:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\dfrac{1}{2x-3}+\dfrac{1}{x-1}=2$
+			\item $\dfrac{x}{x-3}+\dfrac{x-8}{x}=3$
+			\item $\dfrac{x-3}{x^2-3x-4}=\dfrac{x-1}{x^2-x-2}$
+			\item $\dfrac{1}{x-1}+\dfrac{4}{x+2}=\dfrac{3}{x}$
+			\item $\dfrac{x+1}{x+3}+\dfrac{4}{x+7}=1$
+			\item $\dfrac{1}{x+1}+\dfrac{2}{x^2-1}=\dfrac{3}{x-1}$
+		\end{enumerate}
+	\end{multicols}
+	\item Решите уравнения:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\dfrac{7}{x^2+x+12}-\dfrac{6}{x^2+2x-8}=0$
+			\item $\dfrac{2}{x}+\dfrac{10}{x^2-2x}=\dfrac{1+2x}{x-2}$
+			\item $\dfrac{12}{3x-x^2}+\dfrac{3x+5}{x-3}+1=0$
+			\item $\dfrac{3x}{x+1}+\dfrac{2}{x}=\dfrac{2x+5}{x^2+x}$
+			\item $\dfrac{33}{a^2-11a}+\dfrac{a-4}{11-a}=-\dfrac{3}{a}$
+			\item $\dfrac{a+7}{a^2-7a}-\dfrac{4}{(7-a)^2}=\dfrac{1}{a-7}$
+			\item $\dfrac{2x-2}{x^2-36}-\dfrac{x-2}{x^2-6x}-\dfrac{x-1}{x^2+6x}=0$
+		\end{enumerate}
+	\end{multicols}
+	\item Решите уравнение с помощью замены переменной:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\dfrac{7}{x^2+x+12}-\dfrac{6}{x^2+2x-8}=0$
+			\item $\dfrac{2}{x}+\dfrac{10}{x^2-2x}=\dfrac{1+2x}{x-2}$
+			\item $\dfrac{12}{3x-x^2}+\dfrac{3x+5}{x-3}+1=0$
+			\item $\dfrac{3x}{x+1}+\dfrac{2}{x}=\dfrac{2x+5}{x^2+x}$
+			\item $\dfrac{33}{a^2-11a}+\dfrac{a-4}{11-a}=-\dfrac{3}{a}$
+			\item $\dfrac{a+7}{a^2-7a}-\dfrac{4}{(7-a)^2}=\dfrac{1}{a-7}$
+			\item $\dfrac{2x-2}{x^2-36}-\dfrac{x-2}{x^2-6x}-\dfrac{x-1}{x^2+6x}=0$
+		\end{enumerate}
+	\end{multicols}
+\end{enumerate}
+
+\end{document}
