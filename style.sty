@@ -1,6 +1,7 @@
-\usepackage[T2A]{fontenc} 				% Поддержка русских букв
-\usepackage[utf8]{inputenc}				% Кодировка utf8
-\usepackage[english, russian]{babel}	% Языки: русский, английский
+\usepackage{cmap}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
 \usepackage[dvipsnames,table,xcdraw]{xcolor}
 \usepackage{
 	amsmath,
@@ -19,11 +20,12 @@
 	graphicx,
 	fancyhdr,
 	mathrsfs,
-	graphbox
+	graphbox,
+	indentfirst
 }
 %Параметры страницы
-\usepackage[left=10mm,right=10mm,
-top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm]{geometry}
 \pagestyle{fancy}
 %Путь к картинкам
 \graphicspath{{pic/}}
@@ -31,12 +33,18 @@ top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
 %Числа в списке второго уровня по умолчанию
 \renewcommand{\labelenumii}{\arabic{enumii})}
 %Новые команды
-\newcommand{\answer}[1]{\textcolor[rgb]{0.8,0.8,0.8}{\fbox{\scriptsize=#1}}}
+\definecolor{silver}{rgb}{0.7, 0.7, 0.7}
+\definecolor{dark}{rgb}{0.3, 0.3, 0.3}
+\definecolor{harvestgold}{rgb}{0.85, 0.57, 0.0}
+\newcommand{\answer}[1]{\textcolor{silver}{\fbox{#1}}}
+\newcommand{\ranswer}[1]{\textcolor{silver}{\begin{flushright}\vspace{-1em}\fbox{#1}\end{flushright}}}
+\newcommand{\leveli}{\textcolor{dark}{$\blacksquare\square\square$}\hspace{0.5em}}
+\newcommand{\levelii}{\textcolor{dark}{$\blacksquare\blacksquare\square$}\hspace{0.5em}}
+\newcommand{\leveliii}{\textcolor{dark}{$\blacksquare\blacksquare\blacksquare$}\hspace{0.5em}}
 
 %Русские символы в списке
-\makeatletter
 \AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
-\makeatother
 
 %Сеттеры
-\setlength\parindent{1,5em}
+\setlength{\parindent}{5ex}
+\setlength{\parskip}{1em}
