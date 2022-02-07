@@ -1,60 +1,17 @@
 \documentclass[12pt, a4paper]{article}
-\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
-\usepackage[T2A]{fontenc} % Поддержка русских букв
-\usepackage[utf8]{inputenc} % Кодировка utf8
-\usepackage[english, russian]{babel} % Языки: русский, английский
-\usepackage{enumitem}
-\usepackage{pscyr} % Нормальные шрифты
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{amssymb}
-\usepackage{scrextend}
-\usepackage{titling}
-\usepackage{indentfirst}
-\usepackage{cancel}
-\usepackage{soulutf8}
-\usepackage{wrapfig}
-\usepackage{gensymb}
-\usepackage[dvipsnames,table,xcdraw]{xcolor}
-\usepackage{tikz}
-
-%Русские символы в списке
-\makeatletter
-\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
-\makeatother
-
-%Дублирование знаков при переносе
-\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
-	{\hbox{$\mathsurround=0pt #1$}}{}}
-
-\usepackage{graphicx}
-\graphicspath{{pic/}}
-\DeclareGraphicsExtensions{.pdf,.png,.jpg}
-
-%Изменеие параметров листа
-\usepackage[left=15mm,right=15mm,
-top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
-
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\usepackage{multicol}
-
-\setlength\parindent{1,5em}
-\usepackage{indentfirst}
+\usepackage{../../../../../style}
 \begin{document}
-	
-	\lhead{Группа 71}
-	\chead{Модуль 6 Домашняя работа №1}
-	\rhead{Школа <<Симметрия>>}
-	\begin{enumerate}
-		\item \textit{(2 балла)} Найдите значение выражения: 
-		\begin{enumerate}[label=\asbuk*)]
-			\item $(x+y)^3-x^3-3xy(x+y)$, при $x=-\dfrac{1}{2}; y=2$
-			\item $(a-b)^3+(2a-b)^3-3a^3$, при $a=-0,2; b=-0,1$
-		\end{enumerate}	
-		\item \textit{(2 балла)} Угол между радиусами $OA$ и $OB$ окружности равен $60\degree$. Найдите хорду $AB$, если радиус окружности равен $R$.
-		\item \textit{(2 балла)} Найдите угол между радиусами $OA$ и $OB$, если расстояние от центра $O$ окружности до хорды $AB$ вдвое меньше $OA$.
-		\item \textit{(2 балла)} Равные хорды окружности с центром $O$ пересекаются в точке $M$. Докажите, что $MO$ — биссектриса угла между ними.
-		\item \textit{(2 балла)} Прямая, проходящая через общую точку $A$ двух окружностей, пересекает вторично эти окружности в точках $B$ и $C$ соответственно. Расстояние между проекциями центров окружностей на эту прямую равно $12$. Найдите $BC$, если известно, что точка $A$ лежит на отрезке $BC$.
-	\end{enumerate}
+\lhead{Группа 71} \chead{Модуль 6 Домашняя работа №1} \rhead{Школа <<Симметрия>>} \cfoot{}
+\begin{enumerate}
+	\item \textit{(2 балла)} Найдите значение выражения: 
+	\begin{enumerate}[label=\asbuk*)]
+		\item $(x+y)^3-x^3-3xy(x+y)$, при $x=-\dfrac{1}{2}; y=2$
+		\item $(a-b)^3+(2a-b)^3-3a^3$, при $a=-0,2; b=-0,1$
+	\end{enumerate}	
+	\item \textit{(2 балла)} Угол между радиусами $OA$ и $OB$ окружности равен $60\degree$. Найдите хорду $AB$, если радиус окружности равен $7$.
+	\item \textit{(2 балла)} Найдите угол между радиусами $OA$ и $OB$, если расстояние от центра $O$ окружности до хорды $AB$ вдвое меньше $OA$.
+	\item \textit{(2 балла)} Равные хорды окружности с центром $O$ пересекаются в точке $M$. Докажите, что $MO$ — биссектриса угла между ними.
+	\item \textit{(2 балла)} Прямая, проходящая через общую точку $A$ двух окружностей, пересекает вторично эти окружности в точках $B$ и $C$ соответственно. Расстояние между проекциями центров окружностей на эту прямую равно $12$. Найдите $BC$, если известно, что точка $A$ лежит на отрезке $BC$.
+
+\end{enumerate}
 \end{document}
