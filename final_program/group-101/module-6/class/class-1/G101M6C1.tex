@@ -1,61 +1,38 @@
 \documentclass[12pt, a4paper]{article}
-\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
-\usepackage[T2A]{fontenc} % Поддержка русских букв
-\usepackage[utf8]{inputenc} % Кодировка utf8
-\usepackage[english, russian]{babel} % Языки: русский, английский
-\usepackage{enumitem}
-\usepackage{pscyr} % Нормальные шрифты
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{amssymb}
-\usepackage{scrextend}
-\usepackage{titling}
-\usepackage{indentfirst}
-\usepackage{cancel}
-\usepackage{soulutf8}
-\usepackage{wrapfig}
-\usepackage{gensymb}
-\usepackage[dvipsnames,table,xcdraw]{xcolor}
-\usepackage{tikz}
-
-%Русские символы в списке
-\makeatletter
-\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
-\makeatother
-
-%Дублирование знаков при переносе
-\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
-	{\hbox{$\mathsurround=0pt #1$}}{}}
-
-\usepackage{graphicx}
-\graphicspath{{pic/}}
-\DeclareGraphicsExtensions{.pdf,.png,.jpg}
-
-%Изменеие параметров листа
-\usepackage[left=15mm,right=15mm,
-top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
-
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\usepackage{multicol}
-
-\setlength\parindent{1,5em}
-\usepackage{indentfirst}
+\usepackage{../../../../../style}
 \begin{document}
-	
-	\lhead{Группа 101}
-	\chead{Модуль 6 Урок №1-2}
-	\rhead{Школа <<Симметрия>>}
+	\lhead{Группа 101} \chead{Модуль 6 Урок №1-2} \rhead{Школа <<Симметрия>>}
 	\begin{enumerate}
-		\item На рисунке изображены графики функций $f(x)=4x^2-25x+41$ и $g(x)=ax^2+bx+c$, которые пересекаются в точках $A$ и $B$. Найдите абсциссу точки $B$. %(509253)
-		\item 
-		\item 
-		\item
-		\item 
-		\item 
-		\item
-		\item
-		\item
-		\item 
+		\item Решить систему уравнений:
+		$$\left\{
+		\begin{array}{l}
+			x-y-7=0,\\
+			3x-y+7=6
+		\end{array}
+		\right.$$ \answer{$(-4;-11)$}
+		\item \funcexer
+		{Прямые $f(x)=x-5,5$ и $g(x)$ пересекаются в точке с координатами $(a;b)$. Найдите $a+b$. \ranswer{$-10$}}
+		{../graphs/graph_6/graph_6}
+		\item \funcexer
+		{Найдите координаты точки пересечения прямых $f(x)$ и $g(x)$. В ответ запишите сумму абсциссы и ординаты. \ranswer{$3,75$}}
+		{../graphs/graph_5/graph_5}
+		\item \funcexer
+		{На рисунке изображен график функции вида $f(x)=ax^2+c$. Вычислите $f(6)$. \ranswer{$44$}}
+		{../graphs/graph_7/graph_7}
+		\item \funcexer
+		{На рисунке изображен график функции вида $f(x)=ax^2+c$. Вычислите $f(3)$. \ranswer{$12,75$}}
+		{../graphs/graph_9/graph_9}
+		\item \funcexer
+		{На рисунке изображен график функции вида $f(x)=ax^2+c$. При каком положительном значении аргумента, значение функции будет равно $-44$? \ranswer{$8$}.}
+		{../graphs/graph_8/graph_8}
+		\item \funcexer
+		{На рисунке изображен график функции вида $f(x)=ax^2+c$. Найдите $f(c)$. \ranswer{$70$}.}
+		{../graphs/graph_10/graph_10}
+		\item \funcexer
+		{На рисунке изображен график функции вида $f(x)=ax^2+c$. Найдите $f(a-c)$. \ranswer{$-3$}.}
+		{../graphs/graph_11/graph_11}
+		\item \funcexer
+		{На рисунке изображен график функции вида $f(x)=ax^2+bx+c$, где числа $a$, $b$ и $c$ — целые. Вычислите $f(5)$. \ranswer{$32$}}
+		{../graphs/graph_12/graph_12}
 	\end{enumerate}
 \end{document}

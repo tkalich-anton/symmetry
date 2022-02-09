@@ -4,17 +4,16 @@
 	\begin{tikzpicture}
 		\pgfplotsset{
 			/pgf/declare function={
-				parabola_1(\x) = 3*\x^2-5*\x+1;
+				parabola_1(\x) = 1.75*\x^2-3;
 			}
 		}
 		\begin{axis}[
 			xmin=-6,xmax=6,
-			ymin=-3,ymax=9]
+			ymin=-4,ymax=10]
 			\addplot [f_red, line width=1.4pt] {parabola_1(x)};
 			\node[red_dot] (A) at (0,{parabola_1(0)}) {};
-			\node[red_dot] (B) at (1,{parabola_1(1)}) {};
-			\node[red_dot] (C) at (2,{parabola_1(2)}) {};
-			\node[node_text, anchor=north west, f_red] at (2.1,2) {\mbox{\boldmath$f(x)$}};
+			\node[red_dot] (B) at (2,{parabola_1(2)}) {};
+			\node[node_text, anchor=north west, f_red] at (1,-1,5) {\mbox{\boldmath$f(x)$}};
 		\end{axis}
 	\end{tikzpicture}
 \end{document}

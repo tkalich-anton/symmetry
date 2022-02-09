@@ -1,0 +1,53 @@
+\usepackage
+{
+	amsmath,
+	amssymb,
+	tikz,
+	pgfplots,
+	verbatim,
+	amssymb
+}
+
+\usetikzlibrary
+{
+	arrows,
+	patterns,
+	angles,
+	quotes,
+	calc, 
+	3d,
+	backgrounds, 
+	positioning
+}
+\definecolor{f_red}{rgb}{0.5, 0.0, 0.13}
+\definecolor{f_green}{rgb}{0.0, 0.42, 0.24}
+\definecolor{silver}{rgb}{0.7, 0.7, 0.7}
+\pgfplotsset{
+	compat=newest,
+	every axis/.append style={
+		width=10cm,
+		height=10cm,
+		x=0.5cm,y=0.5cm,
+		axis x line=middle, axis y line=middle,
+		xlabel={$x$}, ylabel={$y$},
+		xlabel style={below left, scale=1.2},
+		ylabel style={below right, scale=1.2},
+		ymajorgrids=true, xmajorgrids=true,
+		xticklabels={}, yticklabels={},
+		samples=1000,
+		grid style={silver, thick},
+		axis line style={line width=1.2pt},
+		ticks=both,
+		xtick={-100,-99,...,100}, ytick={-100,-99,...,100},
+		restrict y to domain=-100:100, domain=-20:20,
+		set layers=standard,
+		every major tick/.style={draw=none}, every minor tick/.style={draw=none}
+	}
+}
+\tikzset{
+	baseline={([yshift={-\ht\strutbox}]current bounding box.north)},
+	>=stealth,
+	red_dot/.style={shape=circle, fill=f_red, draw=f_red, inner sep=0pt, minimum size=4pt},
+	green_dot/.style={shape=circle, fill=f_green, draw=f_green, inner sep=0pt, minimum size=4pt},
+	node_text/.style={inner sep=2pt, anchor=north west}
+}

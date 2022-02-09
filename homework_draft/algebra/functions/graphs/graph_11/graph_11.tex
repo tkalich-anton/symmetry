@@ -1,0 +1,22 @@
+\documentclass{standalone}
+\usepackage{../../../../../graph_style}
+\begin{document}
+	\begin{tikzpicture}
+		\pgfplotsset{
+			every axis/.append style={
+				xlabel style={above left},
+			},
+			/pgf/declare function={
+				parabola_1(\x) = 3*\x^2-3;
+			}
+		}
+		\begin{axis}[
+			xmin=-6,xmax=6,
+			ymin=-0.5,ymax=11.5]
+			\addplot [f_red, line width=1.4pt] {parabola_1(x)};
+			\node[red_dot] (A) at (1,{parabola_1(1)}) {};
+			\node[red_dot] (B) at (2,{parabola_1(2)}) {};
+			\node[node_text, anchor=north west, f_red] at (1.5,2) {\mbox{\boldmath$f(x)$}};
+		\end{axis}
+	\end{tikzpicture}
+\end{document}
