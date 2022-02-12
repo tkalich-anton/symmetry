@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\usepackage{../../../../../graph_style}
+\begin{document}
+	\begin{tikzpicture}
+		\pgfplotsset{
+			/pgf/declare function={
+				parabola_1(\x) = -0.75*\x^2+4;
+			}
+		}
+		\begin{axis}[
+			xmin=-6,xmax=6,
+			ymin=-9,ymax=5]
+			\addplot [f_red, line width=1.4pt] {parabola_1(x)};
+			\node[red_dot] (A) at (4,{parabola_1(4)}) {};
+			\node[red_dot] (B) at (0,{parabola_1(0)}) {};
+			\node[node_text, anchor=south west, f_red] at (2,1) {\mbox{\boldmath$f(x)$}};
+		\end{axis}
+	\end{tikzpicture}
+\end{document}
