@@ -1,11 +1,11 @@
 \documentclass[border=3pt]{standalone}
-\usepackage{../../../../graph_style}
+\usepackage{../../../../../../graph_style}
 
 \usepackage{tikz}
 \usetikzlibrary{patterns}
 \begin{document}
 	\begin{tikzpicture}
-		\draw[->, line width=1.2pt] (-1.5, 0) -- (5, 0);
+		\draw[->, line width=1.2pt] (-0.5, 0) -- (5, 0);
 		\draw[fill=black] (7/3, 0) circle (1.8pt) node[node_text, anchor=south] at (7/3,0.1) {$A$};
 		\foreach \x/\xtext in {0,1,...,4}
 		\draw[line width=0.5pt] (\x cm,2pt) -- (\x cm,-2pt) node[anchor=north] {$\xtext$};
