@@ -1,81 +1,120 @@
 \documentclass[12pt, a4paper]{article}
-\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
-\usepackage[T2A]{fontenc} % Поддержка русских букв
-\usepackage[utf8]{inputenc} % Кодировка utf8
-\usepackage[english, russian]{babel} % Языки: русский, английский
-\usepackage{enumitem}
-\usepackage{pscyr} % Нормальные шрифты
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{amssymb}
-\usepackage{scrextend}
-\usepackage{titling}
-\usepackage{indentfirst}
-\usepackage{cancel}
-\usepackage{soulutf8}
-\usepackage{wrapfig}
-\usepackage{gensymb}
-\usepackage[dvipsnames,table,xcdraw]{xcolor}
-\usepackage{tikz}
-
-%Русские символы в списке
-\makeatletter
-\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
-\makeatother
-
-%Дублирование знаков при переносе
-\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
-	{\hbox{$\mathsurround=0pt #1$}}{}}
-
-\usepackage{graphicx}
-\graphicspath{{pic/}}
-\DeclareGraphicsExtensions{.pdf,.png,.jpg}
-
-%Изменеие параметров листа
-\usepackage[left=15mm,right=15mm,
-top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
-
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\usepackage{multicol}
-
-\setlength\parindent{1,5em}
-\usepackage{indentfirst}
+\usepackage{../../../../../style}
 \begin{document}
 	
-	\lhead{Группа 101}
-	\chead{Модуль 6 Урок №3}
-	\rhead{Школа <<Симметрия>>}
-	\begin{enumerate}
-		\item Вычислите:
-		\begin{multicols}{3}
-			\begin{enumerate}[label=\asbuk*)]
-			\item $sin\left( arcsin \dfrac{1}{2}\right) $
-			\item $sin\left( arcsin \dfrac{1}{3}\right) $
-			\item $arcsin \left( -\dfrac{1}{2}\right) $
-			\item $arcsin $ $0$
-			\item $cos\left( arccos \left( -\dfrac{1}{2}\right) \right) $
-			\item $cos\left( arccos \left( -\dfrac{1}{3}\right) \right) $
-			\item $arccos\dfrac{1}{7}$
-			\item $arccos(-1)$
-			\item $tg(arctg1)$
-			\item $tg(arctg\sqrt{3})$
-			\item $arctg$ $0$
-			\item $arctg$ $\pi$
-			\item $ctg\left( arcctg\dfrac{\sqrt{3}}{2}\right) $
-			\item $ctg(arcctg(-20000))$
-			\item $arcctg$ $0$
-			\item $arcctg\dfrac{\sqrt{3}}{3}$
+\lhead{Группа 101} \chead{Модуль 6 Занятие №3} \rhead{Школа <<Симметрия>>}
+\section{Теория}
+\begin{enumerate}
+	\item \textbf{Основное логарифмическое тождество:} $$a^{\log_a b}=b$$
+	\item Переход от логарифмического равенства к показательному: $$a^{\log_a b}=c \Leftrightarrow a^c=b$$
+	\item Логарифм $\log_a b$ существует в том случае, если
+	$$\left\{
+	\begin{array}{l}
+		a>0,\\
+		a\neq1,\\
+		b>0
+	\end{array}
+	\right.$$
+	\item Свойства логарифмов:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\arabic*)]
+			\item $\log_a 1 = 0$
+			\item $\log_a a = 1$
+			\item $\log_{10} a = \lg a$
+			\item $\log_e a = \ln a$
+			\item $\log_a (b\cdot c) = \log_a (b) + \log_a (c)$
+			\item $\log_a (\frac{b}{c}) = \log_a (b) - \log_a (c)$
+			\item $\log_a b^c = c\cdot\log_a b$
+			\item $\log_a^c b = \frac{1}{c}\cdot\log_a b$
+			\item $\log_a b = \dfrac{1}{\log_b a}$
 		\end{enumerate}
-		\end{multicols}
-		\item 
-		\item 
-		\item
-		\item 
-		\item 
-		\item
-		\item
-		\item
-		\item 
-	\end{enumerate}
+	\end{multicols}
+\end{enumerate}
+\section{Практика}
+\begin{enumerate}
+	\item Вычислите:
+	\begin{multicols}{3}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\log_2 4$
+			\item $\log_3 27$
+			\item $\log_5 \dfrac{1}{5}$
+			\item $\log_{10} 100$
+			\item $\log_2 2^3$
+			\item $\log_5 0,2$
+			\item $\log_2 \dfrac{1}{4}$
+			\item $\log_4 1$
+			\item $\log_2 4^3$
+		\end{enumerate}
+	\end{multicols}
+	\item Вычислите:
+	\begin{multicols}{3}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $2^{\log_2 3}$
+			\item $2^{\log_2 7+\log_2 5}$
+			\item $7^{2\log_7 3}$
+			\item $(3^{\log_3 7})^2$
+			\item $10^{3\log_{10} 5}$
+			\item $(3^2)^{\log_3 7}$
+			\item $0,1^{2\log_{0,1} 10}$
+		\end{enumerate}
+	\end{multicols}
+	\item Вычислите:
+	\begin{multicols}{3}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\log_{\frac{1}{2}}2$
+			\item $\log_{\frac{1}{2}}8^3$
+			\item $\log_3 \left(\dfrac{1}{9}\right)^3$
+			\item $\log_{\sqrt{2}}2$
+			\item $\log_{\sqrt{3}}\sqrt{27}$
+			\item $\log_{\sqrt{5}}\sqrt{5^5}$
+		\end{enumerate}
+	\end{multicols}
+	\item Вычислите:
+	\begin{multicols}{3}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $4^{\log_2 3}$
+			\item $25^{\log_5 9}$
+			\item $8^{\log_2 7}$
+			\item $2^{\log_{\sqrt{2}}3}$
+			\item $(\sqrt{3})^{\log_3 5}$
+			\item $(\sqrt[3]{5})^{\log_5 2}$
+		\end{enumerate}
+	\end{multicols}
+	\item Вычислите:
+	\begin{multicols}{3}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\log_6 2 + \log_6 3$
+			\item $\log_{15} 5 + \log_{15} 3$
+			\item $\log_8 \frac{7}{8} + \log_8 \frac{7}{8}$
+			\item $2\log_6 2 + \log_6 9$
+			\item $\log_5 100 - 2\log_5 2$
+		\end{enumerate}
+	\end{multicols}
+	\item Вычислите:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\log_{5^2}125^2$
+			\item $\log_{4}8^2$
+		\end{enumerate}
+	\end{multicols}
+	\item Вычислите:
+	\begin{multicols}{4}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\log_{\frac{1}{4}}2$
+			\item $\log_{\frac{1}{16}}8$
+			\item $2^{\frac{1}{\log_5 2}}$
+			\item $10^{\frac{1}{\log_2 10}}$
+		\end{enumerate}
+	\end{multicols}
+	\item Вычислите: $$\log_3 27 - \log_{\sqrt{3}}27-\log_{\frac{1}{3}}27-\log_{\frac{\sqrt{3}}{2}}\left(\dfrac{64}{27}\right)$$
+	\item Вычислите:
+	\begin{multicols}{2}
+		\begin{enumerate}[label=\asbuk*)]
+			\item $6^{\log_36 25}$
+			\item $\log_2 3 \cdot \log_3 2 \cdot 7^{2\log_7 3}$
+			\item $3^{\log_{\sqrt[3]{9}}4}+2^{\frac{1}{\log_16 4}}$
+			\item $\dfrac{\log_3 135}{\log_15 3}-\dfrac{\log_3 5}{\log_405 3}$
+		\end{enumerate}
+	\end{multicols}
+\end{enumerate}
 \end{document}
