@@ -1,56 +1,17 @@
 \documentclass[12pt, a4paper]{article}
-\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
-\usepackage[T2A]{fontenc} % Поддержка русских букв
-\usepackage[utf8]{inputenc} % Кодировка utf8
-\usepackage[english, russian]{babel} % Языки: русский, английский
-\usepackage{enumitem}
-\usepackage{pscyr} % Нормальные шрифты
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{amssymb}
-\usepackage{scrextend}
-\usepackage{titling}
-\usepackage{indentfirst}
-\usepackage{cancel}
-\usepackage{soulutf8}
-\usepackage{wrapfig}
-\usepackage{gensymb}
-\usepackage[dvipsnames,table,xcdraw]{xcolor}
-\usepackage{tikz}
-
-%Русские символы в списке
-\makeatletter
-\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
-\makeatother
-
-%Дублирование знаков при переносе
-\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
-	{\hbox{$\mathsurround=0pt #1$}}{}}
-
-\usepackage{graphicx}
-\graphicspath{{pic/}}
-\DeclareGraphicsExtensions{.pdf,.png,.jpg}
-
-%Изменеие параметров листа
-\usepackage[left=15mm,right=15mm,
-top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
-
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\usepackage{multicol}
-\setlength\parindent{1,5em}
-\usepackage{indentfirst}
+\usepackage{../../../../../style}
 \begin{document}
 	
 	\lhead{Группа 92}
 	\chead{Модуль 6 Урок 3}
 	\rhead{Школа <<Симметрия>>}
 	\begin{enumerate}
-		\item 
-		\item 
-		\item
-		\item 
-		\item 
-		\item 
+		\item \subimport{../../../../../exercises/arithmetic/coordinate_line/roots}{ex_2_2}
+		\item \subimport{../../../../../exercises/algebra/expressions/fractions}{ex_1}
+		\item Имеются два сосуда, содержащие 10 кг и 16 кг раствора кислоты различной концентрации. Если их слить вместе, то получится раствор, содержащий 55\% кислоты. Если же слить равные массы этих растворов, то полученный раствор будет содержать 61\% кислоты. Сколько килограммов кислоты содержится в первом растворе?
+		\item Смешав $60\%$-ый и $30\%$-ый растворы кислоты и добавив $5$ кг чистой воды, получили $20\%$-ый раствор кислоты. Если бы вместо $5$ кг воды добавили $5$ кг $90\%$-го раствора той же кислоты, то получили бы $70\%$-ый раствор кислоты. Сколько килограммов $60\%$-го раствора использовали для получения смеси?
+		\item Свежие фрукты содержат $80\%$ воды а высушенные --- $28\%$. Сколько сухих фруктов получится из $288$ кг свежих фруктов?
+		\item Из пунктов $А$ и $В$, расстояние между которыми $19$ км, вышли одновременно навстречу друг другу два пешехода и встретились в $9$ км от $А$. Найдите скорость пешехода, шедшего из $А$, если известно, что он шёл со скоростью, на $1$ км/ч большей, чем пешеход, шедший из $В$, и сделал в пути получасовую остановку.
+		\item Расстояние между городами $A$ и $B$ равно $750$ км. Из города $A$ в город $B$ со скоростью $50$ км/ч выехал первый автомобиль, а через три часа после этого навстречу ему из города $B$ выехал со скорость 70 км/ч второй автомобиль. На каком расстоянии от города от $A$ автомобили встретятся?
 	\end{enumerate}
 \end{document}
