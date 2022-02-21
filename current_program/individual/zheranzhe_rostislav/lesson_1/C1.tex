@@ -1,0 +1,169 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+%Изменеие параметров листа
+\usepackage[left=1cm,right=1cm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage{amsmath,amsthm,amssymb,scrextend}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+\renewcommand{\labelenumii}{\arabic{enumii})}
+\begin{document}
+	
+\lhead{Жеранже Ростислав} \cfoot{}
+\rhead{Урок 1}
+\begin{enumerate}
+	\item Вычислить:
+	\begin{multicols}{5}
+		\begin{enumerate}
+			\item $4\cdot5$
+			\item $4\cdot9$
+			\item $5\cdot8$
+			\item $2\cdot9$
+			\item $3\cdot6$
+			\item $9\cdot6$
+			\item $8\cdot7$
+			\item $7\cdot9$
+			\item $3\cdot8$
+			\item $8\cdot9$
+			\item $6\cdot7$
+			\item $6\cdot4$
+			\item $3\cdot7$
+			\item $2\cdot8$
+			\item $3\cdot4$
+			\item $2\cdot6$
+			\item $8\cdot6$
+			\item $3\cdot5$
+			\item $9\cdot9$
+			\item $5\cdot7$
+			\item $7\cdot4$
+			\item $6\cdot3$
+			\item $7\cdot7$
+			\item $5\cdot9$
+			\item $8\cdot2$
+		\end{enumerate}
+	\end{multicols}
+	\item Вычислить:
+	\begin{multicols}{5}
+		\begin{enumerate}
+			\item $10\cdot3$
+			\item $5\cdot10$
+			\item $7\cdot20$
+			\item $30\cdot9$
+			\item $50\cdot3$
+			\item $40\cdot8$
+			\item $70\cdot6$
+			\item $50\cdot2$
+			\item $30\cdot8$
+			\item $90\cdot4$
+			\item $20\cdot7$
+			\item $30\cdot6$
+			\item $3\cdot20$
+			\item $10\cdot9$
+			\item $70\cdot7$
+			\item $80\cdot8$
+			\item $9\cdot90$
+			\item $30\cdot6$
+			\item $5\cdot90$
+			\item $80\cdot7$
+		\end{enumerate}
+	\end{multicols}
+	\item Вычислить:
+	\begin{multicols}{5}
+		\begin{enumerate}
+			\item $13\cdot3$
+			\item $24\cdot6$
+			\item $16\cdot7$
+			\item $26\cdot5$
+			\item $7\cdot22$
+			\item $15\cdot7$
+			\item $61\cdot4$
+			\item $8\cdot27$
+			\item $55\cdot5$
+			\item $72\cdot4$
+			\item $98\cdot8$
+			\item $54\cdot3$
+			\item $53\cdot7$
+			\item $76\cdot9$
+			\item $43\cdot5$
+			\item $7\cdot88$
+			\item $43\cdot3$
+			\item $54\cdot6$
+			\item $69\cdot9$
+			\item $61\cdot2$
+		\end{enumerate}
+	\end{multicols}
+	\item Вычислить:
+	\begin{multicols}{5}
+		\begin{enumerate}
+			\item $14\cdot16$
+			\item $23\cdot14$
+			\item $26\cdot61$
+			\item $53\cdot35$
+			\item $69\cdot41$
+			\item $58\cdot11$
+			\item $39\cdot47$
+			\item $12\cdot19$
+			\item $99\cdot88$
+			\item $26\cdot34$
+		\end{enumerate}
+	\end{multicols}
+	\item Вычислить:
+	\begin{multicols}{5}
+		\begin{enumerate}
+			\item $254\cdot13$
+			\item $376\cdot33$
+			\item $112\cdot78$
+			\item $547\cdot897$
+			\item $411\cdot681$
+			\item $981\cdot781$
+			\item $738\cdot769$
+			\item $518\cdot315$
+			\item $121\cdot457$
+			\item $536\cdot454$
+		\end{enumerate}
+	\end{multicols}
+	\item Вычислить:
+	\begin{multicols}{2}
+		\begin{enumerate}
+			\item $23461+2141$
+			\item $23681+7008$
+			\item $12599+41770$
+			\item $156225+313587$
+			\item $657221+5549301$
+			\item $11298+66791+78498$
+			\item $1111+22222+333333$
+			\item $10101010+121212+232323+343434$
+		\end{enumerate}
+	\end{multicols}
+	\item Вычислить:
+	\begin{multicols}{2}
+		\begin{enumerate}
+			\item $45981-34786$
+			\item $43907-34292$
+			\item $124302-45966$
+			\item $20134-17899$
+			\item $35999-34566$
+			\item $999888-888999$
+		\end{enumerate}
+	\end{multicols}
+\end{enumerate}
+\end{document}

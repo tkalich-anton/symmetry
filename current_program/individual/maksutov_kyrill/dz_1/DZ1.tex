@@ -1,0 +1,49 @@
+\documentclass[12pt, a5paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+%Изменеие параметров листа
+\usepackage[left=1cm,right=1cm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage{amsmath,amsthm,amssymb,scrextend}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+	
+	\lhead{Сентябрь}
+	\rhead{Школа <<Симметрия>>}
+	
+	\section*{Домашняя работа №1}
+	\begin{enumerate}
+		\item Решите уравнения:
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\dfrac{2x^2-3x}{4}=\dfrac{x^2+2x}{3}$
+			\item $\dfrac{x}{2}+\dfrac{2}{x}=\dfrac{x}{3}+\dfrac{3}{x}$
+			\item $\dfrac{2}{x-4}+\dfrac{4}{x^2-4x}=\dfrac{5}{8}$
+			\item $x^3-x^2=2x$
+			\item $x^2-3\sqrt{2}x+4=0$
+		\end{enumerate}
+		\item Произведение двух последовательных натуральных чисел в два раза больше меньшего из них. Найдите эти числа.
+		\item Первый рабочий изготовил 60 деталей на 3 ч быстрее второго. За сколько часов второй рабочий изготовит 90 деталей, если работая вместе, они изготовят те же 90 деталей за 1 ч 30 минут?
+		\item Окружность, вписанная в трапецию, делит ее боковую сторону на отрезки 3 и 4. Найдите радиус окружности.
+		\item Через середину диагонали $KM$ прямоугольника $KLMN$ перпендикулярно этой диагонали проведена прямая, пересекающая сторону $KL$ и $MN$ в точках $A$ и $B$ соответственно. Известно, что $AB=BM=6$. Найдите большую сторону прямоугольника.
+	\end{enumerate}
+\end{document}

@@ -1,0 +1,42 @@
+\documentclass[12pt, a5paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+%Изменеие параметров листа
+\usepackage[left=1cm,right=1cm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage{amsmath,amsthm,amssymb,scrextend}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+	
+	\lhead{Ноябрь}
+	\rhead{Школа <<Симметрия>>}
+	
+	\section*{Домашняя работа}
+	\begin{enumerate}
+		\item Решите уравнение $$\dfrac{x^2+x-5}{x}+\dfrac{3x}{x^2+x-5}+4=0$$
+		\item Вычислите $$2\sqrt{5\sqrt{48}}+3\sqrt{40\sqrt{12}}-2\sqrt{15\sqrt{27}}$$
+		\item Вычислите $$\left(\dfrac{15}{\sqrt{6}-1}+\dfrac{4}{2-\sqrt{6}}\right)\cdot(\sqrt{6}+1)$$
+		\item Вершины $M$ и $N$ квадрата $KLMN$ лежат на гипотенузе $AB$ прямоугольного треугольника $ABC$ ($N$ между $B$ и $M$), а вершины $K$ и $L$ —
+		на катетах $BC$ и $AC$ соответственно. Известно, что $AM =3$ и $BN =7$. Найдите площадь квадрата.
+	\end{enumerate}
+\end{document}

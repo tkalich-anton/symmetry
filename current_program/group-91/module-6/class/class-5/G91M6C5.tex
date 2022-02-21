@@ -1,61 +1,67 @@
 \documentclass[12pt, a4paper]{article}
-\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
-\usepackage[T2A]{fontenc} % Поддержка русских букв
-\usepackage[utf8]{inputenc} % Кодировка utf8
-\usepackage[english, russian]{babel} % Языки: русский, английский
-\usepackage{enumitem}
-\usepackage{pscyr} % Нормальные шрифты
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{amssymb}
-\usepackage{scrextend}
-\usepackage{titling}
-\usepackage{indentfirst}
-\usepackage{cancel}
-\usepackage{soulutf8}
-\usepackage{wrapfig}
-\usepackage{gensymb}
-\usepackage[dvipsnames,table,xcdraw]{xcolor}
-\usepackage{tikz}
-
-%Русские символы в списке
-\makeatletter
-\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
-\makeatother
-
-%Дублирование знаков при переносе
-\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
-	{\hbox{$\mathsurround=0pt #1$}}{}}
-
-\usepackage{graphicx}
-\graphicspath{{pic/}}
-\DeclareGraphicsExtensions{.pdf,.png,.jpg}
-
-%Изменеие параметров листа
-\usepackage[left=15mm,right=15mm,
-top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
-
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\usepackage{multicol}
-\setlength\parindent{1,5em}
-\usepackage{indentfirst}
+\usepackage{../../../../../style}
 \begin{document}
-	
-	\lhead{Группа 91}
-	\chead{Модуль 6 Урок №5}
-	\rhead{Школа <<Симметрия>>}
+	\lhead{Группа 91} \chead{Модуль 6 Занятие №5} \rhead{Школа <<Симметрия>>}
 	\begin{enumerate}
-		\item Стас выбирает трёхзначное число. Найдите вероятность того, что оно делится на $48$.
-		\item Телевизор у Саши сломался и показывает только один случайный канал. Саша включает телевизор. В это время по трем каналам из тридцати показывают кинокомедии. Найдите вероятность того, что Саша попадет на канал, где комедия не идет.
-		\item В фирме такси в данный момент свободно $30$ машин: $1$ чёрная, $9$ жёлтых и $20$ зелёных. По вызову выехала одна из машин, случайно оказавшаяся ближе всего к заказчику. Найдите вероятность того, что к нему приедет жёлтое такси.
-		\item В денежно-вещевой лотерее на $100000$ билетов разыгрывается $1250$ вещевых и $810$ денежных выигрышей. Какова вероятность денежного выигрыша?
-		\item В коробке $14$ пакетиков с чёрным чаем и $6$ пакетиков с зелёным чаем. Павел наугад вынимает один пакетик. Какова вероятность того, что это пакетик с зелёным чаем?
-		\item В лыжных гонках участвуют $13$ спортсменов из России, $2$ спортсмена из Норвегии и $5$ спортсменов из Швеции. Порядок, в котором спортсмены стартуют, определяется жребием. Найдите вероятность того, что первым будет стартовать спортсмен не из России.
-		\item В среднем из $50$ карманных фонариков, поступивших в продажу, семь неисправных. Найдите вероятность того, что выбранный наудачу в магазине фонарик окажется исправен.
-		\item Арифметическая прогрессия $a_n$ задана формулой $n$-го члена $a_{n+1}=a_n+2$  и известно, что $a_1=3$. Найдите пятый член этой прогрессии.
-		\item Грузовик перевозит партию щебня массой $360$ тонн, ежедневно увеличивая норму перевозки на одно и то же число тонн. Известно, что за первый день было перевезено $3$ тонны щебня. Определите, сколько тонн щебня было перевезено за девятый день, если вся работа была выполнена за $18$ дней.
-		\item Бригада рабочих могла выполнить всю работу за $24$ ч, если бы работали одновременно все рабочие. Однако по плану в первый час работал один рабочий, во второй час – $2$ рабочих, в третий – $3$ и т.д. до тез пор, пока в работу не включились все рабочие. И только несколько часов перед завершением работала вся бригада. Время работы, предусмотренное планом, было бы сокращено на 6 часов, если бы с самого начала работы работала бы вся бригада, за исключением пяти рабочих. Найдите количество рабочих.
-		\item Футбольный мяч катится так, что за первую секунду он проходит путь $0,6$ м, а в каждую следующую секунду путь увеличивается на $0,6$ м по сравнению с предыдущей. Сколько секунд будет катиться мячик по горке длиной $6$ метров?
+		\item Вычислите:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+				\item $\dfrac{1}{3}:\dfrac{\left(\dfrac{3}{5}+0,425-\dfrac{1}{200}\right):0,01}{30,75+\dfrac{1}{12}+3\dfrac{1}{6}}:\dfrac{2}{3}$
+				\item \( \dfrac{3\dfrac{1}{3}-\left(6\dfrac{1}{7}-5\dfrac{3}{4}\right):\dfrac{5}{7}}{8+0,375:0,5625}+0,625:\dfrac{5}{6} \)
+			\end{enumerate}
+		\end{multicols}
+		\item \subimport{../../../../../exercises/arithmetic/coordinate_line/fractions}{ex_3}
+		\item \subimport{../../../../../exercises/arithmetic/coordinate_line/roots}{ex_2_3}
+		\item Найдите значение выражения $\dfrac{\left(1\dfrac{1}{2}\right)^4\cdot(0,2)^4}{0,15}$\\
+		\textit{В ответе укажите номер правильного варианта.}
+		\begin{multicols}{4}
+			\begin{enumerate}[label=\arabic*)]
+				\item $0,54$
+				\item $5,4$
+				\item $0,054$
+				\item $0,45$
+			\end{enumerate}
+		\end{multicols}
+		\item Вычислить $\dfrac{\sqrt{200}\cdot\sqrt{27}}{\sqrt{6}}$\\
+		\textit{В ответе укажите номер правильного варианта.}
+		\begin{multicols}{4}
+			\begin{enumerate}[label=\arabic*)]
+				\item $5$
+				\item $35$
+				\item $30$
+				\item $15$
+			\end{enumerate}
+		\end{multicols}
+		\item Упростить выражение $6(3a+4b)-4(5a-b)+(a+b)$ и найти значение при $a=-1$ и $b=\dfrac{1}{2}$
+		\item Решите уравнения:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\arabic*)]
+				\item $x^2-6x+8=0$
+				\item $3x(2x-7)=0$
+				\item $2x^2-3,1x+0,42=0$
+				\item $5x-(3-4x)=\dfrac{2}{5}-x$
+				\item $(x^3-5x^2)(x^2-3x+1)=0$
+			\end{enumerate}
+		\end{multicols}
+		\item Расстояние $S$ (в метрах) до места удара молнии можно приближенно вычислить по формуле $S=330\cdot t$, где $t$ --- количество секунд, прошедших между вспышкой молнии и ударом грома. Определите, на каком расстоянии от места удара молнии находился наблюдатель, если гром он услышал через $10$ секунд после вспышки. Ответ дайте в километрах.
+		\newpage
+		\item Решите неравенство $6-2x>3x+12$.\\ \textit{В ответе укажите номер правильного варианта.}
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\arabic*)]
+				\item $(-\infty;-1,2)$
+				\item $(-1;+\infty)$
+				\item $(-1.2;+\infty)$
+				\item $(-\infty;-1)$
+			\end{enumerate}
+		\end{multicols}
+		\item Решите неравенство $2x+(x-14)\geq-5x-(12-x)$.\\ \textit{В ответе укажите номер правильного варианта.}
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\arabic*)]
+				\item $\left[-\dfrac{3}{7};\dfrac{5}{7}\right]$
+				\item $\left[\dfrac{3}{7};+\infty\right)$
+				\item $\left[\dfrac{5}{7};+\infty\right)$
+				\item $\left(-\infty;\dfrac{2}{7}\right)$
+			\end{enumerate}
+		\end{multicols}
 	\end{enumerate}
 \end{document}
