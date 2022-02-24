@@ -1,78 +1,53 @@
 \documentclass[12pt, a4paper]{article}
-\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
-\usepackage[T2A]{fontenc} % Поддержка русских букв
-\usepackage[utf8]{inputenc} % Кодировка utf8
-\usepackage[english, russian]{babel} % Языки: русский, английский
-\usepackage{enumitem}
-\usepackage{pscyr} % Нормальные шрифты
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{amssymb}
-\usepackage{scrextend}
-\usepackage{titling}
-\usepackage{indentfirst}
-\usepackage{cancel}
-\usepackage{soulutf8}
-\usepackage{wrapfig}
-\usepackage{gensymb}
-\usepackage[dvipsnames,table,xcdraw]{xcolor}
-\usepackage{tikz}
-
-%Русские символы в списке
-\makeatletter
-\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
-\makeatother
-
-%Дублирование знаков при переносе
-\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
-	{\hbox{$\mathsurround=0pt #1$}}{}}
-
-\usepackage{graphicx}
-\graphicspath{{pic/}}
-\DeclareGraphicsExtensions{.pdf,.png,.jpg}
-
-%Изменеие параметров листа
-\usepackage[left=15mm,right=15mm,
-top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
-
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\usepackage{multicol}
-\setlength\parindent{1,5em}
-\usepackage{indentfirst}
+\usepackage{../../../../../style}
 \begin{document}
 	
-	\lhead{Группа 92}
-	\chead{Модуль 6 Урок 6}
-	\rhead{Школа <<Симметрия>>}
-	\begin{enumerate}
+	\lhead{Группа 92} \chead{Модуль 6} \rhead{Школа <<Симметрия>>} \cfoot{}
+	\begin{center}
+		\Large
+		\textbf{Занятие №6}
+	\end{center}
+	\begin{enumerate}[label=\textbf{\arabic*.}]
 		\item Решите уравнения:
-			\begin{enumerate}[label=\asbuk*)]
-				\begin{multicols}{2}
-				\item $-6-5x^2=-4x^4$
-				\item $-3x^2-4+x^4=0$
-				\item $3-2x^4=x^2$
-				\item $3x^4+1=4x^2$
-				\item $\dfrac{2}{x}+\dfrac{10}{x^2-2x}=\dfrac{1+2x}{x-2}$
-				\item $\dfrac{12}{3x-x^2}+\dfrac{3x+5}{x-3}+1=0$
-				\item $\dfrac{3x}{x+1}+\dfrac{2}{x}=\dfrac{2x+5}{x^2+x}$
-				\item $\dfrac{33}{a^2-11a}+\dfrac{a-4}{11-a}=-\dfrac{3}{a}$
-				\end{multicols}
-			\end{enumerate}
+		\begin{enumerate}[label=\asbuk*)]
+			\begin{multicols}{2}
+			\item $3-2x^4=x^2$
+			\item $x^3+4x^2+4x+1=0$
+			\end{multicols}
+		\end{enumerate}
+		\item Решите уравнение: $$\dfrac{2}{x}+\dfrac{10}{x^2-2x}=\dfrac{1+2x}{x-2}$$
+		\item Решите уравнение: $$\left(x+\dfrac{1}{x}\right)^2-4\dfrac{1}{2}\left(x+\dfrac{1}{x}\right)+5=0$$
+		\item Решить систему уравнений:
+		$$\left\{
+		\begin{array}{l}
+			\dfrac{3x-2y}{5}+\dfrac{5x-3y}{3}=x+1,\vspace{0,2cm}\\
+			\dfrac{2x-3y}{3}+\dfrac{4x-3y}{2}=y+1
+		\end{array}
+		\right.$$
 		\item Решите неравенства: 
 		\begin{enumerate}[label=\asbuk*)]
 			\begin{multicols}{2}
-				\item $(x-1)(25-x^2)(x^2-4x+4)>0$
 				\item $10x^2-30+20x\leqslant0$
-				\item $\dfrac{x-1}{x-2}>0$
-				\item $\dfrac{x+3}{x-5}>0$
+				\item $(x-1)(25-x^2)(x^2-4x+4)>0$
 				\item $\dfrac{(x+1)(x+2)}{x-3}>0$
-				\item $\dfrac{15x-5x^2}{12x-3x^2}>0$
 				\item $\dfrac{x^2+6x+5}{x+2}<0$
-				\item $\dfrac{(x-1)^2(x-2)}{(x-3)^2}\geqslant 0$
 			\end{multicols}
 		\end{enumerate}
-	\item На экзамене по геометрии школьнику достаётся одна задача из сборника. Вероятность того, что эта задача по теме «Углы», равна $0,1$. Вероятность того, что это окажется задача по теме «Параллелограмм», равна $0,6$. В сборнике нет задач, которые одновременно относятся к этим двум темам. Найдите вероятность того, что на экзамене школьнику достанется задача по одной из этих двух тем.
-	\item В фирме такси в данный момент свободно $20$ машин: $9$ черных, $4$ желтых и $7$ зеленых. По вызову выехала одна из машин, случайно оказавшаяся ближе всего к заказчику. Найдите вероятность того, что к нему приедет желтое такси.
+		\item Решить систему неравенств:
+		$$\left\{
+		\begin{array}{l}
+			(x-1)(x-2)>0,\vspace{0,2cm}\\
+			(x-1)(x-3)>0
+		\end{array}
+		\right.$$
+		\item Решить систему неравенств:
+		$$\left\{
+		\begin{array}{l}
+			x^2>4,\vspace{0,2cm}\\
+			\dfrac{x^2-9}{x^2-8x+16}>0
+		\end{array}
+		\right.$$
+		\item Участок прямоугольной формы обнесен изгородью. Если от него отрезать по прямой некоторую часть так, что оставшаяся часть окажется квадратом, то при этом его площадь уменьшится на $400$ м$^2$, а изгородь уменьшится на $20$ м. Определить первоначальные размеры участка (длину изгороди и площадь участка).
+		\item Пешеход, идущий из дома на железнодорожную станцию, пройдя за первый час $3$ км, рассчитал, что он опоздает к отходу поезда на $40$ мин, если будет идти с той же скоростью. Поэтому остальной путь он прошел со скоростью на $4$ км/ч и прибыл на станцию за $15$ мин до отхода поезда. Чему равно расстояние от дома до станции и с какой постоянной на всем пути скоростью пешеход пришел бы на станцию точно к отходу поезда?
 	\end{enumerate}
 \end{document}

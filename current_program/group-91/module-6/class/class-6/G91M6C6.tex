@@ -1,60 +1,51 @@
 \documentclass[12pt, a4paper]{article}
-\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
-\usepackage[T2A]{fontenc} % Поддержка русских букв
-\usepackage[utf8]{inputenc} % Кодировка utf8
-\usepackage[english, russian]{babel} % Языки: русский, английский
-\usepackage{enumitem}
-\usepackage{pscyr} % Нормальные шрифты
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{amssymb}
-\usepackage{scrextend}
-\usepackage{titling}
-\usepackage{indentfirst}
-\usepackage{cancel}
-\usepackage{soulutf8}
-\usepackage{wrapfig}
-\usepackage{gensymb}
-\usepackage[dvipsnames,table,xcdraw]{xcolor}
-\usepackage{tikz}
-
-%Русские символы в списке
-\makeatletter
-\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
-\makeatother
-
-%Дублирование знаков при переносе
-\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
-	{\hbox{$\mathsurround=0pt #1$}}{}}
-
-\usepackage{graphicx}
-\graphicspath{{pic/}}
-\DeclareGraphicsExtensions{.pdf,.png,.jpg}
-
-%Изменеие параметров листа
-\usepackage[left=15mm,right=15mm,
-top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
-
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\usepackage{multicol}
-\setlength\parindent{1,5em}
-\usepackage{indentfirst}
+\usepackage{../../../../../style}
 \begin{document}
 	
-	\lhead{Группа 91}
-	\chead{Модуль 6 Урок №6}
-	\rhead{Школа <<Симметрия>>}
+	\lhead{Группа 91} \chead{Модуль 6} \rhead{Школа <<Симметрия>>} \cfoot{}
+	\begin{center}
+		\Large
+		\textbf{Занятие №6}
+	\end{center}
 	\begin{enumerate}
-		\item В среднем на $150$ карманных фонариков приходится три неисправных. Найдите вероятность купить работающий фонарик.
-		\item На экзамене $40$ билетов, Яша не выучил $4$ из них. Найдите вероятность того, что ему попадется выученный билет.
-		\item Максим выбирает трехзначное число. Найдите вероятность того, что оно делится на $98$.
-		\item В каждой пятой банке кофе согласно условиям акции есть приз. Призы распределены по банкам случайно. Галя покупает банку кофе в надежде выиграть приз. Найдите вероятность того, что Галя не найдёт приз в своей банке.
-		\item У бабушки $20$ чашек: $9$ с красными цветами, остальные с синими. Бабушка наливает чай в случайно выбранную чашку. Найдите вероятность того, что это будет чашка с синими цветами.
-		\item Для экзамена подготовили билеты с номерами от $1$ до $25$. Какова вероятность того, что наугад взятый учеником билет имеет номер, являющийся двузначным числом?
-		\item В чемпионате по футболу участвуют $16$ команд, которые жеребьевкой распределяются на $4$ группы: $A, B, C$ и $D$. Какова вероятность того, что команда России не попадает в группу $A$?
-		\item Лене надо подписать $972$ открытки. Ежедневно она подписывает на одно и то же количество открыток больше по сравнению с предыдущим днём. Известно, что за первый день Лена подписала 20 открыток. Определите, сколько открыток было подписано за седьмой день, если вся работа была выполнена за $18$ дней
-		\item Хозяин договорился с рабочим, что они выкопают ему колодец на следующих условиях: за первый метро он им заплатит $3700$ рублей, а за каждый следующий метр – на $1700$ рублей больше, чем за предыдущий. Сколько рублей хозяин должен будет заплатить рабочим, если они выкопают колодец глубиной $8$ метров?
-		\item Тренер посоветовал Андрею в первый день занятий провести на беговой дорожке $22$ минуты, а на каждом следующем занятии увеличивать время, проведённое на беговой дорожке, на $4$ минуты, пока оно не достигнет $60$ минут, а дальше продолжать тренироваться по $60$ минут каждый день. За сколько занятий, начиная с первого, Андрей проведёт на беговой дорожке в сумме $4$ часа $48$ минут?
+		\item Вычислить:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+				\item $\sqrt{27\cdot12}$
+				\item $\sqrt{40\cdot55\cdot22}$
+				\item $\sqrt{245\cdot27\cdot60}$
+				\item $\sqrt{98}\cdot\sqrt{50}$
+			\end{enumerate}
+		\end{multicols}
+		\item Решить уравнения:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+				\item $x(x-1)=0$
+				\item $x^2-4x=0$
+				\item $2x^2=5+3x$
+			\end{enumerate}
+		\end{multicols}
+		\item Упростить выражение: $$\dfrac{x^2-y^2}{(x+y)^2}:\dfrac{6x-6y}{3x+3y}$$
+		\item Упростить выражение: $$\dfrac{a^2+ab}{4a^2-4b^2}\cdot\dfrac{2a^3+2b^3}{a^2-ab}$$
+		\item Упростить выражение: $$\dfrac{6a}{4-9a^2}+\dfrac{1}{3a-2}$$
+		\item Решить систему уравнений:
+		$$\left\{
+		\begin{array}{l}
+			x+y-3=0,\vspace{0,2cm}\\
+			x-y+1=0
+		\end{array}
+		\right.$$
+		\item Решить систему уравнений:
+		$$\left\{
+		\begin{array}{l}
+			x+2y-3=0,\vspace{0,2cm}\\
+			2x-3y=-8
+		\end{array}
+		\right.$$
+		\item Решить уравнения:
+		\begin{enumerate}[label=\asbuk*)]
+			\item $\dfrac{x^2}{5}-\dfrac{2x}{3}=\dfrac{x+5}{6}$
+			\item $(x+3)(x-2)+(x+2)^2=3x+10$
+		\end{enumerate}
 	\end{enumerate}
 \end{document}
