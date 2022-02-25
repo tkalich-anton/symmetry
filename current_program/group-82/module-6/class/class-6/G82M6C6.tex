@@ -1,59 +1,19 @@
 \documentclass[12pt, a4paper]{article}
-\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
-\usepackage[T2A]{fontenc} % Поддержка русских букв
-\usepackage[utf8]{inputenc} % Кодировка utf8
-\usepackage[english, russian]{babel} % Языки: русский, английский
-\usepackage{enumitem}
-\usepackage{pscyr} % Нормальные шрифты
-\usepackage{amsmath}
-\usepackage{amsthm}
-\usepackage{amssymb}
-\usepackage{scrextend}
-\usepackage{titling}
-\usepackage{indentfirst}
-\usepackage{cancel}
-\usepackage{soulutf8}
-\usepackage{wrapfig}
-\usepackage{gensymb}
-\usepackage[dvipsnames,table,xcdraw]{xcolor}
-\usepackage{tikz}
-
-%Русские символы в списке
-\makeatletter
-\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
-\makeatother
-
-%Дублирование знаков при переносе
-\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
-	{\hbox{$\mathsurround=0pt #1$}}{}}
-
-\usepackage{graphicx}
-\graphicspath{{pic/}}
-\DeclareGraphicsExtensions{.pdf,.png,.jpg}
-
-%Изменеие параметров листа
-\usepackage[left=15mm,right=15mm,
-top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
-
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\usepackage{multicol}
-
-\setlength\parindent{1,5em}
-\usepackage{indentfirst}
+\usepackage{../../../../../style}
 \begin{document}
 	
-	\lhead{Группа 82}
-	\chead{Модуль 6 Урок №5-8}
-	\rhead{Школа <<Симметрия>>}
+	\lhead{Группа 82} \chead{Модуль 6} \rhead{Школа <<Симметрия>>}
+	\begin{center}
+		\Large
+		\textbf{Занятие №6}
+	\end{center}
 	\begin{enumerate}
-		\item Площадь прямоугольника равна $24$. Найдите площадь четырехугольника с вершинами в серединах сторон прямоугольника.
-		\item Средняя линия треугольника разбивает его на треугольник и четырехугольник. Какую часть составляет площадь полученного треугольника от площади исходного?
-		\item Докажите, что медиана разбивает треугольник на два равновеликих треугольника.
-		\item Точки, делящие сторону треугольника на $n$ равных частей, соединены отрезками с противоположной вершиной. Докажите, что при этом треугольник также разделился на $n$ равновеликих частей.
-		\item Пусть $M$ — точка на стороне $AB$ треугольника $ABC$, причем $AM : MB = m : n$. Докажите, что площадь треугольника $CAM$ относится к площади треугольника $CBM$ как $m : n$.
-		\item Докажите, что площадь выпуклого четырехугольника со взаимно перпендикулярными диагоналями равна половине произведения диагоналей.
-		\item На сторонах $AB$ и $AC$ треугольника $ABC$, площадь которого равна $50$, взяты соответственно точки $M$ и $K$ так, что $AM : MB = 1 : 5$, а $AK : KC = 3 : 2$. Найдите площадь треугольника $AMK$.
-		\item Вершины одного квадрата расположены на сторонах другого и делят эти стороны в отношении $1 : 2$, считая по часовой стрелке. Найдите отношение площадей квадратов.
+		\item Упростить выражение: $$\dfrac{x^2-y^2}{(x+y)^2}:\dfrac{6x-6y}{3x+3y}$$
+		\item Упростить выражение: $$\dfrac{c^3-8}{x+3}:\left( \dfrac{c-2}{4c}\cdot\dfrac{8c^3}{c^2+3c} \right):\dfrac{c^2+2c-4}{2(3-c)}$$
+		\item Решите уравнение: $$\dfrac{2}{x}+\dfrac{10}{x^2-2x}=\dfrac{1+2x}{x-2}$$
+		\item Решите уравнение: $$\left(x+\dfrac{1}{x}\right)^2-4\dfrac{1}{2}\left(x+\dfrac{1}{x}\right)+5=0$$
+		\item Докажите, что середины двух противоположных сторон любого четырехугольника без параллельных сторон и середины его диагоналей являются вершинами параллелограмма.
+		\item В выпуклом четырехугольнике $ABCD$ отрезок, соединяющий середины сторон $AB$ и $CD$, равен $1$. Прямые $BC$ и $AD$ перпендикулярны. Найдите отрезок, соединяющий середины диагоналей $AC$ и $BD$.
+		\item Один из углов прямоугольной трапеции равен \( 120\degree \), большее основание равно \( 12 \). Найдите отрезок, соединяющий середины диагоналей, если известно, что меньшая диагональ трапеции равна ее большему основанию.
 	\end{enumerate}
 \end{document}
