@@ -1,0 +1,98 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+\begin{document}
+	
+	\lhead{Группа 71}
+	\chead{Модуль 7 Домашняя работа №3}
+	\rhead{Школа <<Симметрия>>}
+	\section*{Домашняя работа №3}
+	\begin{enumerate}
+		\item \textit{(4 балла)} Решите системы уравнений:
+			\begin{enumerate}[label=\asbuk*)]
+		\item 
+		$\left\{
+		\begin{array}{l}
+			x-y-2=-1,\\
+			x+y-5=0
+		\end{array}
+		\right.$
+		\item 
+		$\left\{
+		\begin{array}{l}
+			y-3x=0,\\
+			x-2y=-10
+		\end{array}
+		\right.$
+		\item 
+		$\left\{
+		\begin{array}{l}
+			2x+y-1=0,\\
+			3x+2y+5=0
+		\end{array}
+		\right.$
+		\item 
+		$\left\{
+		\begin{array}{l}
+			x+2y-3=0,\\
+			x+y=-1
+		\end{array}
+		\right.$ 
+	\end{enumerate}
+		\item \textit{(2 балла)} Сократите дроби:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+		\item $\dfrac{24a^5b^7c}{44a^7b^4c}$ 
+		\item $\dfrac{ab(a+3)}{a^2b(a+3)}$ 
+		\item $\dfrac{15a(a-b)}{20b(a-b)}$ 
+		\item $\dfrac{2(x+y)}{4ax}$ 
+		\item $\dfrac{a+b}{a+b}$ 
+		\item $\dfrac{2(x-1)}{5(x-1)}$ 
+		\item $\dfrac{3a(a-b)}{6a(a+b)}$ 
+		\item $\dfrac{4x(x-y^3)}{16x^2y(x-y)}$ 
+		\end{enumerate}
+		\end{multicols}
+		\item \textit{(2 балла)} Найдите решение уравнения $-12x+17y=-87$, состоящее из двух противоположных чисел.
+		\item \textit{(2 балла)} Из пунктов $A$ и $B$, расстояние между которыми равно $24$ км, одновременно навстречу друг другу вышли два туриста. Через $2$ ч после начала движения они еще не встретились, а расстояние между ними составляло $6$ км. Еще через $2$ ч одному из них оставалось пройти до пункта $B$ на $4$ км меньше, чем другому до пункта $A$. Найдите скорость каждого туриста.	
+	\end{enumerate}
+\end{document}
