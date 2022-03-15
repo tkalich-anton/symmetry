@@ -1,0 +1,27 @@
+\documentclass{standalone}
+\usepackage{../../../../../graph_style}
+\begin{document}
+\begin{tikzpicture}
+	\pgfplotsset{
+		every axis/.append style={
+			ylabel style={below left},
+		},
+		/pgf/declare function={
+			line1(\x) = 0.5*\x+4;
+			line2(\x) = 1.25*\x - 1.25;
+		},
+	}
+	\begin{axis}[
+		xmin=-5,xmax=7,
+		ymin=-6,ymax=6]
+		\addplot [f_red, line width=1.4pt] {line1(x)};
+		\addplot [f_green, line width=1.4pt] {line2(x)};
+		\node[node_text, anchor=south east, f_red] at (-1,3.8) {\mbox{\boldmath$f(x)$}};
+		\node[node_text, anchor=north west, f_green] at (2.7,2) {\mbox{\boldmath$g(x)$}};
+		\node[green_dot] (A) at (1,{line2(1)}) {};
+		\node[green_dot] (B) at (5,{line2(5)}) {};
+		\node[red_dot] (C) at (-2,{line1(-2)}) {};
+		\node[red_dot] (D) at (2,{line1(2)}) {};
+	\end{axis}
+\end{tikzpicture}
+\end{document}

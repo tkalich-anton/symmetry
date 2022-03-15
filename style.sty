@@ -26,7 +26,9 @@
 	import,
 	tabularx,
 	colortbl,
-	tablestyles
+	tablestyles,
+	titling,
+	xparse
 }
 %Параметры страницы
 \usepackage[left=15mm,right=15mm,
@@ -52,7 +54,7 @@ top=2cm,bottom=2cm]{geometry}
 \newcommand{\levelii}{\textcolor{dark}{\footnotesize $\blacksquare\blacksquare\square$}\hspace{0.3em}}
 \newcommand{\leveliii}{\textcolor{dark}{\footnotesize $\blacksquare\blacksquare\blacksquare$}\hspace{0.3em}}
 \newcommand{\source}[1]{\textcolor{silver}{\textit{(#1)}}}
-\newcommand{\score}[1]{\textcolor{silver}{\textit{(#1)}}}
+\newcommand{\n}[1]{\textit{Задание \textnumero#1}\\}
 \newcommand{\bb}[1]{\left(#1\right)}
 \newcommand{\funcexer}[2]{
 	\begin{minipage}[t]{0.7\textwidth}
@@ -62,6 +64,14 @@ top=2cm,bottom=2cm]{geometry}
 		\includegraphics[align=t, width=\textwidth]{#2}
 	\end{minipage}
 }
+\NewDocumentEnvironment{ex}{mm}
+{
+	\textbf{\textit{Задание~\textnumero#1}}\\[1ex]
+}
+{
+	\textit{Ответ: #2}\\
+	\textcolor{silver}{\rule{0.95\textwidth}{.2mm}}
+}
 
 \DeclareUnicodeCharacter{202F}{\,}
 %Русские символы в списке
@@ -69,3 +79,6 @@ top=2cm,bottom=2cm]{geometry}
 
 %Сеттеры
 \setlength{\parindent}{3ex}
+
+\def\le{\leqslant}
+\def\ge{\geqslant}
