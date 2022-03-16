@@ -28,7 +28,9 @@
 	colortbl,
 	tablestyles,
 	titling,
-	xparse
+	xparse,
+	xifthen,
+	etoolbox
 }
 %Параметры страницы
 \usepackage[left=15mm,right=15mm,
@@ -43,7 +45,7 @@ top=2cm,bottom=2cm]{geometry}
 \definecolor{silver}{rgb}{0.7, 0.7, 0.7}
 \definecolor{dark}{rgb}{0.3, 0.3, 0.3}
 \definecolor{harvestgold}{rgb}{0.85, 0.57, 0.0}
-\newcommand{\answer}[1]{\textcolor{silver}{\fbox{#1}}}
+%\newcommand{\answer}[1]{\textcolor{silver}{\fbox{#1}}}
 \newcommand{\ranswer}[1]{{
 		
 	\raggedleft
@@ -53,8 +55,8 @@ top=2cm,bottom=2cm]{geometry}
 \newcommand{\leveli}{\textcolor{dark}{\footnotesize $\blacksquare\square\square$}\hspace{0.3em}}
 \newcommand{\levelii}{\textcolor{dark}{\footnotesize $\blacksquare\blacksquare\square$}\hspace{0.3em}}
 \newcommand{\leveliii}{\textcolor{dark}{\footnotesize $\blacksquare\blacksquare\blacksquare$}\hspace{0.3em}}
+
 \newcommand{\source}[1]{\textcolor{silver}{\textit{(#1)}}}
-\newcommand{\n}[1]{\textit{Задание \textnumero#1}\\}
 \newcommand{\bb}[1]{\left(#1\right)}
 \newcommand{\funcexer}[2]{
 	\begin{minipage}[t]{0.7\textwidth}
@@ -64,13 +66,49 @@ top=2cm,bottom=2cm]{geometry}
 		\includegraphics[align=t, width=\textwidth]{#2}
 	\end{minipage}
 }
-\NewDocumentEnvironment{ex}{mm}
+\newcommand{\graphcenter}[1]{
+	\begin{center}
+		\includegraphics{#1}
+	\end{center}
+}
+\newcommand{\selectanswer}{\noindent\textit{В ответе укажите номер правильного варианта.}}
+
+\newboolean{show_number}
+\newboolean{show_answer}
+
+\newcommand{\shownumber}[1]{\setboolean{show_number}{#1}}
+\newcommand{\showanswer}[1]{\setboolean{show_answer}{#1}}
+
+\shownumber{false}
+\showanswer{false}
+
+\newcommand{\num}{\@empty}
+\newcommand{\answer}{\@empty}
+
+\newcommand{\setnumber}[1]{\renewcommand\num{#1}}
+\newcommand{\setanswer}[1]{\renewcommand\answer{#1}}
+
+\NewDocumentEnvironment{ex}{O{\boolean{show_number}} O{\boolean{show_answer}}}
 {
-	\textbf{\textit{Задание~\textnumero#1}}\\[1ex]
+	\ifthenelse {#1}
+	{
+		\ifthenelse {\NOT \equal{\num}{\@empty}}
+			{\noindent\textbf{\textit{Задание~\textnumero\num}}\\[1ex]}
+			{\noindent\textbf{\textit{Задание Без номера}}\\[1ex]}
+		\setnumber{}
+	}
+	{}
 }
 {
-	\textit{Ответ: #2}\\
-	\textcolor{silver}{\rule{0.95\textwidth}{.2mm}}
+	\ifthenelse {#2}
+	{
+		\ifthenelse {\NOT \equal{\answer}{\@empty}}
+			{\noindent\textit{Ответ:~\answer}\\[1ex]}
+			{\noindent\textit{Ответ:~Пусто}\\[1ex]}
+		\setanswer{}
+	}
+	{}
+	\textcolor{silver}{\rule{\textwidth}{.2mm}}\\[1ex]
 }
 
 \DeclareUnicodeCharacter{202F}{\,}
