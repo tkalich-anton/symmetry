@@ -30,7 +30,9 @@
 	titling,
 	xparse,
 	xifthen,
-	etoolbox
+	verbatim,
+	currfile,
+	xhfill
 }
 %Параметры страницы
 \usepackage[left=15mm,right=15mm,
@@ -41,6 +43,7 @@ top=2cm,bottom=2cm]{geometry}
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
 %Числа в списке второго уровня по умолчанию
 \renewcommand{\labelenumii}{\arabic{enumii})}
+
 %Новые команды
 \definecolor{silver}{rgb}{0.7, 0.7, 0.7}
 \definecolor{dark}{rgb}{0.3, 0.3, 0.3}
@@ -74,6 +77,7 @@ top=2cm,bottom=2cm]{geometry}
 \newcommand{\selectanswer}{\noindent\textit{В ответе укажите номер правильного варианта.}}
 
 \newboolean{show_number}
+\newcommand{\numbertype}{real_number}
 \newboolean{show_answer}
 
 \newcommand{\shownumber}[1]{\setboolean{show_number}{#1}}
@@ -83,33 +87,56 @@ top=2cm,bottom=2cm]{geometry}
 \showanswer{false}
 
 \newcommand{\num}{\@empty}
-\newcommand{\answer}{\@empty}
 
 \newcommand{\setnumber}[1]{\renewcommand\num{#1}}
-\newcommand{\setanswer}[1]{\renewcommand\answer{#1}}
 
 \NewDocumentEnvironment{ex}{O{\boolean{show_number}} O{\boolean{show_answer}}}
-{
+{%
 	\ifthenelse {#1}
-	{
-		\ifthenelse {\NOT \equal{\num}{\@empty}}
-			{\noindent\textbf{\textit{Задание~\textnumero\num}}\\[1ex]}
-			{\noindent\textbf{\textit{Задание Без номера}}\\[1ex]}
+	{%
+		\ifthenelse {\equal{\numbertype}{real_number}}
+			{\noindent\textbf{\textit{Задание~\textnumero\currfilebase}}\\[1em]}
+			{\noindent\textbf{\textit{Задание Без номера}}\\[1em]}
 		\setnumber{}
-	}
+	}%
 	{}
 }
 {
-	\ifthenelse {#2}
-	{
-		\ifthenelse {\NOT \equal{\answer}{\@empty}}
-			{\noindent\textit{Ответ:~\answer}\\[1ex]}
-			{\noindent\textit{Ответ:~Пусто}\\[1ex]}
-		\setanswer{}
-	}
-	{}
-	\textcolor{silver}{\rule{\textwidth}{.2mm}}\\[1ex]
+	\par\noindent\xhrulefill{silver}{.2mm}\\[1pt]
+	
+	
 }
+
+\NewDocumentEnvironment{answer}{O{\boolean{show_answer}}}
+{
+	\ifthenelse {\NOT #1}
+		{\expandafter\comment}
+		{\noindent\itshapeОтвет:}
+}
+{
+	\ifthenelse{\NOT #1}
+		{\expandafter\endcomment}
+		{}
+}
+
+\NewDocumentEnvironment{exnumber}{O{\boolean{show_number}}}
+{
+	\ifthenelse {\NOT #1}
+	{\expandafter\comment}
+	{\noindent\itshapeОтвет:}
+}
+{
+	\ifthenelse{\NOT #1}
+	{\expandafter\endcomment}
+	{}
+}
+
+%Нумированный список со столбцами
+\newlist{enumcols}{enumerate}{5}
+\setlist[enumcols]{label=\arabic*)}
+
+\SetEnumitemKey{columns}{before=\begin{multicols}{#1},
+		after=\end{multicols}}
 
 \DeclareUnicodeCharacter{202F}{\,}
 %Русские символы в списке
