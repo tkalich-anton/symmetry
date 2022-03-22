@@ -64,9 +64,6 @@
 \newcommand{\bb}[1]{\left(#1\right)}
 
 % Переменные
-\newboolean{show_number}
-\newboolean{show_answer}
-\newboolean{show_rule}
 
 \newcommand{\numbertype}{real_number}
 \newcommand{\bankpath}{\@empty}
@@ -79,52 +76,93 @@
 
 \makeatletter
 % ========= KEY DEFINITIONS =========
-\define@key{exercise}{show_number}{\setboolean{show_number}{#1}}
-\define@key{exercise}{show_answer}{\setboolean{show_answer}{#1}}
-\define@key{exercise}{show_rule}{\setboolean{show_rule}{#1}}
+\define@key{exercise}{showNumber}{\def\ex@shownum{#1}}
+\define@key{exercise}{showAnswer}{\def\ex@showans{#1}}
+\define@key{exercise}{showRule}{\def\ex@showrule{#1}}
+\define@key{exercise}{bankPath}{\def\ex@bankpath{#1}}
+\define@key{exercise}{type}{\def\ex@type{#1}}
+\define@key{exercise}{mode}{\def\ex@mode{#1}}
 % ========= KEY DEFAULTS =========
-\setkeys{exercise}{show_number=false,show_answer=false,show_rule=false}%
-\makeatother
+\setkeys{exercise}{
+	showNumber=true,
+	showAnswer=false,
+	showRule=false,
+	bankPath=../bank,
+	type=none,
+	mode=single
+}%
+\newcommand{\multiex}{
+	\setkeys{exercise}{
+		bankPath=..,
+		mode=inline
+	}%
+}
 
-\newenvironment{exex}[1][]
-{
+\newcommand{\exercise}[2][]{
+	\begingroup%
 	\setkeys{exercise}{#1}
-	\ifthenelse {\boolean{show_number}}
-	{
-		\noindent
-		\ifthenelse {\equal{\numbertype}{real_number}}%
-		{\textbf{\textit{\textnumero\currfilebase}}\\[1em]}
-		{\textbf{\textit{Без номера}}\\[1em]}
-	}
-}
-{
-	\ifthenelse {\boolean{show_rule}}
-	{\noindent\xhrulefill{silver}{.2mm}\\[0.2pt]\par}
-	{\noindent\xhrulefill{silver}{0mm}\\[0.2pt]\par}
+	\subimport{\ex@bankpath}{#2}
+	\endgroup%
 }
 
-\NewDocumentEnvironment{ex}{O{\boolean{show_number}}O{\boolean{show_rule}}}
-{%
-	\ifthenelse {#1}
+\newenvironment{ex}[1][]
+{
+	\ifthenelse {\boolean{\ex@shownum}}
 	{%
-		\noindent
-		\ifthenelse {\equal{\numbertype}{real_number}}%
-		{\textbf{\textit{\textnumero\currfilebase}}\\[1em]}
-		{\textbf{\textit{Без номера}}\\[1em]}
+		\ifthenelse {\equal{\ex@mode}{inline}}
+			{\textbf{[\currfilebase]}}
+			{\textbf{\textit{\textnumero\currfilebase}}\\[0.1pt]}
 	}%
 	{}
 }
 {
-	\ifthenelse {#2}
+	\ifthenelse {\boolean{\ex@showrule}}
 	{\noindent\xhrulefill{silver}{.2mm}\\[0.2pt]\par}
 	{\noindent\xhrulefill{silver}{0mm}\\[0.2pt]\par}
 }
 
+\newenvironment{condition}
+{
+	\ifthenelse {\equal{\ex@type}{none}}
+		{}
+		{
+			\ifthenelse {\equal{\ex@mode}{single}}
+				{
+					\ifthenelse {\equal{\ex@type}{equation}}{Решить уравнение:}{}
+					\ifthenelse {\equal{\ex@type}{expression}}{Упростить выражение:}{}
+					\begin{center}
+				}
+				{}
+		}
+}
+{
+	\ifthenelse {
+		\NOT \equal{\ex@type}{none}
+		\AND
+		\equal{\ex@mode}{single}}
+		{
+			\end{center}
+		}
+		{}
+}
+
 \newcommand{\answer}[1]{
-	\ifthenelse {\boolean{show_answer}}
-	{\textcolor{silver}{\fbox{#1}}}
+	\ifthenelse {\boolean{\ex@showans}}
+	{
+		\ifthenelse {\equal{\ex@mode}{single}}
+		{
+			
+			\raggedleft
+			\textcolor{silver}{\fbox{#1}}
+			
+		}
+		{\textcolor{silver}{\fbox{#1}}}
+	}
 	{}
 }
+
+\makeatother
+
 
 \newcommand{\ranswer}[1]{{
 		
@@ -164,12 +202,7 @@ top=2cm,bottom=2cm]{geometry}
 %Русские символы в списке
 \AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
 
-\setlength{\parindent}{2ex}
+\setlength{\parindent}{0ex}
 
 %Название школы в шапке справа
 \rhead{Школа <<Симметрия>>}
-
-%Значение переменных по умолчанию
-\shownumber{false}
-\showanswer{false}
-\showrule{false}
