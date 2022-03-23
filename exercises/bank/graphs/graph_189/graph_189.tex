@@ -1,0 +1,22 @@
+\documentclass{standalone}
+\usepackage{../../../../../graph_style}
+\begin{document}
+\pgfplotsset{
+	/pgf/declare function={
+	line1(\x) = \x-5.5;
+	line2(\x) = 3*\x - 1;
+	},
+}
+\begin{tikzpicture}
+	\begin{axis}[
+		xmin=-4,xmax=7,
+		ymin=-5,ymax=6]
+		\addplot [f_red, line width=1.4pt] {line1(x)};
+		\addplot [f_green, line width=1.4pt] {line2(x)};
+		\node[node_text, anchor=north west, f_red] at (4,-2) {\mbox{\boldmath$f(x)$}};
+		\node[node_text, anchor=south west, f_green] at (1.5,2) {\mbox{\boldmath$g(x)$}};
+		\node[green_dot] (B) at (-1,{line2(-1)}) {};
+		\node[green_dot] (B) at (0,{line2(0)}) {};
+	\end{axis}
+\end{tikzpicture}
+\end{document}

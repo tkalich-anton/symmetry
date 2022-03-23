@@ -1,19 +1,15 @@
 \documentclass[10pt, a4paper]{article}
 \usepackage{../style}
-\setkeys{exercise}{
-	showNumber=true,
-	showAnswer=true,
-	showRule=false,
-}%
 \lhead{\leftmark}
+\setkeys{exercise}{%
+	showNumber=true,%
+	showAnswer=true,%
+	showRule=false,%
+}%
+%\includeonly{algebra/algebra}
 \begin{document}
-\part{Арифметика}
-\import{arithmetic}{arithmetic}
-\newpage
-\part{Алгебра}
-\import{algebra}{algebra}
-\newpage
-\part{Текстовые задачи}
-\import{text_problems}{text_problems}
+\subincludefrom{arithmetic/}{arithmetic}
+\subincludefrom{algebra/}{algebra}
+\subincludefrom{text_problems/}{text_problems}
 %\part{Геометрия}
 \end{document}

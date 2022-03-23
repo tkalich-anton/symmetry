@@ -41,7 +41,7 @@
 \definecolor{dark}{rgb}{0.3, 0.3, 0.3}
 \definecolor{harvestgold}{rgb}{0.85, 0.57, 0.0}
 
-%БЛОК КОМАНДЫ
+%КОМАНДЫ
 
 \newcommand{\leveli}{\textcolor{dark}{\footnotesize $\blacksquare\square\square$}\hspace{0.3em}}
 \newcommand{\levelii}{\textcolor{dark}{\footnotesize $\blacksquare\blacksquare\square$}\hspace{0.3em}}
@@ -53,7 +53,7 @@
 \newlist{enumcols}{enumerate}{5}
 \setlist[enumcols]{label=\arabic*)}
 
-\SetEnumitemKey{columns}{before=\begin{multicols}{#1},
+\SetEnumitemKey{columns}{before=\begin{multicols}{#1},%
 		after=\end{multicols}}
 
 %Команды, связанные с математикой
@@ -83,84 +83,78 @@
 \define@key{exercise}{type}{\def\ex@type{#1}}
 \define@key{exercise}{mode}{\def\ex@mode{#1}}
 % ========= KEY DEFAULTS =========
-\setkeys{exercise}{
-	showNumber=true,
-	showAnswer=false,
-	showRule=false,
-	bankPath=../bank,
-	type=none,
-	mode=single
+\setkeys{exercise}{%
+	showNumber=true,%
+	showAnswer=false,%
+	showRule=false,%
+	bankPath=../bank,%
+	type=none,%
+	mode=normal%
 }%
-\newcommand{\multiex}{
-	\setkeys{exercise}{
-		bankPath=..,
-		mode=inline
+\newcommand{\multiex}{%
+	\setkeys{exercise}{%
+		bankPath=..,%
+		mode=item,%
+		type=multi%
 	}%
-}
-
-\newcommand{\exercise}[2][]{
+}%
+\newcommand{\exercise}[2][]{%
 	\begingroup%
-	\setkeys{exercise}{#1}
-	\subimport{\ex@bankpath}{#2}
+	\setkeys{exercise}{#1}%
+	\subimport{\ex@bankpath}{#2}%
 	\endgroup%
-}
-
-\newenvironment{ex}[1][]
-{
-	\ifthenelse {\boolean{\ex@shownum}}
+}%
+\newenvironment{ex}[1][]%
+{%
+	\ifthenelse{\boolean{\ex@shownum}}%
 	{%
-		\ifthenelse {\equal{\ex@mode}{inline}}
-			{\textbf{[\currfilebase]}}
-			{\textbf{\textit{\textnumero\currfilebase}}\\[0.1pt]}
-	}%
-	{}
-}
-{
-	\ifthenelse {\boolean{\ex@showrule}}
-	{\noindent\xhrulefill{silver}{.2mm}\\[0.2pt]\par}
-	{\noindent\xhrulefill{silver}{0mm}\\[0.2pt]\par}
+		\ifthenelse {\equal{\ex@mode}{item}}%
+			{\textbf{[\currfilebase]}}%
+			{\makebox[0.08\linewidth]{\textbf{[\currfilebase]}}}%
+	}{}%
+}%
+{%
+	\ifthenelse{\boolean{\ex@showrule}}%
+	{\noindent\xhrulefill{silver}{.2mm}\\[0.2pt]\par}%
+	{\par~\\[0.1pt]}%
 }
 
-\newenvironment{condition}
-{
-	\ifthenelse {\equal{\ex@type}{none}}
-		{}
-		{
-			\ifthenelse {\equal{\ex@mode}{single}}
-				{
-					\ifthenelse {\equal{\ex@type}{equation}}{Решить уравнение:}{}
-					\ifthenelse {\equal{\ex@type}{expression}}{Упростить выражение:}{}
-					\begin{center}
-				}
-				{}
-		}
-}
-{
-	\ifthenelse {
-		\NOT \equal{\ex@type}{none}
-		\AND
-		\equal{\ex@mode}{single}}
-		{
+\newenvironment{condition}%
+{%
+	\ifthenelse{\equal{\ex@mode}{notext}}%
+	{%
+		\ifthenelse{\equal{\ex@type}{equation}}%
+		{Решить уравнение:}{}%
+		\ifthenelse{\equal{\ex@type}{expression}}%
+		{Упростить выражение:}{}%
+		\begin{center}
+		}%
+		{}%
+}%
+{%
+	\ifthenelse{%
+		\NOT\equal{\ex@type}{none}%
+		\AND%
+		\equal{\ex@mode}{notext}}%
+		{%
 			\end{center}
-		}
-		{}
-}
-
-\newcommand{\answer}[1]{
-	\ifthenelse {\boolean{\ex@showans}}
-	{
-		\ifthenelse {\equal{\ex@mode}{single}}
-		{
+		}%
+		{}%
+}%
+\newcommand{\answer}[1]{%
+	\ifthenelse{\boolean{\ex@showans}}%
+	{%
+		\ifthenelse{\NOT\equal{\ex@mode}{item}}%
+		{%
 			
 			\raggedleft
 			\textcolor{silver}{\fbox{#1}}
 			
-		}
-		{\textcolor{silver}{\fbox{#1}}}
-	}
-	{}
-}
-
+		}%
+		{\textcolor{silver}{\fbox{#1}}}%
+	}%
+	{}%
+}%
 \makeatother
 
 
