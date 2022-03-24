@@ -116,7 +116,9 @@
 {%
 	\ifthenelse{\boolean{\ex@showrule}}%
 	{\noindent\xhrulefill{silver}{.2mm}\\[0.2pt]\par}%
-	{\par~\\[0.1pt]}%
+	{%
+		%\par~\\[0.1pt]
+	}%
 }
 
 \newenvironment{condition}%
@@ -127,6 +129,8 @@
 		{Решить уравнение:}{}%
 		\ifthenelse{\equal{\ex@type}{expression}}%
 		{Упростить выражение:}{}%
+		\ifthenelse{\equal{\ex@type}{eq_system}}%
+		{Решить систему уравнений:}{}%
 		\begin{center}
 		}%
 		{}%
