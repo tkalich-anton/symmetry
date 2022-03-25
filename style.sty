@@ -103,15 +103,24 @@
 	\setkeys{exercise}{#1}%
 	\subimport{\ex@bankpath}{#2}%
 	\endgroup%
-}%
+}
+\newcommand{\mexercise}[2][]{%
+	\begingroup%
+	\setkeys{exercise}{#1,type=multi}%
+	\subimport{\ex@bankpath}{#2}%
+	\endgroup%
+}
 \newenvironment{ex}[1][]%
 {%
 	\ifthenelse{\boolean{\ex@shownum}}%
-	{%
-		\ifthenelse {\equal{\ex@mode}{item}}%
-			{\textbf{[\currfilebase]}}%
-			{\makebox[0.08\linewidth]{\textbf{[\currfilebase]}}}%
-	}{}%
+		{%
+			\ifthenelse {\equal{\ex@mode}{item}}%
+				{\textcolor{silver}{[\currfilebase]}}%
+				{\makebox[0.08\linewidth]{\textbf{[\currfilebase]}}}%
+		}{}%
+	\ifthenelse{\equal{\ex@type}{multi}}%
+		{\setkeys{exercise}{bankPath=..,mode=item,type=multi}}%
+		{}%
 }%
 {%
 	\ifthenelse{\boolean{\ex@showrule}}%
@@ -161,6 +170,17 @@
 }%
 \makeatother
 
+%\makeatletter
+%\renewcommand\@endpart{\vfil
+%	\if@twoside
+%	\null
+%	\thispagestyle{empty}%
+%	\newpage
+%	\fi
+%	\if@tempswa
+%	\twocolumn
+%	\fi}
+%\makeatother
 
 \newcommand{\ranswer}[1]{{
 		

@@ -1,4 +1,4 @@
-\documentclass[10pt, a4paper]{article}
+\documentclass[10pt, a4paper, oneside]{book}
 \usepackage{../style}
 \lhead{\leftmark}
 \setkeys{exercise}{%
@@ -7,10 +7,12 @@
 	showRule=false,%
 }%
 \begin{document}
-\subincludefrom{arithmetic/}{arithmetic}
+\tableofcontents
+\part{Арифметика}
+	\subincludefrom{arithmetic/}{arithmetic}
 \part{Алгебра}
-	%\subincludefrom{algebra/}{expressions}
-	%\subincludefrom{algebra/}{equations}
+	\subincludefrom{algebra/}{expressions}
+	\subincludefrom{algebra/}{equations}
 	\subincludefrom{algebra/}{eq_systems}
 	%\subincludefrom{algebra/}{inequalities}
 	%\subincludefrom{algebra/}{ineq_systems}
