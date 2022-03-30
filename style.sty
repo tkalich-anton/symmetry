@@ -140,6 +140,8 @@
 		{Упростить выражение:}{}%
 		\ifthenelse{\equal{\ex@type}{eq_system}}%
 		{Решить систему уравнений:}{}%
+		\ifthenelse{\equal{\ex@type}{calculate}}%
+		{Вычислить:}{}%
 		\begin{center}
 		}%
 		{}%
