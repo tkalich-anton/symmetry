@@ -1,17 +1,24 @@
-\documentclass[10pt, a4paper]{article}
+\documentclass[10pt, a4paper, oneside]{book}
 \usepackage{../style}
-\shownumber{true}
-\showanswer{true}
+\lhead{\leftmark}
+\setkeys{exercise}{%
+	showNumber=true,%
+	showAnswer=true,%
+	showRule=false,%
+}%
 \begin{document}
-\lhead{\leftmark} \rhead{Школа <<Симметрия>>}
-\part{Арифметика}
-\import{arithmetic}{arithmetic}
+%\tableofcontents
+%\part{Арифметика}
+%	\subincludefrom{arithmetic/}{arithmetic}
 %\part{Алгебра}
-%\section{Выражения}
-%\section{Уравнения}
-%\section{Неравенства}
-%\section{Функции}
-%\section{Параметры}
+%	\subincludefrom{algebra/}{expressions}
+	\subincludefrom{algebra/}{equations}
+%	\subincludefrom{algebra/}{eq_systems}
+	\subincludefrom{algebra/}{inequalities}
+%	\subincludefrom{algebra/}{ineq_systems}
+%	\subincludefrom{algebra/}{functions}
+%	\subincludefrom{algebra/}{parameters}
 %\part{Текстовые задачи}
+%	\subincludefrom{text_problems/}{text_problems}
 %\part{Геометрия}
 \end{document}

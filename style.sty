@@ -1,8 +1,9 @@
+%СТИЛИ
+
 \usepackage{cmap}
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[english, russian]{babel}
-\inputencoding{utf8}
 \usepackage[dvipsnames,table,xcdraw]{xcolor}
 \usepackage{
 	amsmath,
@@ -30,93 +31,198 @@
 	titling,
 	xparse,
 	xifthen,
-	etoolbox
+	verbatim,
+	currfile,
+	xhfill,
+	keyval
 }
+
+\definecolor{silver}{rgb}{0.7, 0.7, 0.7}
+\definecolor{dark}{rgb}{0.3, 0.3, 0.3}
+\definecolor{harvestgold}{rgb}{0.85, 0.57, 0.0}
+
+%КОМАНДЫ
+
+\newcommand{\leveli}{\textcolor{dark}{\footnotesize $\blacksquare\square\square$}\hspace{0.3em}}
+\newcommand{\levelii}{\textcolor{dark}{\footnotesize $\blacksquare\blacksquare\square$}\hspace{0.3em}}
+\newcommand{\leveliii}{\textcolor{dark}{\footnotesize $\blacksquare\blacksquare\blacksquare$}\hspace{0.3em}}
+\newcommand{\selectanswer}{\noindent\textit{В ответе укажите номер правильного варианта.}}
+
+%Нумированный список со столбцами
+
+\newlist{enumcols}{enumerate}{5}
+\setlist[enumcols]{label=\arabic*)}
+
+\SetEnumitemKey{columns}{before=\begin{multicols}{#1},%
+		after=\end{multicols}}
+
+%Команды, связанные с математикой
+
+\def\le{\leqslant}
+\def\ge{\geqslant}
+\DeclareUnicodeCharacter{202F}{\,}
+\newcommand{\bb}[1]{\left(#1\right)}
+
+% Переменные
+
+\newcommand{\numbertype}{real_number}
+\newcommand{\bankpath}{\@empty}
+
+% Команды, которые задают значения переменных
+\newcommand{\shownumber}[1]{\setboolean{show_number}{#1}}
+\newcommand{\showanswer}[1]{\setboolean{show_answer}{#1}}
+\newcommand{\showrule}[1]{\setboolean{show_rule}{#1}}
+\newcommand{\setBankpath}[1]{\renewcommand\bankpath{#1}}
+
+\makeatletter
+% ========= KEY DEFINITIONS =========
+\define@key{exercise}{showNumber}{\def\ex@shownum{#1}}
+\define@key{exercise}{showAnswer}{\def\ex@showans{#1}}
+\define@key{exercise}{showRule}{\def\ex@showrule{#1}}
+\define@key{exercise}{bankPath}{\def\ex@bankpath{#1}}
+\define@key{exercise}{type}{\def\ex@type{#1}}
+\define@key{exercise}{mode}{\def\ex@mode{#1}}
+% ========= KEY DEFAULTS =========
+\setkeys{exercise}{%
+	showNumber=true,%
+	showAnswer=false,%
+	showRule=false,%
+	bankPath=../bank,%
+	type=none,%
+	mode=normal%
+}%
+\newcommand{\multiex}{%
+	\setkeys{exercise}{%
+		bankPath=..,%
+		mode=item,%
+		type=multi%
+	}%
+}%
+\newcommand{\exercise}[2][]{%
+	\begingroup%
+	\setkeys{exercise}{#1}%
+	\subimport{\ex@bankpath}{#2}%
+	\endgroup%
+}
+\newcommand{\mexercise}[2][]{%
+	\begingroup%
+	\setkeys{exercise}{#1,type=multi}%
+	\subimport{\ex@bankpath}{#2}%
+	\endgroup%
+}
+\newenvironment{ex}[1][]%
+{%
+	\ifthenelse{\boolean{\ex@shownum}}%
+		{%
+			\ifthenelse {\equal{\ex@mode}{item}}%
+				{\textcolor{silver}{[\currfilebase]}}%
+				{\makebox[0.08\linewidth]{\textbf{[\currfilebase]}}}%
+		}{}%
+	\ifthenelse{\equal{\ex@type}{multi}}%
+		{\setkeys{exercise}{bankPath=..,mode=item,type=multi}}%
+		{}%
+}%
+{%
+	\ifthenelse{\boolean{\ex@showrule}}%
+	{\noindent\xhrulefill{silver}{.2mm}\\[0.2pt]\par}%
+	{%
+		%\par~\\[0.1pt]
+	}%
+}
+
+\newenvironment{condition}%
+{%
+	\ifthenelse{\equal{\ex@mode}{notext}}%
+	{%
+		\ifthenelse{\equal{\ex@type}{equation}}%
+		{Решить уравнение:}{}%
+		\ifthenelse{\equal{\ex@type}{expression}}%
+		{Упростить выражение:}{}%
+		\ifthenelse{\equal{\ex@type}{eq_system}}%
+		{Решить систему уравнений:}{}%
+		\ifthenelse{\equal{\ex@type}{calculate}}%
+		{Вычислить:}{}%
+		\begin{center}
+		}%
+		{}%
+}%
+{%
+	\ifthenelse{%
+		\NOT\equal{\ex@type}{none}%
+		\AND%
+		\equal{\ex@mode}{notext}}%
+		{%
+			\end{center}
+		}%
+		{}%
+}%
+\newcommand{\answer}[1]{%
+	\ifthenelse{\boolean{\ex@showans}}%
+	{%
+		\ifthenelse{\NOT\equal{\ex@mode}{item}}%
+		{%
+			
+			\raggedleft
+			\textcolor{silver}{\fbox{#1}}
+			
+		}%
+		{\textcolor{silver}{\fbox{#1}}}%
+	}%
+	{}%
+}%
+\makeatother
+
+%\makeatletter
+%\renewcommand\@endpart{\vfil
+%	\if@twoside
+%	\null
+%	\thispagestyle{empty}%
+%	\newpage
+%	\fi
+%	\if@tempswa
+%	\twocolumn
+%	\fi}
+%\makeatother
+
+\newcommand{\ranswer}[1]{{
+		
+		\raggedleft
+		\textcolor{silver}{\fbox{#1}}
+		
+}}
+
+\newcommand{\graphcenter}[1]{
+\begin{center}
+\includegraphics{#1}
+\end{center}
+}
+
+%\newcommand{\funcexer}[2]{
+%	\begin{minipage}[t]{0.7\textwidth}
+%		#1
+%	\end{minipage}
+%	\begin{minipage}[c]{0.25\textwidth}
+%		\includegraphics[align=t, width=\textwidth]{#2}
+%	\end{minipage}
+%}
+
+%СЕТТЕРЫ
+
 %Параметры страницы
 \usepackage[left=15mm,right=15mm,
 top=2cm,bottom=2cm]{geometry}
 \pagestyle{fancy}
+
 %Путь к картинкам
 \graphicspath{{pic/}}
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
-%Числа в списке второго уровня по умолчанию
-\renewcommand{\labelenumii}{\arabic{enumii})}
-%Новые команды
-\definecolor{silver}{rgb}{0.7, 0.7, 0.7}
-\definecolor{dark}{rgb}{0.3, 0.3, 0.3}
-\definecolor{harvestgold}{rgb}{0.85, 0.57, 0.0}
-%\newcommand{\answer}[1]{\textcolor{silver}{\fbox{#1}}}
-\newcommand{\ranswer}[1]{{
-		
-	\raggedleft
-	\textcolor{silver}{\fbox{#1}}
-
-}}
-\newcommand{\leveli}{\textcolor{dark}{\footnotesize $\blacksquare\square\square$}\hspace{0.3em}}
-\newcommand{\levelii}{\textcolor{dark}{\footnotesize $\blacksquare\blacksquare\square$}\hspace{0.3em}}
-\newcommand{\leveliii}{\textcolor{dark}{\footnotesize $\blacksquare\blacksquare\blacksquare$}\hspace{0.3em}}
-
-\newcommand{\source}[1]{\textcolor{silver}{\textit{(#1)}}}
-\newcommand{\bb}[1]{\left(#1\right)}
-\newcommand{\funcexer}[2]{
-	\begin{minipage}[t]{0.7\textwidth}
-		#1
-	\end{minipage}
-	\begin{minipage}[c]{0.25\textwidth}
-		\includegraphics[align=t, width=\textwidth]{#2}
-	\end{minipage}
-}
-\newcommand{\graphcenter}[1]{
-	\begin{center}
-		\includegraphics{#1}
-	\end{center}
-}
-\newcommand{\selectanswer}{\noindent\textit{В ответе укажите номер правильного варианта.}}
-
-\newboolean{show_number}
-\newboolean{show_answer}
-
-\newcommand{\shownumber}[1]{\setboolean{show_number}{#1}}
-\newcommand{\showanswer}[1]{\setboolean{show_answer}{#1}}
-
-\shownumber{false}
-\showanswer{false}
-
-\newcommand{\num}{\@empty}
-\newcommand{\answer}{\@empty}
-
-\newcommand{\setnumber}[1]{\renewcommand\num{#1}}
-\newcommand{\setanswer}[1]{\renewcommand\answer{#1}}
-
-\NewDocumentEnvironment{ex}{O{\boolean{show_number}} O{\boolean{show_answer}}}
-{
-	\ifthenelse {#1}
-	{
-		\ifthenelse {\NOT \equal{\num}{\@empty}}
-			{\noindent\textbf{\textit{Задание~\textnumero\num}}\\[1ex]}
-			{\noindent\textbf{\textit{Задание Без номера}}\\[1ex]}
-		\setnumber{}
-	}
-	{}
-}
-{
-	\ifthenelse {#2}
-	{
-		\ifthenelse {\NOT \equal{\answer}{\@empty}}
-			{\noindent\textit{Ответ:~\answer}\\[1ex]}
-			{\noindent\textit{Ответ:~Пусто}\\[1ex]}
-		\setanswer{}
-	}
-	{}
-	\textcolor{silver}{\rule{\textwidth}{.2mm}}\\[1ex]
-}
 
 \DeclareUnicodeCharacter{202F}{\,}
+
 %Русские символы в списке
 \AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
 
-%Сеттеры
-\setlength{\parindent}{3ex}
+\setlength{\parindent}{0ex}
 
-\def\le{\leqslant}
-\def\ge{\geqslant}
+%Название школы в шапке справа
+\rhead{Школа <<Симметрия>>}
