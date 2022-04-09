@@ -56,6 +56,8 @@
 \SetEnumitemKey{columns}{before=\begin{multicols}{#1},%
 		after=\end{multicols}}
 
+\newcommand{\arabf}{\textbf{\arabic*.}}
+
 %Команды, связанные с математикой
 
 \def\le{\leqslant}
@@ -71,32 +73,25 @@
 % Команды, которые задают значения переменных
 \newcommand{\shownumber}[1]{\setboolean{show_number}{#1}}
 \newcommand{\showanswer}[1]{\setboolean{show_answer}{#1}}
-\newcommand{\showrule}[1]{\setboolean{show_rule}{#1}}
 \newcommand{\setBankpath}[1]{\renewcommand\bankpath{#1}}
 
 \makeatletter
 % ========= KEY DEFINITIONS =========
 \define@key{exercise}{showNumber}{\def\ex@shownum{#1}}
 \define@key{exercise}{showAnswer}{\def\ex@showans{#1}}
-\define@key{exercise}{showRule}{\def\ex@showrule{#1}}
 \define@key{exercise}{bankPath}{\def\ex@bankpath{#1}}
 \define@key{exercise}{type}{\def\ex@type{#1}}
 \define@key{exercise}{mode}{\def\ex@mode{#1}}
-% ========= KEY DEFAULTS =========
-\setkeys{exercise}{%
-	showNumber=true,%
-	showAnswer=false,%
-	showRule=false,%
-	bankPath=../bank,%
-	type=none,%
-	mode=normal%
-}%
+
 \newcommand{\multiex}{%
 	\setkeys{exercise}{%
 		bankPath=..,%
 		mode=item,%
 		type=multi%
 	}%
+}
+\newcommand{\showanswers}{
+	\setkeys{exercise}{showAnswer=true}
 }%
 \newcommand{\exercise}[2][]{%
 	\begingroup%
@@ -110,8 +105,21 @@
 	\subimport{\ex@bankpath}{#2}%
 	\endgroup%
 }
+\def\listpath{}
+\newcommand{\listimport}[2][../../../../../exercises/lists]{%
+	\begingroup%
+	\def\listpath{#1}
+	\subimport{\listpath}{#2}%
+	\endgroup%
+}
+\newcommand{\itemmode}[1]{%
+	\ifthenelse {\equal{#1}{on}}{\setkeys{exercise}{mode=item}}{}
+	\ifthenelse {\equal{#1}{off}}{\setkeys{exercise}{mode=normal}}{}
+}
 \newenvironment{ex}[1][]%
 {%
+	\begingroup%
+	\setkeys{exercise}{#1}%
 	\ifthenelse{\boolean{\ex@shownum}}%
 		{%
 			\ifthenelse {\equal{\ex@mode}{item}}%
@@ -119,42 +127,40 @@
 				{\makebox[0.08\linewidth]{\textbf{[\currfilebase]}}}%
 		}{}%
 	\ifthenelse{\equal{\ex@type}{multi}}%
-		{\setkeys{exercise}{bankPath=..,mode=item,type=multi}}%
+		{\setkeys{exercise}{bankPath=..,mode=item}}%
 		{}%
 }%
 {%
-	\ifthenelse{\boolean{\ex@showrule}}%
-	{\noindent\xhrulefill{silver}{.2mm}\\[0.2pt]\par}%
-	{%
-		%\par~\\[0.1pt]
-	}%
+	\ifthenelse{\equal{\ex@type}{multi}}%
+		{\setkeys{exercise}{mode=normal}}%
+		{}%
+		
+	\endgroup%
 }
 
 \newenvironment{condition}%
 {%
-	\ifthenelse{\equal{\ex@mode}{notext}}%
-	{%
-		\ifthenelse{\equal{\ex@type}{equation}}%
-		{Решить уравнение:}{}%
-		\ifthenelse{\equal{\ex@type}{expression}}%
-		{Упростить выражение:}{}%
-		\ifthenelse{\equal{\ex@type}{eq_system}}%
-		{Решить систему уравнений:}{}%
-		\ifthenelse{\equal{\ex@type}{calculate}}%
-		{Вычислить:}{}%
-		\begin{center}
+	\ifthenelse{\equal{\ex@mode}{item}}{}%
+		{%
+			\ifthenelse{\equal{\ex@type}{equation}}%
+				{Решить уравнение:}{}%
+			\ifthenelse{\equal{\ex@type}{inequality}}%
+				{Решить неравенство:}{}%
+			\ifthenelse{\equal{\ex@type}{expression}}%
+				{Упростить выражение:}{}%
+			\ifthenelse{\equal{\ex@type}{eq_system}}%
+				{Решить систему уравнений:}{}%
+			\ifthenelse{\equal{\ex@type}{ineq_system}}%
+				{Решить систему неравенств:}{}%
+			\ifthenelse{\equal{\ex@type}{calculate}}%
+				{Вычислить:}{}%
 		}%
-		{}%
+	\ifthenelse{\NOT\equal{\ex@type}{none}\AND\NOT\equal{\ex@mode}{item}}%
+		{\begin{center}}{}%
 }%
 {%
-	\ifthenelse{%
-		\NOT\equal{\ex@type}{none}%
-		\AND%
-		\equal{\ex@mode}{notext}}%
-		{%
-			\end{center}
-		}%
-		{}%
+	\ifthenelse{\NOT\equal{\ex@type}{none}\AND\NOT\equal{\ex@mode}{item}}%
+		{\end{center}}{}%
 }%
 \newcommand{\answer}[1]{%
 	\ifthenelse{\boolean{\ex@showans}}%
@@ -172,17 +178,12 @@
 }%
 \makeatother
 
-%\makeatletter
-%\renewcommand\@endpart{\vfil
-%	\if@twoside
-%	\null
-%	\thispagestyle{empty}%
-%	\newpage
-%	\fi
-%	\if@tempswa
-%	\twocolumn
-%	\fi}
-%\makeatother
+\renewcommand{\title}[1]{
+\begin{center}
+	\large
+	\textbf{#1}
+\end{center}
+}
 
 \newcommand{\ranswer}[1]{{
 		
@@ -196,6 +197,7 @@
 \includegraphics{#1}
 \end{center}
 }
+
 
 %\newcommand{\funcexer}[2]{
 %	\begin{minipage}[t]{0.7\textwidth}
@@ -226,3 +228,12 @@ top=2cm,bottom=2cm]{geometry}
 
 %Название школы в шапке справа
 \rhead{Школа <<Симметрия>>}
+
+% ========= KEY DEFAULTS =========
+\setkeys{exercise}{%
+	showNumber=false,%
+	showAnswer=false,%
+	bankPath=../bank,%
+	type=none,%
+	mode=normal%
+}%
