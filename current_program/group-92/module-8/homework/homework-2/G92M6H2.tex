@@ -1,0 +1,60 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{soulutf8}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+	
+	\lhead{Группа 92}
+	\chead{Модуль 6 Домашняя работа 2}
+	\rhead{Школа <<Симметрия>>}
+	
+	\begin{enumerate}
+		\item \textit{(2 балла)} В сосуд, содержащий $8$ литров $24$-процентного водного раствора некоторого вещества, добавили $4$ литра воды. Сколько процентов составляет концентрация получившегося раствора?
+		\item \textit{(2 балла)} Смешали некоторое количество $16$-процентного раствора некоторого вещества с таким же количеством $12$-процентного раствора этого вещества. Сколько процентов составляет концентрация получившегося раствора?
+		\item \textit{(2 балла)} Имеется два сплава. Первый сплав содержит $5\%$ меди, второй – $12\%$ меди. Масса второго сплава больше массы первого на $9$ кг. Из этих двух сплавов получили третий сплав, содержащий $10\%$ меди. Найдите массу третьего сплава. Ответ дайте в килограммах.
+		\item \textit{(2 балла)} Изюм получается в процессе сушки винограда. Сколько килограммов винограда потребуется для получения $12$ килограммов изюма, если виноград содержит $90\%$ воды, а изюм содержит $5\%$ воды?
+		\item \textit{(2 балла)} Имеются два сосуда. Первый содержит $30$ кг, а второй – $15$ кг раствора кислоты различной концентрации. Если эти растворы смешать, то получится раствор, содержащий $34\%$ кислоты. Если же смешать равные массы этих растворов, то получится раствор, содержащий $46\%$ кислоты. Сколько килограммов кислоты содержится в первом сосуде?
+	\end{enumerate}
+\end{document}
