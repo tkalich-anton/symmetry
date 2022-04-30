@@ -53,8 +53,10 @@
 \newlist{enumcols}{enumerate}{5}
 \setlist[enumcols]{label=\arabic*)}
 
-\SetEnumitemKey{columns}{before=\begin{multicols}{#1},%
-		after=\end{multicols}}
+\SetEnumitemKey{columns}{before=\begin{multicols}{#1},after=\end{multicols}}
+
+\SetEnumitemKey{itemcolumns}%
+{before=\itemmode{on}\ifthenelse{\equal{#1}{1}}{}{\begin{multicols}{#1}},after=\itemmode{off}\ifthenelse{\equal{#1}{1}}{}{\end{multicols}}}
 
 \newcommand{\arabf}{\textbf{\arabic*.}}
 
@@ -120,14 +122,16 @@
 				{\makebox[0.08\linewidth]{\textbf{[\currfilebase]}}}%
 		}{}%
 	\ifthenelse{\equal{\ex@type}{multi}}%
-		{\setkeys{exercise}{bankPath=..,mode=item}}%
+		{\setkeys{exercise}{bankPath=/,mode=item}}%
 		{}%
 }%
 {%
 	\ifthenelse{\equal{\ex@type}{multi}}%
-		{\setkeys{exercise}{mode=normal}}%
+		{\setkeys{exercise}{mode=normal, type=none}}%
 		{}%
-		
+	%\ifthenelse {\equal{\ex@mode}{item}}%
+	%	{}%
+	%	{\vspace{\baselineskip}}
 	\endgroup%
 }
 
@@ -141,6 +145,8 @@
 				{Решить неравенство:}{}%
 			\ifthenelse{\equal{\ex@type}{expression}}%
 				{Упростить выражение:}{}%
+			\ifthenelse{\equal{\ex@type}{expr_calc}}%
+				{Упростить выражение и вычислить значение выражения:}{}%
 			\ifthenelse{\equal{\ex@type}{eq_system}}%
 				{Решить систему уравнений:}{}%
 			\ifthenelse{\equal{\ex@type}{ineq_system}}%
@@ -178,28 +184,11 @@
 \end{center}
 }
 
-\newcommand{\ranswer}[1]{{
-		
-		\raggedleft
-		\textcolor{silver}{\fbox{#1}}
-		
-}}
-
 \newcommand{\graphcenter}[1]{
 \begin{center}
 \includegraphics{#1}
 \end{center}
 }
-
-
-%\newcommand{\funcexer}[2]{
-%	\begin{minipage}[t]{0.7\textwidth}
-%		#1
-%	\end{minipage}
-%	\begin{minipage}[c]{0.25\textwidth}
-%		\includegraphics[align=t, width=\textwidth]{#2}
-%	\end{minipage}
-%}
 
 %СЕТТЕРЫ
 
@@ -230,3 +219,19 @@ top=2cm,bottom=2cm]{geometry}
 	type=none,%
 	mode=normal%
 }%
+
+%\newcommand{\ranswer}[1]{{
+%		
+%		\raggedleft
+%		\textcolor{silver}{\fbox{#1}}
+%		
+%}}
+
+%\newcommand{\funcexer}[2]{
+%	\begin{minipage}[t]{0.7\textwidth}
+%		#1
+%	\end{minipage}
+%	\begin{minipage}[c]{0.25\textwidth}
+%		\includegraphics[align=t, width=\textwidth]{#2}
+%	\end{minipage}
+%}

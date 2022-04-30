@@ -1,21 +1,17 @@
 \documentclass[10pt, a4paper, oneside]{book}
 \usepackage{../style}
 \lhead{\leftmark}
-\setkeys{exercise}{showNumber=true,showAnswer=false}
+\setkeys{exercise}{showNumber=true,showAnswer=true}
 \begin{document}
-%\tableofcontents
-%\part{Арифметика}
-%	\subincludefrom{arithmetic/}{arithmetic}
-%\part{Алгебра}
-%	\subincludefrom{algebra/}{expressions}
-%	\subincludefrom{algebra/}{equations}
+\tableofcontents
+\part{Арифметика}
+	\subincludefrom{arithmetic/}{arithmetic}
+\part{Алгебра}
 	\subincludefrom{algebra/}{eq_systems}
-%	\subincludefrom{algebra/}{inequalities}
-%	\subincludefrom{algebra/}{ineq_systems}
-%	\subincludefrom{algebra/}{functions}
-%	\subincludefrom{algebra/}{parameters}
-%\part{Текстовые задачи}
-%	\subincludefrom{text_problems/}{text_problems}
-%\part{Геометрия}
-%	\subincludefrom{notype/}{notype}
+	\subincludefrom{algebra/}{inequalities}
+	\subincludefrom{algebra/}{ineq_systems}
+	\subincludefrom{algebra/}{functions}
+	\subincludefrom{algebra/}{parameters}
+\part{Геометрия}
+	\subincludefrom{geometry/}{triangles}
 \end{document}
