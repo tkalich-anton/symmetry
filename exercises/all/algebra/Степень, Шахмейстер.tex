@@ -1,0 +1,68 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+\begin{document}
+	
+	\chead{Сборник заданий по алгебре}
+	\rhead{Школа <<Симметрия>>}
+	Шахмейстер. Степени с натуральными показателями.
+\begin{enumerate}
+	\item Вычилсите:
+		\begin{enumerate}[label=\textbf{\arabic*)}]
+			\item \( \dfrac{18^2\cdot12^3\cdot8^2}{24^3\cdot6^2} \)
+			\item \( \dfrac{72^3\cdot48^3}{36^5\cdot16^3} \) 
+			\item \( \dfrac{(9\cdot16^{n-1}+16^n)^2}{(4^{n-1}+4^{n-2})^4} \)
+			\item \( \left( \dfrac{7^4}{15^2} \right)^3\cdot\left( \dfrac{5}{7} \right)^6\cdot\left( \dfrac{3}{7} \right)^5 \)
+			\item \( \dfrac{(4\cdot3^{22}+7\cdot3^{21})\cdot57}{(19\cdot27^4)^2} \)
+			\item \( \dfrac{5(3\cdot7^{15}-19\cdot7^{14})}{7^{16}+3\cdot7^{15}} \)
+			\item \( \dfrac{6\cdot2^8-9\cdot2^{10}+3\cdot2^{12}}{4\cdot2^{10}+4\cdot2^{12}-8\cdot2^{11}} \)
+			\item \( \dfrac{3^{n+2}-2\cdot3^n}{3^{n-1}}-\dfrac{36^{n+1}}{6^{2n-1}} \)
+			\item Упростите \( \dfrac{a^{3n}-a^{n-2}}{a^{2n-2}-a^{n-3}} \)
+			\item Сравните 
+			\begin{enumerate}[label=\textbf{\asbuk*)}]
+				\item \( 75^{10} \) и \( 15^{15} \)
+				\item \( 200^6 \) и \( 14^{12} \)
+			\end{enumerate}
+		\end{enumerate}
+\end{enumerate}
+\end{document}

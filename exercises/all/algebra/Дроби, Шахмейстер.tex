@@ -1,0 +1,337 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+\begin{document}
+	
+	\chead{Сборник заданий по алгебре}
+	\rhead{Школа <<Симметрия>>}
+	Шахмейстер. Дроби.
+	\begin{enumerate}
+		\item Сократите дроби:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+				\item \(\dfrac{16a-4b}{12a-3b}\)
+				\item \(\dfrac{4x^5y-12x^3y}{2x^5y^2-6x^3y^2}\)
+				\item \(\dfrac{6x^2-24xy+24y^2}{4y^2-x^2}\)
+				\item \(\dfrac{(2x^2+4x)^2}{(4x+8)^2}\)
+				\item \(\dfrac{3a^4-3a^2b^2}{15(a^2-b^2)}\)
+				\item \(\dfrac{x^4-2x^2+1}{1-x^4}\)
+				\item \(\dfrac{15a^3b+15ab^3}{a^4-b^4}\)
+				\item \(\dfrac{x^2-y^2}{3x-2x^2+3y-2xy}\)
+			\end{enumerate}
+		\end{multicols}
+		\item Выполните действия:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+				\item \(\dfrac{b^2+1}{b^2(b-1)}-\dfrac{2}{b(b-1)}\)
+				\item \(\dfrac{4}{x^2-25}-\dfrac{2}{x+5}-\dfrac{x+2}{5-x}\)
+				\item \(\dfrac{5-3x}{64-x^2}-\dfrac{2-x}{x^2-16x+64}\)
+				\item \(\dfrac{x^2-5x+4}{x-1}+\dfrac{x^2+4x+3}{x+1}\)
+				\item \(\dfrac{2}{y^2-4y+3}-\dfrac{1}{y^2-5y+4}\)
+				\item \(\dfrac{3-a}{6-5a+a^2}+\dfrac{a-4}{6a-a^2-8}\)
+				\item \(\dfrac{4-x}{25-10x+x^2}-\dfrac{3}{x^2+10x+25}-\dfrac{x+4}{25-x^2}\)
+				\item \(\dfrac{a+1}{25-a^2}-\dfrac{4}{a+5}+2\)
+			\end{enumerate}
+		\end{multicols}
+		\item Сократите дроби:
+		\begin{multicols}{2}
+			\begin{enumerate}[label=\asbuk*)]
+				\item \(\dfrac{4x+16y}{3x+12y}\)
+				\item \(\dfrac{8a^3z-4a^2z^2}{12a^2z^4-6az^5}\)
+				\item \(\dfrac{1-9z^2}{18z^3+12z^2+2z}\)
+				\item \(\dfrac{(4y^2-8y)^2}{(8y-16)^2}\)
+				\item \(\dfrac{6x^4-6x^2y^2}{4y^4-4x^4}\)
+				\item \(\dfrac{y^4-1}{1+2y^2+y^4}\)
+				\item \(\dfrac{7x^2y^4+7x^4y^2}{x^6+y^6}\)
+				\item \(\dfrac{x^4+x^2y^2+y^4}{x^2-xy+y^2}\)
+		\end{enumerate}
+	\end{multicols}	
+		\item Выполните действия:
+		 \begin{multicols}{2}
+		 	\begin{enumerate}[label=\asbuk*)]
+		 		\item \(\dfrac{x^2+1}{x^2(x+1)}+\dfrac{2}{x(x+1)}\)
+		 		\item \(\dfrac{3}{b+2}+\dfrac{2b-5}{4-b^2}+\dfrac{5}{b-2}\)
+		 		\item \(\dfrac{x-2}{3x+6}+\dfrac{1}{x^2-4}+\dfrac{x-6}{6-3x}\)
+		 		\item \(\dfrac{y+2}{25-(y+1)^2}-\dfrac{4}{y+6}+2\)
+		 		\item \(\dfrac{x^2+5x+4}{x+1}-\dfrac{x^2-4x+3}{x-1}\)
+		 		\item \(\dfrac{2}{x^2-3x+2}-\dfrac{1}{x^2-6x+5}\)
+		 		\item \(\dfrac{3x+2}{x^2-2x+1}-\dfrac{6}{x^2-1}-\dfrac{3x-2}{x^2+2x+1}\)
+		 		\item \(\dfrac{x-5}{-12+7x-x^2}+\dfrac{x-3}{x^2-9x+20}\)
+		 	\end{enumerate}
+	 	\end{multicols}	
+ 	\item Упростите выражения:
+ 		\begin{enumerate}[label=\asbuk*)]
+ 			\item \(\left( \dfrac{2x}{1-3y}+\dfrac{2x}{3y+1} \right):\dfrac{4x^2+14x}{9y^2+1-6y}\)
+ 			\item \(\left( \dfrac{1+n}{n^2-mn}-\dfrac{1-m}{m^2-mn} \right):\dfrac{m+n}{m^2n-n^2m}\)
+ 			\item \(\dfrac{x^3-9xy^2}{9y^2+x^2}\cdot\left( \dfrac{x+3y}{x^2-3xy} +\dfrac{x-3y}{3xy+x^2}\right)\)
+ 			\item \(\dfrac{(3a-2b)^2}{b-3a}+\dfrac{9a^2}{3a-b}\)
+ 			\item \(\dfrac{k^2-p^2}{k^2-p^2+12kn+36n^2}+\dfrac{12n(3n+p)}{p^2-k^2-12kn-36n^2}\)
+ 			\item \(\dfrac{12bc^2+b^3}{(b-2c)^2}-\dfrac{6b^2c+5c^3}{(2c-b)^2}+\dfrac{3c^3}{4bc-4c^2-b^2}\)
+ 			\item \((1-b)^2\left( \dfrac{1}{(1-b)^2}-\dfrac{1}{1-b^2} \right)+\dfrac{3+b}{1+b}\)
+ 			\item \(\left( \dfrac{5x}{x-9} +\dfrac{42x}{x^2-18x+81}\right):\dfrac{5x-3}{x^2-81}-\dfrac{9(x+9)}{x-9}\)
+ 			\item \(\dfrac{(5x-1)^3}{5x-2}+\dfrac{-1+5x}{2-5x}\)
+ 			\item \(\dfrac{(2y+3x)^2}{2y-3z}-\dfrac{(2y-3z)^2}{2y+3z}\)
+ 		\end{enumerate}
+ 		\item Упростите выражения:
+ 			\begin{enumerate}[label=\asbuk*)]
+ 				\item \(\dfrac{y^3-9x^2y+x}{xy^2-9x^3}+(1-3x-y)\cdot\left( \dfrac{3x+y+1}{9x^2-y^2}-\dfrac{3x+y}{9x^2-3x+y-y^2} \right)\)
+ 				\item \(\left( \dfrac{ab+b^2}{5a^2-5ab}+ab+b^2 \right)\cdot\dfrac{5a}{a+b}-\dfrac{b}{a-b}\)
+ 				\item \(\dfrac{x^4-2x^3+3x^2}{x^4-x^2+4x-4}-\dfrac{x^2}{x^2+x-2}+\dfrac{x^2}{x^2-x+2}-1\)
+ 				\item \(\left( \dfrac{x^2+4}{4x^2+2x}-\dfrac{2x}{2x^3+x^2+8x+4} \right)\cdot\dfrac{4x^2+2x}{x^6-64}-\dfrac{x^2-3}{x^4-16}\)
+ 				\item \(\dfrac{\frac{a-b}{1+ab}-\frac{a-c}{1+ac}}{1+\frac{(a-b)(a-c)}{(1+ab)(1+ac)}}\)
+ 				\item \(\left( \dfrac{x+3}{x+2} \right)^3-\dfrac{x-4}{x+1}\)
+ 				\item \(\left( \dfrac{4n+1}{2n^2+n-10}-\dfrac{4}{n^2-4} \right)\cdot\dfrac{4n^2+10n}{4n+9}+\dfrac{4}{n+2}\)1
+ 				\item \(\left( \dfrac{36}{\frac{7a-17b}{11a-19b}-\frac{11a-19b}{7a-17b}}+\dfrac{77a-166b}{2a-b} \right):\dfrac{45b^2}{2a^2-5ab+2b^2}\)
+ 				\item \(\left( \dfrac{2}{a^2-6a}+\dfrac{1}{2(a+8)}+\dfrac{5}{(a-6)(a+4)} \right):\dfrac{4a+a^2}{2a-12}\)
+ 				\item \(\left( \dfrac{1}{x+2}+\dfrac{9}{2x^2-x-10}+\dfrac{8}{2x^2-5x} \right)\cdot\left( \dfrac{52}{x+4}+2x-13 \right)\)
+ 			\end{enumerate}	
+ 		\item Тренировочная карточка 1
+ 				\begin{enumerate}[label=\asbuk*)]
+ 					\item \(\left( x+\dfrac{3-x^2}{x+1} \right):\dfrac{x+3}{1-x^2}\)
+ 					\item \(\dfrac{1}{a-2}-\dfrac{4a}{a^2-4}\cdot\left( \dfrac{1}{a-1}-\dfrac{1}{a^2-a} \right)\)
+ 					\item \(\left( a+1+\dfrac{1}{a-1} \right):\dfrac{a^2}{a^2-2a+1}\)
+ 					\item \(\dfrac{-5x-6}{x^2-4}+\dfrac{x}{x^2-4}:\dfrac{x}{x-2}+\dfrac{x+2}{x-2}\)
+ 					\item \(\left( \dfrac{10}{25-b^2}+\dfrac{-1}{5+b}+\dfrac{1}{5-b} \right)(25-10b+b^2)\)
+ 					\item \(\left( \dfrac{5m}{m+3}-\dfrac{14m}{m^2+6m+9} \right):\dfrac{5m+1}{m^2-9}+\dfrac{3(m-3)}{m+3}\)
+ 					\item \(\left( \dfrac{4a}{a^2-1}+\dfrac{a-1}{a+1} \right)\cdot\dfrac{a}{a+1}-\dfrac{a}{a-1}\)
+ 					\item \(\left( \dfrac{1}{2-4b} +\dfrac{b+1}{8b^3-1}\cdot\dfrac{4b^2+2b+1}{1+2b}\right):\dfrac{1}{4b-2}\)
+ 					\item \(\left( \dfrac{2}{(a-2)^2} -\dfrac{a}{4-a^2}\right):\dfrac{4+a^2}{4-a^2}+\dfrac{2}{a-2}\)
+ 					\item \(\dfrac{x+12}{x^3-9x}:\left( \dfrac{x-3}{2x^2+5x-3} -\dfrac{9}{9-x^2}\right)+\dfrac{1}{x^2}\)
+ 				\end{enumerate}
+ 			\item Тренировочная карточка 2
+ 			\begin{enumerate}[label=\asbuk*)]
+ 				\item \(\left( x+\dfrac{3-x^3}{1+x^2} \right)\cdot\dfrac{1+x^2}{x^2+6x+9}\)
+ 				\item \(\left( \dfrac{x+6}{3x+9}-\dfrac{1}{x+3} \right)\cdot\dfrac{3}{x-3}-\dfrac{6}{x^2-9}\)
+ 				\item \(\left( a-5+\dfrac{15}{a+5} \right):\dfrac{a^2-10}{a^2+10a+25}\)
+ 				\item \(\dfrac{3y-2}{y^2-4}+\dfrac{3}{y^2-4}\cdot\dfrac{y+2}{3}+\dfrac{y}{y+2}\)
+ 				\item \(\left( \dfrac{-1}{x-4}+\dfrac{16}{x^2-16}+\dfrac{2}{x+4} \right)(x^2-8x+16)\)
+ 				\item \(\left( \dfrac{5a}{a+1}-\dfrac{3a}{a^2+2a+1} \right):\dfrac{5a+2}{a^2-1}+\dfrac{a-1}{a+1}\)
+ 				\item \(\left( \dfrac{36x}{x^2-81}+\dfrac{x-9}{x+9} \right)\cdot\dfrac{x}{x+9}-\dfrac{x}{x-9}\)
+ 				\item \(\left( \dfrac{x^3-8}{x-2}+2x \right):(4-x^2)+\dfrac{x-1}{x-2}\)
+ 				\item \(\left( \dfrac{2}{4-x^2}-\dfrac{2}{(x-2)^2} \right):\dfrac{4}{(2-x)^2}-\dfrac{2-x}{x+2}\)
+ 				\item \(\left( \dfrac{2x}{x+3}+\dfrac{1}{x-1}-\dfrac{4}{x^2+2x-3} \right)\cdot\dfrac{x}{2x+1}-\dfrac{3(x+4)}{x+3}\)
+ 			\end{enumerate}
+ 			\item Тренировочная карточка 3
+ 		\begin{enumerate}[label=\asbuk*)]
+ 			\item \(\left( a+\dfrac{6-a^2}{1+a} \right):\dfrac{6+a}{a^2-1}\)
+ 			\item \(\dfrac{3a}{a^2-9}-\dfrac{3}{a^2-9}\left( \dfrac{a+2}{3a-3}-\dfrac{1}{a-1} \right)\)
+ 			\item \(\left( a+6\dfrac{6}{a-6} \right)\cdot\dfrac{a^2-12a+36}{a^2-30}\)
+ 			\item \(\dfrac{3a-4}{a+1}+\dfrac{a}{a+1}:\dfrac{a}{a^2-1}+\dfrac{5-2a}{a+1}\)
+ 			\item \(\left( \dfrac{2}{a-5}-\dfrac{20}{a^2-25}+\dfrac{-1}{a+5} \right)(a^2+10a+25)\)
+ 			\item \(\left( \dfrac{5x}{x-9}+\dfrac{42x}{x^2-18x+81} \right)\cdot\dfrac{x^2-81}{5x-3}-\dfrac{9(x+9)}{x-9}\)
+ 			\item \(\left(  \dfrac{32a}{64-a^2}+\dfrac{8-a}{8+a}\right):\dfrac{8+a}{8}-\dfrac{8}{8-a}\)
+ 			\item \(\left( \dfrac{a^3+1}{a+1}-a \right):(1-a^2)+\dfrac{2a}{a+1}\)
+ 			\item \(\dfrac{3-2m}{m+5}+\dfrac{(5-m)^2}{m}\cdot\left( \dfrac{m}{(m-5)^2}-\dfrac{m}{25-m^2} \right)\)
+ 			\item \(\left( \dfrac{3}{x-3}+\dfrac{4}{x^2-5x+6}+\dfrac{2x}{x-2} \right):\dfrac{2x+1}{3}+\dfrac{3(x-2)}{3-x}\)
+ 		\end{enumerate}
+ 	\item Тренировочная карточка 4
+ 	\begin{enumerate}[label=\asbuk*)]
+ 		\item \(\left( b+\dfrac{3-b^2}{b-2} \right):\dfrac{3-2b}{b^2-4b+4}\)
+ 		\item \(\left( \dfrac{1}{b-1}-\dfrac{1}{b^2-b} \right)\cdot\dfrac{b}{b+2}+\dfrac{4}{b^2-4}\)
+ 		\item \(\left( x+5+\dfrac{50}{x-5} \right):\dfrac{x^2+25}{x^2-10x+25}\)	
+ 		\item \(\dfrac{5a-6}{a+2}+\dfrac{a}{a+2}\cdot\dfrac{a^2-4}{a}+\dfrac{10-3a}{a+2}\)
+ 		\item \(\left( \dfrac{4b}{b+8}-\dfrac{9b}{b^2+16b+64} \right)\cdot\dfrac{b^2-64}{4b+23}+\dfrac{8(b-8)}{b+8}\)
+ 		\item \(\left( \dfrac{2}{3-b}-\dfrac{4b}{9-b^2}+\dfrac{-1}{3+b} \right)(9+6b+b^2)\)
+ 		\item \(\left( \dfrac{28b}{b^2-49}+\dfrac{b-7}{b+7} \right)\cdot\dfrac{b}{b+7}-\dfrac{b}{b-7}\)
+ 		\item \(\dfrac{a^2}{3+a}\cdot\dfrac{9-a^2}{a^2-3a}+\dfrac{27+a^3}{3-a}:\left( 3+\dfrac{a^2}{3-a} \right)\)
+ 		\item \(\left( \dfrac{9}{y^2-9}+\dfrac{3}{(3-y)^2} \right):\dfrac{6}{(y-3)^2}+\dfrac{1-2y}{3+y}\)
+ 		\item \(\left( \dfrac{2}{x+1}+\dfrac{10}{x^2-3x-4}+\dfrac{3x}{x-4} \right):\dfrac{3x+2}{3}+\dfrac{x-1}{4-x}\)
+  	\end{enumerate}
+  \item Тренировочная карточка 5
+  \begin{enumerate}[label=\asbuk*)]
+  		\item \(\left( 2x-y-\dfrac{2x-y^2}{y} \right)\cdot\dfrac{a}{3xy-3x}-\dfrac{a-1}{y}\)
+  		\item \(\dfrac{m}{m^2-2m+1}-\dfrac{1}{1-m}\cdot\dfrac{m}{m+1}-\dfrac{2}{m+1}\)
+  		\item \(\left( \dfrac{1}{1-a}-\dfrac{1}{1+a} -1\right)\cdot(a^2-1)\)
+  		\item \(\left( \dfrac{a}{b(b+a)}-\dfrac{a-b}{a^2+ab} \right):\left(\dfrac{b^2}{a^3-ab^2}+\dfrac{1}{a+b}\right)\)
+  		 \item \(\left( \dfrac{4y^2+21}{2y+2}-6 \right):\dfrac{2xy+4y-3x-6 }{2-2y^2}\)
+  		\item \(\left( \dfrac{x^2-2x+4}{4x^2-1}\cdot\dfrac{2x^2+x}{x^3+8}-\dfrac{x+2}{2x^2-x} \right):\dfrac{4}{x^2+2x}-\dfrac{x+4}{3-6x}\)
+  		\item \(\left( \dfrac{x^2+3x+2}{x^2+2x+1}-\dfrac{3x+4}{3x+3} \right)\cdot\dfrac{x^2-1}{3}\)
+  		\item \(\left( \dfrac{a}{a+b}+\dfrac{b}{a-b}+\dfrac{2ab}{b^2-a^2} \right)\cdot\dfrac{a}{a+b}-\left( \dfrac{b}{b-a}-\dfrac{2ab}{a^2-b^2} \right)\cdot\dfrac{a-b}{a+b}\)
+  		\item \(ab+\dfrac{ab}{a+b}\cdot\left( \dfrac{a+b}{a-b} -a-b\right)\)
+  		\item \(\dfrac{x^2-3x+2}{x-1}-\dfrac{3x^2+7x-10}{3x+10}-\dfrac{5-4x-9x^2}{x+1}\)
+  \end{enumerate}
+		\item Тренировочная карточка 6
+		\begin{enumerate}[label=\asbuk*)]
+			\item \( \left( 3a-1-\dfrac{3a-1}{x} \right) \cdot\dfrac{x}{2x-2}-2a\)
+			\item \( \left( \dfrac{1+x}{1-2x+x^2}-\dfrac{1}{x+1} \right):\dfrac{x}{x-1}+\dfrac{2}{x+1} \)
+			\item \( \left( 1-\dfrac{1}{x-1}+\dfrac{1}{x+1} \right) :\dfrac{1}{x^2-1}\)
+			\item \( \left( \dfrac{y}{2x^2+xy}-\dfrac{x}{2xy+y^2} \right) \cdot\left( \dfrac{x}{x^2-y^2}-\dfrac{x+y}{x^2-xy} \right)\)
+			\item \( \left( 4-\dfrac{9x^2-8}{3x-3} \right):\dfrac{2a+6x-3ax-9x2}{2x^2-2} \)
+			\item \( \left( \dfrac{c+5}{5c-1}+\dfrac{c+5}{c+1} \right) :\dfrac{c^2+5c}{1-5c}+\dfrac{c^2+5}{c+1}\)
+			\item \( \left( \dfrac{3x^2+8x-7}{3x^2-3}-\dfrac{x+3}{x+1} \right):\dfrac{2}{x^2-2x+1} \)
+			\item \( \left( \dfrac{2}{2+m}-\dfrac{m}{m-2}-\dfrac{4}{4-m^2} \right) :\left( \dfrac{2}{2+m}+\dfrac{4}{m^2-4}+\dfrac{m}{2-m} \right)\)
+			\item \( \dfrac{3}{x+y}-\dfrac{3x-3y}{2x-3y}\cdot\left( \dfrac{2x-3y}{x^2-y^2}-2x+3y \right) \)
+			\item \( \dfrac{x^2+7x-8}{x-1}-\dfrac{7x^2+3x-10}{7x+10}-\dfrac{4-5x-9x^2}{x+1} \)
+		\end{enumerate}
+	\item Тренировочная карточка 7
+	\begin{enumerate}[label=\asbuk*)]
+		\item \( \dfrac{2}{mn}:\left( \dfrac{1}{m}-\dfrac{1}{n} \right)^2-\dfrac{m^2+n^2}{(m-n)^2} \)
+		\item \( \left( \dfrac{5x^2-15xy}{x^2-9y^2}-\dfrac{3xy+9y^2}{x^2+6xy+9y^2} \right) :\left( \dfrac{5}{y}-\dfrac{3}{x} \right)\)
+		\item \( \left( \dfrac{1}{(2a-b)^2}+\dfrac{2}{4a^2-b^2}+\dfrac{1}{(2a+b)^2} \right)\cdot\dfrac{4a^2+4ab+b^2}{16a} \)
+		\item \( \left( x-\dfrac{4xy}{x+y}+y \right) \cdot\left( x+\dfrac{4xy}{x-y}-y \right)\)
+		\item \( \left( \dfrac{0,5b-1,5}{0,5b^2-1,5b+4,5}-\dfrac{2b-6}{\frac{1}{3}b^3+9} \right):\dfrac{b-3}{0,8b^3+21,6} \)
+		\item \( \dfrac{x-\frac{yz}{y-z}}{y-\frac{xz}{x-z}} \)
+		\item \( \dfrac{\frac{3}{2}a^2-2ab+\frac{2}{3}b^2}{\frac{1}{4}a^2-\frac{1}{9}b^2}+\dfrac{6b}{\frac{3}{4}a+\frac{1}{2}b} \)
+		\item \( \dfrac{12c-4c^2}{2c+3}+\dfrac{1}{2c-3}:\left( \dfrac{4}{4c^2-9} -\dfrac{6c-9}{8c^3+27}\right) \)
+		\item \( \left( \dfrac{3x^2+5x-14}{3x^2-12}-\dfrac{x+3}{x+2} \right) :\dfrac{2}{x^2-4x+4}\)
+		\item \( \dfrac{2x^2+x-1}{x+1}+\dfrac{(3x-x^2-2)^2}{x^2-4x+4} \)
+	\end{enumerate}
+	\item Тренировочная карточка 8
+	\begin{enumerate}[label=\asbuk*)]
+		\item \( \left( \dfrac{4a^2-6ac}{4a^2-12ac+9c^2}-\dfrac{6ac+9c^2}{4a^2+12ac+9c^2} \right)\cdot\dfrac{6a+9c}{4a^2+9c^2} \)
+		\item \( \dfrac{4c^2}{(c-2)^4} :\left( \dfrac{1}{(c+2)^2}+\dfrac{1}{(c-2)^2}+\dfrac{2}{c^2-4} \right)\)
+		\item \( \left( a-\dfrac{1-2a^2}{1-a}+1 \right):\left( 1-\dfrac{1}{1-a} \right) \)
+		\item \( \left( \dfrac{a}{0,5a+1} +\dfrac{\frac{2}{3}a}{2-a}+\dfrac{2a}{\frac{1}{4}a^2-1}\right)\cdot\dfrac{0,5a-1}{0,5a-2} \)
+		\item \( \left( \dfrac{a-x}{a}+\dfrac{x}{a-x} \right)\left( \dfrac{a+x}{a}-\dfrac{x}{a+x} \right) \)
+		\item \( \left( \dfrac{2x^2+3x-5}{x^2-2x+1}-\dfrac{4x+5}{2x-2} \right)\cdot\dfrac{x^2-1}{5} \)
+		\item \(\left( \dfrac{4}{a^2-4a}-\dfrac{3a+32}{a^3-64} \right):\dfrac{a-8}{a^3+4a^2+16a}-\dfrac{4}{4-a}\)
+		\item \( \dfrac{y}{x+y}+\left( \dfrac{2x+1}{x+y}-\dfrac{2xy+y}{y^2-x^2} \right):\dfrac{2x+1}{x-y} \)
+		\item \( \dfrac{x^2}{(x-y)(x-z)}+\dfrac{y^2}{(y-x)(y-z)}+\dfrac{z^2}{(z-x)(z-y)} \)
+		\item \( \dfrac{2x^2-3x+1}{x-1}+\dfrac{(4x-x^2-3)^2}{x^2-6x+9} \)
+	\end{enumerate}
+	\item Зачётная карточка 1
+	\begin{enumerate}[label=\asbuk*)]
+		\item \( \left( m^2+\dfrac{6-m^4}{m^2-1} \right) \cdot\dfrac{1+m}{6-m^2}\)
+		\item \( \dfrac{2m}{m^2-4}-\dfrac{2}{m^2-4}:\left( \dfrac{m+1}{2m-2}-\dfrac{1}{m-1} \right) \)
+		\item \( \left( m-4+\dfrac{32}{m+4} \right) \cdot\dfrac{m^2+8m+16}{m^2+16}\)
+		\item \( \dfrac{3-x^2}{x^2-1}+\dfrac{3x}{x^2-1}:\dfrac{x}{x-1}+\dfrac{x-1}{x+1} \)
+		\item \( \left( \dfrac{-1}{a-2}+\dfrac{8}{a^2-4}+\dfrac{2}{a+2} \right) (a^2-4a+4)\)
+		\item \( \left( \dfrac{2x}{x-7}+ \dfrac{7x}{x^2-14x+49}\right) :\dfrac{2x-7}{x^2-49}-\dfrac{7(x+7)}{x-7}\)
+		\item \( \left( \dfrac{20x}{25-x^2}+\dfrac{5-x}{5+x} \right) :\dfrac{5+x}{5}-\dfrac{5}{5-x}\)
+		\item \( \dfrac{8-n^3}{2+n}:\left( 2+\dfrac{n^2}{n+2} \right) \dfrac{n^2}{n-2}\cdot\dfrac{4-n^2}{n^2+2n}\)
+		\item \( \left( \dfrac{2}{(1-x)^2}+\dfrac{1}{x^2-1} \right)\cdot(x-1)^2-\dfrac{3x}{x+1} \)
+		\item \( \left( \dfrac{1}{x+2}+\dfrac{5}{x^2-x-6}+\dfrac{2x}{x-3} \right)\cdot\dfrac{x}{2x+1}-\dfrac{x-9}{2(3-x)} \)
+	\end{enumerate}
+	\item Зачётная карточка 2
+	\begin{enumerate}[label=\asbuk*)]
+		\item \( \left( a+\dfrac{2+a^2}{1-a} \right)\cdot\dfrac{1-2a+a^2}{a+2} \)
+		\item \( \dfrac{b^2}{b^2-1}+\dfrac{1}{b^2-1}:\left( \dfrac{1}{2b-b^2}-\dfrac{1}{2-b} \right) \)
+		\item \( \left( b+3+\dfrac{18}{b-3} \right)\cdot\dfrac{b^2-6b+9}{b^2+9} \)
+		\item \( \dfrac{7-5m}{m-4}+\dfrac{4m}{m+4} \cdot\dfrac{m^2-16}{4m}+\dfrac{9m-23}{m-4}\)
+		\item \( \left( \dfrac{1}{3+a}-\dfrac{6}{9-a^2}+\dfrac{2}{3-a} \right)\cdot(9-6a+a^2) \)
+		\item \( \left(  \dfrac{3a}{a+6}-\dfrac{2a}{a^2+12a+36}\right) :\dfrac{3a+16}{a^2-36}+\dfrac{6(a-6)}{a+6}\)
+		\item \( \left( \dfrac{16b}{16-b^2}+\dfrac{4-b}{4+b} \right):\dfrac{4+b}{4}-\dfrac{4}{4-b} \)
+		\item \( \left( \dfrac{a-1}{a+1}+\dfrac{a^3+1}{a^2-2a+1}\cdot\dfrac{a-1}{a^2-a+1} \right):\dfrac{a^2+1}{a+1} \)
+		\item \( \left( \dfrac{4}{4-x^2}-\dfrac{4}{(x-2)^2} \right) :\dfrac{2}{(2-x)^2}+\dfrac{4x+1}{x+2}\)
+		\item \( \dfrac{a+4}{5(a-1)}:\left( \dfrac{9(a-1)}{3a+4}-\dfrac{(2a-7)^2}{3a^2+a-4}+\dfrac{2}{5(2-a)} \right) \)
+	\end{enumerate}
+	\item Зачётная карточка 3
+\begin{enumerate}[label=\asbuk*)]
+	\item \( \left( x+\dfrac{5-x^2}{1+x} \right):\dfrac{x+5}{x^2+2x++1} \)
+	\item \( \left( \dfrac{x+10}{5x+25} -\dfrac{1}{x+5}\right) \cdot\dfrac{5}{x-5}-\dfrac{10}{x^2-25}\)
+	\item \( \left( a-1+\dfrac{2}{a+1} \right):\dfrac{a^2+1}{a^2+2a+1} \)
+	\item \( \dfrac{-a-24}{a-5}+\dfrac{a}{a+5}:\dfrac{a}{a^2-25}+\dfrac{6a-1}{a-5} \)
+	\item \( \left( \dfrac{2}{a-2}-\dfrac{8}{a^2-4}+\dfrac{-1}{a+2} \right)\cdot(a^2+4a+4) \)
+	\item \( \left( \dfrac{2m}{m-5}+\dfrac{m}{m^2-10m+25} \right) \cdot\dfrac{m^2-25}{2m-9}-\dfrac{5(m+5)}{m-5}\)
+	\item \( \left( \dfrac{8a}{a^2-4}+\dfrac{a-2}{a+2} \right) \cdot\dfrac{a}{a+2}-\dfrac{a}{a-2}\)
+	\item \( \left( \dfrac{m+2}{m+1}-\dfrac{8m^2-8}{m^3-1}:\dfrac{4m+4}{m^2+m+1} \right)\cdot\dfrac{1}{m} \)
+	\item \( \dfrac{(1-b)^2}{2b}\cdot\left( \dfrac{1}{(b-1)^2}-\dfrac{1}{1-b^2} \right) -\dfrac{2}{1+b}\)
+	\item \( \left( \dfrac{4}{5a^2+a-4}-\dfrac{a+1}{9(5a-4)} \right) \cdot\dfrac{15a-12}{a+7}-\dfrac{2}{a+1}\)
+\end{enumerate}
+\item Зачётная карточка 4
+\begin{enumerate}[label=\asbuk*)]
+	\item \( \left( x+\dfrac{3-x^2}{x+1} \right):\dfrac{x+3}{1-x^2} \)
+	\item \( \left( \dfrac{x+4}{3x+3}-\dfrac{1}{x+1} \right):\dfrac{x+1}{3}+\dfrac{2}{x^2-1} \)
+	\item \( \left( a-2+\dfrac{8}{a+2} \right) \cdot\dfrac{a^2+4a+4}{a^2+4}\)
+	\item \( \dfrac{5m-21}{m^2-9}+\dfrac{m}{m^2-9}\cdot\dfrac{m+3}{m}+\dfrac{m-3}{m+3} \)
+	\item \( \left( \dfrac{4}{a+1}+\dfrac{2a}{a^2-1}+\dfrac{-1}{a-1} \right)\cdot(a^2+2a+1) \)
+	\item \( \left( \dfrac{3a}{a-4}+\dfrac{10a}{a^2-8a+16} \right) \cdot\dfrac{a^2-16}{3a-2}+\dfrac{4(a+4)}{4-a}\)
+	\item \( \left( \dfrac{12b}{9-b^2}+\dfrac{3-b}{3+b} \right):\dfrac{3+b}{3}-\dfrac{3}{3-b} \)
+	\item \( \left( \dfrac{1}{2-6a}+\dfrac{1}{27a^3-1}:\dfrac{1+3a}{1+3a+9a^2} \right)\cdot\dfrac{2+6a}{a} \)
+	\item \( \dfrac{2}{x-1}+\dfrac{1-x^2}{1+x^2}\cdot\left( \dfrac{1}{(x-1)^2}-\dfrac{x}{1-x^2} \right) \)
+	\item \( \left( \dfrac{3a-1}{a^2-4}-\dfrac{9a}{3a^2+5a-2} \right)\cdot\dfrac{15a^3-60a}{12a+1}+\dfrac{5}{1-3a} \)
+\end{enumerate}
+\item Зачётная карточка 5
+\begin{enumerate}[label=\asbuk*)]
+	\item \( \dfrac{(2a-b)^2}{a-b}+\dfrac{b^2}{b-a} \)
+	\item \( \dfrac{x^3+y^3}{(x-y)^2}+\dfrac{3xy^2+y^3}{2xy-x^2-y^2} \)
+	\item \( \dfrac{a^3}{a-3}-\dfrac{3a^3+81}{a^2-9} \)
+	\item \( \dfrac{a-1}{2a+2}+\dfrac{a+1}{3-3a}+\dfrac{5a^3-1}{3a^2-3} \)
+	\item \( \dfrac{a^2-bc}{a^2-ab+bc-ac}+\dfrac{3b-a}{2b-2a}+\dfrac{a+2c}{3a-3c} \)
+	\item \( \dfrac{x-2}{(2x+4)^2}:\left( \dfrac{x}{2x-4}-\dfrac{x^2+4}{2x^2-8}-\dfrac{2}{x^2+2x} \right) \)
+	\item \( 1:\left( \dfrac{a}{a-b}+\dfrac{4a^2b-ab^2}{b^3-a^3}+\dfrac{b^2}{a^2+ab+b^2} \right) -\dfrac{-3ab}{(a-b)^2}\)
+	\item \( \left( \dfrac{2a-3b}{a-7b}-2+\dfrac{a-7b}{2a-3b} \right)\cdot\left( \dfrac{23a-29b}{a^2+8ab+16b^2}-\dfrac{15a-21b}{a^2+4ab} \right) \)
+	\item \( \dfrac{ab+cd}{(a+c)(b-c)}+\dfrac{ac+bd}{(a+b)(c-b)}+\dfrac{ad+bc}{(a+b)(a+c)} \)
+	\item \( \dfrac{2}{3-a}+\dfrac{a+3}{a-2}:\left( \dfrac{9(a-2)}{3a+1}-\dfrac{(2a-9)^2}{3a^2-5a-2} \right) \)
+\end{enumerate}
+\item Зачётная карточка 6
+\begin{enumerate}[label=\asbuk*)]
+	\item \( \dfrac{(3a-2b)^2}{b-3a}+\dfrac{9a^2}{3a-b} \)
+	\item \( \dfrac{12bc^2+b^3}{(b-2c)^2}+\dfrac{3c^3}{4bc-4c^2-b^2} \)
+	\item \( \dfrac{4+10x+25x^2}{2+5x}-\dfrac{4-10x+25x^2}{2-5x} \)
+	\item \( \dfrac{(2y+3x)^2}{2y-3z}-\dfrac{(2y-3z)^2}{2y+3z} \)
+	\item \( \dfrac{1}{c^2-cd}-\dfrac{1}{d^2-cd}-\dfrac{4}{c^2-d^2} \)
+	\item \( \dfrac{1}{y-5z}-\dfrac{z}{x^2+2xy}-\dfrac{x+y+5z}{xy-10yz-5xz+2y^2} \)
+	\item \( \left( \dfrac{b^2+9}{27-3b^2}+\dfrac{b}{3b+9}-\dfrac{3}{b^2-3b} \right):\dfrac{(3b+9)^2}{3b^2-b^3} \)
+	\item \( \left( \dfrac{2x+5y}{x^2-2xy}-\dfrac{9y}{x^2-4xy+4y^2} \right)\cdot\left( \dfrac{x-5y}{x+y}+2+\dfrac{x+y}{x-5y} \right) \)
+	\item \( \left( \left( \dfrac{x^2}{(x+1)^2}-\dfrac{y^2}{(y+1)^2} \right) :\left(\dfrac{x}{(x+1)^2}-\dfrac{y}{(y+1)^2}  \right)+1\right)\cdot\dfrac{1-xy}{(x+y)(y+1)} \)
+	\item \( \left( \dfrac{1}{x+1}+\dfrac{5}{x^2-3x-4}+\dfrac{2x-2}{x-4} \right) \cdot\dfrac{x-1}{2x-1}-\dfrac{x-10}{2(4-x)}\)
+\end{enumerate}
+\item Зачётная карточка 7
+\begin{enumerate}[label=\asbuk*)]
+	\item \( \dfrac{(3a-b)^3}{a-b}-\dfrac{b^3-9ab^2}{b-a} \)
+	\item \( \dfrac{a^2+5a}{a^2-18a+81}-\dfrac{50-3a}{18a-81-a^2}-\dfrac{131+2a}{(9-a)^2} \)
+	\item \( \dfrac{ad-bc}{2cd(c+d)}+\dfrac{ad+bc}{2cd(c-d)} \)
+	\item \( \dfrac{(5v+2t)^2}{5v-2t}+\dfrac{(5v-2t)^2}{5v+2t} \)
+	\item \( \dfrac{4b}{4b^2-1}+\dfrac{2b+1}{3-6b}+\dfrac{2b-1}{4b+2} \)
+	\item \( \dfrac{c+6b}{ac+2bc-6ab-3a^2}+\dfrac{2b}{a^2+2ab}-\dfrac{b}{ac-3a^2} \)
+	\item \( \dfrac{t^2(x-y)(y-z)+y^2(z-t)(x-t)}{z^2(x-y)(x-t)+x^2(y-z)(z-t)} \)
+	\item \( \left( \left( \dfrac{4a}{(a-b)^3} -\dfrac{a}{a^3-b^3}\right)\cdot\left( \dfrac{a-b}{a+b} \right)^3-\dfrac{3}{a^2-b^2} \right):\dfrac{3b^2}{a^6-b^6} \)
+	\item \( \left( \dfrac{x-2y}{3xy+6y^2}-x^2+2y \right) \cdot\dfrac{x+2y}{x^2-2xy}+\dfrac{6xy^2-1}{3xy}\)
+	\item \( \dfrac{a+7}{a+2}:\left( \dfrac{9(a+2)}{3a+13}-\dfrac{(2a-1)^2}{3a^2+19a+26} \right) -\dfrac{2}{a+1}\)
+	\end{enumerate}
+\item Зачётная карточка 8
+\begin{enumerate}[label=\asbuk*)]
+	\item \( \dfrac{(5x-1)^3}{5x-3}+\dfrac{-1+15x}{3-5x} \)
+	\item \( \dfrac{x^3+50}{10x-x^2-25}+\dfrac{2x^2}{(x-5)^2}+\dfrac{25x}{(5-x)^2} \)
+	\item \( \dfrac{9m^2-12mn+16n^2}{3m-4n}+\dfrac{9m^2+12mn+16n^2}{3m+4n} \)
+	\item \( \dfrac{(4v-q)^2}{4q-v}+\dfrac{(4q-v)^2}{4v-q} \)
+	\item \( \dfrac{2a+3c}{4a+2c}-\dfrac{2b-3a}{9a+3b}+\dfrac{6a^2-bc}{6a^2+2ab+3ac+bc} \)
+	\item \( \dfrac{(b-c)^2}{(a-b)(c-a)}+\dfrac{(a-c)^2}{(a-b)(b-c)}+\dfrac{(a-b)^2}{(c-a)(b-c)} \)
+	\item \( \left( \dfrac{4z^3}{(z+2)^3}-\dfrac{z^3}{z^3+8} \right) :\left( \dfrac{z-2}{z+2} \right)^2-\dfrac{2(z^3-4)}{z^3+8}\)
+	\item \( \left( \dfrac{x+4y}{\frac{16x^2}{4y-x}+4y+7x} -\dfrac{1}{1+\frac{8x(x+4y)}{(x-4y)^2}}\right):\dfrac{4y-x}{(3x+4y)^2} \)
+	\item \( \dfrac{y+1}{x^2-x+2xy-y+y^2}+\dfrac{x+y}{xy-x+y^2-2y+1}-\dfrac{y^2}{(x+y)(y-1)(x+y-1)} \)
+	\item \( \dfrac{1}{(x-1)^2}+\dfrac{x+11}{x^3-3x^2-6x+8}:\left( \dfrac{x-4}{2x^2+x-6}-\dfrac{9}{8+2x-x^2} \right) \)
+\end{enumerate}
+	\end{enumerate}
+	\end{document}

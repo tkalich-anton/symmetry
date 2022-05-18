@@ -1,0 +1,183 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{scrextend}
+\usepackage{titling}
+\usepackage{indentfirst}
+\usepackage{cancel}
+\usepackage{soulutf8}
+\usepackage{wrapfig}
+\usepackage{gensymb}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{tikz}
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\usepackage{graphicx}
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%Изменеие параметров листа
+\usepackage[left=15mm,right=15mm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+\begin{document}
+	
+	\chead{Сборник заданий по алгебре}
+	\rhead{Школа <<Симметрия>>}
+	Шахмейстер. Корни.
+\begin{enumerate}
+	\item Вычилсите:
+		\begin{enumerate}[label=\textbf{\arabic*)}]
+			\item \( \sqrt{\dfrac{9}{32}}-\dfrac{1}{35}\sqrt{392}+\dfrac{1}{2400}\sqrt{97^2-47^2} \)
+			\item \( \sqrt{(36,5^2-27,5^2):\left( \dfrac{57^3+33^3}{90}-57\cdot33 \right)} \) 
+			\item \( \sqrt{74,5^3-74,5^2\cdot69,5-74,5\cdot69,5^2+69,5^3} \)
+			\item \( \sqrt{2+\sqrt{\dfrac{68(32^2-15^2)}{47}}} \)
+			\item \( \sqrt{\sqrt{63}-7\sqrt{1,75}-0,5\sqrt{343}+\sqrt{112}} \)
+			\item \( \dfrac{(7\sqrt{27}-7\sqrt{8})(\sqrt{27}+\sqrt{8})}{27^2-64} \)
+			\item \( \sqrt{\dfrac{5\sqrt{5}-2\sqrt{2}}{\sqrt{5}-\sqrt{2}}+\sqrt{10}}\cdot(\sqrt{5}-\sqrt{2}) \)
+			\item \( \sqrt{\dfrac{(\sqrt{3}+\sqrt{7})(\sqrt{18}+\sqrt{2})^2}{\sqrt{12}+\sqrt{28}}} \)
+			\item \( \dfrac{(4\sqrt{7}+\sqrt{32})^2}{18+2\sqrt{56}} \)
+			\item \( \dfrac{(\sqrt{17}-2)(\sqrt{34}+\sqrt{8}+\sqrt{17}+2)}{\sqrt{2}+1} \)
+		\end{enumerate}
+	\item Вычислите наиболее рациональным способом:
+		\begin{enumerate}[label=\textbf{\arabic*)}]
+			\item \( \sqrt{1,25}+1,5\sqrt{80}-\dfrac{1}{14}\sqrt{245}-\sqrt{180} \)
+			\item \( \sqrt{51,5^3+51,5^2\cdot26,5-51,5\cdot26,5^2-26,5^3} \)
+			\item \( \sqrt{\left( \dfrac{79^3-41^3}{38}+79\cdot41 \right):(133,5^2-58,5^2)} \)
+			\item \( \sqrt{90+\sqrt{\dfrac{31(57^2-26^2)}{83}}} \)
+			\item \( \sqrt{\sqrt{1\dfrac{1}{48}}+\dfrac{1}{66}\sqrt{363}-\dfrac{1}{68}\sqrt{158^2-131^2}} \)
+			\item \( \dfrac{(\sqrt{5}+\sqrt{2})(7-\sqrt{10})(5\sqrt{5}-2\sqrt{2})}{\dfrac{36^2-28^2}{27^2+2\cdot27\cdot5+5^2}} \)
+			\item \( \dfrac{11(\sqrt{6}-\sqrt{3})^2}{12(3-2\sqrt{2})} \)
+			\item \( \sqrt{\dfrac{(\sqrt{8}+\sqrt{2})^2(\sqrt{6}-\sqrt{2})}{\sqrt{24}-\sqrt{8}}} \)
+			\item \( \dfrac{(\sqrt{3}-\sqrt{2})\sqrt{72}}{3(2\sqrt{6}-\sqrt{16})(\sqrt{16}+1)} \)
+			\item \( \dfrac{(\sqrt{15}+\sqrt{3})(\sqrt{60}-\sqrt{12}-\sqrt{45}+3)}{2-\sqrt{3}} \)
+		\end{enumerate}
+	\item Вычислите:
+		\begin{enumerate}[label=\textbf{\arabic*)}]
+			\item \( (3\sqrt{3}+2\sqrt{7}+\sqrt{21}+6)(3\sqrt{3}+2\sqrt{7}-\sqrt{21}-6) \)
+			\item \( (9-\sqrt{83})\sqrt{18\sqrt{83}+164} \)
+			\item \( \dfrac{4}{\sqrt{5}-3}+3+\sqrt{5} \)
+			\item \( \dfrac{2\sqrt{7}-4}{1+\sqrt{3}}+6\sqrt{3}+0,5(\sqrt{21}-5)(\sqrt{7}+3\sqrt{3})-2 \)
+			\item \( \dfrac{9}{\sqrt{13}-2}+\dfrac{3}{4+\sqrt{13}} \)
+			\item \( \sqrt{4+2\sqrt{3}}+\sqrt{4-2\sqrt{3}} \)
+			\item \( \sqrt{7}-\sqrt{2}-\dfrac{5}{\sqrt{9+2\sqrt{14}}} \)
+			\item Расположите числа в порядке убывания:\\
+			\( 5\sqrt{\dfrac{7}{11}}; \sqrt{17}; \dfrac{1}{2}\sqrt{62} \)
+			\item Что меньше:
+			\( (\sqrt{7}-1) \) или \( \sqrt{3} \)?
+			\item Что больше: \( \dfrac{1}{\sqrt{13}+\sqrt{11}} \) или \( \dfrac{1}{\sqrt{14}+\sqrt{10}} \)?
+		\end{enumerate}
+	\item Сократите дробь:
+		\begin{enumerate}[label=\textbf{\arabic*)}]
+			\item \( \dfrac{a-4}{\sqrt{a}+2} \)
+			\item \( \dfrac{b-9}{\sqrt{b}-3} \)
+			\item \( \dfrac{x\sqrt{x}+27}{\sqrt{x}+3} \)
+			\item \( \dfrac{\sqrt{y^3}-\sqrt{x^3}}{x+\sqrt{xy}+y} \)
+			\item \( \dfrac{x+5\sqrt{x}+6}{\sqrt{x}+3} \)
+		\end{enumerate}
+	\item Вычислите:
+		\begin{enumerate}[label=\textbf{\arabic*)}]
+			\item \( \dfrac{\sqrt{9\sqrt{2}+4\sqrt{7}}}{2+\sqrt{14}} \)
+			\item \(\left( \dfrac{12}{\sqrt{15}-3}-\dfrac{28}{\sqrt{15}-1} +\dfrac{1}{2-\sqrt{3}}\right)(6-\sqrt{3})\)
+			\item \( \sqrt{3-\sqrt{5}}(\sqrt{10}-\sqrt{2})(\sqrt{5}+3) \)
+			\item \( \dfrac{1+2\sqrt{2}}{\sqrt{3+2\sqrt{2}}} \)
+			\item \( \sqrt{11-4\sqrt{7}}+\sqrt{16-6\sqrt{7}} \)
+		\end{enumerate}
+	\item Выполните действия:
+		\begin{enumerate}[label=\textbf{\arabic*)}]
+			\item \( \left( \dfrac{\sqrt{a}}{\sqrt{a}-\sqrt{b}}-\dfrac{\sqrt{b}}{\sqrt{a}+\sqrt{b}} \right) \dfrac{a-b}{a}\) при
+			 \( \left\{
+			\begin{array}{l}
+				a>0,\\
+				b \geqslant0,\\
+				a \neq b.
+			\end{array}
+		\right. \)
+		\item \( \dfrac{a}{\sqrt{ab}+a}+\dfrac{b}{\sqrt{ab}-b}-\dfrac{a}{a-b} \) при 
+		\( \left\{
+		\begin{array}{l}
+			a>0,\\
+			b >0,\\
+			a \neq b.
+		\end{array}
+		\right. \)
+		\item \( \left( \sqrt{x}-\dfrac{\sqrt{xy}+y}{\sqrt{x}+\sqrt{y}} \right)\left( \dfrac{\sqrt{x}}{\sqrt{x}+\sqrt{y}}+\dfrac{2\sqrt{xy}}{x-y} \right) \) при
+		\( \left\{
+		\begin{array}{l}
+			x\geqslant0,\\
+			y \geqslant0,\\
+			x \neq y.
+		\end{array}
+		\right. \)
+		\item \( \dfrac{\sqrt{a}+\sqrt{b}}{a\sqrt{b}-b\sqrt{a}}-\dfrac{\sqrt{a}-\sqrt{b}}{a\sqrt{b}+b\sqrt{a}}-\dfrac{3}{a-b} \) при
+		\( \left\{
+		\begin{array}{l}
+			a>0,\\
+			b>0,\\
+			a \neq b.
+		\end{array}
+		\right. \)
+		\item \( \left( \dfrac{\sqrt{a^3}+\sqrt{b^3}}{\sqrt{a}+\sqrt{b}}-(a+b) \right) :\dfrac{\sqrt{b}-\sqrt{a}}{\sqrt{ab}}\) при
+		\( \left\{
+		\begin{array}{l}
+			a>0,\\
+			b>0,\\
+			a \neq b.
+		\end{array}
+		\right. \)
+		\item \( \dfrac{\left( \dfrac{a-b}{\sqrt{a}+\sqrt{b}} \right)^3+2a\sqrt{a}+b\sqrt{b}}{3a^2+3b\sqrt{ab}}+\dfrac{\sqrt{ab}-a}{a\sqrt{a}-b\sqrt{a}} \) при
+		\( \left\{
+		\begin{array}{l}
+			a>0,\\
+			b \geqslant0,\\
+			a \neq b.
+		\end{array}
+		\right. \)
+		\item \( \dfrac{(a-b)^2}{\sqrt{a^3}-\sqrt{b^3}}+\dfrac{a^2-b^2}{(\sqrt{a}+\sqrt{b})(a+\sqrt{ab}+b)} \) при
+		\( \left\{
+		\begin{array}{l}
+			a\geqslant0,\\
+			b \geqslant0,\\
+			a \neq b.
+		\end{array}
+		\right. \)
+		\item \( \left( \dfrac{1}{\sqrt{a}+\sqrt{a+1}}+\dfrac{1}{\sqrt{a}-\sqrt{a-1}} \right):\left( 1+\sqrt{\dfrac{a+1}{a-1}} \right) \) при \( a>1 \)
+		\item \( \dfrac{x^2+4}{x\sqrt{4+\left( \dfrac{x^2-4}{2x} \right)^2}} \)
+		\item \( \dfrac{\sqrt{x-2\sqrt{x-1}}}{\sqrt{x-1}-1} \)
+		\end{enumerate}
+	\item Выполните действия и упростите:
+		\begin{enumerate}[label=\textbf{\arabic*)}]
+			\item \( \left( \dfrac{\sqrt{x}+1}{\sqrt{x}-1}-\dfrac{\sqrt{x}-1}{\sqrt{x}+1}+4\sqrt{x} \right)\left( \sqrt{x}-\dfrac{1}{\sqrt{x}} \right) \)
+			\item \( \left( \dfrac{\sqrt{x^2-4}-x}{\sqrt{x^2-4}+x}-\dfrac{\sqrt{x^2-4}+x}{\sqrt{x^2-4}-x} \right) :\sqrt{\dfrac{x^2-4}{x}}\)
+			\item \( \left( \dfrac{\sqrt{x^3}-\sqrt{y^3}}{\sqrt{x}-\sqrt{y}-(x+y)} \right)\cdot\sqrt{xy} \)
+			\item \( \left( \dfrac{(\sqrt{a}+\sqrt{b})^2-(2\sqrt{a})^2}{a-b}-(\sqrt{a}-\sqrt{b})(\sqrt{a}+\sqrt{b})^{-1} \right) :\dfrac{4(\sqrt{a})^3}{\sqrt{a}+\sqrt{b}}\)
+			\item \( \left( \dfrac{\sqrt{1+x}}{\sqrt{1+x}-\sqrt{1-x}}+\dfrac{1-x}{\sqrt{1-x^2}-1+x} \right) \left( \sqrt{\dfrac{1}{x^2}-1}-\dfrac{1}{x} \right)\)
+			\item \( \left( \dfrac{4a-\dfrac{9}{a}}{2\sqrt{a}-\dfrac{3}{\sqrt{a}}}+\dfrac{a-4+\dfrac{3}{a}}{\sqrt{a}-\dfrac{1}{\sqrt{a}}} \right)^2 \)
+			\item \( \dfrac{a\sqrt{a}+b\sqrt{b}}{(\sqrt{a}+\sqrt{b})(a-b)}+\dfrac{2\sqrt{b}}{\sqrt{a}+\sqrt{b}}-\dfrac{\sqrt{ab}}{a-b} \)
+			\item \( \dfrac{\sqrt{(x+2)^2-8x}}{\sqrt{x}-\dfrac{2}{\sqrt{x}}} \)
+			\item \( \left( \dfrac{\sqrt{x-a}}{\sqrt{x+a}+\sqrt{x-a}}+\dfrac{\sqrt{x-a}}{\sqrt{x+a}-\sqrt{x-a}} \right):\sqrt{\dfrac{x^2}{a^2}-1} \) при \( x>a>0 \)
+			\item \( \sqrt{\dfrac{a-b}{a+b}}+\dfrac{2a\sqrt{a^2-b^2}}{b^2(ab^{-1}+1)^2}\cdot\dfrac{1}{1+\dfrac{1-ba^{-1}}{1+ba^{-1}}} \)
+		\end{enumerate}
+\end{enumerate}
+\end{document}
