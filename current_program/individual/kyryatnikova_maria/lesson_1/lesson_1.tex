@@ -1,0 +1,44 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+%Изменеие параметров листа
+\usepackage[left=1cm,right=1cm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage{amsmath,amsthm,amssymb,scrextend}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+	
+	\lhead{Курятникова Мария}
+	\rhead{Школа <<Симметрия>>}
+	\begin{enumerate}
+		\item Вычислить:
+		\[ \dfrac{(0,73^3-0,73\cdot0,27^2):0,023+2,4}{(18,544:3,05-1,83)\cdot0,16} \]
+		\item Упростить выражение:
+		\begin{enumerate}
+			\item \( (x-y)(x^2+xy+y^2) \)
+			\item \( (2x-3)^2-(x-1)^2-(3x^2-10x+-12) \)
+			\item \( (x-1)(x^2+x+1)-(x+1)(1-x+x^2) \)
+		\end{enumerate}
+	\end{enumerate}
+\end{document}
+

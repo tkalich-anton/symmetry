@@ -1,0 +1,57 @@
+\documentclass[12pt, a5paper]{article}
+\usepackage{cmap} % Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc} % Поддержка русских букв
+\usepackage[utf8]{inputenc} % Кодировка utf8
+\usepackage[english, russian]{babel} % Языки: русский, английский
+\usepackage{enumitem}
+\usepackage{pscyr} % Нормальные шрифты
+
+%Русские символы в списке
+\makeatletter
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+\makeatother
+%Дублирование знаков при переносе
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}%
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+%Изменеие параметров листа
+\usepackage[left=1cm,right=1cm,
+top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+
+\usepackage{amsmath,amsthm,amssymb,scrextend}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{multicol}
+
+\setlength\parindent{1,5em}
+\usepackage{indentfirst}
+
+\begin{document}
+	
+	\lhead{Сентябрь}
+	\rhead{Школа <<Симметрия>>}
+	
+	\section*{Домашняя работа №1}
+	\begin{enumerate}
+		\item Постройте график функции:
+		\begin{enumerate}[label=\asbuk*)]
+			\item $y=\dfrac{|x|}{x-1}$
+			\item $y=|x-5|+|x-2|$
+			\item $y=\dfrac{|x-2|}{x-2}+\dfrac{|x-3|}{x-3}$
+			\item $y=1-\sqrt{x^4+2x^2+1}$\\
+			(подсказка $\sqrt{x^2}=|x|$)
+			\item $y=|-x^2+6x-8|$
+		\end{enumerate}
+		\item Решите уравнения:
+		\begin{enumerate}[label=\asbuk*)]
+			\item $(-x)^{-1}=\dfrac{2}{3}$
+			\item $x^2-4|x|-21=0$
+			\item $(x-2)^2-8|x-2|+15=0$
+			\item $x^3-x^2=2x$
+		\end{enumerate}
+		\item Упростите выражение:
+		$$\dfrac{a^{-n}+b^{-n}}{a^{-2n}-b^{-2n}}:\left(\dfrac{1}{b^{-n}}-\dfrac{1}{a^{-n}}\right)^{-1}$$
+		\item Окружность, вписанная в трапецию, делит ее боковую сторону на отрезки 3 и 4. Найдите радиус окружности.
+		\item Через середину диагонали $KM$ прямоугольника $KLMN$ перпендикулярно этой диагонали проведена прямая, пересекающая сторону $KL$ и $MN$ в точках $A$ и $B$ соответственно. Известно, что $AB=BM=6$. Найдите большую сторону прямоугольника.
+	\end{enumerate}
+\end{document}

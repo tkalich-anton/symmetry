@@ -34,7 +34,9 @@
 	verbatim,
 	currfile,
 	xhfill,
-	keyval
+	keyval,
+	tabstackengine,
+	mathtools
 }
 
 \definecolor{silver}{rgb}{0.7, 0.7, 0.7}
@@ -48,10 +50,12 @@
 \newcommand{\leveliii}{\textcolor{dark}{\footnotesize $\blacksquare\blacksquare\blacksquare$}\hspace{0.3em}}
 \newcommand{\selectanswer}{\noindent\textit{В ответе укажите номер правильного варианта.}}
 
+\newlist{listofex}{enumerate}{2}
+\setlist[listofex]{label=\fbox{\textbf{\arabic*}}, align=left, leftmargin=0pt, labelindent=0pt, listparindent=0pt, labelwidth=0pt, itemindent=!}
 %Нумированный список со столбцами
 
 \newlist{enumcols}{enumerate}{5}
-\setlist[enumcols]{label=\arabic*)}
+\setlist[enumcols]{label=\arabic*), align=left, leftmargin=0pt, labelindent=0pt, listparindent=0pt, labelwidth=0pt, itemindent=!, topsep=0pt}
 
 \SetEnumitemKey{columns}{before=\begin{multicols}{#1},after=\end{multicols}}
 
@@ -92,6 +96,7 @@
 	\begingroup%
 	\setkeys{exercise}{#1}%
 	\subimport{\ex@bankpath}{#2}%
+	
 	\endgroup%
 }
 \newcommand{\mexercise}[2][]{%
@@ -99,6 +104,9 @@
 	\setkeys{exercise}{#1,type=multi}%
 	\subimport{\ex@bankpath}{#2}%
 	\endgroup%
+}
+\newcommand{\prompt}[1]{
+	\textit{Подсказка: #1}
 }
 \def\listpath{}
 \newcommand{\listimport}[2][../../../../../exercises/lists]{%
@@ -145,8 +153,10 @@
 				{Решить неравенство:}{}%
 			\ifthenelse{\equal{\ex@type}{expression}}%
 				{Упростить выражение:}{}%
-			\ifthenelse{\equal{\ex@type}{expr_calc}}%
-				{Упростить выражение и вычислить значение выражения:}{}%
+			\ifthenelse{\equal{\ex@type}{simplify_calculate}}%
+				{Упростить и вычислить значение выражения:}{}%
+			\ifthenelse{\equal{\ex@type}{calculate_expression}}%
+				{Найти значение выражения:}{}%
 			\ifthenelse{\equal{\ex@type}{eq_system}}%
 				{Решить систему уравнений:}{}%
 			\ifthenelse{\equal{\ex@type}{ineq_system}}%
@@ -190,10 +200,14 @@
 \end{center}
 }
 
+\newcommand\sfrac[2]{%
+	\abovebaseline[-1pt]{\hbox{\small\( \dfrac{#1}{#2} \)}}
+}
+
 %СЕТТЕРЫ
 
 %Параметры страницы
-\usepackage[left=15mm,right=15mm,
+\usepackage[left=12mm,right=12mm,
 top=2cm,bottom=2cm]{geometry}
 \pagestyle{fancy}
 
@@ -207,7 +221,6 @@ top=2cm,bottom=2cm]{geometry}
 \AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
 
 \setlength{\parindent}{0ex}
-
 %Название школы в шапке справа
 \rhead{Школа <<Симметрия>>}
 
