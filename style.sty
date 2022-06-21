@@ -55,12 +55,31 @@
 %Нумированный список со столбцами
 
 \newlist{enumcols}{enumerate}{5}
-\setlist[enumcols]{label=\arabic*), align=left, leftmargin=0pt, labelindent=0pt, listparindent=0pt, labelwidth=0pt, itemindent=!, topsep=0pt}
+\setlist[enumcols]{label=\arabic*), align=left, leftmargin=0pt, labelindent=0pt, listparindent=0pt, labelwidth=0pt, itemindent=!}
+
+\let\multicolmulticols\multicols
+\let\endmulticolmulticols\endmulticols
+
+\RenewDocumentEnvironment{multicols}{mO{}}
+{%
+	\ifnum#1=1
+	#2%
+	\else % More than 1 column
+	\multicolmulticols{#1}[#2]
+	\fi
+}
+{%
+	\ifnum#1=1
+	\else % More than 1 column
+	\endmulticolmulticols
+	\fi
+}
+
 
 \SetEnumitemKey{columns}{before=\begin{multicols}{#1},after=\end{multicols}}
 
 \SetEnumitemKey{itemcolumns}%
-{before=\itemmode{on}\ifthenelse{\equal{#1}{1}}{}{\begin{multicols}{#1}},after=\itemmode{off}\ifthenelse{\equal{#1}{1}}{}{\end{multicols}}}
+{before=\itemmode{on}\begin{multicols}{#1},after=\itemmode{off}\end{multicols}}
 
 \newcommand{\arabf}{\textbf{\arabic*.}}
 
@@ -91,18 +110,28 @@
 
 \newcommand{\showanswers}{
 	\setkeys{exercise}{showAnswer=true}
-}%
+}
+\newcommand{\shownumbers}{
+	\setkeys{exercise}{showNumber=true}
+}
 \newcommand{\exercise}[2][]{%
 	\begingroup%
 	\setkeys{exercise}{#1}%
 	\subimport{\ex@bankpath}{#2}%
-	
+	\ifthenelse{\NOT\equal{\ex@mode}{item}}%
+	{
+		
+		\phantom{f}
+		
+	}
+	{}%
 	\endgroup%
 }
-\newcommand{\mexercise}[2][]{%
+\newcommand{\mexercise}[2][]%
+{%
 	\begingroup%
-	\setkeys{exercise}{#1,type=multi}%
-	\subimport{\ex@bankpath}{#2}%
+		\setkeys{exercise}{#1,type=multi}%
+		\subimport{\ex@bankpath}{#2}%
 	\endgroup%
 }
 \newcommand{\prompt}[1]{
@@ -119,6 +148,15 @@
 	\ifthenelse {\equal{#1}{on}}{\setkeys{exercise}{mode=item}}{}
 	\ifthenelse {\equal{#1}{off}}{\setkeys{exercise}{mode=normal}}{}
 }
+\newlength{\mylen}
+\newcommand{\myflexbox}[2][1em]{%
+	\settowidth{\mylen}{#2}%
+	\ifdim\mylen < #1
+	\makebox[#1][l]{\fbox{#2}}%
+	\else
+	\fbox{#2}%
+	\fi
+}
 \newenvironment{ex}[1][]%
 {%
 	\begingroup%
@@ -126,8 +164,8 @@
 	\ifthenelse{\boolean{\ex@shownum}}%
 		{%
 			\ifthenelse {\equal{\ex@mode}{item}}%
-				{\textcolor{silver}{[\currfilebase]}}%
-				{\makebox[0.08\linewidth]{\textbf{[\currfilebase]}}}%
+				{\textcolor{silver}{\fbox{\currfilebase}}}%
+				{\myflexbox{\currfilebase}}%
 		}{}%
 	\ifthenelse{\equal{\ex@type}{multi}}%
 		{\setkeys{exercise}{bankPath=/,mode=item}}%
@@ -135,11 +173,10 @@
 }%
 {%
 	\ifthenelse{\equal{\ex@type}{multi}}%
-		{\setkeys{exercise}{mode=normal, type=none}}%
+		{%
+			\setkeys{exercise}{mode=normal, type=none}%
+		}%
 		{}%
-	%\ifthenelse {\equal{\ex@mode}{item}}%
-	%	{}%
-	%	{\vspace{\baselineskip}}
 	\endgroup%
 }
 
