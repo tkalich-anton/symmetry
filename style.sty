@@ -104,6 +104,7 @@
 % ========= KEY DEFINITIONS =========
 \define@key{exercise}{showNumber}{\def\ex@shownum{#1}}
 \define@key{exercise}{showAnswer}{\def\ex@showans{#1}}
+\define@key{exercise}{showSource}{\def\ex@showsource{#1}}
 \define@key{exercise}{bankPath}{\def\ex@bankpath{#1}}
 \define@key{exercise}{type}{\def\ex@type{#1}}
 \define@key{exercise}{mode}{\def\ex@mode{#1}}
@@ -149,7 +150,7 @@
 	\ifthenelse {\equal{#1}{off}}{\setkeys{exercise}{mode=normal}}{}
 }
 \newlength{\mylen}
-\newcommand{\myflexbox}[2][1em]{%
+\newcommand{\myflexbox}[2][1,3em]{%
 	\settowidth{\mylen}{#2}%
 	\ifdim\mylen < #1
 	\makebox[#1][l]{\fbox{#2}}%
@@ -173,17 +174,13 @@
 }%
 {%
 	\ifthenelse{\equal{\ex@type}{multi}}%
-		{%
-			\setkeys{exercise}{mode=normal, type=none}%
-		}%
-		{}%
+		{\setkeys{exercise}{mode=normal, type=none}}{}%
 	\endgroup%
 }
 
-\newenvironment{condition}%
-{%
-	\ifthenelse{\equal{\ex@mode}{item}}{}%
-		{%
+\newenvironment{condition}{%
+	\ifthenelse{\NOT\equal{\ex@mode}{item}}%
+		{
 			\ifthenelse{\equal{\ex@type}{equation}}%
 				{Решить уравнение:}{}%
 			\ifthenelse{\equal{\ex@type}{inequality}}%
@@ -191,7 +188,7 @@
 			\ifthenelse{\equal{\ex@type}{expression}}%
 				{Упростить выражение:}{}%
 			\ifthenelse{\equal{\ex@type}{simplify_calculate}}%
-				{Упростить и вычислить значение выражения:}{}%
+				{Упростить и найти значение выражения:}{}%
 			\ifthenelse{\equal{\ex@type}{calculate_expression}}%
 				{Найти значение выражения:}{}%
 			\ifthenelse{\equal{\ex@type}{eq_system}}%
@@ -201,6 +198,7 @@
 			\ifthenelse{\equal{\ex@type}{calculate}}%
 				{Вычислить:}{}%
 		}%
+		{}%
 	\ifthenelse{\NOT\equal{\ex@type}{none}\AND\NOT\equal{\ex@mode}{item}}%
 		{\begin{center}}{}%
 }%
@@ -219,6 +217,14 @@
 			
 		}%
 		{\textcolor{silver}{\fbox{#1}}}%
+	}%
+	{}%
+}%
+\newcommand{\source}[1]{%
+	\ifthenelse{\boolean{\ex@showsource}}%
+	{%
+			
+			\textit{Источник: #1}
 	}%
 	{}%
 }%
@@ -265,6 +271,7 @@ top=2cm,bottom=2cm]{geometry}
 \setkeys{exercise}{%
 	showNumber=false,%
 	showAnswer=false,%
+	showSource=false,%
 	bankPath=../bank,%
 	type=none,%
 	mode=normal%
