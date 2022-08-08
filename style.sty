@@ -197,6 +197,8 @@
 				{Решить систему неравенств:}{}%
 			\ifthenelse{\equal{\ex@type}{calculate}}%
 				{Вычислить:}{}%
+			\ifthenelse{\equal{\ex@type}{prove_identity}}%
+				{Докажите тождество:}{}%
 		}%
 		{}%
 	\ifthenelse{\NOT\equal{\ex@type}{none}\AND\NOT\equal{\ex@mode}{item}}%
