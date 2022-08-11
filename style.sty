@@ -38,7 +38,6 @@
 	tabstackengine,
 	mathtools
 }
-
 \definecolor{silver}{rgb}{0.7, 0.7, 0.7}
 \definecolor{dark}{rgb}{0.3, 0.3, 0.3}
 \definecolor{harvestgold}{rgb}{0.85, 0.57, 0.0}
@@ -50,6 +49,8 @@
 \newcommand{\leveliii}{\textcolor{dark}{\footnotesize $\blacksquare\blacksquare\blacksquare$}\hspace{0.3em}}
 \newcommand{\selectanswer}{\noindent\textit{В ответе укажите номер правильного варианта.}}
 
+\newcommand{\veralign}[1]{\vfill\null#1\vfill\null}
+
 \newlist{listofex}{enumerate}{2}
 \setlist[listofex]{label=\fbox{\textbf{\arabic*}}, align=left, leftmargin=0pt, labelindent=0pt, listparindent=0pt, labelwidth=0pt, itemindent=!}
 %Нумированный список со столбцами
@@ -60,26 +61,25 @@
 \let\multicolmulticols\multicols
 \let\endmulticolmulticols\endmulticols
 
-\RenewDocumentEnvironment{multicols}{mO{}}
+\RenewDocumentEnvironment{multicols}{mO{}}%
 {%
-	\ifnum#1=1
+	\ifnum#1=1%
 	#2%
 	\else % More than 1 column
-	\multicolmulticols{#1}[#2]
-	\fi
+	\multicolmulticols{#1}[#2]%
+	\fi%
 }
 {%
-	\ifnum#1=1
+	\ifnum#1=1%
 	\else % More than 1 column
-	\endmulticolmulticols
-	\fi
+	\endmulticolmulticols%
+	\fi%
 }
 
 
 \SetEnumitemKey{columns}{before=\begin{multicols}{#1},after=\end{multicols}}
 
-\SetEnumitemKey{itemcolumns}%
-{before=\itemmode{on}\begin{multicols}{#1},after=\itemmode{off}\end{multicols}}
+\SetEnumitemKey{itemcolumns}{before=\itemmode{on}\begin{multicols}{#1},after=\itemmode{off}\end{multicols}}
 
 \newcommand{\arabf}{\textbf{\arabic*.}}
 
@@ -102,19 +102,18 @@
 
 \makeatletter
 % ========= KEY DEFINITIONS =========
-\define@key{exercise}{showNumber}{\def\ex@shownum{#1}}
-\define@key{exercise}{showAnswer}{\def\ex@showans{#1}}
-\define@key{exercise}{showSource}{\def\ex@showsource{#1}}
-\define@key{exercise}{bankPath}{\def\ex@bankpath{#1}}
-\define@key{exercise}{type}{\def\ex@type{#1}}
-\define@key{exercise}{mode}{\def\ex@mode{#1}}
-
-\newcommand{\showanswers}{
-	\setkeys{exercise}{showAnswer=true}
-}
-\newcommand{\shownumbers}{
-	\setkeys{exercise}{showNumber=true}
-}
+\define@key{exercise}{showNumber}{\def\ex@shownum{#1}}%
+\define@key{exercise}{showAnswer}{\def\ex@showans{#1}}%
+\define@key{exercise}{showSource}{\def\ex@showsource{#1}}%
+\define@key{exercise}{bankPath}{\def\ex@bankpath{#1}}%
+\define@key{exercise}{type}{\def\ex@type{#1}}%
+\define@key{exercise}{mode}{\def\ex@mode{#1}}%
+\newcommand{\showanswers}{%
+	\setkeys{exercise}{showAnswer=true}%
+}%
+\newcommand{\shownumbers}{%
+	\setkeys{exercise}{showNumber=true}%
+}%
 \newcommand{\exercise}[2][]{%
 	\begingroup%
 	\setkeys{exercise}{#1}%
@@ -134,30 +133,30 @@
 		\setkeys{exercise}{#1,type=multi}%
 		\subimport{\ex@bankpath}{#2}%
 	\endgroup%
-}
-\newcommand{\prompt}[1]{
-	\textit{Подсказка: #1}
-}
-\def\listpath{}
+}%
+\newcommand{\prompt}[1]{%
+	\textit{Подсказка: #1}%
+}%
+\def\listpath{}%
 \newcommand{\listimport}[2][../../../../../exercises/lists]{%
 	\begingroup%
-	\def\listpath{#1}
+	\def\listpath{#1}%
 	\subimport{\listpath}{#2}%
 	\endgroup%
-}
+}%
 \newcommand{\itemmode}[1]{%
-	\ifthenelse {\equal{#1}{on}}{\setkeys{exercise}{mode=item}}{}
-	\ifthenelse {\equal{#1}{off}}{\setkeys{exercise}{mode=normal}}{}
-}
+	\ifthenelse{\equal{#1}{on}}{\setkeys{exercise}{mode=item}}{}%
+	\ifthenelse{\equal{#1}{off}}{\setkeys{exercise}{mode=normal}}{}%
+}%
 \newlength{\mylen}
 \newcommand{\myflexbox}[2][1,3em]{%
 	\settowidth{\mylen}{#2}%
-	\ifdim\mylen < #1
+	\ifdim\mylen < #1%
 	\makebox[#1][l]{\fbox{#2}}%
-	\else
+	\else%
 	\fbox{#2}%
-	\fi
-}
+	\fi%
+}%
 \newenvironment{ex}[1][]%
 {%
 	\begingroup%
@@ -176,11 +175,10 @@
 	\ifthenelse{\equal{\ex@type}{multi}}%
 		{\setkeys{exercise}{mode=normal, type=none}}{}%
 	\endgroup%
-}
-
+}%
 \newenvironment{condition}{%
 	\ifthenelse{\NOT\equal{\ex@mode}{item}}%
-		{
+		{%
 			\ifthenelse{\equal{\ex@type}{equation}}%
 				{Решить уравнение:}{}%
 			\ifthenelse{\equal{\ex@type}{inequality}}%
@@ -214,19 +212,11 @@
 		\ifthenelse{\NOT\equal{\ex@mode}{item}}%
 		{%
 			
-			\raggedleft
-			\textcolor{silver}{\fbox{#1}}
+			\raggedleft%
+			\textcolor{silver}{\fbox{#1}}%
 			
 		}%
 		{\textcolor{silver}{\fbox{#1}}}%
-	}%
-	{}%
-}%
-\newcommand{\source}[1]{%
-	\ifthenelse{\boolean{\ex@showsource}}%
-	{%
-			
-			\textit{Источник: #1}
 	}%
 	{}%
 }%
@@ -273,7 +263,6 @@ top=2cm,bottom=2cm]{geometry}
 \setkeys{exercise}{%
 	showNumber=false,%
 	showAnswer=false,%
-	showSource=false,%
 	bankPath=../bank,%
 	type=none,%
 	mode=normal%
