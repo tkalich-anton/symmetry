@@ -1,6 +1,20 @@
 \begin{ex}
 	\begin{condition}
-		
+		Заполнить цепочку.
+		\begin{center}
+			\begin{tikzpicture}[-latex ,auto, on grid ,
+				semithick, state/.style ={ rectangle, draw , minimum width =1 cm, minimum height =1.2 cm}, pil/.style={ ->, thick, shorten <=2pt, shorten >=2pt,}]
+				\node[state] (A1) at (0,0) {$180$};
+				\node[state] (A2) at (2.5,0) {$\phantom{10}$};
+				\node[state] (A3) at (5,0) {$\phantom{10}$};
+				\node[state] (A4) at (7.5,0) {$\phantom{10}$};
+				\node[state] (A5) at (10,0) {$\phantom{10}$};
+				\path (A1) edge [bend left =25] node[above] {$\times\;14$} (A2);
+				\path (A2) edge [bend left =25] node[above] {$:30$} (A3);
+				\path (A3) edge [bend left =25] node[above] {$+777$} (A4);
+				\path (A4) edge [bend left =25] node[above] {$:7$} (A5);
+			\end{tikzpicture}
+		\end{center}
 	\end{condition}
 	\answer{?}
 \end{ex}

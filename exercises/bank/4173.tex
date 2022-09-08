@@ -1,6 +1,38 @@
 \begin{ex}
 	\begin{condition}
-		
+		Заполнить цепочку:
+		\begin{center}
+			\begin{tikzpicture}[-latex ,auto, on grid ,
+				semithick, state/.style ={ rectangle, draw , minimum width =1 cm, minimum height =1.2 cm}, pil/.style={ ->, thick, shorten <=2pt, shorten >=2pt,}]
+				\node[state] (A1) at (0,0) {$90$};
+				\node[state] (A2) at (2.5,0) {$\phantom{10}$};
+				\node[state] (A3) at (5,0) {$\phantom{10}$};
+				\node[state] (A4) at (7.5,0) {$\phantom{10}$};
+				\node[state] (A5) at (10,0) {$\phantom{10}$};
+				\node[state] (A6) at (12.5,0) {$\phantom{10}$};
+				\node[state] (A7) at (15,0) {$\phantom{10}$};
+				\node[state] (A8) at (15,-3) {$\phantom{10}$};
+				\node[state] (A9) at (12.5,-3) {$\phantom{10}$};
+				\node[state] (A10) at (10,-3) {$\phantom{10}$};
+				\node[state] (A11) at (7.5,-3) {$\phantom{10}$};
+				\node[state] (A12) at (5,-3) {$\phantom{10}$};
+				\node[state] (A13) at (2.5,-3) {$\phantom{10}$};
+				\node[state] (A14) at (0,-3) {$\phantom{10}$};
+				\path (A1) edge [bend left =25] node[above] {$-45$} (A2);
+				\path (A2) edge [bend left =25] node[above] {$:15$} (A3);
+				\path (A3) edge [bend left =25] node[above] {$+13$} (A4);
+				\path (A4) edge [bend left =25] node[above] {$\times\;5$} (A5);
+				\path (A5) edge [bend left =25] node[above] {$:20$} (A6);
+				\path (A6) edge [bend left =25] node[above] {$+26$} (A7);
+				\path (A7) edge node[right] {$\times\;3$} (A8);
+				\path (A8) edge [bend left =25] node[below] {$\times\;16$} (A9);
+				\path (A9) edge [bend left =25] node[below] {$+560$} (A10);
+				\path (A10) edge [bend left =25] node[below] {$\times\;7$} (A11);
+				\path (A11) edge [bend left =25] node[below] {$:140$} (A12);
+				\path (A12) edge [bend left =25] node[below] {$+180$} (A13);
+				\path (A13) edge [bend left =25] node[below] {$:7$} (A14);
+			\end{tikzpicture}
+		\end{center}
 	\end{condition}
 	\answer{?}
 \end{ex}
