@@ -1,0 +1,90 @@
+%6 класс Предподготовка Занятие №1
+\begin{listofex}
+	\item Вычислить:
+	\begin{enumcols}[itemcolumns=2]
+		\item \( 9\:010-(8\:316+864):510 \)
+		\item \( 5\:010-(3\:020-180:9\cdot6) \)
+		\item \( (510:17+24)\cdot38-80:4 \)
+		\item \( (410+96)\cdot(1010-31248:62)-170\cdot1500 \)
+	\end{enumcols}
+	\item Упростить дробь:
+	\begin{enumcols}[itemcolumns=5]
+		\item \( \dfrac{9}{36} \)
+		\item \( \dfrac{45}{54} \)
+		\item \( \dfrac{12}{28} \)
+		\item \( \dfrac{144}{120} \)
+		\item \( \dfrac{72}{24} \)
+	\end{enumcols}
+	\item Вычислить:
+	\begin{enumcols}[itemcolumns=3]
+		\item \( \dfrac{7}{12}-\dfrac{1}{3} \)
+		\item \( \dfrac{2}{26}+\dfrac{3}{39} \)
+		\item \( \dfrac{3}{20}+\dfrac{7}{30}+\dfrac{2}{40} \)
+	\end{enumcols}
+	\item Решить ребус:
+	\begin{enumcols}[itemcolumns=3]
+		\item
+		$\arraycolsep=0.1em\begin{array}{rrrr}
+			&*&*&9\\
+			\smash{\raisebox{1.3ex}{\( \times \)}}&&&*\\
+			\cline{1-4}
+			1&5&*&6
+		\end{array}$
+		\item
+		$\arraycolsep=0.1em\begin{array}{rrrrrr}
+			&*&*&7\\
+			\smash{\raisebox{1.3ex}{\( \times \)}}&&&*&*&*\\
+			\cline{1-6}
+			2&*&4&3&*&*
+		\end{array}$
+		\item
+		$\arraycolsep=0.1em\begin{array}{rrrrrr}
+			&&&4&8&*\\
+			&&\smash{\raisebox{1.3ex}{\( \times \)}}&&*&5\\
+			\cline{3-6}
+			&&*&*&3&5\\
+			\smash{\raisebox{1.3ex}{\( + \)}}&*&*&4&*\\
+			\cline{2-6}
+			&2&1&9&1&*
+		\end{array}$
+		\item
+		$\arraycolsep=0.1em\begin{array}{rrrrr@{\,}r|l}
+			&*&*&*&0&&\,*\\
+			\cline{7-7}
+			\smash{\raisebox{1.3ex}{\( - \)}}&*&6&&&&\,9**\\
+			\cline{2-3}
+			&&&*\\
+			&&\smash{\raisebox{1.3ex}{\( - \)}}&8\\
+			\cline{4-5}
+			&&&1&*\\
+			&&\smash{\raisebox{1.3ex}{\( - \)}}&&*\\
+			\cline{4-5}
+			&&&&2\\
+		\end{array}$
+	\end{enumcols}
+	\item Заполнить пробелы:
+	\begin{center}
+		\begin{tikzpicture}[-latex ,auto, on grid ,
+			semithick, state/.style ={ rectangle, draw , minimum width =1.5 cm, minimum height =1.2 cm}, pil/.style={ ->, thick, shorten <=2pt, shorten >=2pt,}]
+			\node[state] (A) at (0,0) {$1000$};
+			\node[state] (B) at (3,0) {$\phantom{280}$};
+			\node[state] (C) at (6,0) {$840$};
+			\node[state] (D) at (9,0) {$\phantom{42}$};
+			\node[state] (E) at (12,0) {$\phantom{2142}$};
+			\node[state] (F) at (3,-3) {$\phantom{11500}$};
+			\node[state] (G) at (6,-3) {$\phantom{115}$};
+			\node[state] (H) at (9,-3) {$23$};
+			\node[state] (I) at (12,-3) {$\phantom{2323}$};
+			\path (A) edge [bend left =25] node[above] {$-720$} (B);
+			\path (B) edge [bend left =25] node[above] {$\times\:?$} (C);
+			\path (C) edge [bend left =25] node[above] {$:20$} (D);
+			\path (D) edge [bend left =25] node[above] {$\times\:51$} (E);
+			\path (B) edge node[left] {$+11\:220$} (F);
+			\path (F) edge [bend left =25] node[above] {$:100$} (G);
+			\path (G) edge [bend left =25] node[above] {$:\:?$} (H);
+			\path (H) edge node[right] {$+\:?$} (D);
+			\path (H) edge [bend left =25] node[above] {$\times\:101$} (I);
+			\path (E) edge [latex-latex] node[right] {Что больше?} (I);
+		\end{tikzpicture}
+	\end{center}
+\end{listofex}

@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage{../../../../graph_style}
+\begin{document}
+\pgfplotsset{
+	/pgf/declare function={
+	line1(\x) = \x-5.5;
+	line2(\x) = 3*\x - 1;
+	},
+}
+\begin{tikzpicture}
+	\begin{axis}[
+		xmin=-6,xmax=6,
+		ymin=-5,ymax=5]
+		\node[node_text, anchor=south west] at (1,2) {\mbox{\boldmath$y=f'(x)$}};
+		\draw [black, very thick] plot [smooth] coordinates {(-5,3) (-3.5,2) (-2,0) (2,-3) (4,0) (5,2)};
+		\node[shape=circle, draw=black, fill=white, inner sep=0pt, minimum size=4pt] (A) at (-5,3) {};
+		\node[shape=circle, draw=black, fill=white, inner sep=0pt, minimum size=4pt] (B) at (5,2) {};
+	\end{axis}
+\end{tikzpicture}
+\end{document}
