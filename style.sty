@@ -202,6 +202,10 @@
 				{Вычислить:}{}%
 			\ifthenelse{\equal{\ex@type}{prove_identity}}%
 				{Докажите тождество:}{}%
+			\ifthenelse{\equal{\ex@type}{calculate_rational}}%
+				{Вычислить рациональным образом:}{}%
+			\ifthenelse{\equal{\ex@type}{chek_eq}}%
+				{Проверить равенство:}{}%
 		}%
 		{}%
 	\ifthenelse{\NOT\equal{\ex@type}{none}\AND\NOT\equal{\ex@mode}{item}}%
