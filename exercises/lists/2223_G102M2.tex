@@ -48,10 +48,6 @@
 	\begin{enumcols}[itemcolumns=1]
 		\item диаметр, перпендикулярный хорде, делит ее пополам;
 		\item диаметр, проходящий через середину хорды, не являющейся диаметром, перпендикулярен этой хорде;
-		\item окружность симметрична относительно каждого своего
-		диаметра;
-		\item дуги окружности, заключенные между параллельными
-		хордами, равны;
 		\item хорды, удаленные от центра окружности на равные расстояния, равны.
 	\end{enumcols}
 	\item \exercise{2437}
@@ -59,15 +55,27 @@
 	\item \exercise{2442}
 	\item \exercise{2444}
 	\item \exercise{2445}
+	\item Докажите, что если треугольник вписан в окружность и одна из его сторон является диаметром этой окружности, то такой треугольник является прямоугольным.
+	\item Центр окружности, описанной около треугольника, симметричен центру окружности, вписанной в этот треугольник, относительно одной из сторон. Найдите углы треугольника.
+	\item Через точку \( A \) проведена прямая, пересекающая
+	окружность с диаметром \( AB \) в точке \( K \), отличной от \( A \), а
+	окружность с центром \( B \) --- в точках \( M \) и \( N \). Докажите, что \( MK = KN \).
 \end{listofex}
 \newpage
 \title{Занятие №4}
 \begin{listofex}
+	\item Внутренние углы треугольника \( ABC \) относятся как \( 10:5:3 \). Найдите внутренние и внешние углы треугольника \( ABC \) и вычислите разницу самого наибольшего и наименьшего внешних углов. \answer{ внутренние:\( 100;\;50;\;30 \), внешние: \( 80;\;130;\;100; \), разница: \( 50 \) }
+	\item В треугольнике \( ABC \) углы \( B \) и \( C \) равны \( 30 \) и \( 40 \) соответственно. Сторону \( AB \) продлили за вершину \( A \) и из это вершины провели высоту и биссектрису внешнего угла. Найдите угол между высотой и биссектрисой. \answer{ \( 85 \) }
+	\item Две параллельные прямые пересечены третьей. Найдите угол между биссектрисами внутренних односторонних углов.
 	\item \exercise{2438}
 	\item \exercise{2441}
-	\item \exercise{2443}
-	\item \exercise{2460}
-	\item \exercise{2468}
+	\item \exercise{2354}
+	\item \exercise{2514}
+	\item Решить уравнение:
+	\begin{enumcols}[itemcolumns=2]
+		\item \exercise{1015}
+		\item \exercise{1036}
+	\end{enumcols}
 \end{listofex}
 \newpage
 \title{Домашняя работа №2}
@@ -76,21 +84,46 @@
 	\item \exercise{1317}
 	\item \exercise{2436}
 	\item \exercise{2440}
-	\item \exercise{2440}
 	\item \exercise{2454}
 	\item \exercise{2457}
 	\item \exercise{2459}
 \end{listofex}
-%\newpage
-%\title{Занятие №5}
-%\begin{listofex}
-%
-%\end{listofex}
-%\newpage
-%\title{Занятие №6}
-%\begin{listofex}
-%
-%\end{listofex}
+\newpage
+\title{Занятие №5}
+\begin{listofex}
+	\item \exercise{2472}
+	\item \exercise{2473}
+	\item \exercise{2474}
+	\item \exercise{2483}
+	\item \exercise{2493}
+	\item \exercise{2508}
+	\item \exercise{1608}
+	\item \exercise{3664}
+\end{listofex}
+\newpage
+\title{Занятие №6}
+\begin{listofex}
+	\item \exercise{2477}
+	\item \exercise{2481}
+	\item \exercise{2484}
+	\item \exercise{2486}
+	\item \exercise{2479}
+	\item \exercise{2500}
+	\item \exercise{2502}
+	\item \exercise{2506}
+	\item \exercise{1339}
+\end{listofex}
+\newpage
+\title{Домашняя работа №3}
+\begin{listofex}
+	\item \exercise{2475}
+	\item \exercise{2476}
+	\item \exercise{2478}
+	\item \exercise{2485}
+	\item \exercise{2502}
+	\item \exercise{2480}
+	\item \exercise{2501}
+\end{listofex}
 %\newpage
 %\title{Занятие №7}
 %\begin{listofex}
@@ -101,3 +134,85 @@
 %\begin{listofex}
 %
 %\end{listofex}
+\newpage
+\title{Консультация}
+\textbf{Математическая индукция} --- метод математического доказательства, который применяется, чтобы доказать истинность некого утверждения для всех натуральных чисел. Некоторое утверждение будет справедливым для натурального значения \( n \) тогда, и только тогда, когда:
+\begin{enumcols}[itemcolumns=1]
+	\item Оно будет верно при \( n=1 \) \textbf{(база индукции)}
+	\item Предположительно справедливо для произвольного натурального \( n=k \) \textbf{(предположение индукции)}
+	\item И окажется верным при \( n=k+1 \) \textbf{(шаг индукции)}
+\end{enumcols}
+\begin{listofex}
+	\item Докажите методом математической индукции:
+	\begin{enumcols}[itemcolumns=2]
+		\item \( 1+2+3+\dots+n=\dfrac{n(n+1)}{2} \)
+		\item \( 1+3+5+\dots+(2n-1)=n^2 \)
+		\item \( 2+4+6+\dots+2n=n(n+1) \)
+		\item \( 1^2+2^2+3^2+\dots+n^2=\dfrac{n(n+1)(2n+1)}{6} \)
+	\end{enumcols}
+	\item В треугольнике \( ABC \) сторона \( AB=12 \), \( BC=4 \) и \( \angle CBA=45\degree \). Найдите площадь треугольника.
+	\item Радиус описанной вокруг равностороннего треугольника \( ABC \) окружности равен \( 9 \). Найдите площадь сторону и площадь треугольника \( ABC \).
+\end{listofex}
+\newpage
+\title{Консультация}
+\begin{listofex}
+	\item Решить уравнение:
+	\begin{enumcols}[itemcolumns=1]
+		\item \exercise{997}
+		\item \exercise{1003}
+		\item \exercise{1014}
+		\item \exercise{1037}
+		\item \exercise{1003}
+		\item \exercise{3746}
+		\item \exercise{3762}
+	\end{enumcols}
+\end{listofex}
+\newpage
+\title{Консультация}
+\begin{listofex}
+	\item Найдите область определения функции:
+	\begin{enumcols}[itemcolumns=2]
+		\item \( y=\dfrac{x-7}{x^2-6x+8} \)
+		\item \( y=\sqrt{x^2+6x-16} \)
+		\item \( y=\sqrt{\dfrac{x+11}{x^2+14x+33}} \)
+		\item \( y=\dfrac{1-\sqrt{-x^2-7x+8}}{1+\sqrt{x+9}} \)
+	\end{enumcols}
+	\item Найдите область значений функции:
+	\begin{enumcols}[itemcolumns=2]
+		\item \( y=2x-1 \)
+		\item \( y=2x^2-3 \)
+		\item \( y=-3x^2-12x+1,\;x\in[-6;1) \)
+		\item \( y=1-\dfrac{3}{x} \)
+		\item \( y=\dfrac{x-1}{x+1} \)
+	\end{enumcols}
+	\item Найдите промежутки монотонности:
+	\begin{enumcols}[itemcolumns=2]
+		\item \( y=x^2-9x+20 \)
+		\item \( y=(x+3)^2-12 \)
+	\end{enumcols}
+	\item Пусть функция \( y=f(x) \) определена и возрастает на \( R \). Решите уравнение: \[ f\left( \dfrac{24}{x} \right)=f\left( 1+\dfrac{17-x}{x-1} \right) \]
+	\item Найдите область определения функции и исследуйте ее на четность и нечетность: \[ y=\dfrac{x^2}{1+x}+\dfrac{x^2}{1-x} \]
+	\item Являются ли функции \( y=f(x) \) и \( y=g(x) \) взаимно обратными, если \( f(x)=3x+5 \) и \( g(x)=\dfrac{1}{3}x-\dfrac{5}{3} \)?
+	\item Найдите функцию, обратную \( y=\dfrac{x+7}{2x-5} \).
+\end{listofex}
+\newpage
+\title{Консультация}
+\begin{listofex}
+		\item Решить уравнение:
+	\begin{enumcols}[itemcolumns=2]
+		\item \exercise{543}
+		\item \exercise{503}
+		\item \( (x^2+6x)^2+2(x+3)^2=81 \) \answer{\( -7;\;-3;\;1 \)}
+		\item \exercise{975}
+	\end{enumcols}
+	\item Сколько пятизначных чисел можно получить из цифр \( 1;\;3;\;5;\;7;\;9 \)?
+	\item Сколько трехзначных чисел можно получить из цифр \( 1;\;3;\;5;\;7;\;9 \)?
+	\item Сколько есть способов поставить в ряд (последовательность не важна) 3 человек из 8?
+	\item \exercise{1453}
+	\item Решить неравенство:
+	\begin{enumcols}[itemcolumns=2]
+		\item \( (x-1)(x+5)\ge0 \) \answer{\( [-12;0,5] \)}
+		\item \( x^2-6x+5\ge0 \) \answer{\( (-\infty;1]\cup[18;+\infty) \)}
+		\item \( (3x^2-8x+4)(5x^2-8x-4)\le0 \)\answer{ \( \left[ -\dfrac{2}{5};\dfrac{2}{3} \right]\cup\{2\} \) }
+	\end{enumcols}
+\end{listofex}

@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage{../../../../graph_style}
+\begin{document}
+\pgfplotsset{
+	/pgf/declare function={
+	function(\x) = log2(\x);
+	},
+}
+\begin{tikzpicture}
+	\begin{axis}[
+		xmin=-3,xmax=8,
+		ymin=-4,ymax=6]
+		\addplot [line width=1.4pt, domain=-10:2.99, f_red] {2+1/(x-3)};
+		\addplot [line width=1.4pt, domain=3.01:10, f_red] {2+1/(x-3)};
+		\node[node_text, anchor=west] at (3,-3) {\mbox{\boldmath$y=f(x)$}};
+		\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=4pt] (A) at (2,1) {};
+		\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=4pt] (A) at (4,3) {};
+	\end{axis}
+\end{tikzpicture}
+\end{document}

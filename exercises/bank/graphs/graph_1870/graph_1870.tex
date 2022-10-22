@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\usepackage{../../../../graph_style}
+\begin{document}
+\pgfplotsset{
+	every axis/.append style={
+	ylabel style={below left}}
+}
+\begin{tikzpicture}
+	\begin{axis}[
+		xmin=-5,xmax=5,
+		ymin=-8,ymax=2]
+		\addplot [line width=1.4pt, domain=-10:10, f_red] {3*x+abs(2*x+2)-3};
+		\node[node_text, anchor=south] at (-6,2) {\mbox{\boldmath$y=f(x)$}};
+		\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=4pt] (A) at (-1,-6) {};
+		\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=4pt] (C) at (-2,-7) {};
+		\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=4pt] (B) at (0,-1) {};
+	\end{axis}
+\end{tikzpicture}
+\end{document}
