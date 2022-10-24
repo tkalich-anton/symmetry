@@ -5,12 +5,11 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english, russian]{babel}
 \usepackage[dvipsnames,table,xcdraw]{xcolor}
-\usepackage{
+\usepackage{%
 	amsmath,
 	amssymb,
 	scrextend,
 	enumitem,
-	pscyr,
 	multicol,
 	cmap,
 	titling,
@@ -35,18 +34,11 @@
 	xhfill,
 	keyval,
 	tabstackengine,
-	mathtools
-}
-
+	xltxtra
+}%
 \usepackage{xltxtra}
-
 \defaultfontfeatures{Ligatures=TeX,Mapping=tex-text}
-
 \setmainfont{Times New Roman}
-
-\setromanfont{Times New Roman} 
-\setsansfont{Arial} 
-\setmonofont{Courier New} 
 
 \usetikzlibrary{arrows.meta}
 \usetikzlibrary {positioning}
@@ -56,9 +48,6 @@
 
 %КОМАНДЫ
 
-\newcommand{\leveli}{\textcolor{dark}{\footnotesize $\blacksquare\square\square$}\hspace{0.3em}}
-\newcommand{\levelii}{\textcolor{dark}{\footnotesize $\blacksquare\blacksquare\square$}\hspace{0.3em}}
-\newcommand{\leveliii}{\textcolor{dark}{\footnotesize $\blacksquare\blacksquare\blacksquare$}\hspace{0.3em}}
 \newcommand{\selectanswer}{\noindent\textit{В ответе укажите номер правильного варианта.}}
 
 \newcommand{\veralign}[1]{\vfill\null#1\vfill\null}
@@ -66,6 +55,7 @@
 \newlist{listofex}{enumerate}{2}
 \setlist[listofex]{label=\framebox[2em]{\textbf{\arabic*}}, align=left, leftmargin=3em, listparindent=1em, labelwidth=2em, itemindent=0em, labelsep=1em}
 \newcommand{\loeitem}[1]{\framebox[2em]{\textbf{#1}}}
+
 %Нумированный список со столбцами
 
 \newlist{enumcols}{enumerate}{3}
@@ -76,17 +66,14 @@
 
 \RenewDocumentEnvironment{multicols}{mO{}}%
 {%
-	\ifnum#1=1%
-	#2%
-	\else% More than 1 column
-	\multicolmulticols{#1}[#2]%
-	\fi%
+	\ifthenelse{\equal{#1}{1}}
+	{#2}%
+	{\multicolmulticols{#1}[#2]}%
 }%
 {%
-	\ifnum#1=1%
-	\else% More than 1 column
-	\endmulticolmulticols%
-	\fi%
+	\ifthenelse{\equal{#1}{1}}
+	{}%
+	{\endmulticolmulticols}%
 }
 
 
@@ -101,20 +88,26 @@
 
 \def\le{\leqslant}
 \def\ge{\geqslant}
+<<<<<<< HEAD
 \newcommand{\degree}{^{\circe}}
+=======
+%\DeclareUnicodeCharacter{202F}{\,}
+\newcommand{\bb}[1]{\left(#1\right)}
+\newcommand{\degree}{^{\circ}}
+>>>>>>> 1c6f8ef (24/10/22)
 
-% Переменные
+%Переменные
 
 \newcommand{\numbertype}{real_number}
 \newcommand{\bankpath}{\@empty}
 
-% Команды, которые задают значения переменных
+%Команды, которые задают значения переменных
 \newcommand{\shownumber}[1]{\setboolean{show_number}{#1}}
 \newcommand{\showanswer}[1]{\setboolean{show_answer}{#1}}
 \newcommand{\setBankpath}[1]{\renewcommand\bankpath{#1}}
 
 \makeatletter
-% ========= KEY DEFINITIONS =========
+%========= KEY DEFINITIONS =========
 \define@key{exercise}{showNumber}{\def\ex@shownum{#1}}%
 \define@key{exercise}{showAnswer}{\def\ex@showans{#1}}%
 \define@key{exercise}{showSource}{\def\ex@showsource{#1}}%
@@ -131,13 +124,6 @@
 	\begingroup%
 	\setkeys{exercise}{#1}%
 	\subimport{\ex@bankpath}{#2}%
-	%\ifthenelse{\NOT\equal{\ex@mode}{item}}%
-	%{
-	%	
-	%	\phantom{f}
-	%	
-	%}
-	%{}
 	\endgroup%
 }
 \newcommand{\mexercise}[2][]%
@@ -188,8 +174,8 @@
 {%
 	\ifthenelse{\equal{\ex@type}{multi}}%
 		{\setkeys{exercise}{mode=normal, type=none}}{}%
-	\ifthenelse{\NOT\equal{\ex@mode}{item}}%
-	{\vphantom{f}\\}{}%
+	%\ifthenelse{\NOT\equal{\ex@mode}{item}}%
+	%{\vphantom{f}\\}{}%
 	\endgroup%
 }%
 \newenvironment{condition}{%
@@ -231,10 +217,10 @@
 	{%
 		\ifthenelse{\NOT\equal{\ex@mode}{item}}%
 		{%
-			
-			\raggedleft%
+			%
+			%\raggedleft%
 			\textcolor{silver}{\fbox{#1}}%
-			
+			%
 		}%
 		{\textcolor{silver}{\fbox{#1}}\newline}%
 	}%
@@ -279,7 +265,7 @@ top=2cm,bottom=2cm]{geometry}
 %Название школы в шапке справа
 \rhead{Школа <<Симметрия>>}
 
-% ========= KEY DEFAULTS =========
+%========= KEY DEFAULTS =========
 \setkeys{exercise}{%
 	showNumber=false,%
 	showAnswer=false,%
@@ -288,18 +274,18 @@ top=2cm,bottom=2cm]{geometry}
 	mode=normal%
 }%
 
-%\newcommand{\ranswer}[1]{{
-%		
-%		\raggedleft
-%		\textcolor{silver}{\fbox{#1}}
-%		
-%}}
+\newcommand{\ranswer}[1]{{
+		
+		\raggedleft
+		\textcolor{silver}{\fbox{#1}}
+		
+}}
 
-%\newcommand{\funcexer}[2]{
-%	\begin{minipage}[t]{0.7\textwidth}
-%		#1
-%	\end{minipage}
-%	\begin{minipage}[c]{0.25\textwidth}
-%		\includegraphics[align=t, width=\textwidth]{#2}
-%	\end{minipage}
-%}
+\newcommand{\funcexer}[2]{
+	\begin{minipage}[t]{0.7\textwidth}
+		#1
+	\end{minipage}
+	\begin{minipage}[c]{0.25\textwidth}
+		\includegraphics[align=t, width=\textwidth]{#2}
+	\end{minipage}
+}
