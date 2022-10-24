@@ -17,7 +17,6 @@
 	indentfirst,
 	cancel,
 	wrapfig,
-	gensymb,
 	tikz,
 	graphicx,
 	fancyhdr,
@@ -38,6 +37,16 @@
 	tabstackengine,
 	mathtools
 }
+
+\usepackage{xltxtra}
+
+\defaultfontfeatures{Ligatures=TeX,Mapping=tex-text}
+
+\setmainfont{Times New Roman}
+
+\setromanfont{Times New Roman} 
+\setsansfont{Arial} 
+\setmonofont{Courier New} 
 
 \usetikzlibrary{arrows.meta}
 \usetikzlibrary {positioning}
@@ -92,8 +101,7 @@
 
 \def\le{\leqslant}
 \def\ge{\geqslant}
-\DeclareUnicodeCharacter{202F}{\,}
-\newcommand{\bb}[1]{\left(#1\right)}
+\newcommand{\degree}{^{\circe}}
 
 % Переменные
 
@@ -263,7 +271,6 @@ top=2cm,bottom=2cm]{geometry}
 \graphicspath{{pic/}}
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
 
-\DeclareUnicodeCharacter{202F}{\,}
 
 %Русские символы в списке
 \AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
