@@ -34,17 +34,15 @@
 	xhfill,
 	keyval,
 	tabstackengine,
-	xltxtra
+	xltxtra,
+	colortbl
 }%
 \usepackage{xltxtra}
 \defaultfontfeatures{Ligatures=TeX,Mapping=tex-text}
-\setmainfont{Times New Roman}
+\setmainfont{CMU Serif}
 
 \usetikzlibrary{arrows.meta}
 \usetikzlibrary {positioning}
-\definecolor{silver}{rgb}{0.7, 0.7, 0.7}
-\definecolor{dark}{rgb}{0.3, 0.3, 0.3}
-\definecolor{harvestgold}{rgb}{0.85, 0.57, 0.0}
 
 %КОМАНДЫ
 
@@ -89,6 +87,7 @@
 \def\le{\leqslant}
 \def\ge{\geqslant}
 \newcommand{\degree}{^{\circ}}
+\newcommand{\mfrac}[3]{#1\,\dfrac{#2}{#3}}
 
 %Переменные
 
@@ -101,15 +100,18 @@
 \newcommand{\setBankpath}[1]{\renewcommand\bankpath{#1}}
 
 \makeatletter
-%========= KEY DEFINITIONS =========
+%=========>>  ОПРЕДЕЛЕНИЕ КЛЮЧЕЙ ЗАДАНИЯ  <<=========
 \define@key{exercise}{showNumber}{\def\ex@shownum{#1}}%
 \define@key{exercise}{showAnswer}{\def\ex@showans{#1}}%
 \define@key{exercise}{showSource}{\def\ex@showsource{#1}}%
 \define@key{exercise}{bankPath}{\def\ex@bankpath{#1}}%
 \define@key{exercise}{type}{\def\ex@type{#1}}%
 \define@key{exercise}{mode}{\def\ex@mode{#1}}%
-\newcommand{\showanswers}{%
-	\setkeys{exercise}{showAnswer=true}%
+%
+%=========>>  Команды для ключа Задание  <<=========
+\newcommand{\showanswers}[1]{%
+	\ifthenelse{\equal{#1}{on}}{\setkeys{exercise}{showAnswer=true}}{}%
+	\ifthenelse{\equal{#1}{off}}{\setkeys{exercise}{showAnswer=false}}{}%
 }%
 \newcommand{\shownumbers}{%
 	\setkeys{exercise}{showNumber=true}%
@@ -119,7 +121,7 @@
 	\setkeys{exercise}{#1}%
 	\subimport{\ex@bankpath}{#2}%
 	\endgroup%
-}
+}%
 \newcommand{\mexercise}[2][]%
 {%
 	\begingroup%
@@ -128,16 +130,7 @@
 		\vspace{1em}
 	\endgroup%
 }%
-\newcommand{\prompt}[1]{%
-	\textit{Подсказка: #1}%
-}%
-\def\listpath{}%
-\newcommand{\listimport}[2][../../../../../exercises/lists]{%
-	\begingroup%
-	\def\listpath{#1}%
-	\subimport{\listpath}{#2}%
-	\endgroup%
-}%
+%
 \newcommand{\itemmode}[1]{%
 	\ifthenelse{\equal{#1}{on}}{\setkeys{exercise}{mode=item}}{}%
 	\ifthenelse{\equal{#1}{off}}{\setkeys{exercise}{mode=normal}}{}%
@@ -168,8 +161,6 @@
 {%
 	\ifthenelse{\equal{\ex@type}{multi}}%
 		{\setkeys{exercise}{mode=normal, type=none}}{}%
-	%\ifthenelse{\NOT\equal{\ex@mode}{item}}%
-	%{\vphantom{f}\\}{}%
 	\endgroup%
 }%
 \newenvironment{condition}{%
@@ -206,6 +197,76 @@
 	\ifthenelse{\NOT\equal{\ex@type}{none}\AND\NOT\equal{\ex@mode}{item}}%
 		{\end{center}}{}%
 }%
+
+%===============>>  БЛОКИ ЭЛЕМЕНТОВ УРОКА <<=============
+%
+%=========>>  ОПРЕДЕЛЕНИЕ КЛЮЧЕЙ УРОКА  <<=========
+%
+\define@key{eduitem}{module}{\def\class@module{#1}}%
+\define@key{eduitem}{number}{\def\class@number{#1}}%
+%
+%=========>>  Команды ключа Элементов урока  <<=========
+%
+\newcommand{\setmodule}[1]{%
+	\setkeys{eduitem}{module=#1}%
+}%
+\newcommand{\setnumber}[1]{%
+	\setkeys{eduitem}{number=#1}%
+}%
+%
+%=========>>   Окружение урока  <<=========
+%
+\newenvironment{class}[1][]%
+{%
+	\setkeys{eduitem}{#1}%
+	\setcounter{definit}{0}%
+	\chead{\textbf{Модуль \class@module{ }Занятие \class@number }}%
+}%
+{%
+	\setcounter{definit}{0}%
+	\newpage%
+}%
+%
+%=========>>   Окружение домашней работы  <<=========
+%
+\newenvironment{homework}[1][]%
+{%
+	\setkeys{eduitem}{#1}%
+	\setcounter{definit}{0}%
+	\chead{\textbf{Модуль \class@module{ }Домашняя работа \class@number }}%
+}%
+{
+	\setcounter{definit}{0}%
+	\newpage%
+}
+%
+%=========>>   Окружение экзамена  <<=========
+%
+\newenvironment{exam}[1][]%
+{%
+	\setkeys{eduitem}{#1}%
+	\setcounter{definit}{0}%
+	\chead{\textbf{Модуль \class@module{ }Проверочная работа \class@number }}%
+}%
+{
+	\setcounter{definit}{0}%
+	\newpage%
+}
+%
+%=========>>   Окружение консультации  <<=========
+%
+\newenvironment{consultation}[1][]%
+{%
+	\setkeys{eduitem}{#1}%
+	\setcounter{definit}{0}%
+	\chead{\textbf{Модуль \class@module{ }Проверочная работа \class@number }}%
+}%
+{
+	\setcounter{definit}{0}%
+	\newpage%
+}
+
+
 \newcommand{\answer}[1]{%
 	\ifthenelse{\boolean{\ex@showans}}%
 	{%
@@ -229,37 +290,39 @@
 	\textbf{#1}
 \end{center}
 }
-
-\newcommand{\graphcenter}[1]{
-\begin{center}
-\includegraphics{#1}
-\end{center}
-}
-
-\newcommand\sfrac[2]{%
-	\abovebaseline[-1pt]{\hbox{\small\( \dfrac{#1}{#2} \)}}
-}
-
-%СЕТТЕРЫ
+\newcommand{\prompt}[1]{%
+	\textit{Подсказка: #1}%
+}%
+%--------------СЕТТЕРЫ--------------
 
 %Параметры страницы
 \usepackage[left=12mm,right=12mm,
 top=2cm,bottom=2cm]{geometry}
 \pagestyle{fancy}
 
-%Путь к картинкам
+%===============Цвета===============
+
+\definecolor{silver}{rgb}{0.7, 0.7, 0.7}
+\definecolor{dark}{rgb}{0.3, 0.3, 0.3}
+\definecolor{harvestgold}{rgb}{0.85, 0.57, 0.0}
+\definecolor{gray}{rgb}{0.8, 0.8, 0.8}
+
+%=======Путь к картинкам
+%=======!Добавить в другую секцию
 \graphicspath{{pic/}}
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
 
-
-%Русские символы в списке
+%=======Русские символы в списке
+%=======!Добавить в другую секцию
 \AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
 
 \setlength{\parindent}{0ex}
-%Название школы в шапке справа
+
+
+%===============>>  Шапка страницы  <<===============
 \rhead{Школа <<Симметрия>>}
 
-%========= KEY DEFAULTS =========
+%===============>>  НАСТРОЙКИ ВЫВОДА УПРАЖНЕНИЯ ПО УМОЛЧАНИЮ  <<===============
 \setkeys{exercise}{%
 	showNumber=false,%
 	showAnswer=false,%
@@ -267,13 +330,6 @@ top=2cm,bottom=2cm]{geometry}
 	type=none,%
 	mode=normal%
 }%
-
-\newcommand{\ranswer}[1]{{
-		
-		\raggedleft
-		\textcolor{silver}{\fbox{#1}}
-		
-}}
 
 \newcommand{\funcexer}[2]{
 	\begin{minipage}[t]{0.7\textwidth}
@@ -283,3 +339,12 @@ top=2cm,bottom=2cm]{geometry}
 		\includegraphics[align=t, width=\textwidth]{#2}
 	\end{minipage}
 }
+
+\newtheorem{definit}{Определение}
+\newcommand{\cheadbf}[1]{\chead{\textbf{#1}}}
+\renewcommand{\arraystretch}{1.5}
+
+
+%===============РАБОТА С ТАБЛИЦАМИ===============
+\newcolumntype{g}{>{\columncolor{gray}}c}
+\newcolumntype{x}[1]{>{\centering\arraybackslash\hspace{0pt}}p{#1}}
