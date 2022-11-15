@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\usepackage{../../../../graph_style}
+\begin{document}
+\pgfplotsset{
+	/pgf/declare function={
+	function(\x) = ln(\x+1)/ln(3)-1;
+	}
+}
+\begin{tikzpicture}
+	\begin{axis}[
+		xmin=-2,xmax=8,
+		ymin=-4,ymax=6]
+		\addplot [line width=1.4pt, f_red] {function(x)};
+		\node[node_text, anchor=south west] at (3,1) {\mbox{\boldmath$y=f(x)$}};
+		\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=4pt] (A) at (0,-1) {};
+		\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=4pt] (B) at (2,0) {};
+	\end{axis}
+\end{tikzpicture}
+\end{document}
