@@ -247,12 +247,11 @@
 {%
 	\setkeys{eduitem}{#1}%
 	\setcounter{definit}{0}%
-	\chead{\textbf{Модуль \class@module{ }Проверочная работа \class@number }}%
+	\chead{\textbf{Модуль \class@module{ }Проверочная работа }}%
 }%
-{
+{%
 	\setcounter{definit}{0}%
-	\newpage%
-}
+}%
 %
 %=========>>   Окружение консультации  <<=========
 %
@@ -339,6 +338,12 @@ top=2cm,bottom=2cm]{geometry}
 	\begin{minipage}[c]{0.25\textwidth}
 		\includegraphics[align=t, width=\textwidth]{#2}
 	\end{minipage}
+}
+
+\newcommand{\graphcenter}[1]{
+	\begin{center}
+		\includegraphics{#1}
+	\end{center}
 }
 
 \newtheorem{definit}{Определение}
