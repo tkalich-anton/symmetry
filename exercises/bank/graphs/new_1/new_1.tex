@@ -1,0 +1,16 @@
+\documentclass{standalone}
+\usepackage{../../../../graph_style}
+\begin{document}
+\begin{tikzpicture}
+	\begin{axis}[
+		xmin=-7,xmax=4,
+		ymin=-5,ymax=5]
+		\addplot [line width=1.4pt, domain=-10:-0.01, f_red] {2/x};
+		\addplot [line width=1.4pt, domain=0.01:10, f_red] {2/x};
+		\addplot [line width=1.4pt, domain=0.01:10, f_red] {5*x-9};
+		\node[node_text, anchor=north east] at (1.5,1) {\mbox{\boldmath\( A \)}};
+		\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=4pt] (A) at (2,1) {};
+		\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=4pt] (B) at (-1,-2) {};
+	\end{axis}
+\end{tikzpicture}
+\end{document}
