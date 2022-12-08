@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\usepackage{../../../../graph_style}
+\begin{document}
+\begin{tikzpicture}
+	\begin{axis}[
+		xmin=-2,xmax=8,
+		ymin=-2,ymax=8]
+		\addplot [line width=1.4pt, domain=0:10, f_red] {2.5*sqrt(x)};
+%		\node[node_text, anchor=north east] at (1.5,1) {\mbox{\boldmath\( A \)}};
+		\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=4pt] (A) at (0,0) {};
+		\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=4pt] (B) at (4,5) {};
+	\end{axis}
+\end{tikzpicture}
+\end{document}
