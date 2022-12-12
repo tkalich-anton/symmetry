@@ -42,8 +42,6 @@
 	label = \arabic*)
 }
 
-%\everymath{\displaystyle}
-
 \defaultfontfeatures{Ligatures=TeX,Mapping=tex-text}
 \setmainfont{CMU Serif}
 
@@ -56,8 +54,6 @@
 
 \newcommand{\selectanswer}{\noindent\textit{В ответе укажите номер правильного варианта.}}
 
-\newcommand{\veralign}[1]{\vfill\null#1\vfill\null}
-
 \newlist{listofex}{enumerate}{2}
 \setlist[listofex]{label=\framebox[2em]{\textbf{\arabic*}}, align=left, leftmargin=3em, listparindent=1em, labelwidth=2em, itemindent=0em, labelsep=1em}
 \newcommand{\loeitem}[1]{\framebox[2em]{\textbf{#1}}}
@@ -66,6 +62,10 @@
 
 \newlist{enumcols}{enumerate}{3}
 \setlist[enumcols]{label=\arabic*), align=left, leftmargin=0pt, labelindent=0pt, listparindent=0pt, labelsep=0.5em, itemindent=!}
+
+\SetEnumitemKey{columns}{before=\begin{multicols}{#1},after=\end{multicols}}
+
+\SetEnumitemKey{itemcolumns}{before=\itemmode{on}\begin{multicols}{#1},after=\itemmode{off}\end{multicols}}
 
 \let\multicolmulticols\multicols
 \let\endmulticolmulticols\endmulticols
@@ -81,11 +81,6 @@
 	{}%
 	{\endmulticolmulticols}%
 }
-
-
-\SetEnumitemKey{columns}{before=\begin{multicols}{#1},after=\end{multicols}}
-
-\SetEnumitemKey{itemcolumns}{before=\itemmode{on}\begin{multicols}{#1},after=\itemmode{off}\end{multicols}}
 
 
 \newcommand{\arabf}{\textbf{\arabic*.}}
@@ -158,7 +153,7 @@
 	\setkeys{exercise}{#1}%
 	\ifthenelse{\boolean{\ex@shownum}}%
 		{%
-			\ifthenelse {\equal{\ex@mode}{item}}%
+			\ifthenelse{\equal{\ex@mode}{item}}%
 				{\textcolor{silver}{\fbox{\currfilebase}}}%
 				{\framebox[2,5em]{\currfilebase}}%
 		}{}%
@@ -292,6 +287,20 @@
 }%
 \makeatother
 
+%
+%=========>>   Окружение NEWENUMCOLS  <<=========
+%
+\newenvironment{itasks}[1][]
+{
+	\itemmode{on}
+	\begin{tasks}(#1)
+}
+{
+	\end{tasks}
+	\itemmode{off}
+}
+
+
 \renewcommand{\title}[1]{
 \begin{center}
 	\large
@@ -330,14 +339,14 @@ top=2cm,bottom=2cm]{geometry}
 %===============>>  Шапка страницы  <<===============
 \rhead{Школа <<Симметрия>>}
 
-%===============>>  НАСТРОЙКИ ВЫВОДА УПРАЖНЕНИЯ ПО УМОЛЧАНИЮ  <<===============
-\setkeys{exercise}{%
-	showNumber=false,%
-	showAnswer=false,%
-	bankPath=../bank,%
-	type=none,%
-	mode=normal%
-}%
+%=====>>  НАСТРОЙКИ ВЫВОДА УПРАЖНЕНИЯ ПО УМОЛЧАНИЮ  <<======
+\setkeys{exercise}{
+	showNumber=false,
+	showAnswer=false,
+	bankPath=../bank,
+	type=none,
+	mode=normal
+}
 
 \newcommand{\funcexer}[2]{
 	\begin{minipage}[t]{0.7\textwidth}
