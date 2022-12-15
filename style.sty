@@ -8,7 +8,6 @@
 \usepackage{%
 	amsmath,
 	amssymb,
-	scrextend,
 	enumitem,
 	multicol,
 	cmap,
@@ -16,7 +15,7 @@
 	indentfirst,
 	cancel,
 	wrapfig,
-	tikz,
+%	tikz,
 	graphicx,
 	fancyhdr,
 	mathrsfs,
@@ -35,14 +34,23 @@
 	keyval,
 	tabstackengine,
 	xltxtra,
-	colortbl
+	colortbl,
+	tasks
 }%
-\usepackage{xltxtra}
+
+\settasks{
+	label = \arabic*)
+}
+
+%\everymath{\displaystyle}
+
 \defaultfontfeatures{Ligatures=TeX,Mapping=tex-text}
 \setmainfont{CMU Serif}
 
-\usetikzlibrary{arrows.meta}
-\usetikzlibrary {positioning}
+% ДЛЯ TIKZ!
+
+%\usetikzlibrary{arrows.meta}
+%\usetikzlibrary {positioning}
 
 %КОМАНДЫ
 
