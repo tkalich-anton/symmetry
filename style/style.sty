@@ -1,0 +1,395 @@
+%СТИЛИ
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{style}[2022/12/14 Style Package]
+\RequirePackage{cmap}
+\RequirePackage[T2A]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[english, russian]{babel}
+\RequirePackage[dvipsnames,table,xcdraw]{xcolor}
+
+
+
+% Основные пакеты
+%BEGIN_FOLD
+	\RequirePackage{amsmath}
+	\RequirePackage{amssymb}
+	\RequirePackage{enumitem}
+	\RequirePackage{multicol}
+	\RequirePackage{titling}
+	\RequirePackage{indentfirst}
+	\RequirePackage{cancel}
+	\RequirePackage{wrapfig}
+%	\RequirePackage{tikz}
+	\RequirePackage{graphicx}
+	\RequirePackage{fancyhdr}
+	\RequirePackage{mathrsfs}
+	\RequirePackage{graphbox}
+	\RequirePackage{import}
+	\RequirePackage{tabularx}
+	\RequirePackage{colortbl}
+	\RequirePackage{tablestyles}
+	\RequirePackage{xparse}
+	\RequirePackage{xifthen}
+%	\RequirePackage{verbatim}
+	\RequirePackage{currfile}
+	\RequirePackage{xhfill}
+	\RequirePackage{keyval}
+	\RequirePackage{tabstackengine}
+%	\RequirePackage{xltxtra}
+	\RequirePackage{tasks}
+
+%END_FOLD
+
+\DeclareUnicodeCharacter{202F}{\textcolor{red}{FIX ME!!!!}}
+
+% Переменные и сеттеры
+%BEGIN_FOLD
+	% Параметры страницы
+	\usepackage[left=3em,right=3em,
+	top=5em,bottom=5em]{geometry}
+%	\areaset[current]{\textwidth}{\textheight}
+	\pagestyle{fancy}
+	
+	% Размеры картинки и тела условия задачи при выводе в условия и картинки в две колонки.
+	\def\picwidth{0.25\linewidth}
+	\def\bodywidth{0.7\linewidth}
+	
+	% Нумерация тасков арабскими цифрами
+	\settasks{
+		label = \arabic*)
+	}
+%END_FOLD
+
+
+%\defaultfontfeatures{Ligatures=TeX,Mapping=tex-text}
+%\setmainfont{CMU Serif}
+
+% ДЛЯ TIKZ!
+
+%\usetikzlibrary{arrows.meta}
+%\usetikzlibrary {positioning}
+
+%КОМАНДЫ
+
+\newcommand{\selectanswer}{\noindent\textit{В ответе укажите номер правильного варианта.}}
+
+\newlist{listofex}{enumerate}{2}
+\setlist[listofex]{label=\framebox[2em]{\textbf{\arabic*}}, align=left, leftmargin=3em, listparindent=1em, labelwidth=2em, itemindent=0em, labelsep=1em}
+\newcommand{\loeitem}[1]{\framebox[2em]{\textbf{#1}}}
+
+%Нумированный список со столбцами
+
+\newlist{enumcols}{enumerate}{3}
+\setlist[enumcols]{label=\arabic*), align=left, leftmargin=0pt, labelindent=0pt, listparindent=0pt, labelsep=0.5em, itemindent=!}
+
+\SetEnumitemKey{columns}{before=\begin{multicols}{#1},after=\end{multicols}}
+
+\SetEnumitemKey{itemcolumns}{before=\itemmode{on}\begin{multicols}{#1},after=\itemmode{off}\end{multicols}}
+
+\let\multicolmulticols\multicols
+\let\endmulticolmulticols\endmulticols
+
+\RenewDocumentEnvironment{multicols}{mO{}}%
+{%
+	\ifthenelse{\equal{#1}{1}}
+	{#2}%
+	{\multicolmulticols{#1}[#2]}%
+}%
+{%
+	\ifthenelse{\equal{#1}{1}}
+	{}%
+	{\endmulticolmulticols}%
+}
+
+
+\newcommand{\arabf}{\textbf{\arabic*.}}
+
+%Команды, связанные с математикой
+
+\def\le{\leqslant}
+\def\ge{\geqslant}
+\newcommand{\degree}{^{\circ}}
+\newcommand{\mfrac}[3]{#1\,\dfrac{#2}{#3}}
+
+%Переменные
+
+\newcommand{\numbertype}{real_number}
+\newcommand{\bankpath}{\@empty}
+
+%Команды, которые задают значения переменных
+\newcommand{\shownumber}[1]{\setboolean{show_number}{#1}}
+\newcommand{\showanswer}[1]{\setboolean{show_answer}{#1}}
+\newcommand{\setBankpath}[1]{\renewcommand\bankpath{#1}}
+
+\makeatletter
+%=========>>  ОПРЕДЕЛЕНИЕ КЛЮЧЕЙ ЗАДАНИЯ  <<=========
+\define@key{exercise}{showNumber}{\def\ex@shownum{#1}}%
+\define@key{exercise}{showAnswer}{\def\ex@showans{#1}}%
+\define@key{exercise}{showSource}{\def\ex@showsource{#1}}%
+\define@key{exercise}{bankPath}{\def\ex@bankpath{#1}}%
+\define@key{exercise}{type}{\def\ex@type{#1}}%
+\define@key{exercise}{mode}{\def\ex@mode{#1}}%
+%
+%=========>>  Команды для ключа Задание  <<=========
+\newcommand{\showanswers}[1]{%
+	\ifthenelse{\equal{#1}{on}}{\setkeys{exercise}{showAnswer=true}}{}%
+	\ifthenelse{\equal{#1}{off}}{\setkeys{exercise}{showAnswer=false}}{}%
+}%
+\newcommand{\shownumbers}{%
+	\setkeys{exercise}{showNumber=true}%
+}%
+\newcommand{\exercise}[2][]{%
+	\begingroup%
+	\setkeys{exercise}{#1}%
+	\subimport{\ex@bankpath}{#2}%
+	\endgroup%
+}%
+\newcommand{\mexercise}[2][]%
+{%
+	\begingroup%
+		\setkeys{exercise}{#1,type=multi}%
+		\subimport{\ex@bankpath}{#2}%
+		\vspace{1em}
+	\endgroup%
+}%
+%
+\newcommand{\itemmode}[1]{%
+	\ifthenelse{\equal{#1}{on}}{\setkeys{exercise}{mode=item}}{}%
+	\ifthenelse{\equal{#1}{off}}{\setkeys{exercise}{mode=normal}}{}%
+}%
+\newlength{\mylen}
+\newcommand{\myflexbox}[2][1,3em]{%
+	\settowidth{\mylen}{#2}%
+	\ifdim\mylen < #1%
+	\makebox[#1][l]{\fbox{#2}}%
+	\else%
+	\fbox{#2}%
+	\fi%
+}%
+\newenvironment{ex}[1][]%
+{%
+	\begingroup%
+	\setkeys{exercise}{#1}%
+	\ifthenelse{\boolean{\ex@shownum}}%
+		{%
+			\ifthenelse{\equal{\ex@mode}{item}}%
+				{\textcolor{silver}{\fbox{\currfilebase}}}%
+				{\framebox[2,5em]{\currfilebase}}%
+		}{}%
+	\ifthenelse{\equal{\ex@type}{multi}}%
+		{\setkeys{exercise}{bankPath=/,mode=item}}%
+		{}%
+}%
+{%
+	\ifthenelse{\equal{\ex@type}{multi}}%
+		{\setkeys{exercise}{mode=normal, type=none}}{}%
+	\hphantom{p}\\
+	\endgroup%
+}%
+\newenvironment{condition}{%
+	\ifthenelse{\NOT\equal{\ex@mode}{item}}%
+		{%
+			\ifthenelse{\equal{\ex@type}{equation}}%
+				{Решить уравнение:}{}%
+			\ifthenelse{\equal{\ex@type}{inequality}}%
+				{Решить неравенство:}{}%
+			\ifthenelse{\equal{\ex@type}{expression}}%
+				{Упростить выражение:}{}%
+			\ifthenelse{\equal{\ex@type}{simplify_calculate}}%
+				{Упростить и найти значение выражения:}{}%
+			\ifthenelse{\equal{\ex@type}{calculate_expression}}%
+				{Найти значение выражения:}{}%
+			\ifthenelse{\equal{\ex@type}{eq_system}}%
+				{Решить систему уравнений:}{}%
+			\ifthenelse{\equal{\ex@type}{ineq_system}}%
+				{Решить систему неравенств:}{}%
+			\ifthenelse{\equal{\ex@type}{calculate}}%
+				{Вычислить:}{}%
+			\ifthenelse{\equal{\ex@type}{prove_identity}}%
+				{Докажите тождество:}{}%
+			\ifthenelse{\equal{\ex@type}{calculate_rational}}%
+				{Вычислить рациональным образом:}{}%
+			\ifthenelse{\equal{\ex@type}{chek_eq}}%
+				{Проверить равенство:}{}%
+		}%
+		{}%
+	\ifthenelse{\NOT\equal{\ex@type}{none}\AND\NOT\equal{\ex@mode}{item}}%
+		{\begin{center}}{}%
+}%
+{%
+	\ifthenelse{\NOT\equal{\ex@type}{none}\AND\NOT\equal{\ex@mode}{item}}%
+		{\end{center}}{}%
+}%
+
+%
+%===============>>  БЛОКИ ЭЛЕМЕНТОВ УРОКА <<=============
+%
+%BEGIN_FOLD
+
+%
+%=========>>  ОПРЕДЕЛЕНИЕ КЛЮЧЕЙ УРОКА  <<=========
+%
+\define@key{eduitem}{module}{\def\class@module{#1}}%
+\define@key{eduitem}{number}{\def\class@number{#1}}%
+%
+%=========>>  Команды ключа Элементов урока  <<=========
+%
+\newcommand{\setmodule}[1]{%
+	\setkeys{eduitem}{module=#1}%
+}%
+\newcommand{\setnumber}[1]{%
+	\setkeys{eduitem}{number=#1}%
+}%
+%
+%=========>>   Окружение урока  <<=========
+%
+\newenvironment{class}[1][]%
+{%
+	\setkeys{eduitem}{#1}%
+	\setcounter{definit}{0}%
+	\chead{\textbf{Модуль \class@module{ }Занятие \class@number }}%
+}%
+{%
+	\setcounter{definit}{0}%
+	\clearpage%
+}%
+%
+%=========>>   Окружение домашней работы  <<=========
+%
+\newenvironment{homework}[1][]%
+{%
+	\setkeys{eduitem}{#1}%
+	\setcounter{definit}{0}%
+	\chead{\textbf{Модуль \class@module{ }Домашняя работа \class@number }}%
+}%
+{
+	\setcounter{definit}{0}%
+	\clearpage%
+}
+%
+%=========>>   Окружение экзамена  <<=========
+%
+\newenvironment{exam}[1][]%
+{%
+	\setkeys{eduitem}{#1}%
+	\setcounter{definit}{0}%
+	\chead{\textbf{Модуль \class@module{ }Проверочная работа }}%
+}%
+{%
+	\setcounter{definit}{0}%
+	\clearpage%
+}%
+%
+%=========>>   Окружение консультации  <<=========
+%
+\newenvironment{consultation}[1][]%
+{%
+	\setkeys{eduitem}{#1}%
+	\setcounter{definit}{0}%
+	\chead{\textbf{Модуль \class@module{ }Консультация }}%
+}%
+{
+	\setcounter{definit}{0}%
+	\clearpage%
+}
+%END_FOLD
+
+\newcommand{\answer}[1]{%
+	\ifthenelse{\boolean{\ex@showans}}%
+	{%
+		\ifthenelse{\NOT\equal{\ex@mode}{item}}%
+		{%
+			%
+			%\raggedleft%
+			\textcolor{silver}{\fbox{#1}}%
+			%
+		}%
+		{\textcolor{silver}{\fbox{#1}}\newline}%
+	}%
+	{}%
+	\raggedright%
+}%
+\makeatother
+
+%
+%=========>>   Окружение itasks  <<=========
+%
+\newenvironment{itasks}[1][]
+{
+	\itemmode{on}
+	\begin{tasks}(#1)
+}
+{
+	\end{tasks}
+	\itemmode{off}
+}
+
+
+\renewcommand{\title}[1]{
+\begin{center}
+	\large
+	\textbf{#1}
+\end{center}
+}
+\newcommand{\prompt}[1]{%
+	\textit{Подсказка: #1}%
+}%
+
+
+%===============Цвета===============
+
+\definecolor{silver}{rgb}{0.7, 0.7, 0.7}
+\definecolor{dark}{rgb}{0.3, 0.3, 0.3}
+\definecolor{harvestgold}{rgb}{0.85, 0.57, 0.0}
+\definecolor{gray}{rgb}{0.8, 0.8, 0.8}
+
+%=======Путь к картинкам
+%=======!Добавить в другую секцию
+\graphicspath{{pic/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+%=======Русские символы в списке
+%=======!Добавить в другую секцию
+\AddEnumerateCounter{\asbuk}{\russian@alph}{щ}
+
+\setlength{\parindent}{0ex}
+
+
+%===============>>  Шапка страницы  <<===============
+\rhead{Школа <<Симметрия>>}
+
+%=====>>  НАСТРОЙКИ ВЫВОДА УПРАЖНЕНИЯ ПО УМОЛЧАНИЮ  <<======
+\setkeys{exercise}{
+	showNumber=false,
+	showAnswer=false,
+	bankPath=../bank,
+	type=none,
+	mode=normal
+}
+
+\newcommand{\funcexer}[2]{
+	\begin{minipage}[t]{0.7\textwidth}
+		#1
+	\end{minipage}
+	\begin{minipage}[c]{0.25\textwidth}
+		\includegraphics[align=t, width=\textwidth]{#2}
+	\end{minipage}
+}
+
+\newcommand{\graphcenter}[1]{
+	\begin{center}
+		\includegraphics{#1}
+	\end{center}
+}
+
+\newtheorem{definit}{Определение}
+\newcommand{\cheadbf}[1]{\chead{\textbf{#1}}}
+\renewcommand{\arraystretch}{1.5}
+
+
+
+%===============РАБОТА С ТАБЛИЦАМИ===============
+\newcolumntype{g}{>{\columncolor{gray}}c}
+\newcolumntype{x}[1]{>{\centering\arraybackslash\hspace{0pt}}p{#1}}
+
+
