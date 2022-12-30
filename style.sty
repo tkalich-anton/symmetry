@@ -40,7 +40,6 @@
 
 %END_FOLD
 
-%\DeclareUnicodeCharacter{202F}{\textcolor{red}{FIX ME!!!!}}
 
 % Переменные и сеттеры
 %BEGIN_FOLD
@@ -49,10 +48,12 @@
 	top=5em,bottom=5em]{geometry}
 %	\areaset[current]{\textwidth}{\textheight}
 	\pagestyle{fancy}
+	\cfoot{}
 	
 	% Размеры картинки и тела условия задачи при выводе в условия и картинки в две колонки.
 	\def\picwidth{0.25\linewidth}
 	\def\bodywidth{0.7\linewidth}
+	\def\picpath{../pics}
 	
 	% Нумерация тасков арабскими цифрами
 	\settasks{
@@ -362,7 +363,7 @@
 \setkeys{exercise}{
 	showNumber=false,
 	showAnswer=false,
-	bankPath=../bank,
+	bankPath=../../bank,
 	type=none,
 	mode=normal
 }
