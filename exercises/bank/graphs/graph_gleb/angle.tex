@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\usepackage{../../../../graph_style}
+\begin{document}
+\pgfplotsset{
+	every axis/.append style={
+	ylabel style={below left}}
+}
+\begin{tikzpicture}
+	\draw[-, line width=1.2pt] (0, 0) -- (10,0);
+	\draw[-, line width=1.2pt] (0, 0) -- (5, 5);
+	\draw[-, line width=1.2pt] (5, 5) -- (10,0);
+	\draw[-, line width=0.5pt](0,0) -- (4mm,0mm) arc (0:45:4mm) -- (0,0);
+\end{tikzpicture}
+\end{document}
