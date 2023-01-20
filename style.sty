@@ -37,6 +37,7 @@
 	\RequirePackage{tabstackengine}
 	\RequirePackage{xltxtra}
 	\RequirePackage{tasks}
+	\RequirePackage{ulem}
 
 %END_FOLD
 
@@ -51,10 +52,10 @@
 	\cfoot{}
 	
 	% Размеры картинки и тела условия задачи при выводе в условия и картинки в две колонки.
-	\def\picwidth{0.25\linewidth}
-	\def\bodywidth{0.7\linewidth}
+	\def\picwidth{0.27\linewidth}
+	\def\bodywidth{0.65\linewidth}
+	\def\gapwidth{\hspace{0.05\linewidth}}
 	\def\picpath{../pics}
-	
 	% Нумерация тасков арабскими цифрами
 	\settasks{
 		label = \arabic*)
@@ -293,6 +294,17 @@
 	\setcounter{definit}{0}%
 	\clearpage%
 }
+%
+%=========>>   Окружение консультации  <<=========
+%
+\newenvironment{training}[1][]%
+{%
+	\chead{\textbf{Вариант #1}}%
+}%
+{
+	\setcounter{definit}{0}%
+	\clearpage%
+}
 %END_FOLD
 
 \newcommand{\answer}[1]{%
@@ -328,7 +340,6 @@
 
 \renewcommand{\title}[1]{
 \begin{center}
-	\large
 	\textbf{#1}
 \end{center}
 }
@@ -393,5 +404,52 @@
 %===============РАБОТА С ТАБЛИЦАМИ===============
 \newcolumntype{g}{>{\columncolor{gray}}c}
 \newcolumntype{x}[1]{>{\centering\arraybackslash\hspace{0pt}}p{#1}}
+
+\def\foranswer{\phantom{f}\\[1.5em]Ответ: \rule{8em}{0.3pt} .}
+\def\egepreambone{
+	\fbox{\begin{minipage}[t]{\linewidth}
+			\textit{\textbf{
+					Ответом к заданиям 1–11 является целое число
+					или конечная десятичная дробь.
+					Во всех заданиях числа предполагаются действительные,
+					если отдельно не указано иное.
+					Запишите число в поле ответа в тексте работы,
+					затем перенесите его в БЛАНК ОТВЕТОВ 1 справа
+					от номера соответствующего задания, начиная с
+					первой клеточки. Каждую цифру, знак «минус» и запятую
+					пишите в отдельной клеточке в соответствии с
+					приведёнными в бланке образцами.
+					Единицы измерений писать не нужно.
+				}
+			}
+	\end{minipage}}
+}
+\def\egepreambtwo{
+	\phantom{f}\\[1em]
+	\fbox{\begin{minipage}[t]{\linewidth}
+			\textit{\textbf{
+					Не забудьте перенести все ответы в БЛАНК ОТВЕТОВ 1
+					в соответствии с инструкцией по выполнению работы.
+					Проверьте, чтобы каждый ответ был записан в строке
+					с номером соответствующего задания.
+				}
+			}
+	\end{minipage}}
+}
+\def\egepreambtwo{
+	\phantom{f}\\[1em]
+	\fbox{\begin{minipage}[t]{\linewidth}
+			\textit{\textbf{
+					Для записи решений и ответов на задания 12–18 используйте
+					БЛАНК ОТВЕТОВ 2. Запишите сначала номер
+					выполняемого задания (12, 13 и т.д.), а затем полное
+					обоснованное решение и ответ. Ответы записывайте
+					чётко и разборчиво.
+				}
+			}
+	\end{minipage}}
+}
+
+\setlength{\columnsep}{2em}
 
 
