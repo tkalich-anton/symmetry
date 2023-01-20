@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage{../../../../graph_style}
+\begin{document}
+\pgfplotsset{
+	every axis/.append style={
+	ylabel style={below left}}
+}
+\begin{tikzpicture}
+	\begin{axis}[
+		xmin=-5,xmax=5,
+		ymin=-8,ymax=8]
+		\addplot [line width=1.5pt, domain=-4:4, f_red] {x^2};
+		\addplot [line width=1.5pt, domain=-4:4, f_green] {-x^2};
+		\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=4pt] (O) at (0,0) {};
+		\node[node_text, anchor=south west] at (1.1,1.1) {\mbox{\boldmath$f(x)$}};
+		\node[node_text, anchor=south west] at (1.1,-2) {\mbox{\boldmath$-f(x)$}};
+		\node[node_text, anchor=north east] at (0.15,-0.2) {\mbox{\boldmath$O$}};
+	\end{axis}
+\end{tikzpicture}
+\end{document}

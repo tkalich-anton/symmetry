@@ -1,0 +1,24 @@
+\documentclass{standalone}
+\usepackage{../../../../graph_style}
+\begin{document}
+\pgfplotsset{
+	every axis/.append style={
+	ylabel style={below left}}
+}
+\begin{tikzpicture}
+	\begin{axis}[
+		xmin=-5,xmax=5,
+		ymin=-8,ymax=8]
+		\addplot [line width=1.5pt, domain=-8:8, f_red] {1/x};
+		\addplot [line width=1.5pt, domain=-8:8, f_green] {-1/x};
+		\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=3pt] (O) at (0,0) {};
+		\node[shape=circle, draw=f_green, fill=f_green, inner sep=0pt, minimum size=3pt] (A_1) at (-1,1) {};
+		\node[shape=circle, draw=f_green, fill=f_green, inner sep=0pt, minimum size=3pt] (A_2) at (1,-1) {};
+		\node[shape=circle, draw=f_red, fill=f_red, inner sep=0pt, minimum size=3pt] (B_1) at (1,1) {};
+		\node[shape=circle, draw=f_red, fill=f_red, inner sep=0pt, minimum size=3pt] (B_2) at (-1,-1) {};
+		\node[node_text, anchor=south west] at (1.1,1.1) {\mbox{\boldmath$f(x)$}};
+		\node[node_text, anchor=south west] at (1.1,-2) {\mbox{\boldmath$-f(x)$}};
+		\node[node_text, anchor=north east] at (-0,-0) {\mbox{\boldmath$O$}};
+	\end{axis}
+\end{tikzpicture}
+\end{document}
