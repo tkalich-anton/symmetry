@@ -1,15 +1,30 @@
-	\documentclass[
-10pt,
-paper=A4,
-landscape,
-DIV=calc,
-twocolumn
-]{article}
+	\documentclass[10pt,]{article}
 \usepackage{../style}
 \begin{document}
 \begin{listofex}
-	\item \( \dfrac{1,23\cdot45,7}{12,3\cdot0,457}=\dfrac{\dfrac{123}{100}\cdot\dfrac{457}{10}}{\dfrac{123}{10}\cdot\dfrac{457}{1000}}=\left( \dfrac{123}{100}\cdot\dfrac{457}{10} \right):\left( \dfrac{123}{10}\cdot\dfrac{457}{1000} \right)=\dfrac{123\cdot457}{100\cdot10}\cdot\dfrac{10\cdot1000}{123\cdot457}=\dfrac{123\cdot457}{1000}\cdot\dfrac{10000}{123\cdot457}=\dfrac{10000}{1000}=10 \)
-	\item \( \dfrac{(5a^2)^3\cdot(6b)^2}{(30a^3b)^2}=\dfrac{5^3\cdot(a^2)^3\cdot6^2\cdot b^2}{30^2\cdot(a^3)^2\cdot b^2}=\dfrac{125a^6\cdot36b^2}{900a^6b^2}=\dfrac{4500a^6b^2}{900a^6b^2}=\dfrac{45}{9}=5 \)
+	\item Вычислить: \( \dfrac{1,23\cdot45,7}{12,3\cdot0,457}\)\\[0.5em]
+	\textit{Решение:} Для начала представим десятичные дроби в виде обыкновенных. Для этого запишем все число без запятой в числитель, а в знаменателе запишем единицу и после нее такое количество нулей, сколько знаков было справа от запятой. Тогда:
+	\[ 1,23=\dfrac{123}{100};\;45,7=\dfrac{457}{10};\;12,3=\dfrac{123}{10};\;0,457=\dfrac{457}{1000} \]
+	Все вместе будет выглядеть так:
+	\[
+	\dfrac{1,23\cdot45,7}{12,3\cdot0,457}=
+	\cfrac{\cfrac{123}{100}\cdot\cfrac{457}{10}}{\cfrac{123}{10}\cdot\cfrac{457}{1000}}
+	=\cfrac{\cfrac{123\cdot457}{100\cdot10}}{\cfrac{123\cdot457}{10\cdot1000}}
+	\]
+	Теперь представим основную черту дроби в виде знака деления и применим правило деления дробей:
+	\[
+	\left( \dfrac{123\cdot457}{1000} \right):\left( \dfrac{123\cdot457}{10000} \right)=
+	\dfrac{123\cdot457}{1000}\cdot\dfrac{10000}{123\cdot457}=
+	\dfrac{123\cdot457\cdot10000}{123\cdot457\cdot1000}=
+	\dfrac{10000}{1000}=10
+	\]
+	\item Вычислить: \( \dfrac{(5a^2)^3\cdot(6b)^2}{(30a^3b)^2} \)\\[0.5em]
+	\textit{Решение:} Вспомним следующее свойства степени:
+	\[ (a\cdot b)^c=a^c\cdot b^c;\;(a^b)^c=a^{b\cdot c} \]
+	Тогда в нашем случае получим:
+	\[ \dfrac{(5a^2)^3\cdot(6b)^2}{(30a^3b)^2}=\dfrac{5^3\cdot(a^2)^3\cdot6^2\cdot b^2}{30^2\cdot(a^3)^2\cdot b^2}=\dfrac{125\cdot36\cdot a^6\cdot b^2}{900\cdot a^6\cdot b^2} \]
+	Сократим буквенные множители и получим:
+	\[ \dfrac{125\cdot36\cdot a^6\cdot b^2}{900\cdot a^6\cdot b^2}=\dfrac{4500}{900}=\dfrac{45}{9}=5 \]
 	\item Найдите \( p(x)+p(6-x) \), если \( p(x)=\dfrac{x(6-x)}{x-3} \) при \( x\neq3 \)\\
 	\( \dfrac{x(6-x)}{x-3}+\dfrac{(6-x)(6-(6-x))}{(6-x)-3}=\dfrac{6x-x^2}{x-3}+\dfrac{(6-x)(6-6+x)}{6-x-3}=\dfrac{6x-x^2}{x-3}+\dfrac{(6-x)x}{3-x}=\dfrac{6x-x^2}{x-3}-\dfrac{6x-x^2}{x-3}=\dfrac{6x-x^2-(6x-x^2)}{x-3}=\dfrac{0}{x-3}=0 \)
 	\item Найдите \( 61a-11b+50 \), если \( \dfrac{2a-7b+5}{7a-2b+5}=9 \)\\
