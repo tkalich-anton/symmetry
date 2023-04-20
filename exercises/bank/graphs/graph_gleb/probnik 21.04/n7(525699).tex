@@ -1,0 +1,24 @@
+\documentclass{standalone}
+\usepackage{../../../../../graph_style}
+\begin{document}
+\pgfplotsset{
+	every axis/.append style={
+	ylabel style={below left}}
+}
+\begin{tikzpicture}
+	\begin{axis}[
+		xmin=-7,xmax=5,
+		ymin=-3,ymax=4]
+		\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=3pt] (O) at (0,0) {};
+		\node[node_text, anchor=north east] at (-0,-0) {\mbox{\boldmath$O$}};
+		%\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=3pt] (O1) at (0,1) {};
+		%\node[node_text, anchor=north east] at (0,1) {\mbox{\boldmath$1$}};
+		%\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=3pt] (O2) at (1,0) {};
+		%\node[node_text, anchor=north east] at (1,0) {\mbox{\boldmath$1$}};
+		\draw[very thick, f_green] (-5.9,-1.2) to [out=-75,in=170] (-4.8,-1.75) to [out=10,in=190] (-1.4,2.3) to [out=-5,in=180] (2.04,-1.4) to [out=12,in=170] (3.4,-0.4) to [out=-25,in=170] (4.9,-1.2);
+		\addplot [line width=1.5pt, domain=-7:5, f_red] {1/7.6*\x-1.1};
+		\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=3pt] (A) at (-4.8,-1.75) {};
+		\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=3pt] (A) at (1,-1) {};
+	\end{axis}
+\end{tikzpicture}
+\end{document}
