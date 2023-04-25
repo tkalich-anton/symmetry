@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\usepackage{../../../../../graph_style}
+\begin{document}
+\pgfplotsset{
+	every axis/.append style={
+	ylabel style={below left}}
+}
+\begin{tikzpicture}
+	\draw[-, line width=1pt] (0,0) -- (4,0) -- (6,2) -- (6,5) -- (4,3) -- (0,3) -- (0,0) -- (0,3) -- (1,4) -- (3,4) -- (4,5) -- (4,7) -- (2,7) -- (1,6) -- (1,4) -- (1,6) -- (3,6) -- (3,4) -- (3,6) -- (4,7) -- (4,5) -- (6,5) -- (4,3) -- (4,0);
+	%(2,7)
+	\draw[dashed, line width=1pt] (2,7) -- (2,2) -- (0,0) -- (2,2) -- (6,2);
+	\node[node_text, anchor=north] at (2,0) {\mbox{\boldmath$8$}};
+	\node[node_text, anchor=north west] at (5,1) {\mbox{\boldmath$4$}};
+	\node[node_text, anchor=south] at (3,7) {\mbox{\boldmath$1,5$}};
+	\node[node_text, anchor=south east] at (1.5,6.5) {\mbox{\boldmath$2$}};
+	\node[node_text, anchor=east] at (1,5) {\mbox{\boldmath$4$}};
+	\node[node_text, anchor=east] at (2,3.5) {\mbox{\boldmath$8$}};
+\end{tikzpicture}
+\end{document}

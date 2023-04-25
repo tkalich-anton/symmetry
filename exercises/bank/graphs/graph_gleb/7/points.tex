@@ -1,0 +1,16 @@
+\documentclass{standalone}
+\usepackage{../../../../../graph_style}
+\begin{document}
+\pgfplotsset{
+	every axis/.append style={
+	ylabel style={below left}}
+}
+\begin{tikzpicture}
+	\draw[->, line width=1.3pt, black] (-2,0) -- (2,0);
+	\node[shape=circle, draw=black, fill=white, inner sep=0pt, minimum size=3pt] (O) at (0,0) {};
+	\node[node_text, anchor=south] at (-0,0.1) {\mbox{\boldmath$a$}};
+	\draw[->, line width=1.3pt, black] (-2,-1) -- (2,-1);
+	\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=3pt] (O) at (0,-1) {};
+	\node[node_text, anchor=south] at (-0,-0.9) {\mbox{\boldmath$b$}};
+\end{tikzpicture}
+\end{document}
