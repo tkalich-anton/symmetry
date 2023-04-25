@@ -1,0 +1,17 @@
+\documentclass{standalone}
+\usepackage{../../../../../graph_style}
+\begin{document}
+\pgfplotsset{
+	every axis/.append style={
+	ylabel style={below left}}
+}
+\begin{tikzpicture}
+	\begin{axis}[
+		xmin=-5,xmax=5,
+		ymin=-8,ymax=8]
+		\addplot [line width=1.5pt, domain=-8:8, f_red] {-2*\x+5};
+		\addplot [line width=1.5pt, domain=-8:8, f_green] {-2*\x};
+		\addplot [line width=1.5pt, domain=-8:8, gray] {-2*\x-5};
+	\end{axis}
+\end{tikzpicture}
+\end{document}

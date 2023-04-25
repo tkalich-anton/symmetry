@@ -1,0 +1,21 @@
+\documentclass{standalone}
+\usepackage{../../../../../graph_style}
+\begin{document}
+\pgfplotsset{
+	every axis/.append style={
+	ylabel style={below left}}
+}
+\begin{tikzpicture}
+	\begin{axis}[
+		xmin=-4,xmax=3,
+		ymin=-8,ymax=3]
+		\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=3pt] (O) at (0,0) {};
+		\node[node_text, anchor=north east] at (-0,-0) {\mbox{\boldmath$O$}};
+		
+		\addplot [line width=1.5pt, domain=-4:4, f_red] {2*x^2+3*x-4};
+		\node[node_text, anchor=north east] at (0,1) {\mbox{\boldmath$1$}};
+		\node[shape=circle, draw=f_red, fill=f_red, inner sep=0pt, minimum size=3pt] (A) at (-2,-2) {};
+		\node[shape=circle, draw=f_red, fill=f_red, inner sep=0pt, minimum size=3pt] (B) at (1,1) {};
+	\end{axis}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,24 @@
+\documentclass{standalone}
+\usepackage{../../../../../graph_style}
+\begin{document}
+\pgfplotsset{
+	every axis/.append style={
+	ylabel style={below left}}
+}
+\begin{tikzpicture}
+	\begin{axis}[
+		xmin=-4,xmax=5,
+		ymin=-5,ymax=4]
+		\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=3pt] (O) at (0,0) {};
+		\node[node_text, anchor=north east] at (-0,-0) {\mbox{\boldmath$O$}};
+		\node[node_text, anchor=north east] at (0,1) {\mbox{\boldmath$1$}};
+		\node[node_text, anchor=north east] at (1,0) {\mbox{\boldmath$1$}};
+		
+		\addplot [line width=1.5pt, domain=-6:5, f_red] {2/\x};
+		\addplot [line width=1.5pt, domain=-6:5, f_green] {\x*5-9};
+		\node[shape=circle, draw=f_red, fill=f_red, inner sep=0pt, minimum size=3pt] (A) at (2,1) {};
+		\node[node_text, anchor=south west] at (2,1) {\mbox{\boldmath$A$}};
+		\node[shape=circle, draw=f_green, fill=f_green, inner sep=0pt, minimum size=3pt] (B) at (1,-4) {};
+	\end{axis}
+\end{tikzpicture}
+\end{document}
