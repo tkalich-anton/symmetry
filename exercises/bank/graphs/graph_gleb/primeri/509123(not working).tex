@@ -1,0 +1,29 @@
+\documentclass{standalone}
+\usepackage{../../../../../graph_style}
+\begin{document}
+\pgfplotsset{
+	every axis/.append style={
+	ylabel style={below left}}
+}
+\begin{tikzpicture}
+	\node[node_text, anchor=north east] at (-0,-0) {\mbox{\boldmath$O$}};
+	\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=3pt] (O) at (0,0) {};
+	\draw[->, line width=1.2pt] (0,-10) -- (0, 10);
+	\draw[->, line width=1.2pt] (-10, 0) -- (10,0);
+	\node[node_text, anchor=north east] at (-0.1,10) {\mbox{\boldmath$y$}};
+	\node[node_text, anchor=north east] at (10,-0.1) {\mbox{\boldmath$x$}};
+	\node[node_text, anchor=north east] at (9.5,-0.1) {\mbox{\boldmath$\pi$}};
+	\foreach \x in {-\pi,-3*\pi/4,-2*\pi/4,-\pi/4, \pi/4, 2*\pi/4, 3*\pi/4, \pi} \draw[line width=0.5pt, domain=-5:5, gray] (\x,-10) -- (\x,10);
+	
+	%\draw[line width=0.5pt, domain=-5:5, gray] (3.1415, -5) -- (3.1415,5);
+	%\begin{axis}[
+	%	xmin=-5,xmax=5,
+	%	ymin=-8,ymax=8]
+	%	\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=3pt] (O) at (0,0) {};
+	%	\node[node_text, anchor=north east] at (-0,-0) {\mbox{\boldmath$O$}};
+	%	
+	%	\addplot [line width=1.5pt, domain=-5:5, f_red] {1.5*cos(\x r)-1};
+	%	
+	%\end{axis}
+\end{tikzpicture}
+\end{document}

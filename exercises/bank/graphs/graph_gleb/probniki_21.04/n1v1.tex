@@ -1,0 +1,30 @@
+\documentclass{standalone}
+\usepackage{../../../../../graph_style}
+\begin{document}
+\pgfplotsset{
+	every axis/.append style={
+	ylabel style={below left}}
+}
+\begin{tikzpicture}
+	\draw (0,0) circle (2cm);
+	\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=2pt] (O) at (0,0) {};
+	\node[node_text, anchor=south west] at (0,0) {\mbox{\boldmath$O$}};
+	\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=1pt] (C) at (0,2) {};
+	\node[node_text, anchor=south] at (0,2) {\mbox{\boldmath$C$}};
+	\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=1pt] (A) at (1.732,-1) {};
+	\node[node_text, anchor=north west] at (1.732,-1) {\mbox{\boldmath$A$}};
+	\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=1pt] (B) at (-1.732,-1) {};
+	\node[node_text, anchor=north east] at (-1.732,-1) {\mbox{\boldmath$B$}};
+	\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=1pt] (H) at (0,-1) {};
+	\node[node_text, anchor=north] at (0,-1) {\mbox{\boldmath$H$}};
+	\draw[-, line width=0.4pt] (0,0) -- (-1.732,-1);
+	\draw[-, line width=0.4pt] (0,0) -- (1.732,-1);
+	\draw[-, line width=0.4pt] (0,-1) -- (0,2);
+	\draw[-, line width=0.4pt] (-1.732,-1) -- (1.732,-1);
+	\draw[-, line width=0.4pt] (0,2) -- (1.732,-1);
+	\draw[-, line width=0.4pt] (0,2) -- (-1.732,-1);
+	
+	\draw[-, line width=0.4pt] (0,-0.8) -- (-0.2,-0.8);
+	\draw[-, line width=0.4pt] (-0.2,-0.8) -- (-0.2,-1);
+\end{tikzpicture}
+\end{document}
