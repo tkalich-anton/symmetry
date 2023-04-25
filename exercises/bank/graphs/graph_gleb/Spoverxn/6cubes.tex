@@ -1,0 +1,43 @@
+\documentclass{standalone}
+\usepackage{../../../../../graph_style}
+\begin{document}
+\pgfplotsset{
+	every axis/.append style={
+	ylabel style={below left}}
+}
+\begin{tikzpicture}
+	%\draw[-, line width=0.8pt] (0,0) -- (5,0) -- (7.5,2.5) -- (7.5, 7.5) -- (2.5,7.5) -- (0,5) -- (0,0) -- (0,5) -- (5,5) -- (7.5, 7.5) -- (5,5) -- (5,0); ВИДИМАЯ ЧАСТЬ КУБА КАК НАДО
+	%\draw[-, line width=0.8pt] (0,0) -- (5,0) -- (5,5) -- (0,5) -- (0,0) -- (0,5) -- (2.5,7.5) -- (7.5,7.5) -- (5,5);
+	\draw[-, line width=0.8pt] (5,0) -- (10,0) -- (12.5,2.5) -- (12.5, 7.5) -- (7.5,7.5) -- (5,5) -- (5,0) -- (5,5) -- (10,5) -- (12.5, 7.5) -- (10,5) -- (10,0);
+	%\draw[-, line width=0.8pt] (-5,0) -- (0,0) -- (0,5) -- (-5,5) -- (-5,0) -- (-5,5) -- (-2.5,7.5) -- (2.5,7.5) -- (0,5);
+	\draw[-, line width=0.8pt] (-5,0) -- (-2.5,0) -- (-2.5,2.5) -- (0,5) -- (-5,5) -- (-5,0) -- (-5,5) -- (-2.5, 7.5) -- (0,7.5);
+	\draw[-, line width=0.8pt] (7.5,7.5) -- (10,10) -- (7.5,10) -- (10,10) -- (10,7.5);
+	\draw[-, line width=0.8pt] (-2.5,-2.5) -- (2.5,-2.5) -- (5,0) -- (5, 5) -- (0,5) -- (-2.5,2.5) -- (-2.5,-2.5) -- (-2.5,2.5) -- (2.5,2.5) -- (5, 5) -- (2.5,2.5) -- (2.5,-2.5);
+	\draw[-, line width=0.8pt] (0,5) -- (5,5) -- (7.5,7.5) -- (7.5, 12.5) -- (2.5,12.5) -- (0,10) -- (0,5) -- (0,10) -- (5,10) -- (7.5, 12.5) -- (5,10) -- (5,5);
+	%\draw[-, line width=0.8pt] (0,-5) -- (5,-5) -- (7.5,-2.5) -- (7.5, 2.5) -- (2.5,2.5) -- (0,0) -- (0,-5) -- (0,0) -- (5,0) -- (7.5, 2.5) -- (5,0) -- (5,-5);
+	\draw[-, line width=0.8pt] (0,-5) -- (5,-5) -- (7.5,-2.5) -- (7.5, 0) -- (5,0) -- (5,-5) -- (0,-5) -- (0,-2.5);
+	%\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=1pt] (A) at (-2.0,-2.0) {};
+	%\node[node_text, anchor=north east] at (-2.0,-2.0) {\mbox{\boldmath$A$}};
+	%
+	%\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=1pt] (B) at (-0.2,-0.2) {};
+	%\node[node_text, anchor=south west] at (-0.2,-0.2) {\mbox{\boldmath$B$}};
+	%
+	%\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=1pt] (C) at (4.8,-0.2) {};
+	%\node[node_text, anchor=south west] at (4.8,-0.2) {\mbox{\boldmath$C$}};
+	%
+	%\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=1pt] (D) at (2.0,-2.0) {};
+	%\node[node_text, anchor=north west] at (2.0,-2.0) {\mbox{\boldmath$D$}};
+	%
+	%\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=1pt] (A1) at (-2.0,2.0) {};
+	%\node[node_text, anchor=north east] at (-2.0,2.0) {\mbox{\boldmath$A_1$}};
+	%
+	%\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=1pt] (B1) at (-0.2,4.8) {};
+	%\node[node_text, anchor=south west] at (-0.2,4.8) {\mbox{\boldmath$B_1$}};
+	%
+	%\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=1pt] (C1) at (4.8,4.8) {};
+	%\node[node_text, anchor=south west] at (4.8,4.8) {\mbox{\boldmath$C_1$}};
+	%
+	%\node[shape=circle, draw=black, fill=black, inner sep=0pt, minimum size=1pt] (D1) at (2.0,2.0) {};
+	%\node[node_text, anchor=north east] at (2.0,2.0) {\mbox{\boldmath$D_1$}};
+\end{tikzpicture}
+\end{document}

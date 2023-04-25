@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{../../../../../graph_style}
+\begin{document}
+\pgfplotsset{
+	every axis/.append style={
+	ylabel style={below left}}
+}
+\begin{tikzpicture}
+	\draw[f_red] (0,0) circle (2cm);
+	\draw[line width=1pt, f_green] (2,5) -- (2,-2) -- (-4.7,-2) -- (2,5);
+	\node[node_text, anchor=north] at (3,-3) {\textbf{}};
+\end{tikzpicture}
+\end{document}

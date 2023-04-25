@@ -1,0 +1,16 @@
+\documentclass{standalone}
+\usepackage{../../../../../graph_style}
+\begin{document}
+\pgfplotsset{
+	every axis/.append style={
+	ylabel style={below left}}
+}
+\begin{tikzpicture}
+	\draw[line width=1pt] (0,0) circle (1cm);
+	\draw[line width=1pt] (5,0) circle (3cm);
+	\draw[line width=1pt] (-1,0) to [out=-90,in=-90] (1,0);
+	\draw[line width=1pt] (2,0) to [out=-90,in=-90] (8,0);
+	\draw[dashed, line width=1pt] (-1,0) to [out=90,in=90] (1,0);
+	\draw[dashed, line width=1pt] (2,0) to [out=90,in=90] (8,0);
+\end{tikzpicture}
+\end{document}
