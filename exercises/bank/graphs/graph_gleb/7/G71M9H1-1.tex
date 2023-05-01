@@ -1,0 +1,21 @@
+\documentclass{standalone}
+\usepackage{../../../../../graph_style}
+\begin{document}
+\pgfplotsset{
+	every axis/.append style={
+	ylabel style={below left}}
+}
+\begin{tikzpicture}
+	\begin{axis}[
+		xmin=-10,xmax=10,
+		ymin=-10,ymax=10]
+		\node[node_text, anchor=west] at (-0,1) {\mbox{\boldmath$1$}};
+		\node[node_text, anchor=south] at (1,0) {\mbox{\boldmath$1$}};
+		\node[node_text, anchor=north east] at (0,0) {\mbox{\boldmath$O$}};
+		\addplot [line width=1.5pt, domain=-10:10, f_red] {-\x-2};
+		\addplot [line width=1.5pt, domain=-10:10, f_green] {-2*\x+5};
+		\addplot [line width=1.5pt, domain=-10:10, blue] {0.5*\x+4};
+		\addplot [line width=1.5pt, domain=-10:10, orange] {5*\x + 8};
+	\end{axis}
+\end{tikzpicture}
+\end{document}
