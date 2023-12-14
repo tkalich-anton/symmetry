@@ -1,0 +1,28 @@
+if(!settings.multipleView) settings.batchView=false;
+settings.tex="xelatex";
+defaultfilename="probnik_2-2";
+if(settings.render < 0) settings.render=4;
+settings.outformat="";
+settings.inlineimage=true;
+settings.embed=true;
+settings.toolbar=false;
+viewportmargin=(2,2);
+
+size(6cm);
+import geometry;
+defaultpen(fontsize(10pt));
+pair A, B, C, D, O;
+A=(0,-2); C=(3.6,3.2); B=(5,0.61);
+path circ=circumcircle(A,B,C);
+D=point(circ, 0.5length(circ));
+O=circumcenter(A, B, D);
+draw(A--B--C--D);
+draw(circ);
+dot(O);
+draw(D--O--B);
+draw(A--O--C);
+label("$A$", A, SW);
+label("$B$", B, E);
+label("$C$", C, NE);
+label("$D$", D, W);
+label("$O$", O, SE);
